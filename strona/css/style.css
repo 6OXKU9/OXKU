@@ -387,10 +387,14 @@ h2 .ai-badge { position: relative; top: -3px; margin-left: 4px; }
 .today { font: 600 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--primary-ink); background: var(--gold); padding: 4px 7px; border-radius: 3px; position: relative; top: -2px; }
 .day.is-today .evs { border-color: var(--gold); }
 .evs { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow); }
-.ev { display: grid; grid-template-columns: 56px 44px minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 14px 18px; border-bottom: 1px solid var(--line); border-left: 3px solid transparent; }
+.ev { display: grid; grid-template-columns: 56px 44px minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 14px 18px; border-bottom: 1px solid var(--line); }
 .ev:last-child { border-bottom: 0; }
-.ev--w3 { border-left-color: var(--bull-o); }
-.ev--w4 { border-left-color: var(--bull-r); background: linear-gradient(90deg, var(--down-soft), transparent 60%); }
+/* Kolor siły wpływu przechodzi od prawej strony, spod byków, w kolorze najmocniejszego zapalonego byka. */
+.ev { --ev-c: transparent; background: linear-gradient(270deg, var(--ev-c), transparent 55%); }
+.ev--w1 { --ev-c: color-mix(in srgb, var(--bull-g) 8%, transparent); }
+.ev--w2 { --ev-c: color-mix(in srgb, var(--bull-g) 16%, transparent); }
+.ev--w3 { --ev-c: color-mix(in srgb, var(--bull-o) 22%, transparent); }
+.ev--w4 { --ev-c: color-mix(in srgb, var(--bull-r) 30%, transparent); }
 .ev.is-past { opacity: .5; }
 .ev__time { font-size: 15px; font-weight: 500; padding-top: 1px; }
 .ev__main { display: grid; gap: 4px; min-width: 0; }

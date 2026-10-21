@@ -798,13 +798,13 @@
     document.head.appendChild(s);
   }
   var SEKCJE_GC = [["/", "Strona główna", "Home"], ["/#rynki", "Rynki", "Markets"], ["/#analizy", "Analizy", "Analyses"], ["/#przeglad", "Przegląd AI", "AI brief"], ["/#kalendarz", "Kalendarz", "Calendar"], ["/#powiadomienia", "Powiadomienia", "Alerts"]];
-  function wiersz(dt, dd, id) { return "<div><dt>" + dt + "</dt><dd class=\"num\"" + (id ? ' id="' + id + '"' : "") + ">" + dd + "</dd></div>"; }
+  function faktPanel(dt, dd, id) { return "<div><dt>" + dt + "</dt><dd class=\"num\"" + (id ? ' id="' + id + '"' : "") + ">" + dd + "</dd></div>"; }
   V.panel = function () {
     var s = skutecznosc(AN), szk = AN.filter(function (a) { return a.szkic; }).length;
     var ev = KAL && KAL.wydarzenia ? KAL.wydarzenia.length : 0;
     var odw = GC
-      ? '<dl class="facts">' + wiersz(L("Wszystkie wejścia", "All pageviews"), "…", "gc-total") +
-        SEKCJE_GC.map(function (x, i) { return wiersz(L(x[1], x[2]), "…", "gc-" + i); }).join("") + "</dl>" +
+      ? '<dl class="facts">' + faktPanel(L("Wszystkie wejścia", "All pageviews"), "…", "gc-total") +
+        SEKCJE_GC.map(function (x, i) { return faktPanel(L(x[1], x[2]), "…", "gc-" + i); }).join("") + "</dl>" +
         '<p style="margin:12px 0 0;font-size:14px"><a href="' + GC_URL + '" target="_blank" rel="noopener">' + L("Pełne statystyki: wykres dzienny, skąd przychodzą, kraje, urządzenia →", "Full stats: daily chart, referrers, countries, devices →") + "</a></p>" +
         '<p class="muted" style="margin:8px 0 0;font-size:13px">' + L("Twoje własne wejścia w trybie autora nie są liczone.", "Your own visits in author mode are not counted.") + "</p>"
       : '<div class="notice"><span class="tag-ex">' + L("wyłączone", "off") + "</span><p>" + L("Licznik odwiedzin nie jest podłączony. Wpisz kod konta GoatCounter w pliku", "The visit counter is not connected. Enter your GoatCounter code in") + ' <span class="num">js/ustawienia.js</span> (statystyki.goatcounter).</p></div>';
@@ -813,12 +813,12 @@
       '<div class="wrap page"><div class="apanel">' +
       '<div class="panel"><h4>' + L("Odwiedziny", "Visits") + "</h4>" + odw + "</div>" +
       '<div class="panel"><h4>' + L("Treść strony", "Content") + '</h4><dl class="facts">' +
-        wiersz(L("Analizy", "Analyses"), AN.length + (szk ? " (" + L("w tym szkice AI: ", "AI drafts: ") + szk + ")" : "")) +
-        wiersz(L("W toku", "Open"), s["w toku"]) +
-        wiersz(L("Rozliczone", "Settled"), s.zamkniete + " · " + L("trafione ", "hits ") + s.trafiona) +
-        wiersz(L("Trafność", "Hit rate"), s.zamkniete >= MIN_ROZLICZONYCH ? s.proc + "%" : L("od " + MIN_ROZLICZONYCH + " rozliczonych", "from " + MIN_ROZLICZONYCH + " settled")) +
-        wiersz(L("Dane rynkowe", "Market data"), PR ? czasPL(PR.aktualizacja) : "–") +
-        wiersz(L("Kalendarz", "Calendar"), ev + " " + L("wydarzeń", "events")) + "</dl></div>" +
+        faktPanel(L("Analizy", "Analyses"), AN.length + (szk ? " (" + L("w tym szkice AI: ", "AI drafts: ") + szk + ")" : "")) +
+        faktPanel(L("W toku", "Open"), s["w toku"]) +
+        faktPanel(L("Rozliczone", "Settled"), s.zamkniete + " · " + L("trafione ", "hits ") + s.trafiona) +
+        faktPanel(L("Trafność", "Hit rate"), s.zamkniete >= MIN_ROZLICZONYCH ? s.proc + "%" : L("od " + MIN_ROZLICZONYCH + " rozliczonych", "from " + MIN_ROZLICZONYCH + " settled")) +
+        faktPanel(L("Dane rynkowe", "Market data"), PR ? czasPL(PR.aktualizacja) : "–") +
+        faktPanel(L("Kalendarz", "Calendar"), ev + " " + L("wydarzeń", "events")) + "</dl></div>" +
       '<div class="panel"><h4>' + L("Konta i subskrybenci", "Accounts and subscribers") + '</h4><p style="margin:0;font-size:14px">' +
         L("Strona nie ma kont użytkowników: każdy czyta wszystko bez logowania. ", "The site has no user accounts: everyone reads everything without signing in. ") +
         (em ? L("Liczbę zapisanych na powiadomienia e-mail zobaczysz w panelu usługi newslettera.", "You will find the number of e-mail alert subscribers in your newsletter service dashboard.")
