@@ -760,7 +760,7 @@
       "<h2>Jakie dane i po co</h2><ul><li><b>Adres e-mail</b> przy zapisie na powiadomienia: wysyłka powiadomień na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO), do czasu jej wycofania.</li>" +
       "<li><b>Korespondencja</b>, gdy do nas piszesz: odpowiedź na wiadomość, na podstawie naszego prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</li>" +
       "<li><b>Dane techniczne</b> (adres IP, typ przeglądarki) w logach serwera hostingu: bezpieczeństwo i działanie strony (art. 6 ust. 1 lit. f RODO).</li></ul>" +
-      "<h2>Odbiorcy danych</h2><p>Dane mogą otrzymać: dostawca usługi newslettera " + luka("", "nazwa usługi", "service name") + ", dostawca hostingu " + luka("", "nazwa usługi", "service name") + ", a po Twojej zgodzie na pliki cookie TradingView (widżety notowań). Strona korzysta też z czcionek Google Fonts, co oznacza przekazanie adresu IP do Google. Część tych dostawców może przetwarzać dane poza Europejskim Obszarem Gospodarczym na podstawie standardowych klauzul umownych lub decyzji o adekwatności.</p>" +
+      "<h2>Odbiorcy danych</h2><p>Dane mogą otrzymać: dostawca usługi newslettera " + luka("", "nazwa usługi", "service name") + ", dostawca hostingu " + luka("", "nazwa usługi", "service name") + ", a po Twojej zgodzie na pliki cookie TradingView (widżety notowań). Strona korzysta też z czcionek Google Fonts, co oznacza przekazanie adresu IP do Google." + (GC ? " Liczbę odwiedzin mierzy GoatCounter: bez plików cookie i bez zapisywania adresu IP, tylko zbiorcze statystyki (odsłony, strona odsyłająca, kraj, typ urządzenia)." : "") + " Część tych dostawców może przetwarzać dane poza Europejskim Obszarem Gospodarczym na podstawie standardowych klauzul umownych lub decyzji o adekwatności.</p>" +
       "<p>Kanał na Telegramie prowadzi Telegram według własnej polityki prywatności; nie widzimy numerów telefonów subskrybentów.</p>" +
       "<h2>Twoje prawa</h2><p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia, sprzeciwu oraz wycofania zgody w dowolnym momencie. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.</p>" +
       "<h2>Pliki cookie</h2><p>Szczegóły na stronie <a href=\"#cookies\">Pliki cookie</a>.</p>",
@@ -768,7 +768,7 @@
       "<h2>What data and why</h2><ul><li><b>E-mail address</b> when you sign up for alerts: sending alerts based on your consent (Art. 6(1)(a) GDPR), until you withdraw it.</li>" +
       "<li><b>Correspondence</b> when you write to us: replying, based on our legitimate interest (Art. 6(1)(f) GDPR).</li>" +
       "<li><b>Technical data</b> (IP address, browser type) in the hosting server logs: site security and operation (Art. 6(1)(f) GDPR).</li></ul>" +
-      "<h2>Recipients</h2><p>Data may be received by the newsletter provider " + luka("", "nazwa usługi", "service name") + ", the hosting provider " + luka("", "nazwa usługi", "service name") + ", and, once you accept cookies, TradingView (quote widgets). The site also uses Google Fonts, which passes your IP address to Google. Some of these providers may process data outside the European Economic Area under standard contractual clauses or adequacy decisions.</p>" +
+      "<h2>Recipients</h2><p>Data may be received by the newsletter provider " + luka("", "nazwa usługi", "service name") + ", the hosting provider " + luka("", "nazwa usługi", "service name") + ", and, once you accept cookies, TradingView (quote widgets). The site also uses Google Fonts, which passes your IP address to Google." + (GC ? " Visits are measured by GoatCounter: no cookies and no stored IP addresses, only aggregate statistics (pageviews, referrer, country, device type)." : "") + " Some of these providers may process data outside the European Economic Area under standard contractual clauses or adequacy decisions.</p>" +
       "<p>The Telegram channel is run by Telegram under its own privacy policy; we cannot see subscribers' phone numbers.</p>" +
       "<h2>Your rights</h2><p>You have the right to access, rectify and erase your data, to restrict processing, to data portability, to object, and to withdraw consent at any time. You may also lodge a complaint with the Polish data protection authority (Prezes UODO).</p>" +
       "<h2>Cookies</h2><p>See <a href=\"#cookies\">Cookies</a>.</p>"));
@@ -784,14 +784,66 @@
       '</p><p><button type="button" class="btn btn--primary" data-cookies>' + L("Zmień ustawienia", "Change settings") + "</button></p>");
   };
 
+  // ---------- Panel autora (#panel, tylko w trybie autora) ----------
+  var GC = (CFG.statystyki && CFG.statystyki.goatcounter || "").replace(/[^a-z0-9-]/gi, "");
+  var GC_URL = GC ? "https://" + GC + ".goatcounter.com" : "";
+  function sciezkaGC() { var h = (location.hash || "").replace(/^#/, ""); return h && h !== "start" && h !== "panel" ? "/#" + h : "/"; }
+  function liczWejscie() {
+    if (!GC || AUTOR) return;
+    if (window.goatcounter && window.goatcounter.count) { window.goatcounter.count({ path: sciezkaGC() }); return; }
+    window.goatcounter = { no_onload: true };
+    var s = document.createElement("script");
+    s.async = true; s.src = "https://gc.zgo.at/count.js"; s.setAttribute("data-goatcounter", GC_URL + "/count");
+    s.onload = function () { if (window.goatcounter.count) window.goatcounter.count({ path: sciezkaGC() }); };
+    document.head.appendChild(s);
+  }
+  var SEKCJE_GC = [["/", "Strona główna", "Home"], ["/#rynki", "Rynki", "Markets"], ["/#analizy", "Analizy", "Analyses"], ["/#przeglad", "Przegląd AI", "AI brief"], ["/#kalendarz", "Kalendarz", "Calendar"], ["/#powiadomienia", "Powiadomienia", "Alerts"]];
+  function wiersz(dt, dd, id) { return "<div><dt>" + dt + "</dt><dd class=\"num\"" + (id ? ' id="' + id + '"' : "") + ">" + dd + "</dd></div>"; }
+  V.panel = function () {
+    var s = skutecznosc(AN), szk = AN.filter(function (a) { return a.szkic; }).length;
+    var ev = KAL && KAL.wydarzenia ? KAL.wydarzenia.length : 0;
+    var odw = GC
+      ? '<dl class="facts">' + wiersz(L("Wszystkie wejścia", "All pageviews"), "…", "gc-total") +
+        SEKCJE_GC.map(function (x, i) { return wiersz(L(x[1], x[2]), "…", "gc-" + i); }).join("") + "</dl>" +
+        '<p style="margin:12px 0 0;font-size:14px"><a href="' + GC_URL + '" target="_blank" rel="noopener">' + L("Pełne statystyki: wykres dzienny, skąd przychodzą, kraje, urządzenia →", "Full stats: daily chart, referrers, countries, devices →") + "</a></p>" +
+        '<p class="muted" style="margin:8px 0 0;font-size:13px">' + L("Twoje własne wejścia w trybie autora nie są liczone.", "Your own visits in author mode are not counted.") + "</p>"
+      : '<div class="notice"><span class="tag-ex">' + L("wyłączone", "off") + "</span><p>" + L("Licznik odwiedzin nie jest podłączony. Wpisz kod konta GoatCounter w pliku", "The visit counter is not connected. Enter your GoatCounter code in") + ' <span class="num">js/ustawienia.js</span> (statystyki.goatcounter).</p></div>';
+    var em = CFG.powiadomienia && CFG.powiadomienia.emailFormularz;
+    return phead("", L("Tylko dla autora", "Author only"), L("Panel autora", "Author panel"), L("Odwiedziny strony i stan treści w jednym miejscu. Goście nie widzą tej strony.", "Site visits and content status in one place. Guests cannot see this page.")) +
+      '<div class="wrap page"><div class="apanel">' +
+      '<div class="panel"><h4>' + L("Odwiedziny", "Visits") + "</h4>" + odw + "</div>" +
+      '<div class="panel"><h4>' + L("Treść strony", "Content") + '</h4><dl class="facts">' +
+        wiersz(L("Analizy", "Analyses"), AN.length + (szk ? " (" + L("w tym szkice AI: ", "AI drafts: ") + szk + ")" : "")) +
+        wiersz(L("W toku", "Open"), s["w toku"]) +
+        wiersz(L("Rozliczone", "Settled"), s.zamkniete + " · " + L("trafione ", "hits ") + s.trafiona) +
+        wiersz(L("Trafność", "Hit rate"), s.zamkniete >= MIN_ROZLICZONYCH ? s.proc + "%" : L("od " + MIN_ROZLICZONYCH + " rozliczonych", "from " + MIN_ROZLICZONYCH + " settled")) +
+        wiersz(L("Dane rynkowe", "Market data"), PR ? czasPL(PR.aktualizacja) : "–") +
+        wiersz(L("Kalendarz", "Calendar"), ev + " " + L("wydarzeń", "events")) + "</dl></div>" +
+      '<div class="panel"><h4>' + L("Konta i subskrybenci", "Accounts and subscribers") + '</h4><p style="margin:0;font-size:14px">' +
+        L("Strona nie ma kont użytkowników: każdy czyta wszystko bez logowania. ", "The site has no user accounts: everyone reads everything without signing in. ") +
+        (em ? L("Liczbę zapisanych na powiadomienia e-mail zobaczysz w panelu usługi newslettera.", "You will find the number of e-mail alert subscribers in your newsletter service dashboard.")
+            : L("Zapisy na powiadomienia e-mail pojawią się po podłączeniu usługi newslettera.", "E-mail alert sign-ups will appear once a newsletter service is connected.")) + "</p></div>" +
+      "</div></div>";
+  };
+  function wczytajStaty() {
+    if (!GC) return;
+    function pobierz(path, id) {
+      fetch(GC_URL + "/counter/" + encodeURIComponent(path) + ".json").then(function (r) { return r.ok ? r.json() : { count: "0" }; })
+        .then(function (d) { var el = document.getElementById(id); if (el) el.textContent = d.count || "0"; })
+        .catch(function () { var el = document.getElementById(id); if (el) el.textContent = L("brak dostępu", "unavailable"); });
+    }
+    pobierz("TOTAL", "gc-total");
+    SEKCJE_GC.forEach(function (x, i) { pobierz(x[0], "gc-" + i); });
+  }
+
   // ---------- Router ----------
   var TYTULY = { start: "", rynki: ["Rynki", "Markets"], analizy: ["Analizy", "Analyses"], przeglad: ["Przegląd AI", "AI brief"], kalendarz: ["Kalendarz ekonomiczny", "Economic calendar"],
     "o-stronie": ["Metodologia", "Methodology"], kontakt: ["Kontakt", "Contact"], ryzyko: ["Ostrzeżenie o ryzyku", "Risk warning"], powiadomienia: ["Powiadomienia", "Alerts"],
-    regulamin: ["Regulamin", "Terms of service"], prywatnosc: ["Polityka prywatności", "Privacy policy"], cookies: ["Pliki cookie", "Cookies"] };
+    regulamin: ["Regulamin", "Terms of service"], prywatnosc: ["Polityka prywatności", "Privacy policy"], cookies: ["Pliki cookie", "Cookies"], panel: ["Panel autora", "Author panel"] };
   function render(zostanTu) {
     var h = (location.hash || "").replace(/^#/, "") || "start";
     var html, nav = h, tytul = "";
-    if (Object.prototype.hasOwnProperty.call(V, h) && h !== "instrument" && h !== "analiza") { html = V[h](); tytul = TYTULY[h] ? L(TYTULY[h][0], TYTULY[h][1]) : ""; }
+    if (Object.prototype.hasOwnProperty.call(V, h) && h !== "instrument" && h !== "analiza" && (h !== "panel" || AUTOR)) { html = V[h](); tytul = TYTULY[h] ? L(TYTULY[h][0], TYTULY[h][1]) : ""; }
     else if (byId[h]) { html = V.instrument(byId[h]); nav = "rynki"; tytul = byId[h].symbol + " · " + P(byId[h], "nazwa"); }
     else if (h.indexOf("a-") === 0 && AN.some(function (a) { return a.id === h.slice(2); })) {
       var a = AN.filter(function (x) { return x.id === h.slice(2); })[0];
@@ -805,6 +857,8 @@
     if (!zostanTu) { window.scrollTo(0, 0); app.focus({ preventScroll: true }); }
     if (h === "analizy") podepnijFiltry();
     if (h === "kalendarz" && KAL) podepnijKal();
+    if (h === "panel") wczytajStaty();
+    liczWejscie();
   }
   function podepnijFiltry() {
     var fi = document.getElementById("f-ins"), fk = document.getElementById("f-kier"), fw = document.getElementById("f-wyn");
@@ -845,6 +899,8 @@
   }
   function stopka() {
     document.getElementById("foot-rynki").innerHTML = INS.map(function (i) { return '<li><a href="#' + i.id + '">' + esc(P(i, "nazwa")) + "</a></li>"; }).join("");
+    var fp = document.getElementById("foot-panel");
+    if (AUTOR && fp) fp.innerHTML = '<a href="#panel">' + L("Panel autora", "Author panel") + "</a>";
   }
 
   stopka();

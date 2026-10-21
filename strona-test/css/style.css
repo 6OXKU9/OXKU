@@ -258,6 +258,8 @@ section { display: grid; gap: 20px; min-width: 0; }
 .prose h2 { margin-top: 12px; }
 .prose ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
 .contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 760px; }
+.apanel { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; align-items: start; }
+.apanel .facts div { grid-template-columns: 1fr auto; }
 
 /* Stopka */
 .foot { background: var(--brand); color: var(--brand-muted); font-size: 14px; }

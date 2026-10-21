@@ -85,3 +85,10 @@ Strona zapisuje tylko język i decyzję o cookies. Widżety TradingView (mogą z
 ## Wersja angielska
 
 Przełącznik PL/EN w nagłówku. Teksty interfejsu są w kodzie (`L("po polsku", "in English")`), treści w polach z końcówką `_en` w plikach danych. AI uzupełnia wersję angielską przy każdej aktualizacji. Link `?lang=en` otwiera stronę od razu po angielsku.
+
+## Panel autora i licznik odwiedzin
+
+- `#panel` (link „Panel autora” w stopce) widzi tylko autor (`?autor=1`); gość trafia na stronę główną.
+- Odwiedziny liczy GoatCounter (bez cookies, bez zapisu IP): kod konta w `js/ustawienia.js` → `statystyki.goatcounter`. Pusty = licznik wyłączony. Wejścia w trybie autora nie są liczone.
+- Liczby w panelu pochodzą z publicznych liczników GoatCounter (`/counter/…json`), więc w ustawieniach GoatCounter musi być włączone „Allow adding visitor counts on your website”.
+- Strona nie ma kont użytkowników; subskrybentów e-mail widać w panelu usługi newslettera.

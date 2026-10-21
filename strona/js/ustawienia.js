@@ -18,6 +18,12 @@ window.USTAWIENIA = {
     telegram: ""
   },
 
+  // Statystyki odwiedzin (GoatCounter, bez plików cookie). Wpisz kod konta, np. "oxku" dla oxku.goatcounter.com.
+  // Pusty = licznik wyłączony. Wejścia autora (tryb ?autor=1) nie są liczone.
+  statystyki: {
+    goatcounter: ""
+  },
+
   // Baner zgody na pliki cookie. Widżety TradingView ładują się dopiero po zgodzie.
   zgodaCookies: true
 };
