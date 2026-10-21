@@ -2,7 +2,7 @@
 window.USTAWIENIA = {
   // Adres strony bez ukośnika na końcu, np. "https://analizyrynku.pl".
   // Potrzebny do mapy strony (sitemap.xml), linków udostępniania i podglądu w mediach społecznościowych.
-  domena: "",
+  domena: "https://oxku.netlify.app",
 
   // Dane do stopki, kontaktu i stron prawnych.
   wlasciciel: "",            // imię i nazwisko albo nazwa firmy
