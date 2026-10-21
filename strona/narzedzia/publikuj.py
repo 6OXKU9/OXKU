@@ -89,7 +89,7 @@ def strona(a, lang):
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")}</script>
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="{up}css/style.css">
+<link rel="stylesheet" href="{up}css/style.css?v={VER}">
 </head>
 <body>
 <header class="top"><div class="wrap top__in"><a class="logo" href="{up}index.html{"?lang=en" if lang == "en" else ""}"><span class="logo__txt">Analizy<b>Rynku</b></span></a>
@@ -142,6 +142,11 @@ og = (f'<meta property="og:type" content="website">\n<meta property="og:site_nam
       '<meta property="og:description" content="Forex, USD/PLN, złoto, srebro, ropa, Nasdaq 100, S&amp;P 500, DAX i bitcoin: poziomy, scenariusze, kalendarz ekonomiczny.">\n'
       f'<meta property="og:url" content="{DOM}/">\n')
 idx = idx.replace('<link rel="preconnect"', og + '<link rel="preconnect"', 1)
+# Wersja plików w adresach (?v=...), żeby przeglądarka po aktualizacji nie używała starych CSS i JS z pamięci.
+import re as _re, time as _time
+VER = _time.strftime('%Y%m%d%H%M')
+idx = idx.replace('href="css/style.css"', f'href="css/style.css?v={VER}"')
+idx = _re.sub(r'src="js/([\w-]+)\.js"', lambda m: f'src="js/{m.group(1)}.js?v={VER}"', idx)
 open(os.path.join(OUT, 'index.html'), 'w', encoding='utf-8').write(idx)
 
 urls = [f'{DOM}/']

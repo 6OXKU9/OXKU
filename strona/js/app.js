@@ -222,7 +222,7 @@
       s.onload = function () {
         var host = box.closest("[data-tv]");
         var f = host && host.querySelector(".tv-fallback");
-        if (f) f.hidden = true;
+        if (f) { f.hidden = true; f.style.display = "none"; }
         if (host) host.classList.add("tv-ok");
       };
       s.onerror = function () { if (onFail) onFail(box); };

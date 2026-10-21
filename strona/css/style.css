@@ -521,3 +521,5 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 
 /* Zastępcza treść znika, gdy widżet TradingView się wczyta (atrybut hidden musi wygrać z display: grid/flex). */
 .tv-fallback[hidden], .tv-ok > .tv-fallback, .tv-ok .tile__fallback { display: none !important; }
+/* Widżet leży nad zastępczą treścią, więc nawet gdy ta zostanie, nie zasłania wykresu. */
+.tile__chart .tradingview-widget-container, .chart .tradingview-widget-container, .news .tradingview-widget-container { position: relative; z-index: 1; }
