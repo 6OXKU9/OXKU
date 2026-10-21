@@ -144,8 +144,8 @@ og = (f'<meta property="og:type" content="website">\n<meta property="og:site_nam
       '<meta property="og:description" content="Forex, USD/PLN, złoto, srebro, ropa, Nasdaq 100, S&amp;P 500, DAX i bitcoin: poziomy, scenariusze, kalendarz ekonomiczny.">\n'
       f'<meta property="og:url" content="{DOM}/">\n'
       f'<meta property="og:image" content="{DOM}/img/og.png">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
-      '<meta name="twitter:card" content="summary_large_image">\n'
-      f'<link rel="canonical" href="{DOM}/">\n')
+      '<meta name="twitter:card" content="summary_large_image">\n')
+# Bez rel=canonical na stronie głównej: wersje PL i EN (?lang=en) wskazują hreflang, a canonical uznałby EN za duplikat.
 idx = idx.replace('<link rel="preconnect"', og + '<link rel="preconnect"', 1)
 # Wersja plików w adresach (?v=...), żeby przeglądarka po aktualizacji nie używała starych CSS i JS z pamięci.
 import re as _re, time as _time
