@@ -92,3 +92,9 @@ Przełącznik PL/EN w nagłówku. Teksty interfejsu są w kodzie (`L("po polsku"
 - Odwiedziny liczy GoatCounter (bez cookies, bez zapisu IP): kod konta w `js/ustawienia.js` → `statystyki.goatcounter`. Pusty = licznik wyłączony. Wejścia w trybie autora nie są liczone.
 - Liczby w panelu pochodzą z publicznych liczników GoatCounter (`/counter/…json`), więc w ustawieniach GoatCounter musi być włączone „Allow adding visitor counts on your website”.
 - Strona nie ma kont użytkowników; subskrybentów e-mail widać w panelu usługi newslettera.
+
+## Wykresy z poziomami analiz
+
+- Na stronie instrumentu i analizy jest własny wykres świecowy (biblioteka Lightweight Charts od TradingView, licencja Apache 2.0, plik `js/vendor/`) z naniesionymi R1/R2, S1/S2, ceną z analizy i znacznikiem dnia publikacji oraz rozliczenia.
+- Świece dzienne są w `js/ohlc.js`, generowanym przez `narzedzia/pobierz_wykresy.py`. Uruchamia go GitHub Actions (`.github/workflows/wykresy.yml`) po sesji w USA i rano, kopia jest w `dane/ohlc.js` w repozytorium. Bez tego pliku sekcja wykresu się nie pokazuje.
+- `korektaWykresu` w analizie przesuwa poziomy na wykresie, gdy wykres pokazuje inny kontrakt (ropa po zmianie kontraktu).

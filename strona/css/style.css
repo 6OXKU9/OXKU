@@ -562,3 +562,16 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 .lvl__lab > span { display: grid; gap: 1px; }
 .lvl__lab b { font: 600 11px/1.2 var(--f-body); letter-spacing: .02em; }
 .lvl__adv { justify-content: space-between; }
+
+/* Wykres z poziomami analizy */
+.lwbox { border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 14px 16px 10px; display: grid; gap: 8px; }
+.lwbox__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lwbox__head h3 { margin: 0; font-size: 16px; }
+.lwbox__head .muted { font-size: 13px; }
+.lw { height: 360px; position: relative; }
+.lwbox__legend { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.lg::before { content: ""; display: inline-block; width: 16px; height: 0; border-top: 2px solid currentColor; vertical-align: middle; margin-right: 6px; }
+.lg--r::before { color: var(--down); } .lg--s::before { color: var(--up); } .lg--p::before { color: var(--muted); border-top-style: dotted; }
+.lg--m::before { display: none; } .lg--m { color: var(--gold); }
+.lwbox__note { margin: 0; font-size: 12px; }
+@media (max-width: 640px) { .lw { height: 280px; } }

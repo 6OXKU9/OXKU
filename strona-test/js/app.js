@@ -491,7 +491,7 @@
     var a = arr[0];
     var extra = '<div class="meta">' + bias(a && a.kierunek) + (a ? '<span class="sep"></span><span>' + L("Ostatnia analiza: ", "Latest analysis: ") + data(a.data) + "</span>" : "") + "</div>";
     return phead('<a href="#rynki">' + L("Rynki", "Markets") + "</a><span>/</span><span>" + esc(grupa(ins.grupa)) + "</span>", esc(grupa(ins.grupa)) + " · " + esc(ins.symbol), esc(P(ins, "nazwa")), esc(P(ins, "opis")), extra) +
-      '<div class="wrap page"><div class="split"><div class="article">' + kurs(ins) + wykres(ins) +
+      '<div class="wrap page"><div class="split"><div class="article">' + kurs(ins) + wykresAnalizy(ins, a) + wykres(ins) +
       '<div class="sec-head"><div><h2>' + L("Analizy ", "Analyses: ") + esc(ins.symbol) + "</h2></div></div>" +
       (arr.length ? feed(arr) : '<div class="feed"><div class="empty">' + L("Nie ma jeszcze analizy dla tego instrumentu.", "No analysis for this instrument yet.") + "</div></div>") +
       '<div class="sec-head"><div><h2>' + L("Wiadomości", "News") + '</h2></div><span class="muted" style="font-size:13px">' + L("Dane: TradingView", "Data: TradingView") + "</span></div>" + newsy(ins) + "</div>" +
@@ -514,6 +514,7 @@
     return phead('<a href="#analizy">' + L("Analizy", "Analyses") + '</a><span>/</span><a href="#' + esc(ins.id) + '">' + esc(ins.symbol) + "</a>", esc(P(ins, "nazwa")), esc(P(a, "tytul")), "", extra) +
       '<div class="wrap page"><div class="split"><div class="article">' +
       '<div class="summary"><h4 class="eyebrow">' + L("Podsumowanie", "Summary") + "</h4><p>" + esc(P(a, "lead")) + "</p></div>" +
+      wykresAnalizy(ins, a) +
       (P(a, "tresc") || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +
       (a.scenariusze && a.scenariusze.length ? '<div class="sec-head"><div><h2>' + L("Scenariusze", "Scenarios") + '</h2></div></div><ul class="scen">' + a.scenariusze.map(function (s) { return "<li><span>" + bias(s.typ) + "</span><p>" + esc(P(s, "tekst")) + "</p></li>"; }).join("") + "</ul>" : "") +
       (a.zrodla && a.zrodla.length ? '<div class="sec-head"><div><h2>' + L("Źródła", "Sources") + '</h2></div></div><ol class="sources">' + a.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol>" : "") +
@@ -784,6 +785,68 @@
       '</p><p><button type="button" class="btn btn--primary" data-cookies>' + L("Zmień ustawienia", "Change settings") + "</button></p>");
   };
 
+  // ---------- Wykres z poziomami analizy (własne świece z js/ohlc.js + biblioteka Lightweight Charts) ----------
+  // Dane pobiera automatycznie GitHub Actions (narzedzia/pobierz_wykresy.py). Bez danych sekcja się nie pokazuje.
+  var OHLC = (window.OHLC && window.OHLC.instrumenty) || {};
+  var wykresy = [];
+  function maWykres(ins) { return !!(window.LightweightCharts && OHLC[ins.id] && OHLC[ins.id].swiece.length > 5); }
+  function wykresAnalizy(ins, a) {
+    if (!a || !maWykres(ins)) return "";
+    var k = a.korektaWykresu;
+    return '<div class="lwbox"><div class="lwbox__head"><h3>' + L("Wykres z poziomami analizy", "Chart with analysis levels") + "</h3>" +
+      '<span class="muted">' + L("Analiza z ", "Analysis of ") + data(a.data) + " · D1</span></div>" +
+      '<div class="lw" data-lw="' + esc(ins.id) + '" data-an="' + esc(a.id) + '"></div>' +
+      '<p class="lwbox__legend"><span class="lg lg--r">R1, R2 ' + L("opory", "resistance") + '</span><span class="lg lg--s">S1, S2 ' + L("wsparcia", "support") + '</span><span class="lg lg--p">' + L("cena w analizie", "price in analysis") + '</span><span class="lg lg--m">▼ ' + L("dzień publikacji", "publication day") + "</span></p>" +
+      (k ? '<p class="muted lwbox__note">' + esc(P(k, "opis")) + "</p>" : "") +
+      '<p class="muted lwbox__note">' + L("Świece dzienne: ", "Daily candles: ") + esc(OHLC[ins.id].zrodlo) + ", " + L("stan na ", "as of ") + czasPL(window.OHLC.aktualizacja) + "</p></div>";
+  }
+  function kolor(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+  function rysujWykresy() {
+    wykresy.forEach(function (c) { try { c.remove(); } catch (e) {} });
+    wykresy = [];
+    document.querySelectorAll("[data-lw]").forEach(function (el) {
+      var ins = byId[el.getAttribute("data-lw")], aid = el.getAttribute("data-an");
+      var a = AN.filter(function (x) { return x.id === aid; })[0];
+      if (!ins || !a) return;
+      var LW = window.LightweightCharts, sw = OHLC[ins.id].swiece, dec = typeof ins.dec === "number" ? ins.dec : 2;
+      var sh = (a.korektaWykresu && a.korektaWykresu.o) || 0;
+      function lv(v) { return Math.round((v + sh) * Math.pow(10, dec)) / Math.pow(10, dec); }
+      var c = LW.createChart(el, {
+        autoSize: true,
+        layout: { background: { type: "solid", color: "transparent" }, textColor: kolor("--muted"), fontFamily: "IBM Plex Mono, monospace", fontSize: 11 },
+        grid: { vertLines: { color: kolor("--line") }, horzLines: { color: kolor("--line") } },
+        rightPriceScale: { borderColor: kolor("--line-strong") || kolor("--line") },
+        timeScale: { borderColor: kolor("--line-strong") || kolor("--line") },
+        localization: { locale: en() ? "en-GB" : "pl-PL", priceFormatter: function (p) { return cena(p, ins); } },
+        handleScroll: { mouseWheel: false }, handleScale: { mouseWheel: false }
+      });
+      var up = kolor("--up"), dn = kolor("--down");
+      var lv1 = [].concat(a.poziomy.opory || [], a.poziomy.wsparcia || [], [a.poziomy.cena]).map(lv);
+      var s = c.addCandlestickSeries({
+        upColor: up, downColor: dn, wickUpColor: up, wickDownColor: dn, borderVisible: false,
+        priceFormat: { type: "price", precision: dec, minMove: 1 / Math.pow(10, dec) },
+        autoscaleInfoProvider: function (orig) {
+          var r = orig();
+          if (!r) return r;
+          return { priceRange: { minValue: Math.min.apply(null, [r.priceRange.minValue].concat(lv1)), maxValue: Math.max.apply(null, [r.priceRange.maxValue].concat(lv1)) } };
+        }
+      });
+      s.setData(sw.map(function (x) { return { time: x[0], open: x[1], high: x[2], low: x[3], close: x[4] }; }));
+      (a.poziomy.opory || []).forEach(function (v, i) { s.createPriceLine({ price: lv(v), color: dn, lineWidth: i ? 1 : 2, lineStyle: i ? 2 : 0, axisLabelVisible: true, title: "R" + (i + 1) }); });
+      (a.poziomy.wsparcia || []).forEach(function (v, i) { s.createPriceLine({ price: lv(v), color: up, lineWidth: i ? 1 : 2, lineStyle: i ? 2 : 0, axisLabelVisible: true, title: "S" + (i + 1) }); });
+      s.createPriceLine({ price: lv(a.poziomy.cena), color: kolor("--muted"), lineWidth: 1, lineStyle: 1, axisLabelVisible: false, title: L("analiza", "analysis") });
+      function swieca(d) { for (var i = 0; i < sw.length; i++) if (sw[i][0] >= d) return sw[i][0]; return null; }
+      var m = [], t0 = swieca(a.data);
+      if (t0) m.push({ time: t0, position: "aboveBar", color: kolor("--gold"), shape: "arrowDown", text: L("Analiza", "Analysis") });
+      var w = a.wynik && a.wynik.data && swieca(a.wynik.data);
+      if (w && WYNIKI[stan(a)]) m.push({ time: w, position: stan(a) === "trafiona" ? "aboveBar" : "belowBar", color: stan(a) === "trafiona" ? up : stan(a) === "nietrafiona" ? dn : kolor("--muted"), shape: "circle", text: L(WYNIKI[stan(a)][1], WYNIKI[stan(a)][2]) });
+      m.sort(function (x, y) { return x.time < y.time ? -1 : x.time > y.time ? 1 : 0; });
+      s.setMarkers(m);
+      c.timeScale().setVisibleLogicalRange({ from: Math.max(0, sw.length - 70), to: sw.length + 2 });
+      wykresy.push(c);
+    });
+  }
+
   // ---------- Panel autora (#panel, tylko w trybie autora) ----------
   var GC = (CFG.statystyki && CFG.statystyki.goatcounter || "").replace(/[^a-z0-9-]/gi, "");
   var GC_URL = GC ? "https://" + GC + ".goatcounter.com" : "";
@@ -858,6 +921,7 @@
     if (h === "analizy") podepnijFiltry();
     if (h === "kalendarz" && KAL) podepnijKal();
     if (h === "panel") wczytajStaty();
+    if (document.querySelector("[data-lw]")) rysujWykresy();
     liczWejscie();
   }
   function podepnijFiltry() {

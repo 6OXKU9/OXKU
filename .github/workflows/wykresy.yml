@@ -1,0 +1,31 @@
+# Pobiera dzienne notowania do wykresów z poziomami analiz i publikuje je (Netlify wdraża po każdym pushu).
+name: Notowania do wykresów
+on:
+  schedule:
+    - cron: "15 21 * * 1-5"   # po zamknięciu sesji w USA
+    - cron: "0 6 * * *"       # rano (bitcoin handluje też w weekend)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wykresy
+jobs:
+  pobierz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pobierz świece
+        run: |
+          mkdir -p dane
+          python3 strona/narzedzia/pobierz_wykresy.py dane/ohlc.js
+          cp dane/ohlc.js strona/js/ohlc.js
+          cp dane/ohlc.js strona-test/js/ohlc.js
+      - name: Zapisz zmiany
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dane/ohlc.js strona/js/ohlc.js strona-test/js/ohlc.js
+          if git diff --cached --quiet; then echo "Bez zmian"; exit 0; fi
+          git commit -m "Notowania do wykresów $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin main
