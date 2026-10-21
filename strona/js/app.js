@@ -246,12 +246,28 @@
     return '<div class="quote" data-tv><div class="quote__fallback tv-fallback"><span class="num">' + esc(ins.symbol) + "</span><span>" + L("Aktualny kurs pojawi się tutaj na opublikowanej stronie.", "The live quote appears here on the published site.") + "</span></div>" +
       tvWidget("tv-quote-" + ins.id, "symbol-info", { symbol: ins.tv, width: "100%", isTransparent: true }) + "</div>";
   }
-  // Kafelek z kursem i małym wykresem (strona Rynki).
+  // Kafelek rynku (strona Rynki): kurs i zmiana z przeglądu AI oraz pasek poziomów z ostatniej analizy.
+  // Bez widżetów TradingView, więc bez przekierowań i bez zależności od zgody na pliki cookie.
   function kafelek(ins) {
-    var a = ostatnia(ins.id);
-    return '<div class="tile" data-tv><div class="tile__head"><a class="ins" href="#' + ins.id + '"><b>' + esc(ins.symbol) + "</b><span>" + esc(P(ins, "nazwa")) + "</span></a>" + bias(a && a.kierunek) + "</div>" +
-      '<div class="tile__chart"><div class="tile__fallback tv-fallback">' + L("Kurs i wykres na żywo<br>na opublikowanej stronie", "Live quote and chart<br>on the published site") + "</div>" +
-      tvWidget("tv-mini-" + ins.id, "mini-symbol-overview", { symbol: ins.tv, width: "100%", height: "100%", dateRange: "1M", isTransparent: true, autosize: true }) + "</div></div>";
+    var a = ostatnia(ins.id), p = (PR && PR.instrumenty && PR.instrumenty[ins.id]) || {};
+    var poz = a && a.poziomy, S = (poz && poz.wsparcia) || [], R = (poz && poz.opory) || [];
+    var px = p.kurs != null ? p.kurs : poz && poz.cena;
+    var cenaHtml = px != null ? '<span class="num tile__px">' + cena(px, ins) + "</span>" + (p.kurs != null ? zmianaTxt(p.zmiana) : '<span class="muted">' + L("cena z analizy", "price from analysis") + "</span>")
+      : '<span class="muted">' + L("brak danych", "no data") + "</span>";
+    var pasek = "";
+    if (px != null && S.length && R.length) {
+      var lo = Math.min(S[S.length - 1], px), hi = Math.max(R[R.length - 1], px), w = hi - lo || 1;
+      var poz2 = function (v) { return Math.max(0, Math.min(100, (v - lo) / w * 100)).toFixed(1) + "%"; };
+      pasek = '<div class="lvl" aria-hidden="true"><div class="lvl__bar">' +
+        '<span class="lvl__zone" style="left:' + poz2(S[0]) + ";right:calc(100% - " + poz2(R[0]) + ')"></span>' +
+        S.map(function (v) { return '<span class="lvl__tick lvl__tick--s" style="left:' + poz2(v) + '"></span>'; }).join("") +
+        R.map(function (v) { return '<span class="lvl__tick lvl__tick--r" style="left:' + poz2(v) + '"></span>'; }).join("") +
+        '<span class="lvl__px" style="left:' + poz2(px) + '"></span></div>' +
+        '<div class="lvl__lab"><span><b class="lv-dn">S1</b> ' + cena(S[0], ins) + "</span><span><b class=\"lv-up\">R1</b> " + cena(R[0], ins) + "</span></div></div>";
+    }
+    return '<div class="tile"><div class="tile__head"><a class="ins" href="#' + ins.id + '"><b>' + esc(ins.symbol) + "</b><span>" + esc(P(ins, "nazwa")) + "</span></a>" + bias(a && a.kierunek) + "</div>" +
+      '<div class="tile__q">' + cenaHtml + "</div>" + pasek +
+      '<a class="tile__more" href="#' + ins.id + '">' + L("Wykres i analiza", "Chart and analysis") + " →</a></div>";
   }
   // Pasek notowań na żywo pod nagłówkiem. Bez TradingView (lub bez zgody) po prostu się chowa.
   function pasekNotowan() {
@@ -392,7 +408,7 @@
 
   V.rynki = function () {
     return phead("", L("Rynki", "Markets"), L("Przegląd rynków", "Markets overview"), L("Nastawienie i najbliższe poziomy z ostatnich analiz dla wszystkich obserwowanych instrumentów.", "Bias and nearest levels from the latest analyses for every instrument we cover.")) +
-      '<div class="wrap page"><section><div class="sec-head"><div><p class="eyebrow">' + L("Na żywo", "Live") + "</p><h2>" + L("Notowania", "Quotes") + '</h2></div><span class="muted" style="font-size:13px">' + L("Dane: TradingView", "Data: TradingView") + "</span></div>" +
+      '<div class="wrap page"><section><div class="sec-head"><div><p class="eyebrow">' + L("Kursy i poziomy", "Prices and levels") + "</p><h2>" + L("Notowania", "Quotes") + '</h2></div><span class="muted" style="font-size:13px">' + L("Kurs: przegląd AI", "Price: AI overview") + (PR ? ", " + esc(P(PR, "stanNa")) : "") + "</span></div>" +
       GRUPY.map(function (g) {
         var items = INS.filter(function (i) { return i.grupa === g; });
         return items.length ? '<div class="tiles-group"><h4 class="grp-title">' + grupa(g) + '</h4><div class="tiles">' + items.map(kafelek).join("") + "</div></div>" : "";

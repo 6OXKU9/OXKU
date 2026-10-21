@@ -523,3 +523,17 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 .tv-fallback[hidden], .tv-ok > .tv-fallback, .tv-ok .tile__fallback { display: none !important; }
 /* Widżet leży nad zastępczą treścią, więc nawet gdy ta zostanie, nie zasłania wykresu. */
 .tile__chart .tradingview-widget-container, .chart .tradingview-widget-container, .news .tradingview-widget-container { position: relative; z-index: 1; }
+
+/* Kafelek rynku bez widżetu: kurs, zmiana i pasek poziomów S/R z ostatniej analizy. */
+.tile { padding-bottom: 12px; }
+.tile__q { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; min-height: 30px; }
+.tile__px { font-size: 22px; font-weight: 500; color: var(--ink); }
+.lvl { display: grid; gap: 6px; margin-top: 4px; }
+.lvl__bar { position: relative; height: 10px; border-radius: 5px; background: var(--surface-2); border: 1px solid var(--line); }
+.lvl__zone { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--muted) 22%, transparent); }
+.lvl__tick { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; }
+.lvl__tick--s { background: var(--up, #2fb37a); }
+.lvl__tick--r { background: var(--down, #e5634d); }
+.lvl__px { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 2px var(--surface); }
+.lvl__lab { display: flex; justify-content: space-between; font: 500 12px/1.2 var(--f-mono); color: var(--muted); }
+.tile__more { font-size: 13px; font-weight: 500; justify-self: start; }
