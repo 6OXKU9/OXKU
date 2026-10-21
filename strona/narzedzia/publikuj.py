@@ -146,6 +146,7 @@ idx = idx.replace('<link rel="preconnect"', og + '<link rel="preconnect"', 1)
 import re as _re, time as _time
 VER = _time.strftime('%Y%m%d%H%M')
 idx = idx.replace('href="css/style.css"', f'href="css/style.css?v={VER}"')
+idx = idx.replace('Wszelkie prawa zastrzeżone.</span></p>', f'Wszelkie prawa zastrzeżone.</span> <span class="wersja">v{VER}</span></p>', 1)
 idx = _re.sub(r'src="js/([\w-]+)\.js"', lambda m: f'src="js/{m.group(1)}.js?v={VER}"', idx)
 open(os.path.join(OUT, 'index.html'), 'w', encoding='utf-8').write(idx)
 
