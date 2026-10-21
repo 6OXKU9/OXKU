@@ -23,6 +23,32 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-21-dax", instrument: "dax", data: "2026-10-21", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "DAX wybił się z oporu 25 450–25 500, celem 25 800–26 000", tytul_en: "DAX breaks out of 25,450–25,500 resistance, eyeing 25,800–26,000",
+    lead: "DAX zamknął się na najwyższym poziomie od miesiąca po mocnym starcie sezonu wyników. Dopóki indeks trzyma się powyżej 10-dniowej średniej (25 325), przewagę mają kupujący.",
+    lead_en: "The DAX closed at a one-month high after a strong start to earnings season. As long as it holds above the 10-day average (25,325), buyers have the edge.",
+    poziomy: { cena: 25647, opory: [25800, 26000], wsparcia: [25325, 24825] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo kontynuacja wzrostu w stronę 25 800, a dalej 26 000. Strefa 25 450–25 500, która od początku października była oporem, powinna teraz działać jako wsparcie.", tekst_en: "Base case: further gains toward 25,800 and then 26,000. The 25,450–25,500 zone, resistance since early October, should now act as support." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 325 (10-dniowa EMA) unieważnia scenariusz i kieruje indeks na podwójne dno 24 825–24 789.", tekst_en: "A daily close below 25,325 (10-day EMA) invalidates the setup and targets the double bottom at 24,825–24,789." }
+    ],
+    tresc: [
+      "DAX zakończył środową sesję Xetra na 25 647,11 pkt (+1,35%), najwyżej od około miesiąca. Rano spadł do 25 250, a w ciągu dnia doszedł do 25 706. Najmocniej rosły SAP (+3,5% przed wynikami po sesji), Airbus, Bayer i Siemens; Adidas podniósł prognozę zysku na 2026 rok.",
+      "Technicznie indeks pokonał strefę 25 450–25 500, na której zatrzymywał się od początku października. ING wskazuje kolejne opory 25 650, 25 800 i okolice 26 000, a wsparcie w 10-dniowej średniej wykładniczej (25 325) i w podwójnym dnie 24 825/24 789.",
+      "Ryzykiem są wyniki SAP po sesji (22:05), wstępne PMI w czwartek 23 paź i decyzja EBC w przyszłym tygodniu (28–29 paź)."
+    ],
+    tresc_en: [
+      "The DAX ended Wednesday's Xetra session at 25,647.11 (+1.35%), its highest in about a month. It dipped to 25,250 in the morning and reached 25,706 intraday. SAP (+3.5% ahead of results after the close), Airbus, Bayer and Siemens led gains; Adidas raised its 2026 profit guidance.",
+      "Technically the index cleared the 25,450–25,500 zone that had capped it since early October. ING names further resistance at 25,650, 25,800 and around 26,000, with support at the 10-day exponential average (25,325) and the double bottom at 24,825/24,789.",
+      "Risks are SAP's results after the close (22:05 Warsaw time), flash PMIs on Thursday 23 Oct and next week's ECB decision (28–29 Oct)."
+    ],
+    zrodla: [
+      { nazwa: "MS Aktuell: DAX auf Vierwochenhoch (21 paź 2026)", url: "https://ms-aktuell.de/welt/dax-vierwochenhoch-21-10-2026/" },
+      { nazwa: "wallstreet-online / ING Markets: DAX – Tiefe Korrektur vorbei? (21 paź 2026)", url: "https://www.wallstreet-online.de/nachricht/21558344-dax-tiefe-korrektur-vorbei" }
+    ]
+  },
+  {
     id: "2026-10-18-zloto", instrument: "xauusd", data: "2026-10-18", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
     tytul: "Złoto w zakresie 4096–4240, przewaga strony podażowej", tytul_en: "Gold ranges between 4,096 and 4,240, sellers hold a slight edge",

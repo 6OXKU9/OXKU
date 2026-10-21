@@ -438,9 +438,9 @@
       '<div class="stats"><div class="stat"><b>' + INS.length + "</b><span>" + L("Instrumentów", "Instruments") + "</span></div>" +
       '<div class="stat"><b>' + AN.length + "</b><span>" + L("Analiz", "Analyses") + "</span></div>" +
       '<div class="stat"><b>' + trafnoscTxt(sk) + "</b><span>" + (sk.zamkniete > 0 && sk.zamkniete < MIN_ROZLICZONYCH ? L("Trafione / rozliczone", "Hits / settled") : L("Trafność", "Hit rate")) + "</span></div>" +
-      '<div class="stat"><b>' + (f ? data(f.data) : "–") + "</b><span>" + L("Ostatnia aktualizacja", "Last update") + "</span></div></div></div>" +
+      '<div class="stat"><b>' + (PR ? czasPL(PR.aktualizacja) : f ? data(f.data) : "–") + "</b><span>" + L("Aktualizacja danych", "Data updated") + "</span></div></div></div>" +
       (f ? '<article class="feature"><div class="feature__tag"><span>' + L("Najnowsza analiza", "Latest analysis") + "</span>" + ex(f) + "</div>" +
-        '<div class="meta"><b class="num" style="color:var(--ink)">' + esc(fi.symbol) + "</b>" + bias(f.kierunek) + '<span class="num">' + esc(f.interwal) + "</span></div>" +
+        '<div class="meta"><b class="num" style="color:var(--ink)">' + esc(fi.symbol) + "</b>" + bias(f.kierunek) + '<span class="num">' + esc(f.interwal) + '</span><span class="sep"></span><span>' + data(f.data) + "</span></div>" +
         '<h3><a href="#a-' + esc(f.id) + '">' + esc(P(f, "tytul")) + "</a></h3>" + drabinka(f) +
         '<a class="btn btn--primary" href="#a-' + esc(f.id) + '">' + L("Czytaj analizę", "Read analysis") + "</a></article>" : "") +
       "</div></section>";

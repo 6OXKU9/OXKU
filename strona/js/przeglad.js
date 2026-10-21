@@ -30,7 +30,7 @@ window.PRZEGLAD = {
     xagusd: { kurs: 57.54, zmiana: -0.74, tydzien: null, notka: "Lekko w dół razem ze złotem.", notka_en: "Slightly lower along with gold.", zrodlo: 0 },
     usdpln: { kurs: 3.8882, zmiana: null, tydzien: null, notka: "Wyliczony z kursów EUR/PLN (4,3653) i EUR/USD (1,1227) z tego samego źródła.", notka_en: "Derived from EUR/PLN (4.3653) and EUR/USD (1.1227) from the same source.", zrodlo: 1 },
     wti:    { kurs: 96.85, zmiana: -0.99, tydzien: null, notka: "Kontrakt grudniowy. Spadek mimo mniejszych zapasów (−3,06 mln baryłek), bo przepływy przez Ormuz się poprawiają. Brent 108,43 USD.", notka_en: "December contract. Lower despite a stock draw (−3.06M barrels) as Hormuz flows improve. Brent at $108.43.", zrodlo: 2 },
-    dax:    { kurs: 25662, zmiana: 1.41, tydzien: null, notka: "Wzrost dzięki spółkom AI przed wynikami SAP (22:05). Opór z analizy 25 915.", notka_en: "Higher on AI stocks ahead of SAP earnings (22:05 Warsaw time). Analysis resistance at 25,915.", zrodlo: 0 },
+    dax:    { kurs: 25647, zmiana: 1.35, tydzien: null, notka: "Zamknięcie Xetra najwyżej od miesiąca, przed wynikami SAP (22:05). Nowa analiza: cel 25 800, wsparcie 25 325.", notka_en: "Xetra close at a one-month high, ahead of SAP earnings (22:05 Warsaw time). New analysis: target 25,800, support 25,325.", zrodlo: 5 },
     btcusd: { kurs: 84474, zmiana: 1.83, tydzien: null, notka: "Powyżej górnej granicy zakresu z analizy (84 262). Liczy się zamknięcie dnia.", notka_en: "Above the top of the analysis range (84,262). The daily close is what counts.", zrodlo: 0 }
   },
   kalendarz: [
@@ -43,6 +43,7 @@ window.PRZEGLAD = {
     { nazwa: "Trading Economics: EUR/USD (z tabelą walut), 21 paź 2026", nazwa_en: "Trading Economics: EUR/USD (with currency table), 21 Oct 2026", url: "https://tradingeconomics.com/euro-area/currency" },
     { nazwa: "Trading Economics: ropa WTI i Brent, zapasy EIA, 21 paź 2026", nazwa_en: "Trading Economics: WTI and Brent crude, EIA inventories, 21 Oct 2026", url: "https://tradingeconomics.com/commodity/crude-oil" },
     { nazwa: "Yahoo Finance: Stock market today, 21 paź 2026", nazwa_en: "Yahoo Finance: Stock market today, 21 Oct 2026", url: "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html" },
-    { nazwa: "FXStreet: UK CPI inflation climbs to 3.5% YoY in September", url: "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200" }
+    { nazwa: "FXStreet: UK CPI inflation climbs to 3.5% YoY in September", url: "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200" },
+    { nazwa: "MS Aktuell: DAX auf Vierwochenhoch (zamknięcie Xetra), 21 paź 2026", nazwa_en: "MS Aktuell: DAX at a four-week high (Xetra close), 21 Oct 2026", url: "https://ms-aktuell.de/welt/dax-vierwochenhoch-21-10-2026/" }
   ]
 };
