@@ -247,27 +247,61 @@
       tvWidget("tv-quote-" + ins.id, "symbol-info", { symbol: ins.tv, width: "100%", isTransparent: true }) + "</div>";
   }
   // Kafelek rynku (strona Rynki): kurs i zmiana z przeglądu AI oraz pasek poziomów z ostatniej analizy.
-  // Bez widżetów TradingView, więc bez przekierowań i bez zależności od zgody na pliki cookie.
+  // Dwie warstwy: zdanie prostym językiem dla początkujących i wiersz szczegółów (S2/R2, interwał, data, status) dla zaawansowanych.
+  function odl(v, px) { var d = (v - px) / px * 100; return (d > 0 ? "+" : d < 0 ? "−" : "") + Math.abs(d).toLocaleString(NLOC(), { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "%"; }
+  function gdzieCena(px, s1, r1) {
+    if (px < s1) return [L("Cena spadła poniżej wsparcia. To sygnał słabości: sprzedający mają przewagę.", "The price has fallen below support. A sign of weakness: sellers are in control."), "dn"];
+    if (px > r1) return [L("Cena przebiła opór. To sygnał siły: kupujący mają przewagę.", "The price has broken above resistance. A sign of strength: buyers are in control."), "up"];
+    var r = (px - s1) / (r1 - s1 || 1);
+    if (r < 0.25) return [L("Cena jest blisko wsparcia, czyli poziomu, przy którym spadki często się zatrzymują.", "The price is near support, a level where declines often stall."), ""];
+    if (r > 0.75) return [L("Cena jest blisko oporu, czyli poziomu, przy którym wzrosty często się zatrzymują.", "The price is near resistance, a level where rallies often stall."), ""];
+    return [L("Cena jest mniej więcej w połowie drogi między wsparciem a oporem.", "The price is roughly halfway between support and resistance."), ""];
+  }
   function kafelek(ins) {
     var a = ostatnia(ins.id), p = (PR && PR.instrumenty && PR.instrumenty[ins.id]) || {};
     var poz = a && a.poziomy, S = (poz && poz.wsparcia) || [], R = (poz && poz.opory) || [];
     var px = p.kurs != null ? p.kurs : poz && poz.cena;
-    var cenaHtml = px != null ? '<span class="num tile__px">' + cena(px, ins) + "</span>" + (p.kurs != null ? zmianaTxt(p.zmiana) : '<span class="muted">' + L("cena z analizy", "price from analysis") + "</span>")
+    var cenaHtml = px != null ? '<span class="num tile__px">' + cena(px, ins) + "</span>" + (p.kurs != null ? zmianaTxt(p.zmiana) + '<span class="tile__hint">' + L("dziś", "today") + "</span>" : '<span class="muted">' + L("cena z analizy", "price from analysis") + "</span>")
       : '<span class="muted">' + L("brak danych", "no data") + "</span>";
     var pasek = "";
     if (px != null && S.length && R.length) {
       var lo = Math.min(S[S.length - 1], px), hi = Math.max(R[R.length - 1], px), w = hi - lo || 1;
-      var poz2 = function (v) { return Math.max(0, Math.min(100, (v - lo) / w * 100)).toFixed(1) + "%"; };
-      pasek = '<div class="lvl" aria-hidden="true"><div class="lvl__bar">' +
-        '<span class="lvl__zone" style="left:' + poz2(S[0]) + ";right:calc(100% - " + poz2(R[0]) + ')"></span>' +
-        S.map(function (v) { return '<span class="lvl__tick lvl__tick--s" style="left:' + poz2(v) + '"></span>'; }).join("") +
-        R.map(function (v) { return '<span class="lvl__tick lvl__tick--r" style="left:' + poz2(v) + '"></span>'; }).join("") +
-        '<span class="lvl__px" style="left:' + poz2(px) + '"></span></div>' +
-        '<div class="lvl__lab"><span><b class="lv-dn">S1</b> ' + cena(S[0], ins) + "</span><span><b class=\"lv-up\">R1</b> " + cena(R[0], ins) + "</span></div></div>";
+      var x = function (v) { return Math.max(0, Math.min(100, (v - lo) / w * 100)).toFixed(1) + "%"; };
+      var tick = function (v, k, n) { return '<span class="lvl__tick lvl__tick--' + k + '" style="left:' + x(v) + '" title="' + (k === "s" ? "S" : "R") + n + " " + cena(v, ins) + '"></span>'; };
+      var g = gdzieCena(px, S[0], R[0]);
+      var adv = [esc(a.interwal) + " · " + data(a.data).replace(/ \d{4}$/, "")];
+      if (S[1] != null) adv.push("S2 " + cena(S[1], ins));
+      if (R[1] != null) adv.push("R2 " + cena(R[1], ins));
+      pasek = '<div class="lvl"><div class="lvl__bar" role="img" aria-label="' + esc(g[0]) + '">' +
+        '<span class="lvl__zone" style="left:' + x(S[0]) + ";right:calc(100% - " + x(R[0]) + ')"></span>' +
+        S.map(function (v, n) { return tick(v, "s", n + 1); }).join("") + R.map(function (v, n) { return tick(v, "r", n + 1); }).join("") +
+        '<span class="lvl__px" style="left:' + x(px) + '"></span></div>' +
+        '<div class="lvl__lab"><span><b class="lv-dn">' + L("Wsparcie S1", "Support S1") + "</b><span>" + cena(S[0], ins) + ' <i>' + odl(S[0], px) + "</i></span></span>" +
+        '<span class="r"><b class="lv-up">' + L("Opór R1", "Resistance R1") + "</b><span>" + cena(R[0], ins) + ' <i>' + odl(R[0], px) + "</i></span></span></div>" +
+        '<p class="lvl__txt' + (g[1] ? " lvl__txt--" + g[1] : "") + '">' + g[0] + "</p>" +
+        '<div class="lvl__adv"><span>' + adv.join(" · ") + "</span>" + wynikTag(a) + "</div></div>";
     }
     return '<div class="tile"><div class="tile__head"><a class="ins" href="#' + ins.id + '"><b>' + esc(ins.symbol) + "</b><span>" + esc(P(ins, "nazwa")) + "</span></a>" + bias(a && a.kierunek) + "</div>" +
       '<div class="tile__q">' + cenaHtml + "</div>" + pasek +
-      '<a class="tile__more" href="#' + ins.id + '">' + L("Wykres i analiza", "Chart and analysis") + " →</a></div>";
+      '<a class="tile__more" href="#' + ins.id + '">' + L("Wykres i pełna analiza", "Chart and full analysis") + " →</a></div>";
+  }
+  // Krótka legenda nad kafelkami: jak je czytać.
+  function jakCzytac() {
+    return '<details class="howto"><summary>' + L("Jak czytać kafelki?", "How to read the tiles?") + "</summary><div class=\"howto__body\">" +
+      '<div class="lvl__bar howto__bar" aria-hidden="true"><span class="lvl__zone" style="left:25%;right:25%"></span><span class="lvl__tick lvl__tick--s" style="left:5%"></span><span class="lvl__tick lvl__tick--s" style="left:25%"></span><span class="lvl__tick lvl__tick--r" style="left:75%"></span><span class="lvl__tick lvl__tick--r" style="left:95%"></span><span class="lvl__px" style="left:45%"></span></div><ul>' +
+      L("<li><b>Biała kropka</b> to aktualna cena.</li>" +
+        "<li><b>Zielone kreski</b> to wsparcia: poziomy poniżej ceny, przy których spadki często się zatrzymują. Bliższa to S1, dalsza S2.</li>" +
+        "<li><b>Czerwone kreski</b> to opory: poziomy powyżej ceny, przy których wzrosty często się zatrzymują (R1, R2).</li>" +
+        "<li><b>Szare pole</b> to zakres między S1 a R1. Wyjście ceny poza nie to zwykle ważny sygnał.</li>" +
+        "<li><b>Procenty</b> przy poziomach mówią, o ile cena musiałaby się zmienić, żeby do nich dojść.</li>" +
+        "<li><b>Etykieta</b> w rogu (wzrostowy, spadkowy, neutralny) to nastawienie z ostatniej analizy. Najedź na kreskę, żeby zobaczyć jej dokładny poziom.</li>",
+        "<li>The <b>white dot</b> is the current price.</li>" +
+        "<li><b>Green marks</b> are support: levels below the price where declines often stall. The nearer one is S1, the farther S2.</li>" +
+        "<li><b>Red marks</b> are resistance: levels above the price where rallies often stall (R1, R2).</li>" +
+        "<li>The <b>grey band</b> is the range between S1 and R1. A move outside it is usually a meaningful signal.</li>" +
+        "<li>The <b>percentages</b> next to each level show how far the price would have to move to reach it.</li>" +
+        "<li>The <b>label</b> in the corner (bullish, bearish, neutral) is the bias from the latest analysis. Hover over a mark to see its exact level.</li>") +
+      "</ul></div></details>";
   }
   // Pasek notowań na żywo pod nagłówkiem. Bez TradingView (lub bez zgody) po prostu się chowa.
   function pasekNotowan() {
@@ -408,7 +442,7 @@
 
   V.rynki = function () {
     return phead("", L("Rynki", "Markets"), L("Przegląd rynków", "Markets overview"), L("Nastawienie i najbliższe poziomy z ostatnich analiz dla wszystkich obserwowanych instrumentów.", "Bias and nearest levels from the latest analyses for every instrument we cover.")) +
-      '<div class="wrap page"><section><div class="sec-head"><div><p class="eyebrow">' + L("Kursy i poziomy", "Prices and levels") + "</p><h2>" + L("Notowania", "Quotes") + '</h2></div><span class="muted" style="font-size:13px">' + L("Kurs: przegląd AI", "Price: AI overview") + (PR ? ", " + esc(P(PR, "stanNa")) : "") + "</span></div>" +
+      '<div class="wrap page"><section><div class="sec-head"><div><p class="eyebrow">' + L("Kursy i poziomy", "Prices and levels") + "</p><h2>" + L("Notowania", "Quotes") + '</h2></div><span class="muted" style="font-size:13px">' + L("Kurs: przegląd AI", "Price: AI overview") + (PR ? ", " + esc(P(PR, "stanNa")) : "") + "</span></div>" + jakCzytac() +
       GRUPY.map(function (g) {
         var items = INS.filter(function (i) { return i.grupa === g; });
         return items.length ? '<div class="tiles-group"><h4 class="grp-title">' + grupa(g) + '</h4><div class="tiles">' + items.map(kafelek).join("") + "</div></div>" : "";
