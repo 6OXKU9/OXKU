@@ -831,7 +831,9 @@
           return { priceRange: { minValue: Math.min.apply(null, [r.priceRange.minValue].concat(lv1)), maxValue: Math.max.apply(null, [r.priceRange.maxValue].concat(lv1)) } };
         }
       });
-      s.setData(sw.map(function (x) { return { time: x[0], open: x[1], high: x[2], low: x[3], close: x[4] }; }));
+      // Po zmianie kontraktu świece sprzed dnia `od` są ze starego kontraktu: przesuń je tak jak poziomy.
+      var od = a.korektaWykresu && a.korektaWykresu.od;
+      s.setData(sw.map(function (x) { var k = od && x[0] < od ? sh : 0; return { time: x[0], open: x[1] + k, high: x[2] + k, low: x[3] + k, close: x[4] + k }; }));
       (a.poziomy.opory || []).forEach(function (v, i) { s.createPriceLine({ price: lv(v), color: dn, lineWidth: i ? 1 : 2, lineStyle: i ? 2 : 0, axisLabelVisible: true, title: "R" + (i + 1) }); });
       (a.poziomy.wsparcia || []).forEach(function (v, i) { s.createPriceLine({ price: lv(v), color: up, lineWidth: i ? 1 : 2, lineStyle: i ? 2 : 0, axisLabelVisible: true, title: "S" + (i + 1) }); });
       s.createPriceLine({ price: lv(a.poziomy.cena), color: kolor("--muted"), lineWidth: 1, lineStyle: 1, axisLabelVisible: false, title: L("analiza", "analysis") });

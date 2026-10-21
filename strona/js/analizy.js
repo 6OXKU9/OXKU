@@ -15,7 +15,7 @@
 //   ai          true = analizę przygotowała AI
 //   szkic       true = szkic AI czekający na akceptację (usuń pole po sprawdzeniu)
 //   przyklad    true = wpis demonstracyjny
-//   korektaWykresu { o: przesunięcie, opis, opis_en } gdy wykres pokazuje inny kontrakt niż analiza (ropa po zmianie kontraktu)
+//   korektaWykresu { o: przesunięcie, od: "RRRR-MM-DD" (pierwsza świeca nowego kontraktu), opis, opis_en } gdy wykres pokazuje inny kontrakt niż analiza (ropa po zmianie kontraktu)
 //   wynik       rozliczenie (uzupełnia AI albo autor): { status: "trafiona" | "nietrafiona" | "bez rozstrzygnięcia",
 //               data: "RRRR-MM-DD", komentarz: "...", komentarz_en: "..." }. Brak pola = analiza w toku.
 //   *_en        wersja angielska pól: tytul_en, lead_en, tresc_en, scenariusze[].tekst_en
@@ -108,7 +108,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-ropa", instrument: "wti", data: "2026-10-18", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
-    korektaWykresu: { o: -5.12, opis: "Poziomy na wykresie przesunięto o −5,12 USD: 19 paź wygasł kontrakt listopadowy (103,66), a wykres pokazuje grudniowy (98,54).", opis_en: "Levels on the chart are shifted by −$5.12: the November contract (103.66) expired on 19 Oct and the chart shows December (98.54)." },
+    korektaWykresu: { o: -5.12, od: "2026-10-21", opis: "Wykres pokazuje kontrakt grudniowy. Poziomy z analizy i świece kontraktu listopadowego (do 20 paź) przesunięto o −5,12 USD, czyli różnicę między kontraktami z 19 paź (103,66 i 98,54).", opis_en: "The chart shows the December contract. Analysis levels and November-contract candles (up to 20 Oct) are shifted by −$5.12, the spread between the contracts on 19 Oct (103.66 and 98.54)." },
     tytul: "Ropa WTI powyżej 100 USD, trend wzrostowy trzyma", tytul_en: "WTI above $100, the uptrend holds",
     lead: "WTI zyskała ponad 10% w tydzień po atakach w cieśninie Ormuz i dużym spadku zapasów w USA. Dopóki cena jest powyżej 98,23, przewagę mają kupujący.",
     lead_en: "WTI gained over 10% on the week after attacks in the Strait of Hormuz and a large US inventory draw. Buyers stay in control while price holds above 98.23.",
