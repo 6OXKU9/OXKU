@@ -10,6 +10,7 @@ Statyczna strona (HTML/CSS/JS, bez serwera i bazy danych). Działa po otwarciu `
 | `js/ustawienia.js` | **domena, dane właściciela, zapis na powiadomienia, baner cookies** |
 | `js/i18n.js` | wersja angielska (przełącznik PL/EN) |
 | `css/style.css` | wygląd (jasny i ciemny motyw) |
+| `img/` | ikona strony (`favicon.svg`) i obrazek do udostępnień w mediach społecznościowych (`og.png`, 1200×630) |
 | `js/instrumenty.js` | lista rynków: EUR/USD, GBP/USD, USD/JPY, USD/PLN, złoto, srebro, ropa WTI, Nasdaq 100, S&P 500, DAX, bitcoin |
 | `js/analizy.js` | **tu dodajesz analizy** |
 | `js/app.js` | logika: podstrony, filtry, drabinka poziomów, wykres TradingView |
@@ -58,6 +59,11 @@ Własny kalendarz: data i godzina (czas polski), kraj, wydarzenie, instrumenty, 
 ## Skuteczność analiz
 
 Każda analiza ma status: w toku, trafiona, nietrafiona albo bez rozstrzygnięcia (pole `wynik` w `js/analizy.js`). Zasady rozliczania są na podstronie Metodologia; AI rozlicza otwarte analizy przy każdej aktualizacji. Strona „Analizy” pokazuje trafność (trafione / rozliczone), liczby w każdym statusie i wynik dla każdego instrumentu; strona główna pokazuje trafność w nagłówku.
+
+## Tryb autora i próg trafności (nie cofać przy aktualizacjach)
+- **Tryb autora:** komunikaty robocze (oznaczenie „szkic AI”, baner o analizach przykładowych i szkicach, instrukcje edycji plików) widzi tylko autor. Włącza się sam przy podglądzie lokalnym (plik otwarty z dysku, localhost, podgląd w Claude). Na stronie publicznej: dopisz do adresu `?autor=1`, żeby go włączyć, albo `?autor=0`, żeby zobaczyć stronę jak gość. Wybór zapamiętuje przeglądarka. Gość widzi przy szkicach tylko znaczek AI. Kod: `AUTOR` w `js/app.js`.
+- **Próg trafności:** procent trafności pokazujemy dopiero od 5 rozliczonych analiz (`MIN_ROZLICZONYCH` w `js/app.js`), na stronie głównej, w panelu skuteczności i przy instrumentach. Wcześniej strona pokazuje „trafione / rozliczone” (np. 0/1), żeby pojedynczy wynik nie zniekształcał obrazu.
+- **Drabinka poziomów** pokazuje osobno cenę z publikacji analizy („W ANALIZIE”, szara linia) i aktualny kurs z przeglądu AI („TERAZ”, złota linia).
 
 ## Powiadomienia
 

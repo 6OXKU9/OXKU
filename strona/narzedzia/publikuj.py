@@ -2,7 +2,7 @@
 # Domyślnie zapisuje do /mnt/project-files/strona-publikacja (ten katalog wrzucasz na hosting).
 #
 # Co robi:
-#  - kopiuje stronę (index.html, css, js),
+#  - kopiuje stronę (index.html, css, js, img),
 #  - dla każdej analizy tworzy osobną stronę z własnym adresem, tytułem i opisem dla Google
 #    oraz podglądem w mediach społecznościowych (Open Graph):
 #      /analiza/<id>/          wersja polska
@@ -86,7 +86,9 @@ def strona(a, lang):
 <meta property="og:url" content="{adres(a, lang)}">
 <meta property="og:locale" content="{L("pl_PL", "en_GB")}">
 <meta property="article:published_time" content="{a["data"]}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{DOM}/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{up}img/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")}</script>
 <link rel="stylesheet" href="{FONTS}">
 <link rel="stylesheet" href="{up}css/style.css?v={VER}">
@@ -130,7 +132,7 @@ if os.path.exists(OUT):
 os.makedirs(OUT)
 open(os.path.join(OUT, ZNACZNIK), 'w').close()
 shutil.copy(os.path.join(ROOT, 'index.html'), OUT)
-for d in ('css', 'js'):
+for d in ('css', 'js', 'img'):
     shutil.copytree(os.path.join(ROOT, d), os.path.join(OUT, d))
 
 # Strona główna: adres kanoniczny i podgląd w mediach społecznościowych.
@@ -140,7 +142,10 @@ idx = idx.replace('<link rel="alternate" hreflang="en" href="./?lang=en">', f'<l
 og = (f'<meta property="og:type" content="website">\n<meta property="og:site_name" content="AnalizyRynku">\n'
       '<meta property="og:title" content="AnalizyRynku: analizy rynków z rozliczaną skutecznością">\n'
       '<meta property="og:description" content="Forex, USD/PLN, złoto, srebro, ropa, Nasdaq 100, S&amp;P 500, DAX i bitcoin: poziomy, scenariusze, kalendarz ekonomiczny.">\n'
-      f'<meta property="og:url" content="{DOM}/">\n')
+      f'<meta property="og:url" content="{DOM}/">\n'
+      f'<meta property="og:image" content="{DOM}/img/og.png">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+      '<meta name="twitter:card" content="summary_large_image">\n'
+      f'<link rel="canonical" href="{DOM}/">\n')
 idx = idx.replace('<link rel="preconnect"', og + '<link rel="preconnect"', 1)
 # Wersja plików w adresach (?v=...), żeby przeglądarka po aktualizacji nie używała starych CSS i JS z pamięci.
 import re as _re, time as _time

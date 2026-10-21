@@ -238,6 +238,8 @@ section { display: grid; gap: 20px; min-width: 0; }
 .ladder .t-up { fill: var(--down); }
 .ladder .t-dn { fill: var(--up); }
 .ladder .t-now { fill: var(--gold); font-weight: 500; }
+.ladder .ln-pub { stroke: var(--muted); }
+.ladder .t-pub { fill: var(--muted); }
 .ladder .axis { stroke: var(--line-strong); }
 .ladder .band { fill: var(--gold-soft); }
 

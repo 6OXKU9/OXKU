@@ -33,6 +33,22 @@
     return Number(v).toLocaleString(NLOC(), { minimumFractionDigits: d, maximumFractionDigits: d });
   }
   var KIER = { wzrostowy: "bullish", spadkowy: "bearish", neutralny: "neutral" };
+  // Tryb autora: komunikaty robocze (szkic AI, przykłady, instrukcje edycji plików) widzi tylko autor.
+  // Włącza się sam przy podglądzie lokalnym; na stronie publicznej: ?autor=1 włącza, ?autor=0 pokazuje widok gościa (zapamiętywane w przeglądarce).
+  var AUTOR = (function () {
+    var h = location.hostname, m = /[?&]autor=([01])/.exec(location.search);
+    try {
+      if (m) localStorage.setItem("autor", m[1]);
+      var z = localStorage.getItem("autor");
+      if (z === "1" || z === "0") return z === "1";
+    } catch (e) { if (m) return m[1] === "1"; }
+    return location.protocol === "file:" || h === "localhost" || h === "127.0.0.1" || /claude|claudeusercontent/.test(h);
+  })();
+  var MIN_ROZLICZONYCH = 5;
+  function trafnoscTxt(s) {
+    if (!s.zamkniete) return "–";
+    return s.zamkniete >= MIN_ROZLICZONYCH ? s.proc + "%" : s.trafiona + "/" + s.zamkniete;
+  }
   function bias(k) {
     if (!k) return '<span class="bias bias--brak">' + L("brak analizy", "no analysis") + "</span>";
     return '<span class="bias bias--' + esc(k) + '">' + esc(en() ? KIER[k] || k : k) + "</span>";
@@ -40,8 +56,8 @@
   function ex(a) {
     if (!a) return "";
     if (a.przyklad) return '<span class="tag-ex">' + L("przykład", "example") + "</span>";
-    if (a.szkic) return '<span class="tag-ex">' + L("szkic AI", "AI draft") + "</span>";
-    return a.ai ? '<span class="ai-badge" title="' + L("Przygotowane przez AI", "Prepared by AI") + '">AI</span>' : "";
+    if (a.szkic && AUTOR) return '<span class="tag-ex">' + L("szkic AI", "AI draft") + "</span>";
+    return a.ai || a.szkic ? '<span class="ai-badge" title="' + L("Przygotowane przez AI", "Prepared by AI") + '">AI</span>' : "";
   }
   function ostatnia(id) { for (var i = 0; i < AN.length; i++) if (AN[i].instrument === id) return AN[i]; return null; }
   function najblizsze(a) {
@@ -81,9 +97,10 @@
       .filter(function (x) { return x.s.zamkniete; });
     return '<div class="score"><div class="score__main">' +
       '<span class="score__lbl">' + L("Trafność", "Hit rate") + "</span>" +
-      '<b class="num">' + (s.proc != null ? s.proc + "%" : "–") + "</b>" +
-      '<div class="score__bar" aria-hidden="true"><i style="width:' + (s.proc || 0) + '%"></i></div>' +
-      "<p>" + (s.zamkniete ? L("na podstawie " + s.zamkniete + " rozliczonych analiz", "based on " + s.zamkniete + " settled analyses")
+      '<b class="num">' + trafnoscTxt(s) + "</b>" +
+      (s.zamkniete >= MIN_ROZLICZONYCH ? '<div class="score__bar" aria-hidden="true"><i style="width:' + (s.proc || 0) + '%"></i></div>' : "") +
+      "<p>" + (s.zamkniete >= MIN_ROZLICZONYCH ? L("na podstawie " + s.zamkniete + " rozliczonych analiz", "based on " + s.zamkniete + " settled analyses")
+        : s.zamkniete ? L("trafione / rozliczone. Procent pokażemy od " + MIN_ROZLICZONYCH + " rozliczonych analiz, żeby pojedynczy wynik nie zniekształcał obrazu.", "hits / settled. We show a percentage from " + MIN_ROZLICZONYCH + " settled analyses so a single result does not distort the picture.")
         : L("Brak rozliczonych analiz. Trafność pojawi się po rozliczeniu pierwszych.", "No settled analyses yet. The hit rate appears once the first ones are settled.")) + "</p></div>" +
       '<dl class="score__n">' +
       '<div><dt>' + L("Trafione", "Hits") + '</dt><dd class="num c-up">' + s.trafiona + "</dd></div>" +
@@ -91,7 +108,7 @@
       '<div><dt>' + L("W toku", "Open") + '</dt><dd class="num">' + s["w toku"] + "</dd></div>" +
       '<div><dt>' + L("Bez rozstrzygnięcia", "No result") + '</dt><dd class="num muted">' + s["bez rozstrzygnięcia"] + "</dd></div></dl>" +
       (ins.length ? '<ul class="score__ins">' + ins.map(function (x) {
-        return '<li><a href="#' + x.i.id + '">' + esc(x.i.symbol) + '</a><span class="num">' + x.s.trafiona + "/" + x.s.zamkniete + "</span><b class=\"num\">" + x.s.proc + "%</b></li>";
+        return '<li><a href="#' + x.i.id + '">' + esc(x.i.symbol) + '</a><span class="num">' + x.s.trafiona + "/" + x.s.zamkniete + "</span>" + (x.s.zamkniete >= MIN_ROZLICZONYCH ? "<b class=\"num\">" + x.s.proc + "%</b>" : "") + "</li>";
       }).join("") + "</ul>" : "") +
       '</div><p class="muted" style="font-size:13px;margin:0">' + L("Zasady rozliczania analiz opisuje", "How analyses are settled is described in") + ' <a href="#o-stronie">' + L("Metodologia", "Methodology") + "</a>." +
       (AN.some(function (a) { return a.przyklad; }) ? " " + L("Statystyka obejmuje też analizy przykładowe.", "The statistics include the example analyses.") : "") + "</p>";
@@ -136,7 +153,9 @@
     var p = a.poziomy || {};
     var pts = [];
     (p.opory || []).forEach(function (v) { pts.push({ v: v, t: "up", n: L("OPÓR", "RESIST.") }); });
-    if (p.cena != null) pts.push({ v: p.cena, t: "now", n: L("CENA", "PRICE") });
+    if (p.cena != null) pts.push({ v: p.cena, t: "pub", n: L("W ANALIZIE", "AT PUBL.") });
+    var teraz = PR && PR.instrumenty && PR.instrumenty[a.instrument] && PR.instrumenty[a.instrument].kurs;
+    if (teraz != null && teraz !== p.cena) pts.push({ v: teraz, t: "now", n: L("TERAZ", "NOW") });
     (p.wsparcia || []).forEach(function (v) { pts.push({ v: v, t: "dn", n: L("WSPARCIE", "SUPPORT") }); });
     if (pts.length < 2) return "";
     pts.sort(function (x, y) { return y.v - x.v; });
@@ -152,7 +171,7 @@
     svg += '<line class="axis" x1="' + X0 + '" y1="' + top + '" x2="' + X0 + '" y2="' + bot + '" stroke-width="1"/>';
     pts.forEach(function (q, k) {
       var yy = y(q.v).toFixed(1);
-      svg += '<line class="ln-' + q.t + '" x1="' + X0 + '" x2="' + W + '" y1="' + yy + '" y2="' + yy + '" stroke-width="' + (q.t === "now" ? 2 : 1.25) + '"' + (q.t === "now" ? "" : ' stroke-dasharray="4 4"') + "/>";
+      svg += '<line class="ln-' + q.t + '" x1="' + X0 + '" x2="' + W + '" y1="' + yy + '" y2="' + yy + '" stroke-width="' + (q.t === "now" ? 2 : 1.25) + '"' + (q.t === "now" || q.t === "pub" ? "" : ' stroke-dasharray="4 4"') + "/>";
       svg += '<text class="lbl" x="0" y="' + (ly[k] + 4).toFixed(1) + '">' + q.n + "</text>";
       svg += '<text class="t-' + q.t + '" x="' + W + '" y="' + (y(q.v) - 5).toFixed(1) + '" text-anchor="end">' + cena(q.v, ins) + "</text>";
     });
@@ -418,7 +437,7 @@
       '<div class="hero__cta"><a class="btn btn--gold" href="#analizy">' + L("Przeglądaj analizy", "Browse analyses") + '</a><a class="btn btn--ghost" href="#rynki">' + L("Przegląd rynków", "Markets overview") + "</a></div>" +
       '<div class="stats"><div class="stat"><b>' + INS.length + "</b><span>" + L("Instrumentów", "Instruments") + "</span></div>" +
       '<div class="stat"><b>' + AN.length + "</b><span>" + L("Analiz", "Analyses") + "</span></div>" +
-      '<div class="stat"><b>' + (sk.proc != null ? sk.proc + "%" : "–") + "</b><span>" + L("Trafność", "Hit rate") + "</span></div>" +
+      '<div class="stat"><b>' + trafnoscTxt(sk) + "</b><span>" + (sk.zamkniete > 0 && sk.zamkniete < MIN_ROZLICZONYCH ? L("Trafione / rozliczone", "Hits / settled") : L("Trafność", "Hit rate")) + "</span></div>" +
       '<div class="stat"><b>' + (f ? data(f.data) : "–") + "</b><span>" + L("Ostatnia aktualizacja", "Last update") + "</span></div></div></div>" +
       (f ? '<article class="feature"><div class="feature__tag"><span>' + L("Najnowsza analiza", "Latest analysis") + "</span>" + ex(f) + "</div>" +
         '<div class="meta"><b class="num" style="color:var(--ink)">' + esc(fi.symbol) + "</b>" + bias(f.kierunek) + '<span class="num">' + esc(f.interwal) + "</span></div>" +
@@ -426,8 +445,8 @@
         '<a class="btn btn--primary" href="#a-' + esc(f.id) + '">' + L("Czytaj analizę", "Read analysis") + "</a></article>" : "") +
       "</div></section>";
     return hero + '<div class="wrap page">' +
-      (demo ? '<div class="notice"><span class="tag-ex">' + L("przykład", "example") + "</span><p>" + L("Analizy widoczne teraz to treść demonstracyjna z ilustracyjnymi poziomami cen. Zastąp je własnymi w pliku", "The analyses shown now are demo content with illustrative price levels. Replace them with your own in") + ' <span class="num">js/analizy.js</span>.</p></div>' : "") +
-      (szkice ? '<div class="notice"><span class="tag-ex">' + L("szkic AI", "AI draft") + "</span><p>" + L(szkice + " analiz przygotowała AI na podstawie danych ze źródeł. To szkice do Twojej akceptacji: sprawdź je i usuń pole szkic w pliku", szkice + " analyses were prepared by AI from sourced data. They are drafts awaiting approval: review them and remove the szkic field in") + ' <span class="num">js/analizy.js</span>.</p></div>' : "") +
+      (demo && AUTOR ? '<div class="notice"><span class="tag-ex">' + L("przykład", "example") + "</span><p>" + L("Analizy widoczne teraz to treść demonstracyjna z ilustracyjnymi poziomami cen. Zastąp je własnymi w pliku", "The analyses shown now are demo content with illustrative price levels. Replace them with your own in") + ' <span class="num">js/analizy.js</span>.</p></div>' : "") +
+      (szkice && AUTOR ? '<div class="notice"><span class="tag-ex">' + L("szkic AI", "AI draft") + "</span><p>" + L(szkice + " analiz przygotowała AI na podstawie danych ze źródeł. To szkice do Twojej akceptacji: sprawdź je i usuń pole szkic w pliku", szkice + " analyses were prepared by AI from sourced data. They are drafts awaiting approval: review them and remove the szkic field in") + ' <span class="num">js/analizy.js</span>.</p></div>' : "") +
       przegladSkrot() +
       '<section><div class="sec-head"><div><p class="eyebrow">' + L("Przegląd", "Overview") + "</p><h2>" + L("Nastawienie na rynkach", "Market bias") + '</h2></div><a href="#rynki">' + L("Wszystkie rynki →", "All markets →") + "</a></div>" + tabelaRynkow() + "</section>" +
       '<section><div class="sec-head"><div><p class="eyebrow">Research</p><h2>' + L("Najnowsze analizy", "Latest analyses") + '</h2></div><a href="#analizy">' + L("Archiwum i skuteczność →", "Archive and track record →") + "</a></div>" + feed(AN.slice(0, 5)) + "</section>" +
