@@ -518,3 +518,6 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 @media (max-width: 480px) { .top__cta { display: none; } .bot__form textarea { min-height: 44px; } }
 @media (max-width: 420px) { .clock span:first-child { display: none; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Zastępcza treść znika, gdy widżet TradingView się wczyta (atrybut hidden musi wygrać z display: grid/flex). */
+.tv-fallback[hidden], .tv-ok > .tv-fallback, .tv-ok .tile__fallback { display: none !important; }
