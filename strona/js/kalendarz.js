@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-10-21T07:50:00+02:00",
+  aktualizacja: "2026-10-21T18:30:00+02:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -32,7 +32,9 @@ window.KALENDARZ = {
     { nazwa: "FX Tribune: US housing starts fall to 1,221K in September 2026", url: "https://fxtribune.com/news/us-housing-starts-fall-to-1-221k-in-september-2026/" },
     { nazwa: "investingLive: UK inflation set to climb (zapowiedź CPI)", nazwa_en: "investingLive: UK inflation set to climb (CPI preview)", url: "https://investinglive.com/news/economic-data-spotlight-uk-inflation-set-to-climb-as-boe-rate-hike-and-autumn-budget-collide/" },
     { nazwa: "ad-hoc-news / Dow Jones: DAX schließt nach ZEW-Dämpfer (termin wyników SAP)", nazwa_en: "ad-hoc-news / Dow Jones: DAX closes after ZEW setback (SAP earnings time)", url: "https://www.ad-hoc-news.de/boerse/news/marktberichte/dax-schliesst-nach-zew-daempfer-0-1-prozent-tiefer/70376081" },
-    { nazwa: "CappNotes: Closing Look, wtorek 20 paź 2026", nazwa_en: "CappNotes: Closing Look, Tuesday 20 Oct 2026", url: "https://cappnotes.substack.com/p/closing-look-tuesday-october-20-2026" }
+    { nazwa: "CappNotes: Closing Look, wtorek 20 paź 2026", nazwa_en: "CappNotes: Closing Look, Tuesday 20 Oct 2026", url: "https://cappnotes.substack.com/p/closing-look-tuesday-october-20-2026" },
+    { nazwa: "FXStreet: UK CPI inflation climbs to 3.5% YoY in September", url: "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200" },
+    { nazwa: "Trading Economics: ropa WTI (zapasy EIA), 21 paź 2026", nazwa_en: "Trading Economics: WTI crude (EIA inventories), 21 Oct 2026", url: "https://tradingeconomics.com/commodity/crude-oil" }
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
@@ -51,8 +53,8 @@ window.KALENDARZ = {
     { czas: "2026-10-20T16:00:00+02:00", kraj: "US", nazwa: "Sprzedaż domów w toku (wrz)", wplyw: 1, instrumenty: ["sp500"], opis: "Wskaźnik wyprzedzający dla sprzedaży domów.", nazwa_en: "Pending home sales (Sep)", opis_en: "A leading indicator for home sales.", zrodlo: 0 },
     { czas: "2026-10-20T22:00:00+02:00", kraj: "US", nazwa: "Wyniki Netflix", wplyw: 2, instrumenty: ["nasdaq"], opis: "Pierwsze wyniki dużej spółki technologicznej w tym tygodniu.", nazwa_en: "Netflix earnings", opis_en: "The first results from a major tech company this week.", aktualnie: "akcje −5,7% po sesji (słabsza prognoza przychodów)", aktualnie_en: "shares −5.7% after hours (light revenue outlook)", zrodlo: 19 },
 
-    { czas: "2026-10-21T08:00:00+02:00", kraj: "UK", nazwa: "Inflacja CPI (wrz)", wplyw: 3, instrumenty: ["gbpusd"], opis: "Główna dana dla Banku Anglii. Wyższa inflacja zwykle wzmacnia funta.", nazwa_en: "CPI inflation (Sep)", opis_en: "The key data point for the Bank of England. Higher inflation usually supports sterling.", poprzednio: "3,1% r/r", prognoza: "3,4% r/r", poprzednio_en: "3.1% y/y", prognoza_en: "3.4% y/y", zrodlo: 17 },
-    { czas: "2026-10-21T16:30:00+02:00", kraj: "US", nazwa: "Zapasy ropy (DOE)", wplyw: 1, instrumenty: ["wti"], opis: "Przy ropie powyżej 100 USD ma większe znaczenie dla nastrojów inflacyjnych.", nazwa_en: "Crude oil inventories (EIA)", opis_en: "With crude above $100, it matters more for inflation sentiment.", zrodlo: 0 },
+    { czas: "2026-10-21T08:00:00+02:00", kraj: "UK", nazwa: "Inflacja CPI (wrz)", wplyw: 3, instrumenty: ["gbpusd"], opis: "Główna dana dla Banku Anglii. Wyższa inflacja zwykle wzmacnia funta.", nazwa_en: "CPI inflation (Sep)", opis_en: "The key data point for the Bank of England. Higher inflation usually supports sterling.", poprzednio: "3,1% r/r", prognoza: "3,4% r/r", aktualnie: "3,5% r/r (bazowa 2,8%)", poprzednio_en: "3.1% y/y", prognoza_en: "3.4% y/y", aktualnie_en: "3.5% y/y (core 2.8%)", zrodlo: 20 },
+    { czas: "2026-10-21T16:30:00+02:00", kraj: "US", nazwa: "Zapasy ropy (DOE)", wplyw: 1, instrumenty: ["wti"], opis: "Przy ropie powyżej 100 USD ma większe znaczenie dla nastrojów inflacyjnych.", nazwa_en: "Crude oil inventories (EIA)", opis_en: "With crude above $100, it matters more for inflation sentiment.", aktualnie: "−3,06 mln baryłek", aktualnie_en: "−3.06M barrels", zrodlo: 21 },
     { czas: "2026-10-21T19:00:00+02:00", kraj: "US", nazwa: "Aukcja 20-letnich obligacji (13 mld USD)", wplyw: 1, instrumenty: ["xauusd", "usdjpy"], opis: "Popyt na długi dług USA wpływa na rentowności.", nazwa_en: "20-year bond auction ($13bn)", opis_en: "Demand for long-dated US debt affects yields.", zrodlo: 0 },
     { czas: "2026-10-21T22:00:00+02:00", kraj: "US", nazwa: "Wyniki Tesla i Meta Platforms", wplyw: 3, instrumenty: ["nasdaq", "sp500", "btcusd"], opis: "Po słabym tygodniu dla spółek AI wyniki gigantów mogą przesądzić o kierunku Nasdaq.", nazwa_en: "Tesla and Meta Platforms earnings", opis_en: "After a weak week for AI stocks, results from the giants could decide the Nasdaq's direction.", zrodlo: 1 },
 

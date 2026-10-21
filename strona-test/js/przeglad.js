@@ -1,49 +1,48 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-10-21T07:50:00+02:00",
-  stanNa_en: "Wednesday morning, 21 Oct 2026 (Asian session)",
-  stanNa: "środa rano, 21 paź 2026 (sesja azjatycka)",
-  naglowek_en: "Dow up 1%, Netflix slides after hours. Crude rebounds toward $99, gold falls for a fourth day. UK CPI, then Tesla, Meta and SAP tonight.",
-  naglowek: "Dow +1%, Netflix tanieje po sesji. Ropa odbija w stronę 99 USD, złoto traci czwarty dzień. Dziś inflacja w Wielkiej Brytanii, wieczorem Tesla, Meta i SAP.",
+  aktualizacja: "2026-10-21T18:30:00+02:00",
+  stanNa_en: "Wednesday afternoon, 21 Oct 2026 (US session in progress)",
+  stanNa: "środa po południu, 21 paź 2026 (trwa sesja w USA)",
+  naglowek_en: "Tech leads Wall Street higher, the DAX gains about 1.4%. UK inflation tops forecasts at 3.5%; Tesla, Meta and SAP report tonight.",
+  naglowek: "Technologia ciągnie Wall Street w górę, DAX zyskuje około 1,4%. Inflacja w Wielkiej Brytanii powyżej prognoz (3,5%); wieczorem wyniki Tesli, Meta i SAP.",
   punkty: [
-    "Wtorek na Wall Street: Dow Jones +1,02% (52 495,88), S&P 500 +0,28% (7 712,57), Nasdaq Composite bez zmian. Liderem była ochrona zdrowia, technologia lekko w dół.",
-    "Po sesji: Netflix −5,7% przez słabszą prognozę przychodów, Super Micro +12,7% po podniesieniu prognozy. Dziś po sesji wyniki Tesli i Meta, a w Europie SAP (22:05).",
-    "Ropa odbija: WTI około 99,2 USD (+1,4%), Brent około 110,4 USD po większym od oczekiwań spadku zapasów w prywatnym raporcie. Dyplomaci studzą nadzieje na szybkie porozumienie USA–Iran.",
-    "RBA otwiera drogę do podwyżki stóp 3 listopada; Goldman Sachs spodziewa się ruchu do 4,85%. W ankiecie Reutersa 69% ekonomistów oczekuje podwyżki BoJ do 1,50% w tym kwartale, większość w grudniu.",
-    "W Azji Kospi +5% po wtorkowym spadku, Nikkei +1,1%. Rentowności francuskich obligacji blisko najwyższych od 24 lat. Dziś o 8:00 inflacja CPI w Wielkiej Brytanii (prognoza 3,4% r/r)."
+    "W połowie sesji w USA: S&P 500 +0,5%, Nasdaq Composite +1,05%, Dow Jones +0,25%. SpaceX +10% po wynikach, Tesla +3,5% (Musk mówi o badaniu możliwego połączenia z SpaceX), Netflix −4–5%.",
+    "DAX zyskuje około 1,4%, do 25 660 pkt, dzięki spółkom związanym z AI. Wieczorem wyniki SAP (22:05), a w USA po sesji Tesla i Meta.",
+    "Inflacja CPI w Wielkiej Brytanii wzrosła we wrześniu do 3,5% r/r (prognoza 3,4%, poprzednio 3,1%), bazowa do 2,8%. Funt mimo to bez większej reakcji (GBP/USD około 1,339).",
+    "Ropa oddaje poranne wzrosty: WTI około 96,9 USD (−1%), Brent około 108,4 USD. Zapasy w USA spadły o 3,06 mln baryłek (EIA); przepływy przez cieśninę Ormuz zbliżają się do poziomów sprzed wojny.",
+    "Złoto około 4 131 USD, najniżej od 15 paź, bo droga ropa podsyca obawy inflacyjne przed posiedzeniem Fed. Euro pod presją przy rentownościach francuskich 10-latek powyżej 5%."
   ],
   punkty_en: [
-    "Tuesday on Wall Street: Dow Jones +1.02% (52,495.88), S&P 500 +0.28% (7,712.57), Nasdaq Composite flat. Health care led, technology slightly lower.",
-    "After hours: Netflix −5.7% on a light revenue outlook, Super Micro +12.7% after raising guidance. Tesla and Meta report after today's close, and SAP in Europe (22:05 Warsaw time).",
-    "Crude rebounds: WTI around $99.2 (+1.4%), Brent around $110.4 after a larger-than-expected draw in a private inventory survey. Diplomats play down hopes of a quick US-Iran deal.",
-    "The RBA opens the door to a hike on 3 November; Goldman Sachs expects a move to 4.85%. In a Reuters poll, 69% of economists expect a BoJ hike to 1.50% this quarter, most in December.",
-    "In Asia the Kospi rose 5% after Tuesday's drop, the Nikkei +1.1%. French bond yields are near 24-year highs. UK CPI inflation is due at 8:00 Warsaw time (forecast 3.4% y/y)."
+    "Mid-session in the US: S&P 500 +0.5%, Nasdaq Composite +1.05%, Dow Jones +0.25%. SpaceX +10% after earnings, Tesla +3.5% (Musk says a possible merger with SpaceX is being studied), Netflix −4–5%.",
+    "The DAX gains about 1.4% to 25,660 on AI-related stocks. SAP reports tonight (22:05 Warsaw time), with Tesla and Meta after the US close.",
+    "UK CPI inflation rose to 3.5% y/y in September (forecast 3.4%, previous 3.1%), core to 2.8%. Sterling barely reacted (GBP/USD around 1.339).",
+    "Crude gives back its morning gains: WTI around $96.9 (−1%), Brent around $108.4. US inventories fell 3.06M barrels (EIA); flows through the Strait of Hormuz are nearing pre-war levels.",
+    "Gold around $4,131, its lowest since 15 Oct, as pricey oil feeds inflation worries ahead of the Fed meeting. The euro is under pressure with French 10-year yields above 5%."
   ],
   instrumenty: {
-    sp500:  { kurs: 7732.56, zmiana: 0.26, tydzien: null, notka: "Notowania CFD rano. Zamknięcie indeksu kasowego we wtorek: 7 712,57 (+0,28%).", notka_en: "CFD quote this morning. Tuesday's cash index close: 7,712.57 (+0.28%).", zrodlo: 0 },
-    nasdaq: { kurs: 29647, zmiana: 0.53, tydzien: null, notka: "Wzrost mimo spadku Netflixa po sesji. Opór z analizy 29 750. Dziś po sesji Tesla i Meta.", notka_en: "Higher despite Netflix's after-hours drop. Analysis resistance at 29,750. Tesla and Meta report after today's close.", zrodlo: 0 },
-    xauusd: { kurs: 4122, zmiana: -0.07, tydzien: null, notka: "Czwarta spadkowa sesja z rzędu. Wsparcie z analizy 4 096.", notka_en: "A fourth straight losing session. Analysis support at 4,096.", zrodlo: 0 },
-    eurusd: { kurs: 1.1224, zmiana: -0.12, tydzien: null, notka: "Euro blisko kilkumiesięcznych minimów przez niepokoje we Francji i Włoszech oraz rosnące rentowności francuskich obligacji.", notka_en: "The euro is near multi-month lows on unrest in France and Italy and rising French bond yields.", zrodlo: 1 },
-    gbpusd: { kurs: 1.3375, zmiana: -0.04, tydzien: null, notka: "Przed inflacją CPI o 8:00 (prognoza 3,4% r/r, poprzednio 3,1%). Opór z analizy 1,3435.", notka_en: "Ahead of CPI at 8:00 Warsaw time (forecast 3.4% y/y, previous 3.1%). Analysis resistance at 1.3435.", zrodlo: 1 },
-    usdjpy: { kurs: 158.15, zmiana: -0.01, tydzien: null, notka: "Eksport Japonii we wrześniu +16,7% r/r (prognoza 20,1%). Rynek oczekuje podwyżki BoJ raczej w grudniu niż 30 paź.", notka_en: "Japan's September exports +16.7% y/y (forecast 20.1%). Markets expect a BoJ hike in December rather than on 30 Oct.", zrodlo: 1 },
-    xagusd: { kurs: 57.35, zmiana: -1.06, tydzien: null, notka: "Oddaje część wtorkowych wzrostów.", notka_en: "Giving back part of Tuesday's gains.", zrodlo: 0 },
-    usdpln: { kurs: 3.8893, zmiana: null, tydzien: null, notka: "Wyliczony z kursów EUR/PLN (4,3654) i EUR/USD (1,1224) z tego samego źródła.", notka_en: "Derived from EUR/PLN (4.3654) and EUR/USD (1.1224) from the same source.", zrodlo: 1 },
-    wti:    { kurs: 99.23, zmiana: 1.44, tydzien: null, notka: "Kontrakt grudniowy; wtorkowe rozliczenie 98,28 USD. Brent 110,39 USD. Dziś o 16:30 oficjalne dane o zapasach.", notka_en: "December contract; Tuesday's settlement $98.28. Brent at $110.39. Official inventory data today at 16:30 Warsaw time.", zrodlo: 2 },
-    dax:    { kurs: 25430, zmiana: 0.49, tydzien: null, notka: "Notowania CFD rano. Zamknięcie Xetra we wtorek: 25 304. Wyniki SAP dziś o 22:05.", notka_en: "CFD quote this morning. Tuesday's Xetra close: 25,304. SAP reports today at 22:05 Warsaw time.", zrodlo: 0 },
-    btcusd: { kurs: 82761, zmiana: -0.23, tydzien: null, notka: "Stabilnie w okolicach 82 800 USD.", notka_en: "Steady around $82,800.", zrodlo: 0 }
+    sp500:  { kurs: 7751.57, zmiana: 0.51, tydzien: null, notka: "Notowania CFD w trakcie sesji. Opór z analizy 7 790.", notka_en: "CFD quote during the session. Analysis resistance at 7,790.", zrodlo: 0 },
+    nasdaq: { kurs: 29853, zmiana: 1.23, tydzien: null, notka: "W trakcie sesji powyżej oporu z analizy (29 750). Liczy się zamknięcie dnia. Po sesji wyniki Tesli i Meta.", notka_en: "Above the analysis resistance (29,750) during the session. The daily close is what counts. Tesla and Meta report after the close.", zrodlo: 0 },
+    xauusd: { kurs: 4131, zmiana: 0.16, tydzien: null, notka: "Najniżej od 15 paź; droga ropa i oczekiwania podwyżek stóp ciążą złotu. Wsparcie z analizy 4 096.", notka_en: "Lowest since 15 Oct; pricey oil and rate-hike expectations weigh on gold. Analysis support at 4,096.", zrodlo: 0 },
+    eurusd: { kurs: 1.1227, zmiana: -0.09, tydzien: null, notka: "Presja przez rosnące koszty zadłużenia Francji (rentowność 10-latek powyżej 5%).", notka_en: "Pressure from France's rising borrowing costs (10-year yield above 5%).", zrodlo: 1 },
+    gbpusd: { kurs: 1.3392, zmiana: 0.09, tydzien: null, notka: "Inflacja 3,5% (powyżej prognozy) wspiera oczekiwania podwyżki BoE 5 lis. Opór z analizy 1,3435.", notka_en: "Inflation at 3.5% (above forecast) supports expectations of a BoE hike on 5 Nov. Analysis resistance at 1.3435.", zrodlo: 1 },
+    usdjpy: { kurs: 158.07, zmiana: -0.07, tydzien: null, notka: "Spokojnie w zakresie 157,50–159,00. Posiedzenie BoJ 29–30 paź.", notka_en: "Calm within the 157.50–159.00 range. BoJ meets 29–30 Oct.", zrodlo: 1 },
+    xagusd: { kurs: 57.54, zmiana: -0.74, tydzien: null, notka: "Lekko w dół razem ze złotem.", notka_en: "Slightly lower along with gold.", zrodlo: 0 },
+    usdpln: { kurs: 3.8882, zmiana: null, tydzien: null, notka: "Wyliczony z kursów EUR/PLN (4,3653) i EUR/USD (1,1227) z tego samego źródła.", notka_en: "Derived from EUR/PLN (4.3653) and EUR/USD (1.1227) from the same source.", zrodlo: 1 },
+    wti:    { kurs: 96.85, zmiana: -0.99, tydzien: null, notka: "Kontrakt grudniowy. Spadek mimo mniejszych zapasów (−3,06 mln baryłek), bo przepływy przez Ormuz się poprawiają. Brent 108,43 USD.", notka_en: "December contract. Lower despite a stock draw (−3.06M barrels) as Hormuz flows improve. Brent at $108.43.", zrodlo: 2 },
+    dax:    { kurs: 25662, zmiana: 1.41, tydzien: null, notka: "Wzrost dzięki spółkom AI przed wynikami SAP (22:05). Opór z analizy 25 915.", notka_en: "Higher on AI stocks ahead of SAP earnings (22:05 Warsaw time). Analysis resistance at 25,915.", zrodlo: 0 },
+    btcusd: { kurs: 84474, zmiana: 1.83, tydzien: null, notka: "Powyżej górnej granicy zakresu z analizy (84 262). Liczy się zamknięcie dnia.", notka_en: "Above the top of the analysis range (84,262). The daily close is what counts.", zrodlo: 0 }
   },
   kalendarz: [
-    { dzien: "Śr 21 paź", wydarzenia: ["Wielka Brytania: inflacja CPI", "USA: zapasy ropy", "Wyniki Tesli, Meta i SAP po sesji"] },
+    { dzien: "Śr 21 paź", wydarzenia: ["Wyniki Tesli, Meta i SAP po sesji"] },
     { dzien: "Czw 22 paź", wydarzenia: ["USA: cotygodniowe wnioski o zasiłek dla bezrobotnych"] },
     { dzien: "Pt 23 paź", wydarzenia: ["Wstępne indeksy PMI (strefa euro, Wielka Brytania, USA)", "USA: nastroje konsumentów Uniwersytetu Michigan i oczekiwania inflacyjne"] }
   ],
   zrodla: [
     { nazwa: "Trading Economics: złoto (z tabelą US500, US100, DE40, srebro, bitcoin), 21 paź 2026", nazwa_en: "Trading Economics: gold (with US500, US100, DE40, silver, bitcoin table), 21 Oct 2026", url: "https://tradingeconomics.com/commodity/gold" },
     { nazwa: "Trading Economics: EUR/USD (z tabelą walut), 21 paź 2026", nazwa_en: "Trading Economics: EUR/USD (with currency table), 21 Oct 2026", url: "https://tradingeconomics.com/euro-area/currency" },
-    { nazwa: "Trading Economics: ropa WTI i Brent, 21 paź 2026", nazwa_en: "Trading Economics: WTI and Brent crude, 21 Oct 2026", url: "https://tradingeconomics.com/commodity/crude-oil" },
-    { nazwa: "CappNotes: Closing Look, wtorek 20 paź 2026", nazwa_en: "CappNotes: Closing Look, Tuesday 20 Oct 2026", url: "https://cappnotes.substack.com/p/closing-look-tuesday-october-20-2026" },
-    { nazwa: "investingLive: Asia-Pacific market news, RBA's Hauser puts November hike in play", url: "https://investinglive.com/news/investinglive-asia-pacific-market-news-rba-s-hauser-puts-november-hike-in-play/" },
-    { nazwa: "investingLive: UK inflation set to climb (zapowiedź CPI)", nazwa_en: "investingLive: UK inflation set to climb (CPI preview)", url: "https://investinglive.com/news/economic-data-spotlight-uk-inflation-set-to-climb-as-boe-rate-hike-and-autumn-budget-collide/" }
+    { nazwa: "Trading Economics: ropa WTI i Brent, zapasy EIA, 21 paź 2026", nazwa_en: "Trading Economics: WTI and Brent crude, EIA inventories, 21 Oct 2026", url: "https://tradingeconomics.com/commodity/crude-oil" },
+    { nazwa: "Yahoo Finance: Stock market today, 21 paź 2026", nazwa_en: "Yahoo Finance: Stock market today, 21 Oct 2026", url: "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html" },
+    { nazwa: "FXStreet: UK CPI inflation climbs to 3.5% YoY in September", url: "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200" }
   ]
 };
