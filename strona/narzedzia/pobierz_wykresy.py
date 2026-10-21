@@ -1,7 +1,8 @@
 # Pobiera dzienne świece (OHLC) dla wszystkich instrumentów i zapisuje je jako js/ohlc.js (window.OHLC).
 # Uruchamia go automatycznie GitHub Actions (.github/workflows/wykresy.yml); można też ręcznie:
 #   python3 narzedzia/pobierz_wykresy.py [plik_wyjściowy.js]
-# Źródło: Yahoo Finance (wykres dzienny), zapasowo Stooq (CSV). Tylko biblioteka standardowa Pythona.
+# Źródła: CNBC (waluty, metale, ropa, indeksy) i Coinbase (bitcoin); zapasowo Nasdaq.com, Börse Frankfurt, Yahoo, Stooq.
+# Tylko biblioteka standardowa Pythona i curl.
 import csv, io, json, os, subprocess, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timezone
 
@@ -31,6 +32,29 @@ def get(url):
             return resp.read().decode('utf-8')
     except Exception as e:
         raise RuntimeError(f'curl: {err}; urllib: {e}')
+
+CNBC = {'eurusd': 'EUR=', 'gbpusd': 'GBP=', 'usdjpy': 'JPY=', 'usdpln': 'PLN=', 'xauusd': 'XAU=', 'xagusd': 'XAG=',
+        'wti': '@CL.1', 'nasdaq': '.NDX', 'sp500': '.SPX', 'dax': '.GDAXI'}
+
+def cnbc(sym):
+    # Główne źródło: świece dzienne z serwisu CNBC (kurs spot dla walut i metali, najbliższy kontrakt dla ropy).
+    try:
+        od = time.strftime('%Y%m%d000000', time.gmtime(time.time() - 190 * 86400))
+        do = time.strftime('%Y%m%d000000', time.gmtime(time.time() + 86400))
+        d = json.loads(get(f'https://ts-api.cnbc.com/harmony/app/bars/{urllib.parse.quote(sym)}/1D/{od}/{do}/adjusted/EST5EDT.json'))
+        rows = []
+        for b in d['barData']['priceBars']:
+            t = b['tradeTime'][:8]
+            day = f'{t[:4]}-{t[4:6]}-{t[6:]}'
+            o, h, l, c = (float(b[k]) for k in ('open', 'high', 'low', 'close'))
+            # Bez weekendów i pustych świec (otwarcie = maksimum = minimum = zamknięcie).
+            if datetime.strptime(day, '%Y-%m-%d').weekday() >= 5 or o == h == l == c:
+                continue
+            rows.append([day, o, h, l, c])
+        return (rows, 'CNBC') if rows else (None, None)
+    except Exception as e:
+        print(f'  cnbc {sym}: {e}')
+        return None, None
 
 def coinbase():
     # Zapasowe źródło dla bitcoina: publiczne API giełdy Coinbase (świece dzienne, UTC).
@@ -105,13 +129,13 @@ except Exception:
     pass
 out, bledy = {}, []
 for iid, (ys, ss, dec) in SYM.items():
-    rows, src = yahoo(ys)
-    if not rows and iid == 'btcusd':
-        rows, src = coinbase()
+    rows, src = coinbase() if iid == 'btcusd' else cnbc(CNBC[iid])
     if not rows and iid == 'nasdaq':
         rows, src = nasdaq('NDX')
     if not rows and iid == 'dax':
         rows, src = boerse_frankfurt('DE0008469008')
+    if not rows:
+        rows, src = yahoo(ys)
     if not rows:
         rows, src = stooq(ss)
     if not rows:
