@@ -1,0 +1,5 @@
+# Netlify publikuje gotową, wygenerowaną wersję próbną strony (ukrytą przed wyszukiwarkami).
+# Folder strona-test tworzy: python3 strona/narzedzia/publikuj.py --test
+[build]
+  publish = "strona-test"
+  command = ""

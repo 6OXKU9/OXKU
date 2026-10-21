@@ -1,0 +1,8 @@
+Jak obejrzeć stronę na swoim komputerze
+
+1. Rozpakuj plik ZIP (prawy przycisk > Wyodrębnij wszystkie).
+2. Otwórz plik index.html (dwuklik). Strona otworzy się w przeglądarce.
+3. Na banerze cookies kliknij „Akceptuję”, żeby załadowały się wykresy i notowania TradingView na żywo.
+
+Osobne strony analiz są w katalogach analiza/ (po polsku) i en/analysis/ (po angielsku).
+Ten katalog nadaje się też do wrzucenia na hosting, gdy zdecydujesz się na publikację.

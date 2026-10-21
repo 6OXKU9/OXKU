@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Analizy Rynku</title>
+<meta name="description" content="Analizy techniczne i fundamentalne z rozliczaną skutecznością: forex, USD/PLN, złoto, srebro, ropa, Nasdaq 100, S&amp;P 500, DAX, bitcoin.">
+<link rel="alternate" hreflang="pl" href="./?lang=pl">
+<link rel="alternate" hreflang="en" href="./?lang=en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--BODY-->
+<div class="util">
+  <div class="wrap util__in">
+    <div class="sessions" id="sesje" aria-label="Sesje rynku walutowego" data-en-aria="Forex market sessions"></div>
+    <div class="clock"><span data-en="Warsaw">Warszawa</span> <span class="num" id="zegar">--:--</span></div>
+  </div>
+</div>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#start" aria-label="AnalizyRynku, strona główna" data-en-aria="AnalizyRynku, home">
+      <svg class="logo__mark" viewBox="0 0 28 28" aria-hidden="true">
+        <rect x="0" y="0" width="28" height="28" rx="5" class="lm-bg"/>
+        <path d="M7 6v16M14 9v13M21 4v18" class="lm-wick"/>
+        <rect x="5" y="10" width="4" height="8" class="lm-body"/>
+        <rect x="12" y="12" width="4" height="7" class="lm-gold"/>
+        <rect x="19" y="7" width="4" height="9" class="lm-body"/>
+      </svg>
+      <span class="logo__txt">Analizy<b>Rynku</b></span>
+    </a>
+    <nav class="nav" aria-label="Główna nawigacja" data-en-aria="Main navigation">
+      <a href="#start" data-nav="start" data-en="Home">Start</a>
+      <a href="#rynki" data-nav="rynki" data-en="Markets">Rynki</a>
+      <a href="#analizy" data-nav="analizy" data-en="Analyses">Analizy</a>
+      <a href="#przeglad" data-nav="przeglad" data-en="AI brief">Przegląd AI</a>
+      <a href="#kalendarz" data-nav="kalendarz" data-en="Calendar">Kalendarz</a>
+      <a href="#o-stronie" data-nav="o-stronie" data-en="Methodology">Metodologia</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Język / Language"><button type="button" data-lang="pl" aria-pressed="true">PL</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    <a class="btn btn--primary top__cta" href="#kontakt" data-en="Contact">Kontakt</a>
+  </div>
+</header>
+<div class="tape" id="tape" aria-label="Notowania na żywo" data-en-aria="Live quotes"></div>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <span class="logo__txt">Analizy<b>Rynku</b></span>
+      <p data-en="Independent technical and fundamental analysis of currencies, precious metals, commodities, stock indices and crypto.">Niezależne analizy techniczne i fundamentalne rynku walutowego, metali, surowców, indeksów i kryptowalut.</p>
+    </div>
+    <div>
+      <h4 data-en="Markets">Rynki</h4>
+      <ul id="foot-rynki"></ul>
+    </div>
+    <div>
+      <h4 data-en="Site">Serwis</h4>
+      <ul>
+        <li><a href="#analizy" data-en="All analyses">Wszystkie analizy</a></li>
+        <li><a href="#przeglad" data-en="AI market brief">Przegląd rynku AI</a></li>
+        <li><a href="#kalendarz" data-en="Economic calendar">Kalendarz ekonomiczny</a></li>
+        <li><a href="#o-stronie" data-en="Methodology">Metodologia</a></li>
+        <li><a href="#powiadomienia" data-en="Alerts">Powiadomienia</a></li>
+        <li><a href="#kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-en="Legal">Informacje prawne</h4>
+      <ul>
+        <li><a href="#ryzyko" data-en="Risk warning">Ostrzeżenie o ryzyku</a></li>
+        <li><a href="#regulamin" data-en="Terms of service">Regulamin</a></li>
+        <li><a href="#prywatnosc" data-en="Privacy policy">Polityka prywatności</a></li>
+        <li><a href="#cookies" data-en="Cookies">Pliki cookie</a></li>
+        <li><button type="button" class="linkbtn" data-cookies data-en="Cookie settings">Ustawienia cookies</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot__risk">
+    <p><b data-en="Risk warning.">Ostrzeżenie o ryzyku.</b> <span data-en="Content on this site is for educational and informational purposes only and is not an investment recommendation within the meaning of applicable law. Trading leveraged instruments (forex, CFDs) carries a high risk of rapid loss of capital.">Treści publikowane w serwisie mają charakter wyłącznie edukacyjny i informacyjny i nie stanowią rekomendacji inwestycyjnej w rozumieniu obowiązujących przepisów. Handel instrumentami z dźwignią finansową (forex, CFD) wiąże się z wysokim ryzykiem szybkiej utraty kapitału.</span></p>
+    <p class="foot__meta">© <span id="rok"></span> AnalizyRynku. <span data-en="All rights reserved.">Wszelkie prawa zastrzeżone.</span></p>
+  </div>
+</footer>
+
+<script src="js/ustawienia.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/instrumenty.js"></script>
+<script src="js/analizy.js"></script>
+<script src="js/przeglad.js"></script>
+<script src="js/kalendarz.js"></script>
+<script src="js/app.js"></script>
+<script src="js/asystent.js"></script>
+<!--/BODY-->
+</body>
+</html>

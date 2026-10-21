@@ -1,0 +1,27 @@
+# Procedura aktualizacji danych AI
+
+Wykonuje ją Claude przy każdym zaplanowanym odświeżeniu (rano, po sesji) i na żądanie.
+
+1. **Zbierz dane** przez WebSearch/WebFetch z publicznych serwisów finansowych. Nie scrapuj investing.com (regulamin tego zabrania).
+   - Kurs, zmiana dzienna i tygodniowa dla wszystkich instrumentów z `js/instrumenty.js`: EUR/USD, GBP/USD, USD/JPY, USD/PLN, złoto, srebro, ropa WTI, Nasdaq 100, S&P 500, DAX, bitcoin.
+   - Maksima i minima cen od daty każdej otwartej analizy (do rozliczenia w kroku 4).
+   - Najważniejsze wydarzenia od poprzedniej aktualizacji.
+   - Kalendarz makro od dziś do końca przyszłego tygodnia: data, godzina, kraj, prognoza, poprzedni odczyt, a dla wydarzeń, które już minęły, faktyczny odczyt.
+2. **Zaktualizuj `js/przeglad.js`** w tym samym formacie (przeczytaj go najpierw). Każda liczba musi mieć źródło w `zrodla`. Czego nie da się potwierdzić, zostaw jako `null` („brak danych”); nie zgaduj. Ustaw `aktualizacja` i `stanNa`. Uzupełnij też wersję angielską (także `nazwa_en` przy każdym źródle w `zrodla`, gdy nazwa zawiera polskie słowa): `naglowek_en`, `stanNa_en`, `punkty_en` (tyle samo punktów) i `notka_en` przy każdym instrumencie.
+3. **Zaktualizuj `js/kalendarz.js`** w tym samym formacie (przeczytaj go najpierw).
+   - `czas` z przesunięciem strefy czasu polskiego: +02:00 do 25 paź 2026 (03:00), potem +01:00 aż do 28 mar 2027. Godziny ET przeliczaj: +6 h, gdy obie strefy mają ten sam rodzaj czasu (letni/zimowy); między 25 paź a 1 lis 2026 jest +5 h.
+   - `wplyw` 1–4: 4 tylko decyzje banków centralnych (Fed, EBC, BoE, BoJ), konferencje ich prezesów, NFP i CPI z USA. 3: CPI/PKB/rynek pracy dużych gospodarek, wstępne PMI strefy euro i USA, wyniki największych spółek tech. 2: pozostałe ważne dane. 1: dane drugorzędne.
+   - Usuwaj wydarzenia starsze niż 2 dni, dopisuj `aktualnie`, gdy odczyt już się ukazał.
+   - Godziny wzięte ze stałych harmonogramów urzędów, a nie ze źródła, odnotuj w `uwaga`.
+   - Uwzględniaj też Polskę (`kraj: "PL"`: decyzje RPP, CPI) dla USD/PLN i wydarzenia dla ropy (OPEC+, zapasy EIA) i DAX.
+   - Każde wydarzenie ma `nazwa_en` i `opis_en`; `uwaga` ma `uwaga_en`.
+4. **Rozlicz otwarte analizy** w `js/analizy.js` (te bez pola `wynik` albo ze statusem „w toku”), według zasad z podstrony Metodologia:
+   - wzrostowa: trafiona, gdy cena dotknie R1 (pierwszy opór nad ceną z publikacji) zanim świeca na interwale analizy zamknie się poniżej S1; nietrafiona w odwrotnej kolejności. Spadkowa odwrotnie. Neutralna: trafiona, gdy do końca horyzontu żadna świeca nie zamknie się poza S1–R1.
+   - zmiana kontraktu (ropa WTI): gdy kontrakt z analizy wygasa, przesuń jej poziomy o różnicę cen starego i nowego kontraktu z dnia zmiany (np. 19 paź 2026: listopad 103,66, grudzień 98,54, różnica −5,12) i dalej rozliczaj na nowym kontrakcie. Zapisz to w komentarzu wyniku.
+   - horyzont: H4 = 5 dni sesyjnych, D1 = 10, W1 = 6 tygodni; po nim bez rozstrzygnięcia: `"bez rozstrzygnięcia"`.
+   - zapis: `wynik: { status: "trafiona" | "nietrafiona" | "bez rozstrzygnięcia", data: "RRRR-MM-DD", komentarz: "…", komentarz_en: "…" }`. Komentarz podaje, który poziom padł, kiedy i źródło ceny. Gdy kolejności zdarzeń nie da się ustalić ze źródeł, zostaw analizę w toku i napisz to w odpowiedzi.
+5. **Zbuduj i opublikuj podgląd:**
+   `python3 /mnt/project-files/strona/narzedzia/podglad.py /tmp/claude-0/-home-claude/1ef09666-e197-58d4-989d-6b4c054ea5fb/scratchpad/analizy-rynku.html` (utwórz katalog, jeśli go nie ma), potem narzędzie Artifact z tą ścieżką, pod adresem https://claude.ai/artifact/C7pWHPd8r9KoHJQsQuBQe4 (podaj `url`, jeśli publikacja trafiłaby gdzie indziej). Nie zmieniaj `capabilities` (pomiń to pole).
+6. **Odśwież paczki:** `cd /mnt/project-files && python3 strona/narzedzia/publikuj.py && python3 strona/narzedzia/publikuj.py --test`, potem `python3 -c "import shutil; shutil.make_archive('/mnt/project-files/strona-publikacja','zip','/mnt/project-files','strona-publikacja'); shutil.make_archive('/mnt/project-files/strona','zip','/mnt/project-files','strona'); shutil.make_archive('/mnt/project-files/strona-test','zip','/mnt/project-files/strona-test')"`. Wersja próbna (`strona-test`) jest ukryta przed wyszukiwarkami; Bartek wgrywa ją na Netlify.
+7. **Komunikacja:** zaplanowane odświeżenie kończy się tylko aktualizacją checklisty (update_status) i `no_reply_needed`, chyba że coś się nie udało, na rynku wydarzyło się coś wyjątkowego albo któraś analiza została rozliczona (wtedy jedna krótka wiadomość z wynikiem). Odświeżenie na żądanie kończy się jedną krótką wiadomością w wątku.
+8. **Powiadomienia:** dopóki w `js/ustawienia.js` nie ma podłączonej usługi i Bartek nie zgodził się na wysyłkę, nie wysyłaj niczego na zewnątrz.
