@@ -20,7 +20,7 @@ def get(url):
     # Najpierw systemowy curl (Yahoo odrzuca część klientów Pythona kodem 429), potem urllib.
     try:
         r = subprocess.run(['curl', '-sS', '-f', '-L', '--compressed', '-m', '30', '-A', UA['User-Agent'],
-                            '-H', 'Accept: application/json,text/csv,*/*', url], capture_output=True, text=True)
+                            '-H', 'Accept: application/json, text/plain, */*', url], capture_output=True, text=True)
         if r.returncode == 0 and r.stdout:
             return r.stdout
         err = r.stderr.strip()
@@ -43,7 +43,7 @@ def coinbase():
         return None, None
 
 def yahoo(sym):
-    for host in ('query1', 'query2'):
+    for host in ('query1', 'query2', 'query1', 'query2'):
         try:
             d = json.loads(get(f'https://{host}.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=6mo&interval=1d'))
             r = d['chart']['result'][0]
@@ -60,7 +60,32 @@ def yahoo(sym):
                 return rows, 'Yahoo Finance'
         except Exception as e:
             print(f'  {host} {sym}: {e}')
+            time.sleep(4)  # Yahoo chwilowo odrzuca serwery GitHub kodem 429; ponów po przerwie
     return None, None
+
+def nasdaq(sym):
+    # Zapasowo dla Nasdaq 100: publiczne API nasdaq.com.
+    try:
+        d = json.loads(get(f'https://api.nasdaq.com/api/quote/{sym}/historical?assetclass=index&fromdate={time.strftime("%Y-%m-%d", time.gmtime(time.time() - 190 * 86400))}&limit=200'))
+        num = lambda v: float(v.replace(',', ''))
+        rows = [[f'{r["date"][6:]}-{r["date"][:2]}-{r["date"][3:5]}', num(r['open']), num(r['high']), num(r['low']), num(r['close'])] for r in d['data']['tradesTable']['rows']]
+        return (sorted(rows), 'Nasdaq.com') if rows else (None, None)
+    except Exception as e:
+        print(f'  nasdaq {sym}: {e}')
+        return None, None
+
+def boerse_frankfurt(isin):
+    # Zapasowo dla DAX: notowania Börse Frankfurt (Xetra).
+    try:
+        now = int(time.time())
+        d = json.loads(get(f'https://api.boerse-frankfurt.de/v1/tradingview/history?symbol=XETR%3A{isin}&resolution=1D&from={now - 190 * 86400}&to={now}'))
+        if d.get('s') != 'ok':
+            return None, None
+        rows = [[datetime.fromtimestamp(t, timezone.utc).strftime('%Y-%m-%d'), o, h, l, c] for t, o, h, l, c in zip(d['t'], d['o'], d['h'], d['l'], d['c'])]
+        return (rows, 'Börse Frankfurt') if rows else (None, None)
+    except Exception as e:
+        print(f'  boerse-frankfurt {isin}: {e}')
+        return None, None
 
 def stooq(sym):
     try:
@@ -71,16 +96,28 @@ def stooq(sym):
         print(f'  stooq {sym}: {type(e).__name__} {e}')
         return None, None
 
-import urllib.parse
+# Poprzedni plik: instrumenty, których tym razem nie udało się pobrać, zachowują stare świece.
+stare = {}
+try:
+    txt = open(OUT, encoding='utf-8').read()
+    stare = json.loads(txt[txt.index('{'):txt.rindex('}') + 1]).get('instrumenty', {})
+except Exception:
+    pass
 out, bledy = {}, []
 for iid, (ys, ss, dec) in SYM.items():
     rows, src = yahoo(ys)
     if not rows and iid == 'btcusd':
         rows, src = coinbase()
+    if not rows and iid == 'nasdaq':
+        rows, src = nasdaq('NDX')
+    if not rows and iid == 'dax':
+        rows, src = boerse_frankfurt('DE0008469008')
     if not rows:
         rows, src = stooq(ss)
     if not rows:
         bledy.append(iid)
+        if iid in stare:
+            out[iid] = stare[iid]
         continue
     seen = {}
     for r in rows:  # jedna świeca na dzień (ostatnia wygrywa)
