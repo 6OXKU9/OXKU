@@ -47,8 +47,8 @@ def cnbc(sym):
             t = b['tradeTime'][:8]
             day = f'{t[:4]}-{t[4:6]}-{t[6:]}'
             o, h, l, c = (float(b[k]) for k in ('open', 'high', 'low', 'close'))
-            # Bez weekendów i pustych świec (otwarcie = maksimum = minimum = zamknięcie).
-            if datetime.strptime(day, '%Y-%m-%d').weekday() >= 5 or o == h == l == c:
+            # Bez weekendów, pustych świec (otwarcie = maksimum = minimum = zamknięcie) i niepełnych (zera, np. dzień wygaśnięcia kontraktu).
+            if datetime.strptime(day, '%Y-%m-%d').weekday() >= 5 or o == h == l == c or min(o, h, l, c) <= 0:
                 continue
             rows.append([day, o, h, l, c])
         return (rows, 'CNBC') if rows else (None, None)
