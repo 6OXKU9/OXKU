@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-10-21T22:30:00+02:00",
+  aktualizacja: "2026-10-22T07:45:00+02:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -41,11 +41,6 @@ window.KALENDARZ = {
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
   wydarzenia: [
-    { czas: "2026-10-19T04:00:00+02:00", kraj: "CN", nazwa: "PKB za III kwartał", wplyw: 3, instrumenty: ["xagusd", "xauusd", "nasdaq", "wti", "dax"], opis: "Kondycja drugiej gospodarki świata. Słaby odczyt uderza w metale przemysłowe i apetyt na ryzyko.", nazwa_en: "Q3 GDP", opis_en: "Health check on the world's second-largest economy. A weak print hits industrial metals and risk appetite.", poprzednio: "4,3% r/r", prognoza: "4,4% r/r", aktualnie: "4,5% r/r", poprzednio_en: "4.3% y/y", prognoza_en: "4.4% y/y", aktualnie_en: "4.5% y/y", zrodlo: 7 },
-    { czas: "2026-10-19T04:00:00+02:00", kraj: "CN", nazwa: "Produkcja przemysłowa i sprzedaż detaliczna", wplyw: 2, instrumenty: ["xagusd"], opis: "Popyt przemysłowy z Chin, ważny dla srebra.", nazwa_en: "Industrial production and retail sales", opis_en: "Chinese industrial demand, important for silver.", aktualnie: "produkcja +5,5% r/r, sprzedaż +1,1% r/r", aktualnie_en: "output +5.5% y/y, sales +1.1% y/y", zrodlo: 7 },
-    { czas: "2026-10-19T08:00:00+02:00", kraj: "DE", nazwa: "Zamówienia w przemyśle", wplyw: 2, instrumenty: ["dax", "eurusd"], opis: "Wskaźnik przyszłej produkcji w niemieckim przemyśle.", nazwa_en: "Factory orders", opis_en: "A gauge of future output in German manufacturing.", zrodlo: 9 },
-    { czas: "2026-10-19T14:30:00+02:00", kraj: "CA", nazwa: "Inflacja CPI", wplyw: 2, instrumenty: [], opis: "Wpływa na oczekiwania wobec Banku Kanady i kurs dolara kanadyjskiego.", nazwa_en: "CPI inflation", opis_en: "Shapes expectations for the Bank of Canada and the Canadian dollar.", poprzednio: "3,0% r/r", prognoza: "3,0% r/r", aktualnie: "3,1% r/r", poprzednio_en: "3.0% y/y", prognoza_en: "3.0% y/y", aktualnie_en: "3.1% y/y", zrodlo: 10 },
-    { czas: "2026-10-19T16:00:00+02:00", kraj: "US", nazwa: "Indeks NAHB rynku nieruchomości (paź)", wplyw: 1, instrumenty: ["sp500"], opis: "Nastroje deweloperów w USA.", nazwa_en: "NAHB housing market index (Oct)", opis_en: "US homebuilder sentiment.", prognoza: "32", aktualnie: "29", zrodlo: 12 },
 
     { czas: "2026-10-20T03:15:00+02:00", kraj: "CN", nazwa: "Stopy LPR (1-roczna i 5-letnia)", wplyw: 1, instrumenty: [], opis: "Podstawowe stopy kredytowe w Chinach.", nazwa_en: "Loan prime rates (1-year and 5-year)", opis_en: "China's benchmark lending rates.", poprzednio: "3,0% i 3,5%", aktualnie: "3,0% i 3,5% (bez zmian)", poprzednio_en: "3.0% and 3.5%", aktualnie_en: "3.0% and 3.5% (unchanged)", zrodlo: 13 },
     { czas: "2026-10-20T08:00:00+02:00", kraj: "DE", nazwa: "Ceny producentów PPI (wrz)", wplyw: 1, instrumenty: ["eurusd", "dax"], opis: "Wczesny sygnał presji cenowej w niemieckiej gospodarce.", nazwa_en: "Producer prices PPI (Sep)", opis_en: "An early signal of price pressure in the German economy.", zrodlo: 12 },

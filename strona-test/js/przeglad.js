@@ -1,49 +1,47 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-10-21T22:30:00+02:00",
-  stanNa_en: "Wednesday evening, 21 Oct 2026 (after the US close)",
-  stanNa: "środa wieczorem, 21 paź 2026 (po zamknięciu sesji w USA)",
-  naglowek_en: "Tech lifts Wall Street for a fourth day: S&P 500 +0.6%, Nasdaq +1.05%. After the bell Tesla beat on profit, SAP raised its cloud outlook; Brent near $110.",
-  naglowek: "Technologia czwarty dzień ciągnie Wall Street: S&P 500 +0,6%, Nasdaq +1,05%. Po sesji Tesla z zyskiem powyżej prognoz, SAP podnosi prognozę chmury; Brent blisko 110 USD.",
+  aktualizacja: "2026-10-22T07:45:00+02:00",
+  stanNa_en: "Thursday morning, 22 Oct 2026 (before the European open)",
+  stanNa: "czwartek rano, 22 paź 2026 (przed sesją w Europie)",
+  naglowek_en: "Risk-off overnight: Nasdaq futures −1.3% after Tesla's capex cut, Asia lower, Brent at $111 on Gulf tensions; gold back below $4,100.",
+  naglowek: "Noc w trybie ryzyka: kontrakty na Nasdaq −1,3% po cięciu inwestycji Tesli, Azja w dół, Brent 111 USD przez napięcia w Zatoce; złoto znów poniżej 4 100 USD.",
   punkty: [
-    "Zamknięcie w USA: S&P 500 7 757,72 (+0,59%), Nasdaq Composite 26 702 (+1,05%), Dow Jones 52 857 (+0,69%). Rentowność 10-letnich obligacji około 5,15%.",
-    "Tesla po sesji: zysk 0,48 USD na akcję wobec prognozowanych 0,45, przychody 28,05 mld USD, nieco poniżej oczekiwań (28,34 mld). Wyniki Meta też po sesji.",
-    "SAP po sesji w Europie: przychody 10,27 mld EUR (+13%), zaległe zamówienia w chmurze +28%; spółka spodziewa się przychodów z chmury przy górnej granicy prognozy. DAX zamknął dzień na 25 647 (+1,35%).",
-    "Ropa: WTI (grudzień) 97,15 USD (−0,7%), Brent około 109–110 USD po doniesieniach o ataku na pole naftowe Aramco.",
-    "Złoto około 4 134 USD (+0,2%) i srebro 57,87 USD (−0,2%) bez większych zmian; bitcoin około 84 500 USD (+1,8%), powyżej zakresu z analizy."
+    "Kontrakty na Nasdaq 100 tracą około 1,3%, na S&P 500 około 0,7%. Tesla po sesji −3,3% po obniżeniu prognozy nakładów inwestycyjnych, Meta +2,2% po podniesieniu swojej, Lam Research −7,4%.",
+    "Azja na minusie: Kospi −3,3% (najniżej od kwietnia), Hang Seng −2,9%, Nikkei około −1%. Bank Korei bez zmian stóp (3,00%), inflacja w Nowej Zelandii 3,7% r/r (prognoza 3,8%).",
+    "Bliski Wschód: Departament Stanu wycofuje część personelu z Arabii Saudyjskiej, a według New York Timesa USA i Izrael mają plany kolejnych uderzeń na Iran. Brent +2% do około 111 USD, WTI około 99 USD.",
+    "Złoto spada o około 1,4% do 4 080 USD mimo napięć, bo drożejąca ropa wzmacnia obawy o inflację i podwyżki stóp; srebro −3,3%. Popyt na bezpieczne aktywa trafia do obligacji USA (10-latki 5,09%) i jena (157,70).",
+    "Wczoraj Nasdaq 100 zamknął się na 29 822 pkt, powyżej poziomu unieważnienia (29 750), więc analiza spadkowa z 18 paź jest nietrafiona. Dziś nowa analiza: cel 29 000, unieważnienie przy zamknięciu powyżej 30 000."
   ],
   punkty_en: [
-    "US close: S&P 500 7,757.72 (+0.59%), Nasdaq Composite 26,702 (+1.05%), Dow Jones 52,857 (+0.69%). The 10-year Treasury yield is around 5.15%.",
-    "Tesla after the bell: EPS $0.48 vs $0.45 expected, revenue $28.05bn, slightly below expectations ($28.34bn). Meta also reports after the close.",
-    "SAP after the European close: revenue €10.27bn (+13%), current cloud backlog +28%; it now sees cloud revenue at the upper end of guidance. The DAX closed at 25,647 (+1.35%).",
-    "Oil: WTI (December) $97.15 (−0.7%), Brent around $109–110 after reports of an attack on an Aramco oil field.",
-    "Gold around $4,134 (+0.2%) and silver $57.87 (−0.2%) little changed; bitcoin around $84,500 (+1.8%), above its analysis range."
+    "Nasdaq 100 futures are down about 1.3%, S&P 500 futures about 0.7%. Tesla −3.3% after hours on a capex cut, Meta +2.2% after raising its own, Lam Research −7.4%.",
+    "Asia is lower: Kospi −3.3% (lowest since April), Hang Seng −2.9%, Nikkei about −1%. The Bank of Korea held at 3.00%, New Zealand inflation 3.7% y/y (forecast 3.8%).",
+    "Middle East: the State Department is pulling some staff out of Saudi Arabia, and the New York Times reports the US and Israel have plans for further strikes on Iran. Brent +2% to about $111, WTI around $99.",
+    "Gold falls about 1.4% to $4,080 despite the tensions, as pricier oil feeds inflation and rate-hike worries; silver −3.3%. Haven demand goes to Treasuries (10-year 5.09%) and the yen (157.70).",
+    "Yesterday the Nasdaq 100 closed at 29,822, above the invalidation level (29,750), so the bearish analysis of 18 Oct is a miss. New analysis today: target 29,000, invalidated by a close above 30,000."
   ],
   instrumenty: {
-    sp500:  { kurs: 7757.72, zmiana: 0.59, tydzien: null, notka: "Czwarta wzrostowa sesja z rzędu. Opór z analizy 7 790.", notka_en: "Fourth straight gain. Analysis resistance at 7,790.", zrodlo: 3 },
-    nasdaq: { kurs: 29801, zmiana: 1.05, tydzien: null, notka: "Notowanie z końca sesji, w okolicy oporu z analizy (29 750). Dokładne zamknięcie Nasdaq 100 i rozliczenie analizy przy porannej aktualizacji.", notka_en: "Late-session quote, near the analysis resistance (29,750). The exact Nasdaq 100 close and the settlement come with the morning update.", zrodlo: 0 },
-    xauusd: { kurs: 4134, zmiana: 0.23, tydzien: null, notka: "Stabilnie po spadku do najniższego poziomu od 15 paź. Wsparcie z analizy 4 096.", notka_en: "Steady after dipping to its lowest since 15 Oct. Analysis support at 4,096.", zrodlo: 0 },
-    eurusd: { kurs: 1.1235, zmiana: null, tydzien: null, notka: "Euro pod presją rosnących rentowności francuskich obligacji.", notka_en: "The euro is weighed by rising French bond yields.", zrodlo: 3 },
-    gbpusd: { kurs: 1.3392, zmiana: 0.09, tydzien: null, notka: "Inflacja 3,5% (powyżej prognozy) wspiera oczekiwania podwyżki BoE 5 lis. Opór z analizy 1,3435.", notka_en: "Inflation at 3.5% (above forecast) supports expectations of a BoE hike on 5 Nov. Analysis resistance at 1.3435.", zrodlo: 1 },
-    usdjpy: { kurs: 158.18, zmiana: null, tydzien: null, notka: "W zakresie 157,50–159,00. Posiedzenie BoJ 29–30 paź.", notka_en: "Within the 157.50–159.00 range. BoJ meets 29–30 Oct.", zrodlo: 3 },
-    xagusd: { kurs: 57.87, zmiana: -0.16, tydzien: null, notka: "Bez większych zmian razem ze złotem.", notka_en: "Little changed along with gold.", zrodlo: 0 },
-    usdpln: { kurs: 3.8854, zmiana: null, tydzien: null, notka: "Wyliczony z kursów EUR/PLN (4,3653) i EUR/USD (1,1235).", notka_en: "Derived from EUR/PLN (4.3653) and EUR/USD (1.1235).", zrodlo: 1 },
-    wti:    { kurs: 97.15, zmiana: -0.68, tydzien: null, notka: "Kontrakt grudniowy. Brent drożeje po doniesieniach o ataku na pole Aramco, WTI lekko w dół.", notka_en: "December contract. Brent rises on reports of an attack on an Aramco field, WTI slightly lower.", zrodlo: 3 },
-    dax:    { kurs: 25647, zmiana: 1.35, tydzien: null, notka: "Najwyżej od miesiąca. SAP po sesji: przychody +13%, prognoza chmury przy górnej granicy. Analiza: cel 25 800, wsparcie 25 325.", notka_en: "Highest in a month. SAP after the close: revenue +13%, cloud outlook at the upper end. Analysis: target 25,800, support 25,325.", zrodlo: 5 },
-    btcusd: { kurs: 84481, zmiana: 1.84, tydzien: null, notka: "Powyżej górnej granicy zakresu z analizy (84 262). Liczy się zamknięcie dnia o 2:00 czasu polskiego.", notka_en: "Above the top of the analysis range (84,262). The daily close at 00:00 UTC is what counts.", zrodlo: 0 }
+    sp500:  { kurs: 7697.38, zmiana: -0.77, tydzien: null, notka: "Notowania CFD rano. Wczoraj zamknięcie 7 757 (+0,6%). Wsparcie z analizy 7 520, opór 7 790.", notka_en: "Morning CFD quote. Yesterday's close 7,757 (+0.6%). Analysis support 7,520, resistance 7,790.", zrodlo: 0 },
+    nasdaq: { kurs: 29359, zmiana: -1.56, tydzien: null, notka: "Notowania CFD rano. Analiza z 18 paź nietrafiona (zamknięcie 29 822 powyżej 29 750). Nowa: cel 29 000, unieważnienie powyżej 30 000.", notka_en: "Morning CFD quote. The 18 Oct analysis missed (close 29,822 above 29,750). New one: target 29,000, invalidated above 30,000.", zrodlo: 0 },
+    xauusd: { kurs: 4080.51, zmiana: -1.46, tydzien: null, notka: "Poniżej 4 100 przez obawy o inflację i podwyżki stóp. Wsparcie z analizy 4 096: liczy się zamknięcie dnia.", notka_en: "Below $4,100 on inflation and rate-hike worries. Analysis support at 4,096: the daily close is what counts.", zrodlo: 0 },
+    eurusd: { kurs: 1.1245, zmiana: 0.1, tydzien: null, notka: "Lekko w górę przy słabszym dolarze.", notka_en: "Slightly higher on a softer dollar.", zrodlo: 1 },
+    gbpusd: { kurs: 1.3395, zmiana: 0.01, tydzien: null, notka: "Blisko miesięcznego maksimum po inflacji 3,5%. Opór z analizy 1,3435.", notka_en: "Near a one-month high after 3.5% inflation. Analysis resistance at 1.3435.", zrodlo: 4 },
+    usdjpy: { kurs: 157.7, zmiana: -0.3, tydzien: null, notka: "Jen zyskuje jako bezpieczna przystań. Dolna granica zakresu z analizy 157,50.", notka_en: "The yen gains as a safe haven. Bottom of the analysis range at 157.50.", zrodlo: 1 },
+    xagusd: { kurs: 56.05, zmiana: -3.29, tydzien: null, notka: "Mocny spadek razem ze złotem. Cel analizy spadkowej 55,40.", notka_en: "Sharp drop along with gold. Bearish analysis target at 55.40.", zrodlo: 0 },
+    usdpln: { kurs: 3.8764, zmiana: -0.21, tydzien: null, notka: "Zamknięcie z 21 paź, tuż nad dolną granicą zakresu z analizy (3,8762).", notka_en: "Close of 21 Oct, just above the bottom of the analysis range (3.8762).", zrodlo: 3 },
+    wti:    { kurs: 99.04, zmiana: 1.95, tydzien: null, notka: "Kontrakt grudniowy. W górę przez napięcia w Zatoce; Brent 111,11 USD. Opór z analizy (po korekcie) 99,32.", notka_en: "December contract. Higher on Gulf tensions; Brent at $111.11. Analysis resistance (adjusted) at 99.32.", zrodlo: 0 },
+    dax:    { kurs: 25508, zmiana: -0.53, tydzien: null, notka: "Notowania przed sesją. Wczoraj zamknięcie 25 645 (+1,35%). Wsparcie z analizy 25 325.", notka_en: "Pre-market quote. Yesterday's close 25,645 (+1.35%). Analysis support at 25,325.", zrodlo: 0 },
+    btcusd: { kurs: 82765, zmiana: -1.48, tydzien: null, notka: "Wczorajsze zamknięcie dnia (84 025) w zakresie z analizy, więc analiza nadal w toku. Zakres 79 676–84 262.", notka_en: "Yesterday's daily close (84,025) was inside the analysis range, so the analysis is still open. Range 79,676–84,262.", zrodlo: 0 }
   },
   kalendarz: [
-    { dzien: "Czw 22 paź", wydarzenia: ["USA: cotygodniowe wnioski o zasiłek dla bezrobotnych", "USA: indeks wskaźników wyprzedzających"] },
+    { dzien: "Czw 22 paź", wydarzenia: ["USA: cotygodniowe wnioski o zasiłek dla bezrobotnych (14:30)", "USA: indeks wskaźników wyprzedzających (16:00)"] },
     { dzien: "Pt 23 paź", wydarzenia: ["Wstępne indeksy PMI (strefa euro, Wielka Brytania, USA)", "USA: nastroje konsumentów Uniwersytetu Michigan i oczekiwania inflacyjne"] }
   ],
   zrodla: [
-    { nazwa: "Trading Economics: złoto (z tabelą US500, US100, DE40, srebro, bitcoin), 21 paź 2026", nazwa_en: "Trading Economics: gold (with US500, US100, DE40, silver, bitcoin table), 21 Oct 2026", url: "https://tradingeconomics.com/commodity/gold" },
-    { nazwa: "Trading Economics: EUR/USD (z tabelą walut), 21 paź 2026", nazwa_en: "Trading Economics: EUR/USD (with currency table), 21 Oct 2026", url: "https://tradingeconomics.com/euro-area/currency" },
-    { nazwa: "Yahoo Finance: Stock market today, 21 paź 2026 (Brent, atak na pole Aramco)", nazwa_en: "Yahoo Finance: Stock market today, 21 Oct 2026 (Brent, Aramco field attack)", url: "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html" },
-    { nazwa: "Investrade: Market Review, 21 paź 2026 (zamknięcie)", nazwa_en: "Investrade: Market Review, 21 Oct 2026 (close)", url: "https://investrade.com/market-review-october-21-2026/" },
-    { nazwa: "Teslarati: Tesla Q3 2026 earnings results", url: "https://www.teslarati.com/tesla-tsla-q3-2026-earnings-results/" },
-    { nazwa: "MS Aktuell: DAX auf Vierwochenhoch (zamknięcie Xetra), 21 paź 2026", nazwa_en: "MS Aktuell: DAX at a four-week high (Xetra close), 21 Oct 2026", url: "https://ms-aktuell.de/welt/dax-vierwochenhoch-21-10-2026/" },
-    { nazwa: "Stock Titan: SAP Quarterly Statement Q3 2026", url: "https://www.stocktitan.net/news/SAP/sap-quarterly-statement-q3-lfpmuutnzhal.html" }
+    { nazwa: "Trading Economics: złoto (z tabelą srebro, ropa, US500, US100, DE40, bitcoin), 22 paź 2026", nazwa_en: "Trading Economics: gold (with silver, oil, US500, US100, DE40, bitcoin table), 22 Oct 2026", url: "https://tradingeconomics.com/commodity/gold" },
+    { nazwa: "Bloomberg via swissinfo: US Stock Futures Drop After Earnings, Oil Gains (22 paź 2026)", url: "https://www.swissinfo.ch/eng/us-stock-futures-drop-after-earnings,-oil-gains:-markets-wrap/92254614" },
+    { nazwa: "investingLive: Asia-Pacific market news, 22 paź 2026", nazwa_en: "investingLive: Asia-Pacific market news, 22 Oct 2026", url: "https://investinglive.com/news/investinglive-asia-pacific-market-news-asian-stocks-slide-dollar-slips/" },
+    { nazwa: "CNBC: świece dzienne (zamknięcia 21 paź 2026)", nazwa_en: "CNBC: daily candles (21 Oct 2026 closes)", url: "https://www.cnbc.com/quotes/PLN=" },
+    { nazwa: "Trading Economics: GBP/USD (z tabelą walut), 22 paź 2026", nazwa_en: "Trading Economics: GBP/USD (with currency table), 22 Oct 2026", url: "https://tradingeconomics.com/united-kingdom/currency" }
   ]
 };

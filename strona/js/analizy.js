@@ -24,6 +24,34 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-22-nasdaq", instrument: "nasdaq", data: "2026-10-22", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 traci w nocy po wynikach Tesli, test strefy 29 000", tytul_en: "Nasdaq 100 slips overnight after Tesla results, 29,000 zone in play",
+    lead: "Kontrakty na Nasdaq 100 tracą rano około 1,3% po cięciu inwestycji przez Teslę i napięciach na Bliskim Wschodzie. Indeks pozostaje pod przełamaną linią trendu, a bazą jest powrót do strefy 29 000.",
+    lead_en: "Nasdaq 100 futures are down about 1.3% this morning after Tesla's capex cut and Middle East tensions. The index stays below its broken trend line, and a return to the 29,000 zone is the base case.",
+    poziomy: { cena: 29359, opory: [30000, 30370], wsparcia: [29000, 28745] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do strefy 29 000–29 240 (październikowe minima i podstawa wybicia z września), a przy jej przełamaniu do 28 745 (minimum z września).", tekst_en: "Base case: a drop to the 29,000–29,240 zone (October lows and the base of September's breakout), and on a break to 28,745 (September low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 30 000 (przełamana linia trendu i opór psychologiczny) unieważnia scenariusz i otwiera drogę do 30 370.", tekst_en: "A daily close above 30,000 (broken trend line and psychological resistance) invalidates the setup and opens the way to 30,370." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął środę na 29 822 pkt (+1,1%), czwartą sesję z rzędu wyżej. W nocy kontrakty terminowe spadły o około 1,3%: Tesla obniżyła prognozę nakładów inwestycyjnych (akcje −3,3% po sesji), a Meta podniosła swoją (+2,2%), co podsyca wątpliwości wokół handlu spółkami AI.",
+      "Ciąży też Bliski Wschód: Brent podrożał do około 111 USD po atakach w Arabii Saudyjskiej, a według New York Timesa USA i Izrael mają plany kolejnych uderzeń na Iran. Giełdy w Azji spadały, Kospi o 3,3%.",
+      "Technicznie indeks wybił się w piątek dołem z linii trendu wzrostowego. StoneX wskazuje opór około 30 000 (tam przebiega przełamana linia) i 30 370, a wsparcia 29 240, około 29 000 i 28 745. Dopóki indeks jest pod 30 000, bazą jest konsolidacja z testem okolic 29 000."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Wednesday at 29,822 (+1.1%), its fourth straight gain. Overnight futures fell about 1.3%: Tesla cut its capex forecast (shares −3.3% after hours) while Meta raised its own (+2.2%), feeding doubts about the AI trade.",
+      "The Middle East also weighs: Brent rose to about $111 after attacks in Saudi Arabia, and the New York Times reports the US and Israel have plans for further strikes on Iran. Asian markets fell, the Kospi by 3.3%.",
+      "Technically the index broke below its uptrend line on Friday. StoneX cites resistance around 30,000 (where the broken line runs) and 30,370, with support at 29,240, around 29,000 and 28,745. While the index is below 30,000, consolidation with a test of the 29,000 area is the base case."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: Nasdaq 100 forecast (21 paź 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/nasdaq-100-forecast-stocks-rebound-ahead-of-more-earnings-2026-10-21/" },
+      { nazwa: "Bloomberg via swissinfo: US Stock Futures Drop After Earnings, Oil Gains (22 paź 2026)", url: "https://www.swissinfo.ch/eng/us-stock-futures-drop-after-earnings,-oil-gains:-markets-wrap/92254614" },
+      { nazwa: "OneUp Trader: NASDAQ Futures technical analysis (21 paź 2026)", url: "https://blog.oneuptrader.com/analysis/technical-analysis/nasdaq-nq-technical-analysis-bulls-under-pressure-as-trendline-breaks/" },
+      { nazwa: "Trading Economics: US100 (22 paź 2026, rano)", url: "https://tradingeconomics.com/commodity/gold" }
+    ]
+  },
+  {
     id: "2026-10-21-dax", instrument: "dax", data: "2026-10-21", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "DAX wybił się z oporu 25 450–25 500, celem 25 800–26 000", tytul_en: "DAX breaks out of 25,450–25,500 resistance, eyeing 25,800–26,000",
@@ -275,6 +303,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-nasdaq", instrument: "nasdaq", data: "2026-10-18", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-21", komentarz: "21 paź Nasdaq 100 zamknął sesję na 29 822 pkt (+1,1%), powyżej poziomu unieważnienia R1 29 750, zanim cena dotknęła wsparcia S1 28 740 (najniżej od publikacji: 29 209 20 paź). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 21 Oct the Nasdaq 100 closed at 29,822 (+1.1%), above the R1 invalidation level of 29,750, before price touched S1 support at 28,740 (lowest since publication: 29,209 on 20 Oct). Price source: CNBC daily candles." },
     tytul: "Nasdaq 100 po wyprzedaży spółek AI, presja w dół", tytul_en: "Nasdaq 100 after the AI selloff, pressure stays lower",
     lead: "Indeks stracił 5,5% w tydzień i zamknął piątek przy dziennym minimum. Obawy o zadłużenie spółek AI i ryzyko podwyżki stóp Fed przeważają.",
     lead_en: "The index lost 5.5% on the week and closed Friday at its daily low. Worries over AI company debt and Fed hike risk dominate.",
