@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-10-22T07:45:00+02:00",
+  aktualizacja: "2026-10-22T22:30:00+02:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -37,6 +37,7 @@ window.KALENDARZ = {
     { nazwa: "Trading Economics: ropa WTI (zapasy EIA), 21 paź 2026", nazwa_en: "Trading Economics: WTI crude (EIA inventories), 21 Oct 2026", url: "https://tradingeconomics.com/commodity/crude-oil" },
     { nazwa: "Teslarati: Tesla Q3 2026 earnings results", url: "https://www.teslarati.com/tesla-tsla-q3-2026-earnings-results/" },
     { nazwa: "Stock Titan: SAP Quarterly Statement Q3 2026", url: "https://www.stocktitan.net/news/SAP/sap-quarterly-statement-q3-lfpmuutnzhal.html" },
+    { nazwa: "Yahoo Finance: Stock market today, 22 paź 2026 (wnioski o zasiłek)", nazwa_en: "Yahoo Finance: Stock market today, 22 Oct 2026 (jobless claims)", url: "https://finance.yahoo.com/markets/article/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html" }
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
@@ -57,7 +58,7 @@ window.KALENDARZ = {
 
     { czas: "2026-10-21T22:05:00+02:00", kraj: "DE", nazwa: "Wyniki SAP za III kwartał", wplyw: 2, instrumenty: ["dax"], opis: "Największa spółka w DAX; wyniki po zamknięciu sesji w Europie.", nazwa_en: "SAP Q3 earnings", opis_en: "The largest DAX company; results after the European close.", aktualnie: "przychody 10,27 mld EUR (+13%), zaległe zamówienia w chmurze +28%, prognoza chmury podniesiona do górnej granicy", aktualnie_en: "revenue €10.27bn (+13%), current cloud backlog +28%, cloud outlook raised to the upper end", zrodlo: 23 },
 
-    { czas: "2026-10-22T14:30:00+02:00", kraj: "US", nazwa: "Wnioski o zasiłek dla bezrobotnych", wplyw: 2, instrumenty: ["eurusd", "xauusd", "sp500", "usdpln"], opis: "Cotygodniowy sygnał o kondycji rynku pracy w USA.", nazwa_en: "Initial jobless claims", opis_en: "Weekly signal on the health of the US labour market.", zrodlo: 0 },
+    { czas: "2026-10-22T14:30:00+02:00", kraj: "US", nazwa: "Wnioski o zasiłek dla bezrobotnych", wplyw: 2, instrumenty: ["eurusd", "xauusd", "sp500", "usdpln"], opis: "Cotygodniowy sygnał o kondycji rynku pracy w USA.", nazwa_en: "Initial jobless claims", opis_en: "Weekly signal on the health of the US labour market.", aktualnie: "194 tys. (najmniej od 3 miesięcy)", aktualnie_en: "194K (lowest in three months)", zrodlo: 24 },
     { czas: "2026-10-22T16:00:00+02:00", kraj: "US", nazwa: "Indeks wskaźników wyprzedzających (wrz)", wplyw: 1, instrumenty: ["sp500"], opis: "Zbiorczy wskaźnik koniunktury.", nazwa_en: "Leading economic index (Sep)", opis_en: "Composite indicator of business conditions.", zrodlo: 0 },
 
     { czas: "2026-10-23T09:15:00+02:00", kraj: "FR", nazwa: "Wstępne PMI (paź)", wplyw: 1, instrumenty: ["eurusd", "dax"], opis: "Pierwszy z europejskich odczytów PMI.", nazwa_en: "Flash PMI (Oct)", opis_en: "The first of the European PMI readings.", zrodlo: 1 },
