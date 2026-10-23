@@ -24,6 +24,33 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-23-dax", instrument: "dax", data: "2026-10-23", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "DAX traci po słabym PMI z Francji, celem strefa 24 800", tytul_en: "DAX slips after weak French PMI, eyeing the 24,800 zone",
+    lead: "DAX zamknął piątek na 25 182 pkt, poniżej 10-dniowej średniej i wsparcia 25 325. Dopóki indeks jest pod strefą 25 450–25 475, bazą jest powrót do wsparcia 24 800.",
+    lead_en: "The DAX closed Friday at 25,182, below its 10-day average and the 25,325 support. While the index stays below the 25,450–25,475 zone, a return to 24,800 support is the base case.",
+    poziomy: { cena: 25182, opory: [25475, 25800], wsparcia: [24800, 24480] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do strefy 24 800–24 850 (wielokrotnie potwierdzone wsparcie i październikowe minimum 24 792), a przy jej przełamaniu do 24 480.", tekst_en: "Base case: a drop to the 24,800–24,850 zone (repeatedly confirmed support and the October low of 24,792), and on a break to 24,480." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 25 475 (górna granica strefy oporu 25 450–25 475) unieważnia scenariusz i otwiera drogę do 25 800.", tekst_en: "A daily close above 25,475 (top of the 25,450–25,475 resistance zone) invalidates the setup and opens the way to 25,800." }
+    ],
+    tresc: [
+      "DAX zakończył piątkową sesję Xetra na 25 182 pkt (−0,8%) po dziennym minimum 25 129. Najmocniej traciły MTU Aero Engines (−4,8% po słabych wynikach Safrana), Deutsche Telekom (−3,2%) i Siemens Energy (−2,9%).",
+      "Nastroje popsuły wstępne PMI: we Francji indeks złożony spadł do 48,4 pkt, poniżej progu 50, a w Niemczech do 52,8 pkt wobec oczekiwanych 53,3. Brent podrożał do około 116 USD, a w USA spadki kontynuowały spółki technologiczne.",
+      "W przyszłym tygodniu zdecydują Fed (28 paź), EBC (29 paź) i wyniki Microsoftu, Alphabetu i Amazona. Analitycy onvista wskazują opór w strefie 25 450–25 475 i wsparcia 25 000 oraz 24 800–24 850, a wallstreet-online wskazuje 25 800 jako sygnał kupna i 24 792 jako minimum miesiąca."
+    ],
+    tresc_en: [
+      "The DAX ended Friday's Xetra session at 25,182 (−0.8%) after a daily low of 25,129. MTU Aero Engines (−4.8% after weak Safran results), Deutsche Telekom (−3.2%) and Siemens Energy (−2.9%) fell the most.",
+      "Flash PMIs soured the mood: France's composite fell to 48.4, below the 50 threshold, and Germany's to 52.8 versus 53.3 expected. Brent rose to about $116, and US tech stocks kept falling.",
+      "Next week the Fed (28 Oct), the ECB (29 Oct) and results from Microsoft, Alphabet and Amazon will set the tone. onvista analysts cite resistance in the 25,450–25,475 zone and support at 25,000 and 24,800–24,850, while wallstreet-online sees 25,800 as a buy signal and 24,792 as the monthly low."
+    ],
+    zrodla: [
+      { nazwa: "ad-hoc-news / Dow Jones: DAX schließt nach Frankreichs PMI 190 Punkte tiefer (23 paź 2026)", url: "https://www.ad-hoc-news.de/boerse/news/marktberichte/dax-schliesst-nach-frankreichs-pmi-190-punkte-tiefer/70400630" },
+      { nazwa: "onvista: Dax verteidigt Unterstützung (21 paź 2026)", url: "https://www.onvista.de/news/2026/10-21-dax-verteidigt-unterstuetzung-dieser-widerstand-ist-nun-entscheidend-41123281-19-26566647" },
+      { nazwa: "wallstreet-online: DAX: Mal hoch, mal wieder runter (20 paź 2026)", url: "https://www.wallstreet-online.de/nachricht/21549809-dax-hoch-runter" }
+    ]
+  },
+  {
     id: "2026-10-23-zloto", instrument: "xauusd", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Złoto poniżej 4000 USD po raz pierwszy od lipca, celem strefa 3940–3960", tytul_en: "Gold below $4,000 for the first time since July, eyeing the $3,940–3,960 zone",
@@ -191,6 +218,7 @@ window.ANALIZY = [
   {
     id: "2026-10-21-dax", instrument: "dax", data: "2026-10-21", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-23", komentarz: "23 paź DAX zamknął sesję Xetra na 25 182 pkt (−0,8%), poniżej wsparcia S1 25 325, zanim cena dotknęła oporu R1 25 800 (najwyżej od publikacji: 25 706 21 paź). Źródło ceny: ad-hoc-news.de (Dow Jones).", komentarz_en: "On 23 Oct the DAX closed the Xetra session at 25,182 (−0.8%), below S1 support at 25,325, before price touched R1 resistance at 25,800 (highest since publication: 25,706 on 21 Oct). Price source: ad-hoc-news.de (Dow Jones)." },
     tytul: "DAX wybił się z oporu 25 450–25 500, celem 25 800–26 000", tytul_en: "DAX breaks out of 25,450–25,500 resistance, eyeing 25,800–26,000",
     lead: "DAX zamknął się na najwyższym poziomie od miesiąca po mocnym starcie sezonu wyników. Dopóki indeks trzyma się powyżej 10-dniowej średniej (25 325), przewagę mają kupujący.",
     lead_en: "The DAX closed at a one-month high after a strong start to earnings season. As long as it holds above the 10-day average (25,325), buyers have the edge.",
