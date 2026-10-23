@@ -24,8 +24,145 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-23-zloto", instrument: "xauusd", data: "2026-10-23", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Złoto poniżej 4000 USD po raz pierwszy od lipca, celem strefa 3940–3960", tytul_en: "Gold below $4,000 for the first time since July, eyeing the $3,940–3,960 zone",
+    lead: "Złoto wybiło się dołem z trzytygodniowej konsolidacji i w nocy spadło do 3986,74 USD. Ropa przy 100 USD podbija oczekiwania inflacyjne i szanse na podwyżkę stóp Fed, więc bazą jest dalszy spadek.",
+    lead_en: "Gold broke below its three-week consolidation and fell to $3,986.74 overnight. Oil near $100 lifts inflation expectations and Fed hike odds, so a further drop is the base case.",
+    poziomy: { cena: 4024, opory: [4067, 4228], wsparcia: [3950, 3873] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do czerwcowego minimum w strefie 3940–3960 (cel Societe Generale), a przy jej przełamaniu do przełamanej linii trendu przy 3873.", tekst_en: "Base case: a drop to the June low in the $3,940–3,960 zone (Societe Generale's target), and on a break to the broken trend line near $3,873." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 4067 (dolna granica przełamanej konsolidacji) unieważnia scenariusz i otwiera drogę do 4228.", tekst_en: "A daily close above $4,067 (the lower bound of the broken consolidation) invalidates the setup and opens the way to $4,228." }
+    ],
+    tresc: [
+      "Złoto zamknęło czwartek na 4024 USD (−2,8%), a w piątek w Azji spadło do 3986,74 USD, najniżej od trzech miesięcy. Cena wybiła się dołem z konsolidacji 4067–4228, w której poruszała się przez trzy tygodnie.",
+      "Głównym czynnikiem jest ropa: WTI kosztuje około 100 USD, a Trump sięgnął po ustawę Defense Production Act w sprawie paliw. Droższa energia podbija oczekiwania inflacyjne, a rynek wycenia około 80% szans na podwyżkę stóp Fed w grudniu, co zwiększa koszt trzymania złota.",
+      "Według FXStreet cena jest pod 20-tygodniową średnią (4282,89), a RSI 38,75 wskazuje słabnący, ale niewyczerpany impet spadkowy. Societe Generale widzi spadek do czerwcowego minimum 3940–3960, a dalej do około 3830. Ważne będzie posiedzenie Fed w przyszłym tygodniu."
+    ],
+    tresc_en: [
+      "Gold closed Thursday at $4,024 (−2.8%), and in Asia on Friday fell to $3,986.74, a three-month low. Price broke below the $4,067–4,228 consolidation it had held for three weeks.",
+      "Oil is the main driver: WTI trades near $100, and Trump invoked the Defense Production Act over fuel. Pricier energy lifts inflation expectations, and markets price about an 80% chance of a December Fed hike, raising the cost of holding gold.",
+      "According to FXStreet, price is below the 20-week average ($4,282.89), and an RSI of 38.75 points to weakening but not exhausted downside momentum. Societe Generale sees a drop to the June low of $3,940–3,960, then to about $3,830. Next week's Fed meeting will matter."
+    ],
+    zrodla: [
+      { nazwa: "FXStreet: Gold hits fresh three-month low below $4,000 (23 paź 2026)", url: "https://www.fxstreet.com/analysis/gold-price-forecast-xau-usd-hits-fresh-three-month-low-below-4-000-amid-surging-energy-prices-202610230330" },
+      { nazwa: "FXStreet: Gold extends decline as higher oil prices fuel inflation concerns (23 paź 2026)", url: "https://www.fxstreet.com/analysis/gold-extends-decline-as-higher-oil-prices-fuel-inflation-concerns-202610230507" },
+      { nazwa: "Trading Economics: złoto (23 paź 2026, rano)", url: "https://tradingeconomics.com/commodity/gold" }
+    ]
+  },
+  {
+    id: "2026-10-23-srebro", instrument: "xagusd", data: "2026-10-23", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro na najniższym poziomie od listopada 2025, celem 50 USD", tytul_en: "Silver at its lowest since November 2025, eyeing $50",
+    lead: "Srebro straciło w czwartek 5,8% i w nocy zeszło poniżej 54 USD. Dopóki cena jest pod 55,50 USD, przewagę mają sprzedający.",
+    lead_en: "Silver lost 5.8% on Thursday and slipped below $54 overnight. While price stays below $55.50, sellers have the edge.",
+    poziomy: { cena: 54.42, opory: [55.50, 58.00], wsparcia: [50.00] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do psychologicznego poziomu 50 USD, który wskazują analitycy FXStreet.", tekst_en: "Base case: a drop to the psychological $50 level cited by FXStreet analysts." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 55,50 (najbliższy opór poziomy) unieważnia scenariusz; wyżej leży 58,00 (38,2% zniesienia spadku z maja–lipca).", tekst_en: "A daily close above $55.50 (nearest horizontal resistance) invalidates the setup; above lies $58.00 (38.2% retracement of the May–July decline)." }
+    ],
+    tresc: [
+      "Srebro zamknęło czwartek na 54,59 USD (−5,8%) po dziennym minimum 54,46, a w piątek w Azji spadło poniżej 54 USD, najniżej od listopada 2025 roku. Zmierza do drugiego z rzędu tygodnia spadków.",
+      "Presję tworzą te same czynniki co w złocie: ropa przy 100 USD, rosnące oczekiwania na podwyżkę stóp Fed i mocny dolar. W tym tygodniu cena trzykrotnie nie utrzymała się nad 58 USD.",
+      "FXStreet wskazuje opór 55,50, a dalej 58,00, 60,00 i około 63,00 (23,6% zniesienia). MACD jest pod zerem, a RSI około 31,5 jest blisko wyprzedania, co może spowalniać spadek, ale nie zapowiada jeszcze odwrócenia."
+    ],
+    tresc_en: [
+      "Silver closed Thursday at $54.59 (−5.8%) after a daily low of $54.46, and in Asia on Friday fell below $54, its lowest since November 2025. It is heading for a second straight weekly loss.",
+      "The same drivers as in gold weigh: oil near $100, rising Fed hike expectations and a strong dollar. This week price failed three times to hold above $58.",
+      "FXStreet cites resistance at $55.50, then $58.00, $60.00 and about $63.00 (23.6% retracement). MACD is below zero and an RSI near 31.5 is close to oversold, which may slow the decline but does not yet signal a reversal."
+    ],
+    zrodla: [
+      { nazwa: "FXStreet: Silver slides further below $54.00, fresh YTD low (23 paź 2026)", url: "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-slides-further-below-5400-fresh-ytd-low-and-counting-202610230201" },
+      { nazwa: "FXStreet: Silver breaks $55 as bears target $50 (22 paź 2026)", url: "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-breaks-55-as-bears-target-50-202610221848" },
+      { nazwa: "Trading Economics: srebro (23 paź 2026, rano)", url: "https://tradingeconomics.com/commodity/silver" }
+    ]
+  },
+  {
+    id: "2026-10-23-ropa", instrument: "wti", data: "2026-10-23", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Ropa WTI powyżej 100 USD, kupujący celują w 105", tytul_en: "WTI crude above $100, buyers target $105",
+    lead: "WTI wróciła ponad 100 USD po atakach w Arabii Saudyjskiej i decyzji Trumpa o użyciu Defense Production Act. Dopóki cena trzyma się nad 95 USD, bazą jest dalszy wzrost.",
+    lead_en: "WTI is back above $100 after attacks in Saudi Arabia and Trump's move to invoke the Defense Production Act. While price holds above $95, further gains are the base case.",
+    poziomy: { cena: 100.40, opory: [105, 110], wsparcia: [95, 91] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 105 USD, a przy trwałym wybiciu do 110 USD. Szczyt z początku wojny na Bliskim Wschodzie leży przy 113 USD.", tekst_en: "Base case: a rise to $105, and on a sustained break to $110. The peak from the start of the Middle East war is near $113." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 95 USD (pierwsze wsparcie) unieważnia scenariusz i otwiera drogę do 50-dniowej średniej przy 91 USD.", tekst_en: "A daily close below $95 (first support) invalidates the setup and opens the way to the 50-day average near $91." }
+    ],
+    tresc: [
+      "Grudniowy kontrakt na WTI zamknął czwartek na 99,47 USD po dziennym maksimum 100,57, a rano kosztuje około 100,40 USD (+0,9%). Brent jest przy 114 USD.",
+      "Ceny wspierają ataki na infrastrukturę w Arabii Saudyjskiej, doniesienia o planach kolejnych uderzeń na Iran i decyzja Trumpa o użyciu Defense Production Act w sprawie paliw, która pokazuje, że Waszyngton liczy się z napiętą podażą.",
+      "Według FXStreet 100 USD to opór psychologiczny, a kolejne bariery to 105 i 110 USD. Wsparcia leżą przy 95 USD i przy 50-dniowej średniej około 91 USD. Wykres pokazuje grudniowy kontrakt."
+    ],
+    tresc_en: [
+      "The December WTI contract closed Thursday at $99.47 after a daily high of $100.57, and this morning trades near $100.40 (+0.9%). Brent is near $114.",
+      "Prices are supported by attacks on Saudi infrastructure, reports of plans for further strikes on Iran and Trump's decision to invoke the Defense Production Act over fuel, which shows Washington expects tight supply.",
+      "According to FXStreet, $100 is psychological resistance, with further barriers at $105 and $110. Support lies at $95 and at the 50-day average near $91. The chart shows the December contract."
+    ],
+    zrodla: [
+      { nazwa: "FXStreet: WTI buyers eye breakout above $100 (22 paź 2026)", url: "https://www.fxstreet.com/news/wti-oil-price-forecast-buyers-eye-breakout-above-100-as-upside-pressure-builds-202610221228" },
+      { nazwa: "FXEmpire: Saudi attacks lift Brent and WTI on supply fears (22 paź 2026)", url: "https://www.fxempire.com/forecasts/article/oil-price-forecast-saudi-attacks-lift-brent-and-wti-on-supply-fears-1639721" },
+      { nazwa: "Trading Economics: ropa WTI (23 paź 2026, rano)", url: "https://tradingeconomics.com/commodity/crude-oil" }
+    ]
+  },
+  {
+    id: "2026-10-23-usdjpy", instrument: "usdjpy", data: "2026-10-23", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "USD/JPY pod presją ryzyka interwencji, celem 155,00", tytul_en: "USD/JPY under intervention-risk pressure, eyeing 155.00",
+    lead: "Para wybiła się w czwartek dołem z zakresu 157,5–159 i spadła do 156,67. Wyższa inflacja bazowa w Japonii i ryzyko interwencji przemawiają za dalszym osłabieniem dolara wobec jena.",
+    lead_en: "The pair broke below its 157.5–159 range on Thursday and fell to 156.67. Higher core inflation in Japan and intervention risk favour further dollar losses against the yen.",
+    poziomy: { cena: 156.93, opory: [157.60, 159.00], wsparcia: [155.00, 153.90] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek przez 156,40 do 155,00, a dalej do 153,90 (poziomy Orbex).", tekst_en: "Base case: a drop through 156.40 to 155.00, then to 153.90 (Orbex levels)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 157,60 unieważnia scenariusz i otwiera drogę do 159,00.", tekst_en: "A daily close above 157.60 invalidates the setup and opens the way to 159.00." }
+    ],
+    tresc: [
+      "USD/JPY zamknął czwartek na 156,76 (−0,9%), poniżej dolnej granicy zakresu, w którym poruszał się od tygodnia. W nocy para zeszła do 156,25, a rano odbiła do około 156,90.",
+      "Inflacja bazowa w Japonii wyniosła 2,1%, a wskaźnik bez żywności i energii 2,4% wobec oczekiwanych 2,3%, co wspiera zwolenników podwyżki stóp BoJ. Rynek liczy się też z interwencją walutową. Wspiera dolara jedynie wysoka rentowność obligacji USA.",
+      "Orbex wskazuje wsparcia 156,40, 155,00 i 153,90 oraz opory 157,60, 159,00 i 160,00, oceniając, że w parze dominuje presja spadkowa."
+    ],
+    tresc_en: [
+      "USD/JPY closed Thursday at 156.76 (−0.9%), below the bottom of the range it held for a week. Overnight the pair fell to 156.25, and this morning it rebounded to about 156.90.",
+      "Japan's core inflation came in at 2.1%, and the measure excluding food and energy at 2.4% versus 2.3% expected, which supports the case for a BoJ hike. Markets also price in the risk of currency intervention. Only high US yields support the dollar.",
+      "Orbex cites support at 156.40, 155.00 and 153.90 and resistance at 157.60, 159.00 and 160.00, and sees downward pressure dominating the pair."
+    ],
+    zrodla: [
+      { nazwa: "Orbex: USD/JPY technical analysis (22 paź 2026)", url: "https://www.orbex.com/blog/en/2026/10/usd-jpy-22-10-2026" },
+      { nazwa: "RoboForex: USDJPY under pressure amid hawkish signals from the BoJ (21 paź 2026)", url: "https://roboforex.com/ph/beginners/analytics/forex-forecast/currencies/usd-jpy-forecast-2026-10-21/" },
+      { nazwa: "Trading Economics: USD/JPY (23 paź 2026, rano)", url: "https://tradingeconomics.com/japan/currency" }
+    ]
+  },
+  {
+    id: "2026-10-23-nasdaq", instrument: "nasdaq", data: "2026-10-23", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 pod 29 000 po wyprzedaży półprzewodników, celem 28 745", tytul_en: "Nasdaq 100 below 29,000 after the chip selloff, eyeing 28,745",
+    lead: "Indeks stracił w czwartek 2,9%, a indeks półprzewodników 6,7%. Dopóki Nasdaq 100 jest pod 29 240, bazą jest test wrześniowego minimum 28 745.",
+    lead_en: "The index lost 2.9% on Thursday and the semiconductor index 6.7%. While the Nasdaq 100 is below 29,240, a test of September's 28,745 low is the base case.",
+    poziomy: { cena: 28999, opory: [29240, 30000], wsparcia: [28745, 28000] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 28 745 (minimum z września), a przy jego przełamaniu do 28 000.", tekst_en: "Base case: a drop to 28,745 (September low), and on a break to 28,000." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 29 240 (dawne wsparcie, podstawa wrześniowego wybicia) unieważnia scenariusz i otwiera drogę do 30 000.", tekst_en: "A daily close above 29,240 (former support, the base of September's breakout) invalidates the setup and opens the way to 30,000." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął czwartek na 28 959 pkt (−2,9%) po dziennym minimum 28 855. Indeks półprzewodników spadł o 6,7% po cięciu inwestycji przez Teslę i obawach o finansowanie spółek AI. Rano kontrakty rosną o 0,1%.",
+      "W Azji przecena trwała: KOSDAQ stracił 3,5%, Kospi 2,2%, a Nikkei 1,4%. Ciążą też ropa przy 100 USD i rosnące szanse na podwyżkę stóp Fed w grudniu.",
+      "StoneX wskazywał wsparcia 29 240, 29 000 i 28 745 oraz opory 30 000 i 30 370. Dwa pierwsze wsparcia zostały przełamane, więc 29 240 staje się oporem, a kolejnym celem jest wrześniowe minimum. Poniżej OneUp Trader wskazuje 28 000."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Thursday at 28,959 (−2.9%) after a daily low of 28,855. The semiconductor index fell 6.7% after Tesla's capex cut and worries over AI company funding. Futures are up 0.1% this morning.",
+      "The selloff continued in Asia: the KOSDAQ lost 3.5%, the Kospi 2.2% and the Nikkei 1.4%. Oil near $100 and rising odds of a December Fed hike also weigh.",
+      "StoneX cited support at 29,240, 29,000 and 28,745 and resistance at 30,000 and 30,370. The first two supports have broken, so 29,240 turns into resistance and September's low is the next target. Below that, OneUp Trader cites 28,000."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: Nasdaq 100 forecast (21 paź 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/nasdaq-100-forecast-stocks-rebound-ahead-of-more-earnings-2026-10-21/" },
+      { nazwa: "OneUp Trader: NASDAQ Futures technical analysis (21 paź 2026)", url: "https://blog.oneuptrader.com/analysis/technical-analysis/nasdaq-nq-technical-analysis-bulls-under-pressure-as-trendline-breaks/" },
+      { nazwa: "Yournews: Wall Street slides as Nasdaq drops more than 2% (22 paź 2026)", url: "https://yournews.com/2026/10/22/7234999/wall-street-slides-as-nasdaq-drops-more-than-2-amid/" },
+      { nazwa: "Trading Economics: US100 (23 paź 2026, rano)", url: "https://tradingeconomics.com/united-states/stock-market" }
+    ]
+  },
+  {
     id: "2026-10-22-nasdaq", instrument: "nasdaq", data: "2026-10-22", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-22", komentarz: "22 paź Nasdaq 100 spadł do 28 855 pkt, poniżej wsparcia S1 29 000, i zamknął sesję na 28 959 (−2,9%), daleko od poziomu unieważnienia R1 30 000. Analiza ukazała się przed sesją w USA, więc liczy się świeca z dnia publikacji. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 22 Oct the Nasdaq 100 fell to 28,855, below S1 support at 29,000, and closed at 28,959 (−2.9%), far from the R1 invalidation level of 30,000. The analysis was published before the US session, so the publication-day candle counts. Price source: CNBC daily candles." },
     tytul: "Nasdaq 100 traci w nocy po wynikach Tesli, test strefy 29 000", tytul_en: "Nasdaq 100 slips overnight after Tesla results, 29,000 zone in play",
     lead: "Kontrakty na Nasdaq 100 tracą rano około 1,3% po cięciu inwestycji przez Teslę i napięciach na Bliskim Wschodzie. Indeks pozostaje pod przełamaną linią trendu, a bazą jest powrót do strefy 29 000.",
     lead_en: "Nasdaq 100 futures are down about 1.3% this morning after Tesla's capex cut and Middle East tensions. The index stays below its broken trend line, and a return to the 29,000 zone is the base case.",
@@ -80,6 +217,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-zloto", instrument: "xauusd", data: "2026-10-18", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-22", komentarz: "22 paź złoto zamknęło dzień na 4024,1 USD (−2,8%), poniżej dolnej granicy zakresu S1 4096. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 22 Oct gold closed the day at $4,024.1 (−2.8%), below the S1 lower bound of $4,096. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     tytul: "Złoto w zakresie 4096–4240, przewaga strony podażowej", tytul_en: "Gold ranges between 4,096 and 4,240, sellers hold a slight edge",
     lead: "Wysoka inflacja w USA i rentowności 10-latek powyżej 5% hamują złoto. Dopóki cena nie wyjdzie z zakresu, bazą jest konsolidacja.",
     lead_en: "Hot US inflation and 10-year yields above 5% are capping gold. Until price breaks out of the range, consolidation is the base case.",
@@ -109,6 +247,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-srebro", instrument: "xagusd", data: "2026-10-18", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-22", komentarz: "22 paź srebro spadło do 54,46 USD, poniżej wsparcia S1 55,40, zanim jakakolwiek świeca dzienna zamknęła się powyżej R1 59,37 (najwyższe zamknięcie od publikacji: 57,97 20 paź). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 22 Oct silver fell to $54.46, below S1 support at $55.40, before any daily candle closed above R1 at $59.37 (highest close since publication: $57.97 on 20 Oct). Price source: CNBC daily candles." },
     tytul: "Srebro pod presją, celem minimum tygodnia 55,40", tytul_en: "Silver under pressure, targeting the weekly low at 55.40",
     lead: "Srebro straciło około 9% w miesiąc i trzyma się poniżej oporu 59,37. Rosnące rentowności i ryzyko podwyżki stóp Fed sprzyjają spadkom.",
     lead_en: "Silver has lost about 9% in a month and stays below resistance at 59.37. Rising yields and Fed hike risk favour the downside.",
@@ -136,6 +275,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-ropa", instrument: "wti", data: "2026-10-18", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-22", komentarz: "22 paź grudniowy kontrakt na WTI doszedł do 100,57 USD, powyżej R1 104,44 przeliczonego na nowy kontrakt (99,32), zanim świeca dzienna zamknęła się poniżej S1 (najniższe zamknięcie: 97,15 21 paź wobec S1 93,11 po przeliczeniu). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 22 Oct the December WTI contract reached $100.57, above R1 of $104.44 converted to the new contract ($99.32), before a daily candle closed below S1 (lowest close: $97.15 on 21 Oct versus converted S1 of $93.11). Price source: CNBC daily candles." },
     korektaWykresu: { o: -5.12, od: "2026-10-21", opis: "Wykres pokazuje kontrakt grudniowy. Poziomy z analizy i świece kontraktu listopadowego (do 20 paź) przesunięto o −5,12 USD, czyli różnicę między kontraktami z 19 paź (103,66 i 98,54).", opis_en: "The chart shows the December contract. Analysis levels and November-contract candles (up to 20 Oct) are shifted by −$5.12, the spread between the contracts on 19 Oct (103.66 and 98.54)." },
     tytul: "Ropa WTI powyżej 100 USD, trend wzrostowy trzyma", tytul_en: "WTI above $100, the uptrend holds",
     lead: "WTI zyskała ponad 10% w tydzień po atakach w cieśninie Ormuz i dużym spadku zapasów w USA. Dopóki cena jest powyżej 98,23, przewagę mają kupujący.",
@@ -247,6 +387,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-usdjpy", instrument: "usdjpy", data: "2026-10-18", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-22", komentarz: "22 paź USD/JPY zamknął dzień na 156,76, poniżej dolnej granicy zakresu S1 157,50. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 22 Oct USD/JPY closed the day at 156.76, below the S1 lower bound of 157.50. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     tytul: "USD/JPY w wąskim zakresie 157,50–159,00", tytul_en: "USD/JPY in a tight 157.50–159.00 range",
     lead: "Zmienność na USD/JPY jest historycznie niska. Ostrzeżenia przed interwencją ograniczają wzrosty, a wysokie rentowności w USA hamują spadki.",
     lead_en: "USD/JPY volatility is historically low. Intervention warnings cap the upside, while high US yields limit the downside.",
