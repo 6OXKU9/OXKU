@@ -24,6 +24,34 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-26-usdpln", instrument: "usdpln", data: "2026-10-26", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Dolar przy 3,93 zł, najdrożej od prawie dwóch lat", tytul_en: "The dollar near 3.93 zloty, its highest in almost two years",
+    lead: "USD/PLN wybił się w piątek ponad strefę oporu 3,9156–3,9255 i zamknął tydzień na 3,9264. Dopóki kurs trzyma się nad 3,9002, bazą jest test piątkowego maksimum 3,9345.",
+    lead_en: "USD/PLN broke above the 3.9156–3.9255 resistance zone on Friday and closed the week at 3.9264. While the rate holds above 3.9002, a test of Friday's 3.9345 high is the base case.",
+    poziomy: { cena: 3.9266, opory: [3.9345, 4.0000], wsparcia: [3.9002, 3.8785] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do piątkowego maksimum 3,9345, najwyżej od prawie dwóch lat, a przy jego przełamaniu w stronę 4,00 zł, poziomu wskazywanego przez analityków.", tekst_en: "Base case: a rise to Friday's high of 3.9345, the highest in almost two years, and on a break towards 4.00 zloty, the level analysts point to." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3,9002 (pierwsze wsparcie według DM BOŚ) unieważnia scenariusz i otwiera drogę do 3,8785.", tekst_en: "A daily close below 3.9002 (first support according to DM BOŚ) invalidates the setup and opens the way to 3.8785." }
+    ],
+    tresc: [
+      "USD/PLN zamknął piątek na 3,9264 (+0,7%) po dziennym maksimum 3,9345. W poniedziałek rano dolar kosztuje około 3,9266 zł. EUR/PLN jest przy 4,40, na górnej granicy strefy oporu 4,39–4,40.",
+      "Dolar zyskuje dzięki drogiej ropie (Brent około 115 USD), oczekiwaniom na kolejne podwyżki stóp Fed i obawom o finanse publiczne Francji. Złotemu ciążą też prognozy Fitch, który podniósł szacunek deficytu Polski na 2026 rok do 7,3% PKB.",
+      "Analityk DM BOŚ wskazywał strefę oporu 3,9156–3,9255 oraz wsparcia 3,9002 i 3,8785. Strefa została przełamana, a PKO BP spodziewa się utrzymania presji wzrostowej na USD/PLN. W tym tygodniu kluczowe będą decyzje Fed (środa) i EBC (czwartek)."
+    ],
+    tresc_en: [
+      "USD/PLN closed Friday at 3.9264 (+0.7%) after a daily high of 3.9345. On Monday morning the dollar trades near 3.9266 zloty. EUR/PLN is near 4.40, at the top of the 4.39–4.40 resistance zone.",
+      "The dollar is supported by pricey oil (Brent near $115), expectations of further Fed hikes and worries over France's public finances. The zloty is also weighed by Fitch, which raised its 2026 Polish deficit estimate to 7.3% of GDP.",
+      "A DM BOŚ analyst cited a 3.9156–3.9255 resistance zone and support at 3.9002 and 3.8785. The zone has broken, and PKO BP expects upward pressure on USD/PLN to persist. This week the Fed (Wednesday) and ECB (Thursday) decisions are key."
+    ],
+    zrodla: [
+      { nazwa: "Comparic: Kurs dolara blisko 3,93 zł. Kluczowe poziomy dla USD/PLN (12 paź 2026)", url: "https://comparic.pl/kurs-dolara-blisko-393-zl-kluczowe-poziomy-dla-usd-pln-i-eur-usd/" },
+      { nazwa: "Super Biznes: Dolar o krok od 4 zł (13 paź 2026)", url: "https://superbiz.se.pl/wiadomosci/dolar-o-krok-od-4-zl-funt-najdrozszy-od-prawie-dwoch-lat-aa-53HG-mF7w-yTrZ.html" },
+      { nazwa: "money.pl: Kurs dolara do złotego 26.10.2026", url: "https://www.money.pl/pieniadze/ile-kosztuje-dolar-kurs-dolara-do-zlotego-pln-usd-26-10-2026-7344105680009312a.html" },
+      { nazwa: "CNBC: USD/PLN, świeca dzienna 23 paź 2026", url: "https://www.cnbc.com/quotes/PLN=" }
+    ]
+  },
+  {
     id: "2026-10-23-dax", instrument: "dax", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "DAX traci po słabym PMI z Francji, celem strefa 24 800", tytul_en: "DAX slips after weak French PMI, eyeing the 24,800 zone",
@@ -444,6 +472,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-usdpln", instrument: "usdpln", data: "2026-10-18", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-23", komentarz: "23 paź USD/PLN zamknął dzień na 3,9264, powyżej górnej granicy zakresu R1 3,9211. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 23 Oct USD/PLN closed the day at 3.9264, above the R1 upper bound of 3.9211. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     tytul: "USD/PLN w okolicach 3,88, złoty odrabia straty", tytul_en: "USD/PLN near 3.88 as the zloty recovers",
     lead: "Słabszy dolar po wypowiedziach prezesa Fed pomógł złotemu. Kurs testuje październikowe minimum 3,8762; opór to niedawny szczyt 3,9211.",
     lead_en: "A softer dollar after the Fed chair's comments helped the zloty. The rate is testing the October low of 3.8762; resistance is the recent high at 3.9211.",
