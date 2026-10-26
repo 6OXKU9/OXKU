@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-10-26T07:45:00+01:00",
+  aktualizacja: "2026-10-26T22:30:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -46,12 +46,14 @@ window.KALENDARZ = {
     { nazwa: "investingLive: US S&P Global flash October services PMI 57.9 vs 58.0 expected", url: "https://investinglive.com/news/us-s-p-global-flash-october-services-pmi-57-9-vs-58-0-expected/" },
     { nazwa: "Trading Economics: US Consumer Sentiment Falls to Five-Month Low (23 paź 2026)", url: "https://tradingeconomics.com/united-states/consumer-confidence/news/590907" },
     { nazwa: "Investrade: Weekly Event Calendar 26–30 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-26-2026-10-30-2026/" },
-    { nazwa: "LiteFinance: kalendarz ekonomiczny 26 paź – 1 lis 2026 (godziny GMT)", url: "https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-26102026-01112026/" }
+    { nazwa: "LiteFinance: kalendarz ekonomiczny 26 paź – 1 lis 2026 (godziny GMT)", url: "https://www.litefinance.org/blog/analysts-opinions/weekly-economic-calendar-for-26102026-01112026/" },
+    { nazwa: "ad-hoc-news / Dow Jones: DAX schließt dank Bayer am Montag 0,9 Prozent höher (26 paź 2026)", nazwa_en: "ad-hoc-news / Dow Jones: DAX closes 0.9% higher on Bayer (26 Oct 2026)", url: "https://www.ad-hoc-news.de/boerse/news/marktberichte/dax-schliesst-dank-bayer-am-montag-0-9-prozent-hoeher/70416342" }
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
   wydarzenia: [
 
+    { czas: "2026-10-26T10:00:00+01:00", kraj: "DE", nazwa: "Indeks Ifo klimatu gospodarczego (paź)", wplyw: 2, instrumenty: ["eurusd", "dax"], opis: "Nastroje w niemieckich firmach. Szósty z rzędu wzrost, najwyżej od maja 2023 roku.", nazwa_en: "Ifo business climate (Oct)", opis_en: "Sentiment in German companies. A sixth straight rise, the highest since May 2023.", poprzednio: "89,9", poprzednio_en: "89.9", prognoza: "89,9 (stagnacja)", prognoza_en: "89.9 (no change)", aktualnie: "90,2", aktualnie_en: "90.2", zrodlo: 34 },
     { czas: "2026-10-26T13:30:00+01:00", kraj: "US", nazwa: "Indeks aktywności Fed z Chicago (wrz)", wplyw: 1, instrumenty: ["sp500"], opis: "Zbiorczy wskaźnik aktywności gospodarczej w USA.", nazwa_en: "Chicago Fed National Activity Index (Sep)", opis_en: "A composite gauge of US economic activity.", zrodlo: 32 },
     { czas: "2026-10-26T15:30:00+01:00", kraj: "US", nazwa: "Indeks przemysłu Fed z Dallas (paź)", wplyw: 1, instrumenty: ["sp500", "wti"], opis: "Koniunktura w przemyśle Teksasu, ważnym dla sektora naftowego.", nazwa_en: "Dallas Fed manufacturing index (Oct)", opis_en: "Manufacturing conditions in Texas, key for the oil sector.", zrodlo: 32 },
     { czas: "2026-10-26T18:00:00+01:00", kraj: "US", nazwa: "Aukcja 2-letnich obligacji (69 mld USD)", wplyw: 1, instrumenty: ["eurusd", "usdjpy", "xauusd"], opis: "Popyt na krótki dług przed decyzją Fed.", nazwa_en: "2-year note auction ($69bn)", opis_en: "Demand for short-term debt ahead of the Fed decision.", zrodlo: 32 },
