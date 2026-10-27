@@ -24,6 +24,34 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-27-dax", instrument: "dax", data: "2026-10-27", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "DAX w zawężającym się zakresie przed Fed i EBC", tytul_en: "DAX in a narrowing range ahead of the Fed and ECB",
+    lead: "DAX odrobił w dwa dni cały piątkowy spadek i zamknął wtorek na 25 591 pkt. Przed decyzjami Fed i EBC oraz wynikami Big Tech bazą jest ruch w zakresie 25 317–25 800.",
+    lead_en: "The DAX recouped Friday's entire drop in two days and closed Tuesday at 25,591. Ahead of the Fed and ECB decisions and Big Tech results, trading within 25,317–25,800 is the base case.",
+    poziomy: { cena: 25591, opory: [25800, 25900], wsparcia: [25317, 25000] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo konsolidacja między wsparciem 25 317 (gdzie indeks stabilizował się w poniedziałek i wtorek) a oporem 25 800.", tekst_en: "Base case: consolidation between 25,317 support (where the index stabilised on Monday and Tuesday) and 25,800 resistance." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 25 800 (sygnał kupna według wallstreet-online) otwiera drogę do 25 900, rekordowego zamknięcia.", tekst_en: "A daily close above 25,800 (a buy signal according to wallstreet-online) opens the way to 25,900, the record close." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 317 otwiera drogę do 25 000.", tekst_en: "A daily close below 25,317 opens the way to 25,000." }
+    ],
+    tresc: [
+      "DAX zamknął wtorkową sesję Xetra na 25 590,77 pkt (+0,7%), po poniedziałkowym wzroście o 0,9%. Najmocniej rosło Porsche (blisko +4% po wynikach), a traciły Mercedes-Benz (blisko −4% po obniżeniu prognozy zysku) i Beiersdorf (−3,3%).",
+      "Według finanzen.at zakres wahań się zawęża: kluczowe wsparcie leży przy 25 317, a trwały ruch powyżej 25 700 poprawiłby obraz wykresu. wallstreet-online wskazuje 25 800 jako sygnał kupna, a rekordowe zamknięcie to około 25 900.",
+      "W środę decyzja Fed oraz wyniki Microsoftu i Alphabetu, w czwartek EBC i Amazon, w piątek Bank Japonii i PKB Niemiec. Przy tylu wydarzeniach analiza zakłada konsolidację, a nie kierunek."
+    ],
+    tresc_en: [
+      "The DAX closed Tuesday's Xetra session at 25,590.77 (+0.7%), after Monday's 0.9% gain. Porsche rose the most (nearly +4% after results), while Mercedes-Benz (nearly −4% after a profit warning) and Beiersdorf (−3.3%) fell.",
+      "According to finanzen.at the trading range is narrowing: key support lies at 25,317, and a sustained move above 25,700 would improve the chart. wallstreet-online sees 25,800 as a buy signal, and the record close is about 25,900.",
+      "Wednesday brings the Fed decision and results from Microsoft and Alphabet, Thursday the ECB and Amazon, Friday the Bank of Japan and German GDP. With so many events, this analysis assumes consolidation rather than a direction."
+    ],
+    zrodla: [
+      { nazwa: "ARIVA.DE / dpa-AFX: Aktien Frankfurt Schluss, Dax steigt vor Tech-Zahlen (27 paź 2026)", url: "https://www.ariva.de/news/roundup-aktien-frankfurt-schluss-dax-steigt-vor-tech-zahlen-12183820" },
+      { nazwa: "finanzen.at: DAX überraschend stark (27 paź 2026)", url: "https://www.finanzen.at/nachrichten/aktien/dax-ueberraschend-stark-jetzt-noch-long-vor-der-fed-1036671323" },
+      { nazwa: "wallstreet-online: DAX: Mal hoch, mal wieder runter (20 paź 2026)", url: "https://www.wallstreet-online.de/nachricht/21549809-dax-hoch-runter" }
+    ]
+  },
+  {
     id: "2026-10-27-usdpln", instrument: "usdpln", data: "2026-10-27", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "Dolar po 3,94 zł, celem górna granica kanału przy 3,98", tytul_en: "The dollar at 3.94 zloty, eyeing the channel top near 3.98",
@@ -110,6 +138,7 @@ window.ANALIZY = [
   {
     id: "2026-10-23-dax", instrument: "dax", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-27", komentarz: "27 paź DAX zamknął sesję Xetra na 25 590,77 pkt (+0,7%), powyżej poziomu unieważnienia R1 25 475, zanim cena dotknęła wsparcia S1 24 800 (najniżej od publikacji: 25 014 23 paź). Źródło ceny: ARIVA.DE / dpa-AFX.", komentarz_en: "On 27 Oct the DAX closed the Xetra session at 25,590.77 (+0.7%), above the R1 invalidation level of 25,475, before price touched S1 support at 24,800 (lowest since publication: 25,014 on 23 Oct). Price source: ARIVA.DE / dpa-AFX." },
     tytul: "DAX traci po słabym PMI z Francji, celem strefa 24 800", tytul_en: "DAX slips after weak French PMI, eyeing the 24,800 zone",
     lead: "DAX zamknął piątek na 25 182 pkt, poniżej 10-dniowej średniej i wsparcia 25 325. Dopóki indeks jest pod strefą 25 450–25 475, bazą jest powrót do wsparcia 24 800.",
     lead_en: "The DAX closed Friday at 25,182, below its 10-day average and the 25,325 support. While the index stays below the 25,450–25,475 zone, a return to 24,800 support is the base case.",
