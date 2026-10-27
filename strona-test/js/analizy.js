@@ -24,8 +24,64 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-27-usdpln", instrument: "usdpln", data: "2026-10-27", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Dolar po 3,94 zł, celem górna granica kanału przy 3,98", tytul_en: "The dollar at 3.94 zloty, eyeing the channel top near 3.98",
+    lead: "USD/PLN przebił w poniedziałek kwietniowe maksima z 2025 roku przy 3,94 i jest najwyżej od półtora roku. Dopóki kurs trzyma się nad 3,92, bazą jest ruch w stronę górnej granicy tegorocznego kanału wzrostowego.",
+    lead_en: "USD/PLN broke above the April 2025 highs near 3.94 on Monday and is at an 18-month high. While the rate holds above 3.92, a move towards the top of this year's rising channel is the base case.",
+    poziomy: { cena: 3.9437, opory: [3.9800, 4.0000], wsparcia: [3.9200, 3.9002] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do około 3,98 zł (górna granica tegorocznego kanału wzrostowego według Comparic), a przy jej przełamaniu do 4,00 zł.", tekst_en: "Base case: a rise to about 3.98 zloty (the top of this year's rising channel according to Comparic), and on a break to 4.00 zloty." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3,92 (przełamany opór, teraz wsparcie) unieważnia scenariusz i otwiera drogę do 3,9002.", tekst_en: "A daily close below 3.92 (broken resistance, now support) invalidates the setup and opens the way to 3.9002." }
+    ],
+    tresc: [
+      "USD/PLN zamknął poniedziałek na 3,9373 po dziennym maksimum 3,9418, a we wtorek rano jest przy 3,9437 (wyliczone z EUR/PLN 4,4039 i EUR/USD 1,1167). EUR/PLN jest najwyżej od ponad dwóch lat.",
+      "Dolar zyskuje na oczekiwaniach kolejnych podwyżek stóp Fed (rynek wycenia około 82% szans na grudniową podwyżkę) i na napięciach wokół Iranu. Euro słabnie po gorszych danych i przez problemy finansów publicznych Francji, a słabość złotego trwa od kilku tygodni.",
+      "Według Comparic kluczowym oporem było 3,92 zł; po jego przełamaniu kolejne poziomy to kwietniowe maksima z 2025 roku przy 3,94 i górna granica kanału wzrostowego przy około 3,98. W środę decyzja Fed, w czwartek EBC."
+    ],
+    tresc_en: [
+      "USD/PLN closed Monday at 3.9373 after a daily high of 3.9418, and on Tuesday morning trades near 3.9437 (derived from EUR/PLN 4.4039 and EUR/USD 1.1167). EUR/PLN is at its highest in over two years.",
+      "The dollar is supported by expectations of further Fed hikes (markets price about an 82% chance of a December hike) and tensions around Iran. The euro weakens on softer data and France's public finance problems, and the zloty's slide has lasted several weeks.",
+      "According to Comparic, 3.92 zloty was the key resistance; after its break the next levels are the April 2025 highs near 3.94 and the top of the rising channel near 3.98. The Fed decides on Wednesday, the ECB on Thursday."
+    ],
+    zrodla: [
+      { nazwa: "Comparic: Dolar kontynuuje wzrosty, kurs złotego mocno traci (26 paź 2026)", url: "https://comparic.pl/dolar-kontynuuje-wzrosty-kurs-zlotego-mocno-traci-26-pazdziernika-2026-r/" },
+      { nazwa: "Parkiet: Popołudniowe umocnienie dolara, USD najwyżej od kilkunastu miesięcy (26 paź 2026)", url: "https://www.parkiet.com/waluty/art45400771-popoludniowe-umocnienie-dolara-usd-najwyzej-od-kilkunastu-miesiecy" },
+      { nazwa: "Trading Economics: EUR/USD i EUR/PLN (27 paź 2026, rano)", url: "https://tradingeconomics.com/euro-area/currency" }
+    ]
+  },
+  {
+    id: "2026-10-27-nasdaq", instrument: "nasdaq", data: "2026-10-27", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "Nasdaq 100 odbija po wniosku Anthropic, ale przed Fed i wynikami w zakresie 29 000–29 800", tytul_en: "Nasdaq 100 rebounds on Anthropic's filing, but stays in a 29,000–29,800 range ahead of the Fed and earnings",
+    lead: "Indeks wrócił nad 29 200 dzięki odbiciu spółek AI, ale wciąż jest pod 50-dniową średnią przy 29 800. Przed decyzją Fed i wynikami Microsoftu, Alphabetu i Amazona bazą jest ruch w zakresie 29 000–29 800.",
+    lead_en: "The index climbed back above 29,200 on a rebound in AI stocks but remains below the 50-day average near 29,800. Ahead of the Fed decision and results from Microsoft, Alphabet and Amazon, trading within 29,000–29,800 is the base case.",
+    poziomy: { cena: 29273, opory: [29800, 30000], wsparcia: [29000, 28300] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo konsolidacja między wsparciem 29 000 a 50-dniową średnią EMA przy 29 800.", tekst_en: "Base case: consolidation between 29,000 support and the 50-day EMA near 29,800." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 29 000 otwiera drogę do czerwcowego minimum 28 300.", tekst_en: "A daily close below 29,000 opens the way to the June low of 28,300." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 29 800 otwiera drogę do 30 000 i linii trendu przy 30 200.", tekst_en: "A daily close above 29,800 opens the way to 30,000 and the trend line near 30,200." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął poniedziałek na 29 273 pkt (+1,1%) po dziennym maksimum 29 404. Spółki AI i producenci chipów odbili po tym, jak Anthropic złożył prospekt przed debiutem na Nasdaq. W Azji Kospi zyskał we wtorek 3,4%, a Nikkei 1,7%.",
+      "StoneX ocenia obraz techniczny jako spadkowy: odbicie zatrzymało się wcześniej na 50-dniowej średniej EMA przy 29 800, a wsparcie 29 000 było testowane kilka razy. Poniżej leży czerwcowe minimum 28 300, a powyżej 30 000 i linia trendu przy 30 200.",
+      "W środę decyzja Fed (rynek spodziewa się utrzymania stóp, ale wycenia grudniową podwyżkę) oraz wyniki Microsoftu i Alphabetu, w czwartek Amazona, PKB i inflacja PCE. Te wydarzenia mogą wybić indeks z zakresu, dlatego ta analiza zakłada konsolidację, a nie kierunek."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Monday at 29,273 (+1.1%) after a daily high of 29,404. AI stocks and chipmakers rebounded after Anthropic filed a prospectus to list on Nasdaq. In Asia on Tuesday the Kospi gained 3.4% and the Nikkei 1.7%.",
+      "StoneX sees the technical picture as bearish: earlier rebounds stalled at the 50-day EMA near 29,800, and 29,000 support has been tested several times. Below lies the June low of 28,300, above it 30,000 and the trend line near 30,200.",
+      "Wednesday brings the Fed decision (a hold is expected, but markets price a December hike) and results from Microsoft and Alphabet, with Amazon, GDP and PCE inflation on Thursday. These events could break the index out of its range, so this analysis assumes consolidation rather than a direction."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: Nasdaq 100 Forecast, NDX rebounds as Anthropic files for IPO (26 paź 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/nasdaq-100-forecast-ndx-rebounds-as-anthropic-files-for-ipo/" },
+      { nazwa: "investingLive: Asia-Pacific market news, Regional stocks mostly rose (27 paź 2026)", url: "https://investinglive.com/news/investinglive-asia-pacific-market-news-regional-stocks-mostly-rose/" },
+      { nazwa: "Trading Economics: rynek akcji USA (US100), 26 paź 2026", url: "https://tradingeconomics.com/united-states/stock-market" }
+    ]
+  },
+  {
     id: "2026-10-26-usdpln", instrument: "usdpln", data: "2026-10-26", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-26", komentarz: "26 paź USD/PLN doszedł do 3,9418, powyżej oporu R1 3,9345, a dzień zamknął na 3,9373. Kurs nie zamknął się poniżej S1 3,9002. Analiza ukazała się rano przy kursie 3,9266, a maksimum padło po publikacji. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 26 Oct USD/PLN reached 3.9418, above R1 resistance at 3.9345, and closed the day at 3.9373. The rate did not close below S1 at 3.9002. The analysis was published in the morning at 3.9266, and the high came after publication. Price source: CNBC daily candles." },
     tytul: "Dolar przy 3,93 zł, najdrożej od prawie dwóch lat", tytul_en: "The dollar near 3.93 zloty, its highest in almost two years",
     lead: "USD/PLN wybił się w piątek ponad strefę oporu 3,9156–3,9255 i zamknął tydzień na 3,9264. Dopóki kurs trzyma się nad 3,9002, bazą jest test piątkowego maksimum 3,9345.",
     lead_en: "USD/PLN broke above the 3.9156–3.9255 resistance zone on Friday and closed the week at 3.9264. While the rate holds above 3.9002, a test of Friday's 3.9345 high is the base case.",
@@ -189,6 +245,7 @@ window.ANALIZY = [
   {
     id: "2026-10-23-nasdaq", instrument: "nasdaq", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-26", komentarz: "26 paź Nasdaq 100 zamknął sesję na 29 273 pkt (+1,1%), powyżej poziomu unieważnienia R1 29 240, zanim cena dotknęła wsparcia S1 28 745 (najniżej od publikacji: 28 826 23 paź). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 26 Oct the Nasdaq 100 closed at 29,273 (+1.1%), above the R1 invalidation level of 29,240, before price touched S1 support at 28,745 (lowest since publication: 28,826 on 23 Oct). Price source: CNBC daily candles." },
     tytul: "Nasdaq 100 pod 29 000 po wyprzedaży półprzewodników, celem 28 745", tytul_en: "Nasdaq 100 below 29,000 after the chip selloff, eyeing 28,745",
     lead: "Indeks stracił w czwartek 2,9%, a indeks półprzewodników 6,7%. Dopóki Nasdaq 100 jest pod 29 240, bazą jest test wrześniowego minimum 28 745.",
     lead_en: "The index lost 2.9% on Thursday and the semiconductor index 6.7%. While the Nasdaq 100 is below 29,240, a test of September's 28,745 low is the base case.",
