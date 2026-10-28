@@ -1,48 +1,47 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-10-27T22:30:00+01:00",
-  stanNa_en: "Tuesday evening, 27 Oct 2026 (after the US close)",
-  stanNa: "wtorek wieczorem, 27 paź 2026 (po zamknięciu sesji w USA)",
-  naglowek_en: "Tech rebound continues for a second day: Nasdaq +1.2%, S&P 500 +0.6%, DAX +0.7%. US consumer confidence jumps to 91.7. Oil slips below $100, gold back above $4,050. The euro near its lowest since April 2025.",
-  naglowek: "Drugi dzień odbicia technologii: Nasdaq +1,2%, S&P 500 +0,6%, DAX +0,7%. Zaufanie konsumentów w USA skacze do 91,7. Ropa poniżej 100 USD, złoto znów nad 4 050 USD. Euro najsłabiej od kwietnia 2025.",
+  aktualizacja: "2026-10-28T07:45:00+01:00",
+  stanNa_en: "Wednesday morning, 28 Oct 2026 (before the European open)",
+  stanNa: "środa rano, 28 paź 2026 (przed otwarciem sesji w Europie)",
+  naglowek_en: "Kospi +6% on SK Hynix results. Oil rises again after the Houthis claim a strike on Saudi Arabia's biggest refinery. Australian inflation above forecasts, RBNZ surprises with a hold. The Fed decides tonight.",
+  naglowek: "Kospi +6% po wynikach SK Hynix. Ropa znów drożeje po ataku Huti na największą rafinerię Arabii Saudyjskiej. Inflacja w Australii powyżej prognoz, RBNZ zaskakuje utrzymaniem stóp. Wieczorem decyzja Fed.",
   punkty: [
-    "Zamknięcie w USA: S&P 500 7 722 (+0,60%), Nasdaq 26 477 (+1,18%), Dow Jones 52 378 (+0,03%). Rosły chipy i spółki chmurowe, Broadcom +4%. Boeing −10,7% po większej od oczekiwań stracie, sektor energii −2%.",
-    "Dane z USA lepsze od prognoz: zaufanie konsumentów Conference Board 91,7 pkt (oczekiwano 80,4, poprzednio 84,2), zamówienia na dobra trwałe +1,8% m/m (oczekiwano +1,7%).",
-    "DAX zamknął się na 25 590,77 pkt (+0,7%): Porsche blisko +4% po wynikach, Mercedes-Benz blisko −4% po obniżeniu prognozy. Analiza spadkowa z 23 paź jest nietrafiona; jest nowa analiza z zakresem 25 317–25 800.",
-    "Ropa WTI 99,90 USD (−1,8%), Brent 113,88 USD. Złoto około 4 060 USD (+1,1%), bo tańsza ropa łagodzi obawy inflacyjne. Rentowność 10-latek USA 4,99%.",
-    "Dolar mocny: EUR/USD 1,1149, USD/JPY 157,7, USD/PLN około 3,951. Euro, jen i złoto są blisko poziomów rozstrzygających analizy z 18 i 23 paź; rozliczenie jutro rano na podstawie świec dziennych. Jutro decyzja Fed (19:00) oraz wyniki Microsoftu i Alphabetu."
+    "Azja: Kospi około +6% i Kosdaq +3% dzięki SK Hynix (zysk operacyjny w III kw. około 83 bln wonów, siedem razy więcej niż rok wcześniej). Nikkei +1,4%, Szanghaj +0,5%, Hang Seng +0,2%; HSBC −7% mimo wzrostu zysku.",
+    "Ropa: Brent około 116 USD (+1,8%), WTI 101,5 USD (+1,6%) po tym, jak Huti ogłosili atak rakietowy na największą rafinerię Arabii Saudyjskiej (bez potwierdzenia Rijadu). WSJ: USA ostrzegły sojuszników o możliwej kampanii przeciw Iranowi po wyborach 3 listopada.",
+    "Australia: inflacja bazowa (średnia obcięta) 3,7% r/r wobec oczekiwanych 3,6%, miesięczna 4,3%; rośnie szansa na podwyżkę RBA 3 listopada. RBNZ utrzymał stopę 2,75% (4 do 3), choć rynek liczył na podwyżkę.",
+    "Złoto około 4 030 USD (−0,8%), srebro 53,80 USD. Dolar mocny przed Fed: EUR/USD 1,1122, USD/JPY 157,95, USD/PLN około 3,956.",
+    "Rozliczenia: nietrafione analizy EUR/USD z 18 paź (zamknięcie 1,1122 pod zakresem) i USD/JPY z 23 paź (zamknięcie 157,94 nad 157,60). Są nowe analizy. Dziś Bank Kanady (14:45), Fed (19:00, konferencja 19:30) oraz wyniki Alphabetu i Microsoftu po sesji."
   ],
   punkty_en: [
-    "US close: S&P 500 7,722 (+0.60%), Nasdaq 26,477 (+1.18%), Dow Jones 52,378 (+0.03%). Chips and cloud stocks rose, Broadcom +4%. Boeing −10.7% after a bigger-than-expected loss, energy −2%.",
-    "US data beat forecasts: Conference Board consumer confidence 91.7 (80.4 expected, 84.2 prior), durable goods orders +1.8% m/m (+1.7% expected).",
-    "The DAX closed at 25,590.77 (+0.7%): Porsche nearly +4% after results, Mercedes-Benz nearly −4% after a profit warning. The bearish 23 Oct analysis missed; a new analysis has a 25,317–25,800 range.",
-    "WTI $99.90 (−1.8%), Brent $113.88. Gold around $4,060 (+1.1%) as cheaper oil eases inflation worries. The US 10-year yield is at 4.99%.",
-    "The dollar is strong: EUR/USD 1.1149, USD/JPY 157.7, USD/PLN around 3.951. The euro, yen and gold are near levels that decide the 18 and 23 Oct analyses; settlement tomorrow morning from daily candles. Tomorrow brings the Fed decision (19:00) and results from Microsoft and Alphabet."
+    "Asia: Kospi about +6% and Kosdaq +3% on SK Hynix (Q3 operating profit of about 83 trillion won, roughly seven times a year earlier). Nikkei +1.4%, Shanghai +0.5%, Hang Seng +0.2%; HSBC −7% despite higher profit.",
+    "Oil: Brent around $116 (+1.8%), WTI $101.5 (+1.6%) after the Houthis claimed a missile strike on Saudi Arabia's biggest refinery (unconfirmed by Riyadh). WSJ: the US warned allies of a possible campaign against Iran after the 3 November elections.",
+    "Australia: core inflation (trimmed mean) 3.7% y/y versus 3.6% expected, monthly 4.3%; odds of an RBA hike on 3 November rise. The RBNZ held at 2.75% (4-3) although markets expected a hike.",
+    "Gold around $4,030 (−0.8%), silver $53.80. The dollar is strong ahead of the Fed: EUR/USD 1.1122, USD/JPY 157.95, USD/PLN around 3.956.",
+    "Settlements: the 18 Oct EUR/USD analysis (close of 1.1122 below the range) and the 23 Oct USD/JPY analysis (close of 157.94 above 157.60) missed. New analyses are up. Today: Bank of Canada (14:45), the Fed (19:00, press conference 19:30) and Alphabet and Microsoft results after the close."
   ],
   instrumenty: {
-    sp500:  { kurs: 7722, zmiana: 0.6, tydzien: null, notka: "Drugi dzień wzrostów. Analiza spadkowa z 18 paź: opór 7 790.", notka_en: "A second day of gains. Bearish 18 Oct analysis: resistance 7,790.", zrodlo: 1 },
-    nasdaq: { kurs: 29647.68, zmiana: 1.29, tydzien: null, notka: "Notowanie CFD, blisko górnej granicy zakresu z analizy (29 800).", notka_en: "CFD quote, near the top of the analysis range (29,800).", zrodlo: 3 },
-    xauusd: { kurs: 4060.2, zmiana: 1.08, tydzien: null, notka: "Blisko oporu z analizy (4 067); liczy się zamknięcie dnia.", notka_en: "Near the analysis resistance ($4,067); the daily close is what counts.", zrodlo: 0 },
-    eurusd: { kurs: 1.1149, zmiana: -0.22, tydzien: null, notka: "Poniżej dolnej granicy zakresu z analizy (1,116); rozliczenie rano.", notka_en: "Below the bottom of the analysis range (1.116); settlement in the morning.", zrodlo: 2 },
-    gbpusd: { kurs: 1.3319, zmiana: -0.18, tydzien: null, notka: "Pod oporem z analizy (1,3435).", notka_en: "Below the analysis resistance (1.3435).", zrodlo: 2 },
-    usdjpy: { kurs: 157.68, zmiana: 0.11, tydzien: null, notka: "Powyżej oporu z analizy (157,60); rozliczenie rano na podstawie zamknięcia dnia.", notka_en: "Above the analysis resistance (157.60); settlement in the morning from the daily close.", zrodlo: 2 },
-    xagusd: { kurs: 54.41, zmiana: 0.84, tydzien: null, notka: "Analiza: opór 55,50, cel 50.", notka_en: "Analysis: resistance $55.50, target $50.", zrodlo: 0 },
-    usdpln: { kurs: 3.951, zmiana: 0.35, tydzien: null, notka: "Wyliczony z kursów EUR/PLN (4,4049) i EUR/USD (1,11489). Analiza: cel 3,98, wsparcie 3,92.", notka_en: "Derived from EUR/PLN (4.4049) and EUR/USD (1.11489). Analysis: target 3.98, support 3.92.", zrodlo: 2 },
-    wti:    { kurs: 99.9, zmiana: -1.83, tydzien: null, notka: "Rozliczenie kontraktu grudniowego. Brent 113,88 USD. Analiza: cel 105, wsparcie 95.", notka_en: "December contract settlement. Brent at $113.88. Analysis: target $105, support $95.", zrodlo: 1 },
-    dax:    { kurs: 25590.77, zmiana: 0.71, tydzien: null, notka: "Zamknięcie Xetra. Nowa analiza: zakres 25 317–25 800.", notka_en: "Xetra close. New analysis: 25,317–25,800 range.", zrodlo: 4 },
-    btcusd: { kurs: 80578, zmiana: 0.73, tydzien: null, notka: "W zakresie z analizy (79 676–84 262).", notka_en: "Inside the analysis range (79,676–84,262).", zrodlo: 0 }
+    sp500:  { kurs: 7722.6, zmiana: 0.6, tydzien: null, notka: "Zamknięcie wtorku. Analiza spadkowa z 18 paź: opór 7 790.", notka_en: "Tuesday close. Bearish 18 Oct analysis: resistance 7,790.", zrodlo: 3 },
+    nasdaq: { kurs: 29651.4, zmiana: 1.29, tydzien: null, notka: "Zamknięcie wtorku, blisko górnej granicy zakresu z analizy (29 800).", notka_en: "Tuesday close, near the top of the analysis range (29,800).", zrodlo: 3 },
+    xauusd: { kurs: 4029.53, zmiana: -0.76, tydzien: null, notka: "We wtorek zamknięcie 4 060, tuż pod oporem z analizy (4 067).", notka_en: "Tuesday close of $4,060, just below the analysis resistance ($4,067).", zrodlo: 0 },
+    eurusd: { kurs: 1.1122, zmiana: -0.02, tydzien: null, notka: "Najniżej od kwietnia 2025. Nowa analiza: opór 1,1170, cel 1,1080.", notka_en: "Lowest since April 2025. New analysis: resistance 1.1170, target 1.1080.", zrodlo: 2 },
+    gbpusd: { kurs: 1.33, zmiana: -0.05, tydzien: null, notka: "Pod oporem z analizy (1,3435).", notka_en: "Below the analysis resistance (1.3435).", zrodlo: 2 },
+    usdjpy: { kurs: 157.95, zmiana: 0.0, tydzien: null, notka: "Nowa analiza: zakres 156,75–159,05.", notka_en: "New analysis: 156.75–159.05 range.", zrodlo: 2 },
+    xagusd: { kurs: 53.8, zmiana: -1.12, tydzien: null, notka: "Analiza: opór 55,50, cel 50.", notka_en: "Analysis: resistance $55.50, target $50.", zrodlo: 0 },
+    usdpln: { kurs: 3.9564, zmiana: 0.1, tydzien: null, notka: "Wyliczony z kursów EUR/PLN (4,4004) i EUR/USD (1,11221). Analiza: cel 3,98, wsparcie 3,92.", notka_en: "Derived from EUR/PLN (4.4004) and EUR/USD (1.11221). Analysis: target 3.98, support 3.92.", zrodlo: 2 },
+    wti:    { kurs: 101.54, zmiana: 1.64, tydzien: null, notka: "Kontrakt grudniowy. Brent 115,95 USD. Analiza: cel 105, wsparcie 95.", notka_en: "December contract. Brent at $115.95. Analysis: target $105, support $95.", zrodlo: 0 },
+    dax:    { kurs: 25545, zmiana: -0.18, tydzien: null, notka: "Kontrakt CFD rano. Analiza: zakres 25 317–25 800.", notka_en: "CFD quote this morning. Analysis: 25,317–25,800 range.", zrodlo: 0 },
+    btcusd: { kurs: 80799, zmiana: -0.01, tydzien: null, notka: "W zakresie z analizy (79 676–84 262); dziś ostatni dzień jej horyzontu.", notka_en: "Inside the analysis range (79,676–84,262); today is the last day of its horizon.", zrodlo: 0 }
   },
   kalendarz: [
-    { dzien: "Śr 28 paź", wydarzenia: ["Australia: inflacja CPI (1:30)", "Bank Kanady (14:45) i Fed (19:00): decyzje w sprawie stóp", "Wyniki Alphabet i Microsoft po sesji"] },
+    { dzien: "Śr 28 paź", wydarzenia: ["Bank Kanady (14:45) i Fed (19:00): decyzje w sprawie stóp", "Wyniki Alphabet i Microsoft po sesji"] },
     { dzien: "Czw 29 paź", wydarzenia: ["USA: PKB za III kwartał i inflacja PCE (13:30)", "EBC: decyzja w sprawie stóp (14:15)", "Wyniki Amazon po sesji"] },
     { dzien: "Pt 30 paź", wydarzenia: ["BoJ: decyzja w sprawie stóp", "PKB Niemiec (8:00) i strefy euro (11:00)"] }
   ],
   zrodla: [
-    { nazwa: "Trading Economics: złoto (z tabelą srebro, ropa, DE40, bitcoin), 27 paź 2026", nazwa_en: "Trading Economics: gold (with silver, oil, DE40, bitcoin table), 27 Oct 2026", url: "https://tradingeconomics.com/commodity/gold" },
-    { nazwa: "Investrade: Market Review, 27 paź 2026", nazwa_en: "Investrade: Market Review, 27 Oct 2026", url: "https://investrade.com/market-review-october-27-2026/" },
-    { nazwa: "Trading Economics: EUR/USD (z tabelą walut), 27 paź 2026", nazwa_en: "Trading Economics: EUR/USD (with currency table), 27 Oct 2026", url: "https://tradingeconomics.com/euro-area/currency" },
-    { nazwa: "Trading Economics: rynek akcji USA (US100), 27 paź 2026", nazwa_en: "Trading Economics: US stock market (US100), 27 Oct 2026", url: "https://tradingeconomics.com/united-states/stock-market" },
-    { nazwa: "ARIVA.DE / dpa-AFX: Aktien Frankfurt Schluss (27 paź 2026)", nazwa_en: "ARIVA.DE / dpa-AFX: Frankfurt stocks close (27 Oct 2026)", url: "https://www.ariva.de/news/roundup-aktien-frankfurt-schluss-dax-steigt-vor-tech-zahlen-12183820" }
+    { nazwa: "Trading Economics: złoto (z tabelą srebro, ropa, DE40, bitcoin), 28 paź 2026 rano", nazwa_en: "Trading Economics: gold (with silver, oil, DE40, bitcoin table), 28 Oct 2026 morning", url: "https://tradingeconomics.com/commodity/gold" },
+    { nazwa: "investingLive: Asia-Pacific market news, Hawkish RBA, surprise RBNZ hold (28 paź 2026)", nazwa_en: "investingLive: Asia-Pacific market news, Hawkish RBA, surprise RBNZ hold (28 Oct 2026)", url: "https://www.louisvelazquez.com/investinglive-asia-pacific-market-news-hawkish-rba-surprise-rbnz-hold-lift-aud-nzd/" },
+    { nazwa: "Trading Economics: EUR/USD (z tabelą walut), 28 paź 2026 rano", nazwa_en: "Trading Economics: EUR/USD (with currency table), 28 Oct 2026 morning", url: "https://tradingeconomics.com/euro-area/currency" },
+    { nazwa: "CNBC: świece dzienne Nasdaq 100 i S&P 500, 27 paź 2026", nazwa_en: "CNBC: Nasdaq 100 and S&P 500 daily candles, 27 Oct 2026", url: "https://www.cnbc.com/quotes/.NDX" }
   ]
 };

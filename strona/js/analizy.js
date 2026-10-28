@@ -24,6 +24,61 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-28-eurusd", instrument: "eurusd", data: "2026-10-28", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "EUR/USD przy październikowych minimach, celem strefa 1,1050–1,1080", tytul_en: "EUR/USD at October lows, eyeing the 1.1050–1.1080 zone",
+    lead: "Euro jest najsłabiej od kwietnia 2025 roku i notowane poniżej wszystkich głównych średnich. Dopóki kurs jest pod 1,1170, bazą jest spadek do strefy 1,1050–1,1080.",
+    lead_en: "The euro is at its weakest since April 2025 and trades below all major moving averages. While the rate stays below 1.1170, a drop to the 1.1050–1.1080 zone is the base case.",
+    poziomy: { cena: 1.1122, opory: [1.1170, 1.1220], wsparcia: [1.1080, 1.1050] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo przełamanie 1,1115 i spadek do strefy 1,1050–1,1080 (minimalny cel według Traders Union).", tekst_en: "Base case: a break of 1.1115 and a drop to the 1.1050–1.1080 zone (the minimum target according to Traders Union)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,1170 (górna granica strefy 1,1160–1,1170) unieważnia scenariusz i otwiera drogę do 1,1200–1,1220, gdzie leżą krótkie średnie.", tekst_en: "A daily close above 1.1170 (top of the 1.1160–1.1170 zone) invalidates the setup and opens the way to 1.1200–1.1220, where the short-term averages lie." }
+    ],
+    tresc: [
+      "EUR/USD zamknął wtorek na 1,1122 (−0,45%), najniżej od kwietnia 2025 roku, i rano utrzymuje się przy 1,1122. Dolar zyskuje przed dzisiejszą decyzją Fed, a napięcia na Bliskim Wschodzie zwiększają popyt na amerykańską walutę.",
+      "Strefę euro osłabiają spowolnienie gospodarki przy uporczywej inflacji i problemy finansów publicznych Francji, której PMI spadł do 48,4 pkt. EBC w czwartek najpewniej utrzyma stopę depozytową na 2,50%.",
+      "Traders Union ocenia perspektywę jako negatywną: przełamanie 1,1115 otwiera drogę do 1,1080–1,1050, a dopiero wybicie ponad 1,1160–1,1170 zmieniłoby obraz. RoboForex wskazuje opór 1,1200 i wsparcia 1,1120 i 1,1100."
+    ],
+    tresc_en: [
+      "EUR/USD closed Tuesday at 1.1122 (−0.45%), its lowest since April 2025, and holds near 1.1122 this morning. The dollar gains ahead of today's Fed decision, and Middle East tensions add to demand for the US currency.",
+      "The euro area is weighed by a slowing economy with sticky inflation and by France's public finance problems, with its PMI down to 48.4. The ECB will most likely keep the deposit rate at 2.50% on Thursday.",
+      "Traders Union sees the outlook as negative: a break of 1.1115 opens the way to 1.1080–1.1050, and only a move above 1.1160–1.1170 would change the picture. RoboForex cites resistance at 1.1200 and support at 1.1120 and 1.1100."
+    ],
+    zrodla: [
+      { nazwa: "Traders Union: EUR/USD remains vulnerable near October lows (27 paź 2026)", url: "https://tradersunion.com/news/currencies/show/3980473-eur-usd-remains-vulnerable-near-october-lows-ahead-of-central-bank-decisions/" },
+      { nazwa: "RoboForex: EURUSD forecast, 27 paź 2026", url: "https://roboforex.com/beginners/analytics/forex-forecast/currencies/eur-usd-forecast-2026-10-27/" },
+      { nazwa: "Trading Economics: EUR/USD (28 paź 2026, rano)", url: "https://tradingeconomics.com/euro-area/currency" }
+    ]
+  },
+  {
+    id: "2026-10-28-usdjpy", instrument: "usdjpy", data: "2026-10-28", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "USD/JPY przy 158 między przewagą rentowności a ryzykiem interwencji", tytul_en: "USD/JPY near 158, caught between the yield gap and intervention risk",
+    lead: "Para wróciła do 158, ale przed decyzjami Fed i Banku Japonii wzrosty ogranicza ryzyko interwencji. Bazą jest ruch w zakresie 156,75–159,05.",
+    lead_en: "The pair is back at 158, but ahead of the Fed and Bank of Japan decisions intervention risk caps gains. Trading within 156.75–159.05 is the base case.",
+    poziomy: { cena: 157.95, opory: [159.05, 160.00], wsparcia: [156.75, 155.11] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo konsolidacja między wrześniowym minimum 156,75 a październikowym maksimum 159,05.", tekst_en: "Base case: consolidation between the September low of 156.75 and the October high of 159.05." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 159,05 otwiera drogę do 160,00, gdzie ryzyko interwencji jest największe.", tekst_en: "A daily close above 159.05 opens the way to 160.00, where intervention risk is highest." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 156,75 oznaczałoby wyraźne umocnienie jena i otwiera drogę do 155,11.", tekst_en: "A daily close below 156.75 would signal clear yen strength and opens the way to 155.11." }
+    ],
+    tresc: [
+      "USD/JPY zamknął wtorek na 157,94 (+0,3%), a rano jest przy 157,95. Dolar zyskuje przed dzisiejszą decyzją Fed, a różnica rentowności 10-latek USA i Japonii wciąż wspiera parę.",
+      "Wzrosty ogranicza ryzyko interwencji: w lipcu Japonia interweniowała razem z USA po wybiciu ponad 160, a każde podejście do 159,05 kończyło się ostrzeżeniami Tokio. Bank Japonii w piątek najpewniej utrzyma stopę 1,25%, ale może zasygnalizować grudniową podwyżkę.",
+      "Investing.com wskazuje wsparcia 156,75 (zamknięcie poniżej oznaczałoby zwrot na korzyść jena) i 155,11 oraz opory 159,05 i 160,00. XTB spodziewa się konsolidacji przy 157–158 do czasu decyzji banków centralnych."
+    ],
+    tresc_en: [
+      "USD/JPY closed Tuesday at 157.94 (+0.3%) and trades near 157.95 this morning. The dollar gains ahead of today's Fed decision, and the gap between US and Japanese 10-year yields still supports the pair.",
+      "Intervention risk caps gains: in July Japan intervened jointly with the US after a break above 160, and each approach to 159.05 has drawn warnings from Tokyo. The Bank of Japan will most likely hold at 1.25% on Friday but may signal a December hike.",
+      "Investing.com cites support at 156.75 (a close below would signal a shift towards yen strength) and 155.11, with resistance at 159.05 and 160.00. XTB expects consolidation around 157–158 until the central bank decisions."
+    ],
+    zrodla: [
+      { nazwa: "Investing.com: USD/JPY Near 158 as Yield Gap Support Collides With Japan's Intervention Risk (16 paź 2026)", url: "https://ca.investing.com/analysis/usdjpy-near-158-as-yield-gap-support-collides-with-japans-intervention-risk-200628629" },
+      { nazwa: "XTB: Chart of the Day, USDJPY caught in a trap (27 paź 2026)", url: "https://www.xtb.com/en/market-analysis/chart-of-the-day-usdjpy-caught-in-a-trap-tokyo-intervention-and-a-hawkish-boj-loom" },
+      { nazwa: "Trading Economics: USD/JPY (28 paź 2026, rano)", url: "https://tradingeconomics.com/euro-area/currency" }
+    ]
+  },
+  {
     id: "2026-10-27-dax", instrument: "dax", data: "2026-10-27", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
     tytul: "DAX w zawężającym się zakresie przed Fed i EBC", tytul_en: "DAX in a narrowing range ahead of the Fed and ECB",
@@ -247,6 +302,7 @@ window.ANALIZY = [
   {
     id: "2026-10-23-usdjpy", instrument: "usdjpy", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-27", komentarz: "27 paź USD/JPY zamknął dzień na 157,94, powyżej poziomu unieważnienia R1 157,60, zanim kurs dotknął wsparcia S1 155,00 (najniżej od publikacji: 156,06 23 paź). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 27 Oct USD/JPY closed the day at 157.94, above the R1 invalidation level of 157.60, before the rate touched S1 support at 155.00 (lowest since publication: 156.06 on 23 Oct). Price source: CNBC daily candles." },
     tytul: "USD/JPY pod presją ryzyka interwencji, celem 155,00", tytul_en: "USD/JPY under intervention-risk pressure, eyeing 155.00",
     lead: "Para wybiła się w czwartek dołem z zakresu 157,5–159 i spadła do 156,67. Wyższa inflacja bazowa w Japonii i ryzyko interwencji przemawiają za dalszym osłabieniem dolara wobec jena.",
     lead_en: "The pair broke below its 157.5–159 range on Thursday and fell to 156.67. Higher core inflation in Japan and intervention risk favour further dollar losses against the yen.",
@@ -474,6 +530,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-eurusd", instrument: "eurusd", data: "2026-10-18", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-27", komentarz: "27 paź EUR/USD zamknął dzień na 1,1122, poniżej dolnej granicy zakresu S1 1,1160. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 27 Oct EUR/USD closed the day at 1.1122, below the S1 lower bound of 1.1160. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     tytul: "EUR/USD odbija od tegorocznego minimum, opór 1,1300", tytul_en: "EUR/USD bounces off the yearly low, resistance at 1.1300",
     lead: "Para przerwała serię pięciu spadkowych tygodni. Krótkoterminowo trwa odbicie, ale dopóki kurs jest poniżej 1,1300, średnioterminowy obraz pozostaje spadkowy.",
     lead_en: "The pair snapped a five-week losing streak. A short-term bounce is under way, but below 1.1300 the medium-term picture stays bearish.",

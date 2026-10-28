@@ -551,8 +551,8 @@
 
   // ---------- Kalendarz ekonomiczny ----------
   var KRAJE = {
-    pl: { US: "USA", EZ: "Strefa euro", DE: "Niemcy", FR: "Francja", UK: "Wielka Brytania", PL: "Polska", CN: "Chiny", CA: "Kanada", JP: "Japonia", CH: "Szwajcaria", AU: "Australia" },
-    en: { US: "United States", EZ: "Euro area", DE: "Germany", FR: "France", UK: "United Kingdom", PL: "Poland", CN: "China", CA: "Canada", JP: "Japan", CH: "Switzerland", AU: "Australia" }
+    pl: { US: "USA", EZ: "Strefa euro", DE: "Niemcy", FR: "Francja", UK: "Wielka Brytania", PL: "Polska", CN: "Chiny", CA: "Kanada", JP: "Japonia", CH: "Szwajcaria", AU: "Australia", NZ: "Nowa Zelandia" },
+    en: { US: "United States", EZ: "Euro area", DE: "Germany", FR: "France", UK: "United Kingdom", PL: "Poland", CN: "China", CA: "Canada", JP: "Japan", CH: "Switzerland", AU: "Australia", NZ: "New Zealand" }
   };
   var SILA = { pl: ["", "słaby", "średni", "duży", "bardzo duży"], en: ["", "low", "medium", "high", "very high"] };
   var DNI = { pl: ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"], en: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] };
