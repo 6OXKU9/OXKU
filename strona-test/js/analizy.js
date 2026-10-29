@@ -24,6 +24,59 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-29-bitcoin", instrument: "btcusd", data: "2026-10-29", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin przy 80 000 USD pod oporem 81 000–81 950, celem 78 000", tytul_en: "Bitcoin near $80,000 below the $81,000–81,950 resistance, eyeing $78,000",
+    lead: "Bitcoin nie przebił strefy 81 000–81 950 USD i rano wrócił poniżej 80 000. Słaby popyt na rynku kasowym i ryzyko grudniowej podwyżki stóp Fed przemawiają za testem wsparcia 78 000 USD.",
+    lead_en: "Bitcoin failed to break the $81,000–81,950 zone and slipped back below $80,000 this morning. Weak spot demand and the risk of a December Fed hike favour a test of $78,000 support.",
+    poziomy: { cena: 79988, opory: [81950, 84856], wsparcia: [78000, 77600] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do wsparcia 78 000 USD (Mudrex), a przy jego przełamaniu do górnej granicy strefy 73 000–77 600 (CryptoQuant).", tekst_en: "Base case: a drop to $78,000 support (Mudrex), and on a break to the top of the $73,000–77,600 zone (CryptoQuant)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 81 950 (górna granica strefy oporu, blisko średniego kosztu zakupu przez fundusze ETF) unieważnia scenariusz; wyżej leży maksimum z 21 paź przy 84 856.", tekst_en: "A daily close above $81,950 (top of the resistance zone, near the average ETF cost basis) invalidates the setup; above lies the 21 Oct high near $84,856." }
+    ],
+    tresc: [
+      "Bitcoin zamknął środę na 81 249 USD, a w czwartek rano spadł do około 79 990 USD (dzienne minimum 79 586). Przez ostatnie dziesięć dni zamknięcia mieściły się w zakresie 80 000–84 000 USD.",
+      "Według Analytics Insight odbicia hamuje strefa 81 000–81 800 USD, gdzie leży średni koszt zakupu przez fundusze ETF (około 81 500) i gdzie trafia podaż górników. CryptoQuant od 14 paź notuje ujemny popyt na rynku kasowym.",
+      "Fed utrzymał stopy, ale dwoje członków głosowało za podwyżką, a rynek wycenia około 86–90% szans na podwyżkę w grudniu. Dziś PKB USA i inflacja PCE (13:30). Mudrex wskazuje wsparcie przy 78 000 USD."
+    ],
+    tresc_en: [
+      "Bitcoin closed Wednesday at $81,249 and on Thursday morning fell to about $79,990 (daily low $79,586). Over the past ten days closes stayed within $80,000–84,000.",
+      "According to Analytics Insight, rebounds stall in the $81,000–81,800 zone, where the average ETF cost basis sits (about $81,500) and miner supply arrives. CryptoQuant has recorded negative spot demand since 14 Oct.",
+      "The Fed held rates, but two officials voted for a hike, and markets price about an 86–90% chance of a December hike. US GDP and PCE inflation are due today (13:30). Mudrex cites support near $78,000."
+    ],
+    zrodla: [
+      { nazwa: "Analytics Insight: Bitcoin slips near USD 80,361 as Fed hold keeps hike fears alive (29 paź 2026)", url: "https://www.analyticsinsight.net/price-analysis/crypto-prices-today-bitcoin-slips-near-usd-80361-as-fed-hold-keeps-hike-fears-alive" },
+      { nazwa: "Coinbase: świece dzienne BTC-USD", url: "https://www.coinbase.com/price/bitcoin" }
+    ]
+  },
+  {
+    id: "2026-10-29-nasdaq", instrument: "nasdaq", data: "2026-10-29", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 cofa się spod 29 800 po rozczarowaniu Alphabetu, celem 29 000", tytul_en: "Nasdaq 100 retreats from 29,800 after Alphabet disappoints, eyeing 29,000",
+    lead: "Indeks zamknął środę tuż nad 50-dniową średnią przy 29 800, ale po słabych wynikach Alphabetu kontrakty spadają o około 1,2%. Dopóki Nasdaq 100 jest pod 29 800, bazą jest powrót do wsparcia 29 000.",
+    lead_en: "The index closed Wednesday just above the 50-day average near 29,800, but after Alphabet's weak results futures are down about 1.2%. While the Nasdaq 100 stays below 29,800, a return to 29,000 support is the base case.",
+    poziomy: { cena: 29447, opory: [29800, 30000], wsparcia: [29000, 28300] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do wsparcia 29 000, wielokrotnie testowanego w październiku, a przy jego przełamaniu do czerwcowego minimum 28 300.", tekst_en: "Base case: a drop to 29,000 support, tested repeatedly in October, and on a break to the June low of 28,300." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 29 800 (50-dniowa średnia EMA) unieważnia scenariusz i otwiera drogę do 30 000.", tekst_en: "A daily close above 29,800 (the 50-day EMA) invalidates the setup and opens the way to 30,000." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął środę na 29 813 pkt (+0,5%), trzeci dzień wzrostów. Po sesji Alphabet stracił ponad 8%: zysk na akcję 2,12 USD wobec oczekiwanych 3,02 i ujemny przepływ gotówki przy nakładach 51 mld USD. Microsoft zyskał około 5% po lepszych wynikach i wzroście Azure o 48%.",
+      "Rano kontrakty CFD na Nasdaq 100 są przy 29 447 pkt, około 1,2% pod środowym zamknięciem. W Azji Kospi stracił 2,8% po spadku Samsunga. Fed utrzymał stopy, ale rynek wycenia grudniową podwyżkę.",
+      "StoneX wskazuje opór 29 800 (50-dniowa średnia EMA, gdzie wcześniejsze odbicia się zatrzymywały) i 30 000 oraz wsparcia 29 000 i 28 300. Dziś PKB i inflacja PCE (13:30), a po sesji wyniki Amazona."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Wednesday at 29,813 (+0.5%), a third straight gain. After the close Alphabet fell over 8%: EPS of $2.12 versus $3.02 expected and negative free cash flow on $51bn of capex. Microsoft rose about 5% on better results and 48% Azure growth.",
+      "This morning Nasdaq 100 CFDs trade near 29,447, about 1.2% below Wednesday's close. In Asia the Kospi lost 2.8% after Samsung fell. The Fed held rates, but markets price a December hike.",
+      "StoneX cites resistance at 29,800 (the 50-day EMA, where earlier rebounds stalled) and 30,000, with support at 29,000 and 28,300. GDP and PCE inflation are due today (13:30), with Amazon results after the close."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: Nasdaq 100 Forecast, NDX rebounds as Anthropic files for IPO (26 paź 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/nasdaq-100-forecast-ndx-rebounds-as-anthropic-files-for-ipo/" },
+      { nazwa: "TradingKey: Alphabet Q3 2026 earnings (28 paź 2026)", url: "https://www.tradingkey.com/analysis/stocks/us-stocks/262248965-google-earnings-report-q3-services-cloud-search-capital-expenditures-cash-tradingkey" },
+      { nazwa: "Trading Economics: US100 (29 paź 2026, rano)", url: "https://tradingeconomics.com/united-states/stock-market" }
+    ]
+  },
+  {
     id: "2026-10-28-eurusd", instrument: "eurusd", data: "2026-10-28", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "EUR/USD przy październikowych minimach, celem strefa 1,1050–1,1080", tytul_en: "EUR/USD at October lows, eyeing the 1.1050–1.1080 zone",
@@ -136,6 +189,7 @@ window.ANALIZY = [
   {
     id: "2026-10-27-nasdaq", instrument: "nasdaq", data: "2026-10-27", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-28", komentarz: "28 paź Nasdaq 100 zamknął sesję na 29 813 pkt, powyżej górnej granicy zakresu R1 29 800. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 28 Oct the Nasdaq 100 closed at 29,813, above the R1 upper bound of 29,800. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     tytul: "Nasdaq 100 odbija po wniosku Anthropic, ale przed Fed i wynikami w zakresie 29 000–29 800", tytul_en: "Nasdaq 100 rebounds on Anthropic's filing, but stays in a 29,000–29,800 range ahead of the Fed and earnings",
     lead: "Indeks wrócił nad 29 200 dzięki odbiciu spółek AI, ale wciąż jest pod 50-dniową średnią przy 29 800. Przed decyzją Fed i wynikami Microsoftu, Alphabetu i Amazona bazą jest ruch w zakresie 29 000–29 800.",
     lead_en: "The index climbed back above 29,200 on a rebound in AI stocks but remains below the 50-day average near 29,800. Ahead of the Fed decision and results from Microsoft, Alphabet and Amazon, trading within 29,000–29,800 is the base case.",
@@ -502,6 +556,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-bitcoin", instrument: "btcusd", data: "2026-10-18", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-28", komentarz: "Przez cały 10-dniowy horyzont (19–28 paź) żadna świeca dzienna nie zamknęła się poza zakresem S1–R1 (79 676–84 262). Najniższe zamknięcie: 80 009 (26 paź), najwyższe: 84 025 (21 paź). Źródło ceny: świece dzienne Coinbase.", komentarz_en: "Throughout the 10-day horizon (19–28 Oct) no daily candle closed outside the S1–R1 range (79,676–84,262). Lowest close: 80,009 (26 Oct), highest: 84,025 (21 Oct). Price source: Coinbase daily candles." },
     tytul: "Bitcoin w impasie między 79 700 a 84 300", tytul_en: "Bitcoin stuck between 79,700 and 84,300",
     lead: "Bitcoin trzyma się w rejonie średniego kosztu zakupu przez ETF-y (około 81 500). Odpływy z funduszy i awersja do ryzyka ciążą, ale wsparcia na razie trzymają.",
     lead_en: "Bitcoin is holding around the average ETF cost basis (about 81,500). Fund outflows and risk aversion weigh on it, but supports are holding for now.",

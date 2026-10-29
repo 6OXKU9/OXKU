@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-10-28T22:30:00+01:00",
+  aktualizacja: "2026-10-29T07:45:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -58,11 +58,6 @@ window.KALENDARZ = {
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
   wydarzenia: [
-
-    { czas: "2026-10-26T10:00:00+01:00", kraj: "DE", nazwa: "Indeks Ifo klimatu gospodarczego (paź)", wplyw: 2, instrumenty: ["eurusd", "dax"], opis: "Nastroje w niemieckich firmach. Szósty z rzędu wzrost, najwyżej od maja 2023 roku.", nazwa_en: "Ifo business climate (Oct)", opis_en: "Sentiment in German companies. A sixth straight rise, the highest since May 2023.", poprzednio: "89,9", poprzednio_en: "89.9", prognoza: "89,9 (stagnacja)", prognoza_en: "89.9 (no change)", aktualnie: "90,2", aktualnie_en: "90.2", zrodlo: 34 },
-    { czas: "2026-10-26T13:30:00+01:00", kraj: "US", nazwa: "Indeks aktywności Fed z Chicago (wrz)", wplyw: 1, instrumenty: ["sp500"], opis: "Zbiorczy wskaźnik aktywności gospodarczej w USA.", nazwa_en: "Chicago Fed National Activity Index (Sep)", opis_en: "A composite gauge of US economic activity.", zrodlo: 32 },
-    { czas: "2026-10-26T15:30:00+01:00", kraj: "US", nazwa: "Indeks przemysłu Fed z Dallas (paź)", wplyw: 1, instrumenty: ["sp500", "wti"], opis: "Koniunktura w przemyśle Teksasu, ważnym dla sektora naftowego.", nazwa_en: "Dallas Fed manufacturing index (Oct)", opis_en: "Manufacturing conditions in Texas, key for the oil sector.", zrodlo: 32 },
-    { czas: "2026-10-26T18:00:00+01:00", kraj: "US", nazwa: "Aukcja 2-letnich obligacji (69 mld USD)", wplyw: 1, instrumenty: ["eurusd", "usdjpy", "xauusd"], opis: "Popyt na krótki dług przed decyzją Fed.", nazwa_en: "2-year note auction ($69bn)", opis_en: "Demand for short-term debt ahead of the Fed decision.", zrodlo: 32 },
 
     { czas: "2026-10-27T13:30:00+01:00", kraj: "US", nazwa: "Zamówienia na dobra trwałe (wrz)", wplyw: 2, instrumenty: ["eurusd", "sp500"], opis: "Sygnał o inwestycjach firm przed posiedzeniem Fed.", nazwa_en: "Durable goods orders (Sep)", opis_en: "A signal on business investment ahead of the Fed meeting.", poprzednio: "+0,1% m/m", poprzednio_en: "+0.1% m/m", prognoza: "+1,7% m/m", prognoza_en: "+1.7% m/m", aktualnie: "+1,8% m/m (bez transportu +0,5%)", aktualnie_en: "+1.8% m/m (ex transport +0.5%)", zrodlo: 35 },
     { czas: "2026-10-27T15:00:00+01:00", kraj: "US", nazwa: "Zaufanie konsumentów Conference Board (paź)", wplyw: 2, instrumenty: ["eurusd", "sp500", "xauusd"], opis: "Nastroje konsumentów przy drogiej ropie i rosnących oczekiwaniach inflacyjnych.", nazwa_en: "Conference Board consumer confidence (Oct)", opis_en: "Consumer mood amid pricey oil and rising inflation expectations.", poprzednio: "84,2 (po korekcie)", poprzednio_en: "84.2 (revised)", prognoza: "80,4", prognoza_en: "80.4", aktualnie: "91,7", aktualnie_en: "91.7", zrodlo: 35 },
