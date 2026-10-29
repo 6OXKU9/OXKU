@@ -24,6 +24,33 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-29-dax", instrument: "dax", data: "2026-10-29", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "DAX nad 26 000 pkt, celem szczyt z 4 września przy 26 164", tytul_en: "DAX above 26,000, eyeing the 4 September high at 26,164",
+    lead: "DAX wybił się z zakresu i zamknął czwartek na 26 040 pkt, najwyżej od siedmiu tygodni. Dopóki indeks trzyma się nad 25 665, bazą jest test szczytu z 4 września przy 26 164.",
+    lead_en: "The DAX broke out of its range and closed Thursday at 26,040, a seven-week high. While the index holds above 25,665, a test of the 4 September high at 26,164 is the base case.",
+    poziomy: { cena: 26039.68, opory: [26164], wsparcia: [25665, 25488] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 26 164 pkt (szczyt z 4 września, opór według TraderFox dla DZ Banku).", tekst_en: "Base case: a rise to 26,164 (the 4 September high, resistance according to TraderFox for DZ Bank)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 665 (kluczowy poziom trendu według onvista) unieważnia scenariusz i otwiera drogę do 25 488 (minimum z 28 października).", tekst_en: "A daily close below 25,665 (the key trend level according to onvista) invalidates the setup and opens the way to 25,488 (the 28 October low)." }
+    ],
+    tresc: [
+      "DAX zamknął czwartkową sesję Xetra na 26 039,68 pkt (+1,3%). Najmocniej rósł Adidas (+5,8% po zapowiedzi powrotu do wzrostu w IV kwartale), a na końcu indeksu był Vonovia (około −3%).",
+      "EBC zgodnie z oczekiwaniami zostawił stopy bez zmian (depozytowa 2,50%), co rynek przyjął spokojnie. Christine Lagarde odejdzie z funkcji prezes wcześniej, 7 lutego 2027 roku.",
+      "onvista wskazuje 25 665 jako poziom, nad którym trend wzrostowy pozostaje nienaruszony, i 26 120 (poziom z początku września) jako kolejny punkt odniesienia. TraderFox dla DZ Banku podaje opór 26 164 (szczyt z 4 września) i wsparcie 25 488. W piątek PKB Niemiec (8:00) i strefy euro (11:00) oraz inflacja w Niemczech (14:00)."
+    ],
+    tresc_en: [
+      "The DAX closed Thursday's Xetra session at 26,039.68 (+1.3%). Adidas rose the most (+5.8% after guiding to a return to growth in Q4), while Vonovia was at the bottom of the index (about −3%).",
+      "The ECB left rates unchanged as expected (deposit rate 2.50%), which the market took calmly. Christine Lagarde will leave the presidency early, on 7 February 2027.",
+      "onvista sees 25,665 as the level above which the uptrend stays intact, and 26,120 (the early-September level) as the next reference point. TraderFox for DZ Bank gives resistance at 26,164 (the 4 September high) and support at 25,488. Friday brings German GDP (8:00), euro-area GDP (11:00) and German inflation (14:00)."
+    ],
+    zrodla: [
+      { nazwa: "ARIVA.DE / dpa-AFX: Aktien Frankfurt Schluss, Dax über 26.000 Punkte, EZB-Leitzins stabil (29 paź 2026)", url: "https://www.ariva.de/news/roundup-aktien-frankfurt-schluss-dax-ueber-26-000-punkte-12187543" },
+      { nazwa: "onvista: Dax überwindet letzte Hürde vor einem Anstieg auf 26.000 Punkte (29 paź 2026)", url: "https://www.onvista.de/news/2026/10-29-dax-ueberwindet-letzte-huerde-vor-einem-anstieg-auf-26-000-punkte-41123281-19-26569831" },
+      { nazwa: "DZ BANK / TraderFox: Technische Analyse DAX (29 paź 2026)", url: "https://www.dzbank-wertpapiere.de/markets/daxanalyse" }
+    ]
+  },
+  {
     id: "2026-10-29-bitcoin", instrument: "btcusd", data: "2026-10-29", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Bitcoin przy 80 000 USD pod oporem 81 000–81 950, celem 78 000", tytul_en: "Bitcoin near $80,000 below the $81,000–81,950 resistance, eyeing $78,000",
@@ -134,6 +161,7 @@ window.ANALIZY = [
   {
     id: "2026-10-27-dax", instrument: "dax", data: "2026-10-27", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-29", komentarz: "29 paź DAX zamknął sesję Xetra na 26 039,68 pkt, powyżej górnej granicy zakresu R1 25 800. Zamknięcie dnia wypadło poza zakresem S1–R1. Źródło ceny: ARIVA.DE / dpa-AFX.", komentarz_en: "On 29 Oct the DAX closed the Xetra session at 26,039.68, above the R1 upper bound of 25,800. The daily close fell outside the S1–R1 range. Price source: ARIVA.DE / dpa-AFX." },
     tytul: "DAX w zawężającym się zakresie przed Fed i EBC", tytul_en: "DAX in a narrowing range ahead of the Fed and ECB",
     lead: "DAX odrobił w dwa dni cały piątkowy spadek i zamknął wtorek na 25 591 pkt. Przed decyzjami Fed i EBC oraz wynikami Big Tech bazą jest ruch w zakresie 25 317–25 800.",
     lead_en: "The DAX recouped Friday's entire drop in two days and closed Tuesday at 25,591. Ahead of the Fed and ECB decisions and Big Tech results, trading within 25,317–25,800 is the base case.",
