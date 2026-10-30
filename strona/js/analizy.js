@@ -24,6 +24,61 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-30-bitcoin", instrument: "btcusd", data: "2026-10-30", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin pod 80 000 USD po włamaniu na Binance, celem 76 500", tytul_en: "Bitcoin below $80,000 after the Binance hack, eyeing $76,500",
+    lead: "Bitcoin przełamał wsparcia 80 000 i 78 000 USD i jest najniżej od sześciu tygodni. Dopóki kurs jest pod 80 000, bazą jest test średniego kosztu krótkoterminowych posiadaczy przy 76 500.",
+    lead_en: "Bitcoin broke the $80,000 and $78,000 supports and is at a six-week low. While the price stays below $80,000, a test of the short-term holders' average cost near $76,500 is the base case.",
+    poziomy: { cena: 78447, opory: [80000, 81000], wsparcia: [76500, 73500] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 76 500 USD (średni koszt zakupu krótkoterminowych posiadaczy według KuCoin), a przy jego przełamaniu do strefy 73 100–73 500 (WazirX).", tekst_en: "Base case: a drop to $76,500 (the short-term holders' average cost basis according to KuCoin), and on a break to the $73,100–73,500 zone (WazirX)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 80 000 USD (przełamane wsparcie, teraz opór) unieważnia scenariusz i otwiera drogę do 81 000.", tekst_en: "A daily close above $80,000 (broken support, now resistance) invalidates the setup and opens the way to $81,000." }
+    ],
+    tresc: [
+      "Bitcoin zamknął czwartek na 77 780 USD po minimum 77 699 i w piątek rano jest przy 78 447. Wcześniejsza analiza spadkowa z celem 78 000 została rozliczona jako trafiona.",
+      "Presję wywołało włamanie na Binance: według KuCoin z gorących portfeli giełdy wypłynęło około 5,3–5,6 mld USD w ponad 60 aktywach, a Binance wstrzymał wpłaty i wypłaty i zapowiedział pokrycie strat. Indeks strachu i chciwości spadł z 51 do 30. Do tego doszła wyprzedaż spółek technologicznych po wynikach Alphabetu i Amazona.",
+      "KuCoin wskazuje 76 500 USD jako kluczowe wsparcie krótkoterminowe, a WazirX kolejną strefę przy 73 100–73 500. CoinSwitch uważa przedział 80 000–81 000 za ważny dla odbicia."
+    ],
+    tresc_en: [
+      "Bitcoin closed Thursday at $77,780 after a low of $77,699 and is at $78,447 on Friday morning. The previous bearish analysis with a $78,000 target was settled as a hit.",
+      "The pressure came from the Binance hack: according to KuCoin about $5.3–5.6bn flowed out of the exchange's hot wallets in more than 60 assets, and Binance halted deposits and withdrawals and pledged to cover losses. The Fear & Greed Index fell from 51 to 30. A tech selloff after Alphabet and Amazon results added to it.",
+      "KuCoin sees $76,500 as the key short-term support, and WazirX the next zone at $73,100–73,500. CoinSwitch considers $80,000–81,000 important for a recovery."
+    ],
+    zrodla: [
+      { nazwa: "KuCoin: Crypto Daily Market Report (30 paź 2026)", url: "https://www.kucoin.com/news/articles/crypto-daily-market-report-october-30-2026" },
+      { nazwa: "Analytics Insight: Bitcoin fell near USD 78,483 as Binance hack kept traders cautious (30 paź 2026)", url: "https://www.analyticsinsight.net/price-analysis/crypto-prices-today-bitcoin-fell-near-usd-78483-as-binance-hack-kept-traders-cautious" },
+      { nazwa: "Coinbase: świece dzienne BTC-USD", url: "https://www.coinbase.com/price/bitcoin" }
+    ]
+  },
+  {
+    id: "2026-10-30-eurusd", instrument: "eurusd", data: "2026-10-30", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "EUR/USD odbija od najniższego poziomu od maja 2025, zakres 1,1113–1,1260", tytul_en: "EUR/USD rebounds from its lowest since May 2025, range 1.1113–1.1260",
+    lead: "Euro odbiło po spadku do najniższego poziomu od maja 2025 roku, bo spadek rentowności w USA osłabił dolara. Po decyzjach Fed i EBC bazą jest ruch w zakresie 1,1113–1,1260.",
+    lead_en: "The euro rebounded after falling to its lowest since May 2025, as lower US yields weighed on the dollar. After the Fed and ECB decisions, trading within 1.1113–1.1260 is the base case.",
+    poziomy: { cena: 1.1183, opory: [1.1260, 1.1355], wsparcia: [1.1113, 1.1000] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo konsolidacja między wsparciem 1,1113 (tegoroczne minimum z 14 października) a oporem 1,1260 (NordFX).", tekst_en: "Base case: consolidation between 1.1113 support (this year's 14 October low) and 1.1260 resistance (NordFX)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,1260 otwiera drogę do 1,1355.", tekst_en: "A daily close above 1.1260 opens the way to 1.1355." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,1113 otwiera drogę do 1,1000.", tekst_en: "A daily close below 1.1113 opens the way to 1.1000." }
+    ],
+    tresc: [
+      "EUR/USD zamknął czwartek na 1,1178 po minimum 1,1103, najniższym od maja 2025 roku, i w piątek rano jest przy 1,1183. Wcześniejsza analiza spadkowa została rozliczona jako nietrafiona, bo kurs zamknął się nad oporem 1,1170.",
+      "Dolara osłabił spadek rentowności obligacji USA (10-latki około 4,90%, najniżej od ponad miesiąca), bo wyprzedaż spółek AI skłoniła inwestorów do szukania bezpieczeństwa. Z drugiej strony mocny PKB (3,4%) i inflacja PCE 3,6% podtrzymują oczekiwania kolejnej podwyżki Fed, a EBC utrzymał stopy i może podnieść je w grudniu.",
+      "NordFX wskazuje opory 1,1260 i 1,1355 oraz wsparcia przy tegorocznym minimum 1,1113, 200-tygodniowej średniej przy 1,1105 i 1,1000. Przy sprzecznych sygnałach z obu stron analiza zakłada konsolidację."
+    ],
+    tresc_en: [
+      "EUR/USD closed Thursday at 1.1178 after a low of 1.1103, its lowest since May 2025, and is at 1.1183 on Friday morning. The previous bearish analysis was settled as a miss because the pair closed above the 1.1170 resistance.",
+      "Lower US Treasury yields (the 10-year around 4.90%, its lowest in over a month) weighed on the dollar as the AI selloff drove a flight to safety. On the other hand, strong GDP (3.4%) and 3.6% PCE inflation keep expectations of another Fed hike alive, while the ECB held rates and may hike in December.",
+      "NordFX sees resistance at 1.1260 and 1.1355 and support at this year's 1.1113 low, the 200-week average near 1.1105 and 1.1000. With mixed signals on both sides, this analysis assumes consolidation."
+    ],
+    zrodla: [
+      { nazwa: "Yahoo Finance / Reuters: Yen gains after BOJ, AI jitters drive Treasury rally, weigh on dollar (30 paź 2026)", url: "https://finance.yahoo.com/markets/currencies/articles/yen-steady-boj-ai-jitters-015222078.html" },
+      { nazwa: "Forexuro: EUR/USD Weekly Outlook, Fed and ECB, 26–30 paź 2026", url: "https://forexuro.com/forecasts/eurusd-week-26-october-2026" },
+      { nazwa: "Trading Economics: jen japoński (z tabelą walut), 30 paź 2026", url: "https://tradingeconomics.com/japan/currency" }
+    ]
+  },
+  {
     id: "2026-10-29-dax", instrument: "dax", data: "2026-10-29", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "DAX nad 26 000 pkt, celem szczyt z 4 września przy 26 164", tytul_en: "DAX above 26,000, eyeing the 4 September high at 26,164",
@@ -53,6 +108,7 @@ window.ANALIZY = [
   {
     id: "2026-10-29-bitcoin", instrument: "btcusd", data: "2026-10-29", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-29", komentarz: "29 paź bitcoin spadł do 77 699 USD, poniżej celu S1 78 000, zanim jakakolwiek świeca dzienna zamknęła się nad oporem R1 81 950. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 29 Oct bitcoin fell to $77,699, below the S1 target of $78,000, before any daily candle closed above the R1 resistance of $81,950. Price source: Coinbase daily candles." },
     tytul: "Bitcoin przy 80 000 USD pod oporem 81 000–81 950, celem 78 000", tytul_en: "Bitcoin near $80,000 below the $81,000–81,950 resistance, eyeing $78,000",
     lead: "Bitcoin nie przebił strefy 81 000–81 950 USD i rano wrócił poniżej 80 000. Słaby popyt na rynku kasowym i ryzyko grudniowej podwyżki stóp Fed przemawiają za testem wsparcia 78 000 USD.",
     lead_en: "Bitcoin failed to break the $81,000–81,950 zone and slipped back below $80,000 this morning. Weak spot demand and the risk of a December Fed hike favour a test of $78,000 support.",
@@ -106,6 +162,7 @@ window.ANALIZY = [
   {
     id: "2026-10-28-eurusd", instrument: "eurusd", data: "2026-10-28", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-10-29", komentarz: "29 paź EUR/USD zamknął się na 1,1178, powyżej oporu R1 1,1170, zanim kurs dotknął celu S1 1,1080 (minimum 1,1103). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 29 Oct EUR/USD closed at 1.1178, above the R1 resistance of 1.1170, before reaching the S1 target of 1.1080 (low 1.1103). Price source: CNBC daily candles." },
     tytul: "EUR/USD przy październikowych minimach, celem strefa 1,1050–1,1080", tytul_en: "EUR/USD at October lows, eyeing the 1.1050–1.1080 zone",
     lead: "Euro jest najsłabiej od kwietnia 2025 roku i notowane poniżej wszystkich głównych średnich. Dopóki kurs jest pod 1,1170, bazą jest spadek do strefy 1,1050–1,1080.",
     lead_en: "The euro is at its weakest since April 2025 and trades below all major moving averages. While the rate stays below 1.1170, a drop to the 1.1050–1.1080 zone is the base case.",
