@@ -24,6 +24,89 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-10-30-zloto", instrument: "xauusd", data: "2026-10-30", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Złoto najniżej od roku, celem 3 800 USD", tytul_en: "Gold at a one-year low, eyeing $3,800",
+    lead: "Złoto spadło w piątek o ponad 3% poniżej 3 900 USD, najniżej od października 2025 roku. Dopóki cena jest pod 4 000, bazą jest test wsparcia 3 800.",
+    lead_en: "Gold fell more than 3% on Friday to below $3,900, its lowest since October 2025. While the price stays below $4,000, a test of $3,800 support is the base case.",
+    poziomy: { cena: 3874.08, opory: [4000, 4005], wsparcia: [3800] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 3 800 USD (wsparcie według analityka Waleeda Saida cytowanego przez Kitco).", tekst_en: "Base case: a drop to $3,800 (support according to analyst Waleed Said quoted by Kitco)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 4 000 USD (psychologiczny poziom według IC Markets; 4-godzinna średnia 20-okresowa przy 4 005 według Rio Times) unieważnia scenariusz.", tekst_en: "A daily close above $4,000 (a psychological level according to IC Markets; the 4-hour 20-period average near $4,005 according to Rio Times) invalidates the setup." }
+    ],
+    tresc: [
+      "Złoto kosztuje około 3 874 USD (−3,7% w ciągu dnia według Trading Economics) i jest najniżej od roku. Poprzednia analiza spadkowa z celem 3 950 została rozliczona jako trafiona.",
+      "Według Kitco droga ropa przez wojnę z Iranem podsyca inflację, a rynek spodziewa się podwyżek stóp Fed w grudniu i na początku 2027 roku. Złoto nie zyskało nawet przy słabszym dolarze i spadku rentowności, bo inwestorzy sprzedawali je, by pokryć depozyty po wyprzedaży spółek technologicznych.",
+      "Waleed Said oczekuje testu 3 800 USD. Odbicie zmieniłoby obraz dopiero powyżej około 4 005 USD (Rio Times). W przyszłym tygodniu wybory w USA we wtorek i raport z rynku pracy w piątek."
+    ],
+    tresc_en: [
+      "Gold trades around $3,874 (−3.7% on the day according to Trading Economics) and is at a one-year low. The previous bearish analysis with a $3,950 target was settled as a hit.",
+      "According to Kitco, expensive oil due to the war with Iran feeds inflation, and markets expect Fed hikes in December and early 2027. Gold did not gain even as the dollar and yields fell, because investors sold it to meet margin calls after the tech selloff.",
+      "Waleed Said expects a test of $3,800. A rebound would change the picture only above about $4,005 (Rio Times). Next week brings the US midterms on Tuesday and the jobs report on Friday."
+    ],
+    zrodla: [
+      { nazwa: "Kitco: Gold prices plunge to one-year low below $3,900 (30 paź 2026)", url: "https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears" },
+      { nazwa: "Rio Times: Silver drops 5%, gold 3% as rout accelerates (30 paź 2026)", url: "https://www.riotimesonline.com/silver-drops-5-gold-3-as-rout-accelerates/" },
+      { nazwa: "IC Markets: Asia Fundamental Forecast (30 paź 2026)", url: "https://icmarkets.com.au/blog/ic-markets-asia-fundamental-forecast-30-october-2026" },
+      { nazwa: "Trading Economics: złoto, 30 paź 2026", url: "https://tradingeconomics.com/commodity/gold" }
+    ]
+  },
+  {
+    id: "2026-10-30-srebro", instrument: "xagusd", data: "2026-10-30", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro pod 50 USD, celem 48,29", tytul_en: "Silver below $50, eyeing $48.29",
+    lead: "Srebro straciło w piątek blisko 6% i spadło poniżej 50 USD po raz pierwszy od listopada. Dopóki cena jest pod 50, bazą jest test zniesienia Fibonacciego przy 48,29.",
+    lead_en: "Silver lost nearly 6% on Friday and fell below $50 for the first time since November. While the price stays below $50, a test of the Fibonacci retracement at $48.29 is the base case.",
+    poziomy: { cena: 49.12, opory: [50, 52.3], wsparcia: [48.29, 45.55] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 48,29 USD (78,6% zniesienia Fibonacciego według FXEmpire), a niżej do 45,55 (dołek z października 2025).", tekst_en: "Base case: a drop to $48.29 (the 78.6% Fibonacci retracement according to FXEmpire), and lower to $45.55 (the October 2025 swing low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 50 USD (poziom psychologiczny według Tradingpedia) unieważnia scenariusz i otwiera drogę do 52,30 (4-godzinna średnia według Rio Times).", tekst_en: "A daily close above $50 (a psychological level according to Tradingpedia) invalidates the setup and opens the way to $52.30 (the 4-hour average according to Rio Times)." }
+    ],
+    tresc: [
+      "Srebro kosztuje około 49,12 USD (−5,8% w ciągu dnia według Trading Economics), a tydzień kończy spadkiem o blisko 9%, najmocniejszym od czerwca (Kitco). Poprzednia analiza spadkowa z celem 50 została rozliczona jako trafiona.",
+      "Srebro spada szybciej niż złoto przy rosnących oczekiwaniach podwyżek stóp Fed i wyprzedaży na rynkach akcji. Tradingpedia opisuje wyraźny trend spadkowy w kanale, z RSI w strefie wyprzedania (27), co grozi krótkimi odbiciami.",
+      "FXEmpire wskazuje kluczowe wsparcie przy 48,29 USD (78,6% zniesienia wzrostów od kwietnia 2025) i niżej 45,55. Odbicie powyżej 50 USD unieważniłoby scenariusz."
+    ],
+    tresc_en: [
+      "Silver trades around $49.12 (−5.8% on the day according to Trading Economics) and ends the week down almost 9%, its steepest weekly drop since June (Kitco). The previous bearish analysis with a $50 target was settled as a hit.",
+      "Silver is falling faster than gold amid rising Fed hike expectations and the equity selloff. Tradingpedia describes a clear downtrend in a channel, with the RSI oversold (27), which risks short-lived rebounds.",
+      "FXEmpire sees key support at $48.29 (the 78.6% retracement of the rally from April 2025) and lower at $45.55. A rebound above $50 would invalidate the setup."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Silver (XAG/USD) Price Forecast, bearish signals put $48.29 support in focus (26 paź 2026)", url: "https://www.fxempire.com/forecasts/article/silver-xag-usd-price-forecast-bearish-signals-put-48-29-support-in-focus-1640544" },
+      { nazwa: "Tradingpedia: Silver extends slide as XAG/USD marks new year-to-date low (30 paź 2026)", url: "https://www.tradingpedia.com/2026/10/30/silver-extends-slide-as-xag-usd-marks-new-year-to-date-low/" },
+      { nazwa: "Kitco: Gold prices plunge to one-year low below $3,900 (30 paź 2026)", url: "https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears" },
+      { nazwa: "Rio Times: Silver drops 5%, gold 3% as rout accelerates (30 paź 2026)", url: "https://www.riotimesonline.com/silver-drops-5-gold-3-as-rout-accelerates/" }
+    ]
+  },
+  {
+    id: "2026-10-30-nasdaq", instrument: "nasdaq", data: "2026-10-30", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 przełamał wrześniowy dołek, celem 28 300", tytul_en: "Nasdaq 100 breaks the September low, eyeing 28,300",
+    lead: "Nasdaq 100 stracił w piątek około 3,5% po wynikach Amazona i Intela i przełamał wrześniowy dołek przy 28 745. Dopóki indeks jest pod tym poziomem, bazą jest spadek do wsparcia 28 300.",
+    lead_en: "The Nasdaq 100 lost about 3.5% on Friday after Amazon and Intel results and broke the September low at 28,745. While the index stays below that level, a drop to 28,300 support is the base case.",
+    poziomy: { cena: 28412.27, opory: [28745, 29000], wsparcia: [28300] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 28 300 pkt (wsparcie według StoneX).", tekst_en: "Base case: a drop to 28,300 (support according to StoneX)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 28 745 (wrześniowy dołek, który StoneX nazywa „linią na piasku”) unieważnia scenariusz i otwiera drogę do 29 000.", tekst_en: "A daily close above 28,745 (the September low that StoneX calls the \"line in the sand\") invalidates the setup and opens the way to 29,000." }
+    ],
+    tresc: [
+      "Nasdaq 100 jest przy 28 412 pkt (notowanie CFD, −3,5% w ciągu dnia), a Nasdaq Composite zamknął się na 25 442 (−2,8%), najgorszy dzień od czerwca. Poprzednia analiza spadkowa z celem 29 000 została rozliczona jako trafiona.",
+      "Intel stracił około 29% po słabej prognozie, Reddit także około 29%, a Amazon rozczarował wynikami i wyższymi nakładami na AI. Sektor technologiczny w S&P 500 spadł o blisko 5%, a indeks VIX wzrósł do około 22,75. W październiku Nasdaq stracił ponad 5%.",
+      "StoneX uznaje 28 745 (dołek z połowy września) za kluczowy poziom: jego przełamanie potwierdza niższy dołek. Wcześniej StoneX wskazywał wsparcie przy 28 300. Analiza ma krótki zasięg, bo indeks jest blisko celu; w przyszłym tygodniu wybory w USA i raport z rynku pracy."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 is at 28,412 (CFD quote, −3.5% on the day), and the Nasdaq Composite closed at 25,442 (−2.8%), its worst day since June. The previous bearish analysis with a 29,000 target was settled as a hit.",
+      "Intel lost about 29% on a weak outlook, Reddit also about 29%, and Amazon disappointed with its results and higher AI spending. The S&P 500 tech sector fell almost 5%, and the VIX rose to about 22.75. The Nasdaq lost more than 5% in October.",
+      "StoneX sees 28,745 (the mid-September low) as the key level: breaking it confirms a lower low. StoneX earlier pointed to support at 28,300. The analysis has a short reach because the index is close to the target; next week brings the US midterms and the jobs report."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: Nasdaq 100 forecast, Alphabet results reignite AI concerns (29 paź 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/nasdaq-100-forecast-alphabet-results-reignite-ai-concerns-2026-10-29/" },
+      { nazwa: "TheStreet: Stock Market Today, 30 paź 2026", url: "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026" },
+      { nazwa: "Trading Economics: rynek akcji USA (US100), 30 paź 2026", url: "https://tradingeconomics.com/united-states/stock-market" }
+    ]
+  },
+  {
     id: "2026-10-30-bitcoin", instrument: "btcusd", data: "2026-10-30", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Bitcoin pod 80 000 USD po włamaniu na Binance, celem 76 500", tytul_en: "Bitcoin below $80,000 after the Binance hack, eyeing $76,500",
@@ -135,6 +218,7 @@ window.ANALIZY = [
   {
     id: "2026-10-29-nasdaq", instrument: "nasdaq", data: "2026-10-29", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-30", komentarz: "30 paź Nasdaq 100 spadł o około 3,5% do około 28 400 pkt, poniżej celu S1 29 000, a wcześniej żadna świeca dzienna nie zamknęła się nad R1 29 800 (29 paź zamknięcie 29 402). Źródła ceny: Trading Economics, TheStreet, świece dzienne CNBC.", komentarz_en: "On 30 Oct the Nasdaq 100 fell about 3.5% to around 28,400, below the S1 target of 29,000, and no daily candle had closed above R1 29,800 before that (29 Oct close 29,402). Price sources: Trading Economics, TheStreet, CNBC daily candles." },
     tytul: "Nasdaq 100 cofa się spod 29 800 po rozczarowaniu Alphabetu, celem 29 000", tytul_en: "Nasdaq 100 retreats from 29,800 after Alphabet disappoints, eyeing 29,000",
     lead: "Indeks zamknął środę tuż nad 50-dniową średnią przy 29 800, ale po słabych wynikach Alphabetu kontrakty spadają o około 1,2%. Dopóki Nasdaq 100 jest pod 29 800, bazą jest powrót do wsparcia 29 000.",
     lead_en: "The index closed Wednesday just above the 50-day average near 29,800, but after Alphabet's weak results futures are down about 1.2%. While the Nasdaq 100 stays below 29,800, a return to 29,000 support is the base case.",
@@ -360,6 +444,7 @@ window.ANALIZY = [
   {
     id: "2026-10-23-zloto", instrument: "xauusd", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-30", komentarz: "30 paź złoto spadło poniżej 3 900 USD (około 3 874–3 880), poniżej celu S1 3 950, a wcześniej żadna świeca dzienna nie zamknęła się nad R1 4 067 (najwyżej 4 066,77 28 paź). Źródła ceny: Kitco, Trading Economics, świece dzienne CNBC.", komentarz_en: "On 30 Oct gold fell below $3,900 (about $3,874–3,880), below the S1 target of $3,950, and no daily candle had closed above R1 $4,067 before that (highest close $4,066.77 on 28 Oct). Price sources: Kitco, Trading Economics, CNBC daily candles." },
     tytul: "Złoto poniżej 4000 USD po raz pierwszy od lipca, celem strefa 3940–3960", tytul_en: "Gold below $4,000 for the first time since July, eyeing the $3,940–3,960 zone",
     lead: "Złoto wybiło się dołem z trzytygodniowej konsolidacji i w nocy spadło do 3986,74 USD. Ropa przy 100 USD podbija oczekiwania inflacyjne i szanse na podwyżkę stóp Fed, więc bazą jest dalszy spadek.",
     lead_en: "Gold broke below its three-week consolidation and fell to $3,986.74 overnight. Oil near $100 lifts inflation expectations and Fed hike odds, so a further drop is the base case.",
@@ -387,6 +472,7 @@ window.ANALIZY = [
   {
     id: "2026-10-23-srebro", instrument: "xagusd", data: "2026-10-23", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-30", komentarz: "30 paź srebro spadło poniżej 50 USD (około 48,95–49,12), osiągając cel S1 50, zanim jakakolwiek świeca dzienna zamknęła się nad R1 55,50. Źródła ceny: Kitco, Trading Economics.", komentarz_en: "On 30 Oct silver fell below $50 (about $48.95–49.12), reaching the S1 target of $50 before any daily candle closed above R1 $55.50. Price sources: Kitco, Trading Economics." },
     tytul: "Srebro na najniższym poziomie od listopada 2025, celem 50 USD", tytul_en: "Silver at its lowest since November 2025, eyeing $50",
     lead: "Srebro straciło w czwartek 5,8% i w nocy zeszło poniżej 54 USD. Dopóki cena jest pod 55,50 USD, przewagę mają sprzedający.",
     lead_en: "Silver lost 5.8% on Thursday and slipped below $54 overnight. While price stays below $55.50, sellers have the edge.",
