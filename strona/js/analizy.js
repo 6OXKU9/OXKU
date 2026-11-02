@@ -24,6 +24,34 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-02-nasdaq", instrument: "nasdaq", data: "2026-11-02", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 pod 200-dniową średnią, celem 27 645", tytul_en: "Nasdaq 100 below its 200-day average, eyeing 27,645",
+    lead: "Nasdaq 100 stracił w poniedziałek około 1,4% i zszedł pod 200-okresową średnią przy 28 300, którą StoneX uznaje za granicę długoterminowego trendu. Dopóki indeks jest pod tym poziomem, bazą jest spadek do 50-tygodniowej średniej przy 27 645.",
+    lead_en: "The Nasdaq 100 lost about 1.4% on Monday and dropped below the 200-period average at 28,300, which StoneX sees as the line for the long-term trend. While the index stays below that level, a drop to the 50-week average at 27,645 is the base case.",
+    poziomy: { cena: 28094.94, opory: [28300, 29000], wsparcia: [27645, 27000] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 27 645 pkt (50-tygodniowa średnia według DailyForex), a niżej do 27 000 (lipcowy dołek według StoneX).", tekst_en: "Base case: a drop to 27,645 (the 50-week average according to DailyForex), and lower to 27,000 (the July low according to StoneX)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 28 300 (200-okresowa średnia EMA według StoneX) unieważnia scenariusz i otwiera drogę do 29 000.", tekst_en: "A daily close above 28,300 (the 200-period EMA according to StoneX) invalidates the setup and opens the way to 29,000." }
+    ],
+    tresc: [
+      "Nasdaq 100 jest przy 28 095 pkt (notowanie CFD, −1,4%), a Nasdaq Composite zamknął się na 25 164 (−1,1%). Sektor technologiczny stracił około 2,4% przy rotacji do spółek cyklicznych, finansowych i defensywnych; Dow Jones wzrósł o 0,4%. Poprzednia analiza spadkowa z celem 28 300 została rozliczona jako trafiona.",
+      "Oracle stracił około 5% po zapowiedzi pozyskania 20 mld USD kapitału. Palantir pokazał przychody 2,31 mld USD (+96%, powyżej oczekiwań) i podniósł prognozę. Po sesji wyniki Apple, a we wtorek wybory w USA i wyniki AMD. Rynek wycenia 76% szans na grudniową podwyżkę stóp Fed.",
+      "StoneX wskazuje 28 300 (200 EMA) jako wsparcie, które po przełamaniu otwiera drogę do 27 000, oraz opory 29 000 i 29 700. DailyForex uważa 27 645 (50-tygodniowa EMA) za kluczowy poziom ryzyka w listopadzie."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 is at 28,095 (CFD quote, −1.4%), and the Nasdaq Composite closed at 25,164 (−1.1%). The tech sector lost about 2.4% amid rotation into cyclical, financial and defensive stocks; the Dow rose 0.4%. The previous bearish analysis with a 28,300 target was settled as a hit.",
+      "Oracle fell about 5% after announcing a $20bn capital raise. Palantir reported revenue of $2.31bn (+96%, above expectations) and raised its outlook. Apple reports after the close, and Tuesday brings the US midterms and AMD results. Markets price a 76% chance of a December Fed hike.",
+      "StoneX sees 28,300 (200 EMA) as support that, once broken, opens the way to 27,000, with resistance at 29,000 and 29,700. DailyForex sees 27,645 (50-week EMA) as the key risk level for November."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: Nasdaq 100 forecast, NDX rebounds as oil prices fall and ahead of Apple earnings (2 lis 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/nasdaq-100-forecast-ndx-rebounds-as-oil-prices-fall-and-ahead-of-apple-earnings/" },
+      { nazwa: "DailyForex: NASDAQ 100 Monthly Forecast, November 2026", url: "https://www.dailyforex.com/forex-technical-analysis/2026/10/nasdaq100-monthly-november-2026/251175" },
+      { nazwa: "Yahoo Finance: Stock market today, 2 lis 2026", url: "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html" },
+      { nazwa: "Trading Economics: rynek akcji USA (US100), 2 lis 2026", url: "https://tradingeconomics.com/united-states/stock-market" }
+    ]
+  },
+  {
     id: "2026-11-02-sp500", instrument: "sp500", data: "2026-11-02", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "S&P 500 po przełamaniu formacji głowy z ramionami, celem 7 500", tytul_en: "S&P 500 after a head-and-shoulders break, eyeing 7,500",
@@ -165,6 +193,7 @@ window.ANALIZY = [
   {
     id: "2026-10-30-nasdaq", instrument: "nasdaq", data: "2026-10-30", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-11-02", komentarz: "2 lis Nasdaq 100 spadł do około 28 095 pkt (−1,4%), poniżej celu S1 28 300, a od publikacji żadna świeca dzienna nie zamknęła się nad R1 28 745 (30 paź zamknięcie 28 384,8). Źródła ceny: Trading Economics, świece dzienne CNBC.", komentarz_en: "On 2 Nov the Nasdaq 100 fell to about 28,095 (−1.4%), below the S1 target of 28,300, and since publication no daily candle had closed above R1 28,745 (30 Oct close 28,384.8). Price sources: Trading Economics, CNBC daily candles." },
     tytul: "Nasdaq 100 przełamał wrześniowy dołek, celem 28 300", tytul_en: "Nasdaq 100 breaks the September low, eyeing 28,300",
     lead: "Nasdaq 100 stracił w piątek około 3,5% po wynikach Amazona i Intela i przełamał wrześniowy dołek przy 28 745. Dopóki indeks jest pod tym poziomem, bazą jest spadek do wsparcia 28 300.",
     lead_en: "The Nasdaq 100 lost about 3.5% on Friday after Amazon and Intel results and broke the September low at 28,745. While the index stays below that level, a drop to 28,300 support is the base case.",
