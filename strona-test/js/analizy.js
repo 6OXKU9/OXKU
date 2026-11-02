@@ -24,6 +24,89 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-02-sp500", instrument: "sp500", data: "2026-11-02", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "S&P 500 po przełamaniu formacji głowy z ramionami, celem 7 500", tytul_en: "S&P 500 after a head-and-shoulders break, eyeing 7,500",
+    lead: "S&P 500 stracił w piątek 1,8% i zamknął się pod linią szyi formacji głowy z ramionami. Dopóki indeks jest pod 7 700, bazą jest test wsparcia 7 500.",
+    lead_en: "The S&P 500 lost 1.8% on Friday and closed below the neckline of a head-and-shoulders pattern. While the index stays below 7,700, a test of 7,500 support is the base case.",
+    poziomy: { cena: 7580.07, opory: [7700, 7800], wsparcia: [7500, 7330] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 7 500 pkt (kluczowe wsparcie według StoneX i DailyForex), a przy jego przełamaniu do 200-dniowej średniej przy 7 330.", tekst_en: "Base case: a drop to 7,500 (key support according to StoneX and DailyForex), and on a break to the 200-day average near 7,330." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 700 (50-okresowa średnia według StoneX) unieważnia scenariusz i otwiera drogę do 7 800 (okolice rekordu).", tekst_en: "A daily close above 7,700 (the 50-period average according to StoneX) invalidates the setup and opens the way to 7,800 (near the record)." }
+    ],
+    tresc: [
+      "S&P 500 zamknął piątek na 7 580,07 pkt (−1,8%) po minimum 7 527,56. Poprzednia analiza spadkowa z 18 paź minęła bez rozstrzygnięcia: do celu 7 520 zabrakło niecałych 8 punktów. W poniedziałek rano kontrakty rosną o około 0,4%.",
+      "DailyForex widzi przełamanie formacji głowy z ramionami z linią szyi przy 7 626,2 i oczekuje dalszych spadków. StoneX wskazuje opory 7 700 i 7 800 oraz wsparcie 7 500, a MACD i RSI pokazują przewagę sprzedających.",
+      "Tydzień jest pełen wydarzeń: wyniki Apple (pon.), wybory w USA i wyniki AMD (wt.), decyzja BoE (czw.) i raport z rynku pracy (pt.). Rynek wycenia około 75% szans na grudniową podwyżkę stóp Fed."
+    ],
+    tresc_en: [
+      "The S&P 500 closed Friday at 7,580.07 (−1.8%) after a low of 7,527.56. The previous bearish analysis from 18 Oct ended without a result: it fell less than 8 points short of the 7,520 target. Futures are up about 0.4% on Monday morning.",
+      "DailyForex sees a head-and-shoulders break with the neckline at 7,626.2 and expects further losses. StoneX points to resistance at 7,700 and 7,800 and support at 7,500, with MACD and RSI showing sellers in control.",
+      "The week is packed: Apple results (Mon), the US midterms and AMD results (Tue), the BoE decision (Thu) and the jobs report (Fri). Markets price about a 75% chance of a December Fed hike."
+    ],
+    zrodla: [
+      { nazwa: "StoneX: S&P 500 Analysis, earnings uncertainty continues to weigh on the SPX (30 paź 2026)", url: "https://www.stonex.com/en-gb/news-and-analysis/sandp-500-analysis-earnings-uncertainty-continues-to-weigh-on-the-spx-2026-10-30/" },
+      { nazwa: "DailyForex: EUR/USD, Oil and Stocks 02 to 06/11 (2 lis 2026)", url: "https://www.dailyforex.com/forex-technical-analysis/2026/11/weekly-pairs-in-focus-2nd-to-6th-november-2026/251275" },
+      { nazwa: "Trading Economics: rynek akcji USA, 2 lis 2026", url: "https://tradingeconomics.com/united-states/stock-market" }
+    ]
+  },
+  {
+    id: "2026-11-02-gbpusd", instrument: "gbpusd", data: "2026-11-02", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Funt przy 1,34 przed spodziewaną podwyżką BoE", tytul_en: "Sterling near 1.34 ahead of an expected BoE hike",
+    lead: "GBP/USD utrzymuje się blisko 1,34, bo rynek oczekuje w czwartek pierwszej podwyżki stóp Banku Anglii w tym cyklu. Dopóki kurs jest nad 1,3306, bazą jest wzrost do oporu 1,3428.",
+    lead_en: "GBP/USD holds near 1.34 as markets expect the Bank of England's first hike of this cycle on Thursday. While the pair stays above 1.3306, a rise to 1.3428 resistance is the base case.",
+    poziomy: { cena: 1.3396, opory: [1.3428, 1.3489], wsparcia: [1.3306, 1.3245] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 1,3428 (opór R1 według InstaForex), a wyżej do 1,3489.", tekst_en: "Base case: a rise to 1.3428 (R1 resistance according to InstaForex), and higher to 1.3489." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,3306 (wsparcie S2 według InstaForex) unieważnia scenariusz i otwiera drogę do 1,3245.", tekst_en: "A daily close below 1.3306 (S2 support according to InstaForex) invalidates the setup and opens the way to 1.3245." }
+    ],
+    tresc: [
+      "GBP/USD zamknął piątek na 1,3391 po maksimum 1,3433 i w poniedziałek rano jest przy 1,3396. Poprzednia analiza wzrostowa z 18 paź minęła bez rozstrzygnięcia: do celu 1,3435 zabrakło 2 pipsów.",
+      "InstaForex oczekuje, że BoE podniesie stopy w czwartek po raz pierwszy w tym cyklu przez rosnącą inflację w Wielkiej Brytanii, a rynek ma już w dużej mierze wyceniony zacieśnianie w USA. Autor dopuszcza płytką korektę na początku tygodnia, po której trend wzrostowy ma wrócić.",
+      "Poziomy InstaForex: opory 1,3428 i 1,3489, wsparcia 1,3367, 1,3306 i 1,3245. Unieważnienie ustawiono pod 1,3306, by płytka korekta do 1,3367 nie kończyła scenariusza."
+    ],
+    tresc_en: [
+      "GBP/USD closed Friday at 1.3391 after a high of 1.3433 and is at 1.3396 on Monday morning. The previous bullish analysis from 18 Oct ended without a result: it fell 2 pips short of the 1.3435 target.",
+      "InstaForex expects the BoE to raise rates on Thursday for the first time this cycle due to rising UK inflation, while markets have largely priced US tightening already. The author allows for a shallow correction early in the week, after which the uptrend should resume.",
+      "InstaForex levels: resistance at 1.3428 and 1.3489, support at 1.3367, 1.3306 and 1.3245. The invalidation is set below 1.3306 so that a shallow pullback to 1.3367 does not end the setup."
+    ],
+    zrodla: [
+      { nazwa: "InstaForex: Overview of the GBP/USD pair, 2 lis 2026", url: "https://www.instaforex.com/forex_analysis/461875" },
+      { nazwa: "Saxo: Asia Market Quick Take (2 lis 2026)", url: "https://www.home.saxo/en-mena/content/articles/macro/asia-market-quick-take-02-november-2026-02112026" },
+      { nazwa: "Trading Economics: jen japoński (z tabelą walut), 2 lis 2026", url: "https://tradingeconomics.com/japan/currency" }
+    ]
+  },
+  {
+    id: "2026-11-02-bitcoin", instrument: "btcusd", data: "2026-11-02", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "Bitcoin odbija po włamaniu na Binance, zakres 75 800–80 000", tytul_en: "Bitcoin rebounds after the Binance hack, range $75,800–80,000",
+    lead: "Bitcoin odbił do około 78 100–78 500 USD, bo Binance wznawia wypłaty i odtworzył 95% skradzionych środków. Przed wyborami w USA i danymi z rynku pracy bazą jest ruch w zakresie 75 800–80 000.",
+    lead_en: "Bitcoin rebounded to about $78,100–78,500 as Binance resumes withdrawals and has replenished 95% of the stolen funds. Ahead of the US midterms and jobs data, trading within $75,800–80,000 is the base case.",
+    poziomy: { cena: 78117, opory: [80000, 81000], wsparcia: [75800] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo konsolidacja między wsparciem 75 800 (Mudrex) a oporem 80 000 (przełamane wsparcie według KuCoin).", tekst_en: "Base case: consolidation between $75,800 support (Mudrex) and $80,000 resistance (broken support according to KuCoin)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 80 000 otwiera drogę do 81 000.", tekst_en: "A daily close above $80,000 opens the way to $81,000." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 75 800 oznacza powrót presji po włamaniu.", tekst_en: "A daily close below $75,800 signals renewed post-hack pressure." }
+    ],
+    tresc: [
+      "Bitcoin zamknął 30 paź na 77 180 USD po minimum 76 141, a w weekend wzrósł do 77 810. Poprzednia analiza spadkowa z celem 76 500 została rozliczona jako trafiona.",
+      "Binance wznawia wypłaty etapami w 15 sieciach, 1 listopada zrealizował wypłaty za 4,65 mld USD i odtworzył 95% skradzionych środków; pełna weryfikacja ma nastąpić 3 listopada. Według investingLive odbicie wygląda lepiej, ale prawdziwym testem jest 79 000.",
+      "Najbliższe poziomy to wsparcie około 77 500 i opór około 78 800 (Analytics Insight), niżej 77 000 (WazirX) i 75 800 (Mudrex). Przy wyborach w USA we wtorek i danych z rynku pracy w piątek analiza zakłada szerszą konsolidację."
+    ],
+    tresc_en: [
+      "Bitcoin closed 30 Oct at $77,180 after a low of $76,141 and rose to $77,810 over the weekend. The previous bearish analysis with a $76,500 target was settled as a hit.",
+      "Binance is resuming withdrawals in phases across 15 networks, processed $4.65bn of withdrawals on 1 November and has replenished 95% of the stolen funds; full verification is due on 3 November. According to investingLive the rebound looks better, but $79,000 is the real test.",
+      "The nearest levels are support around $77,500 and resistance around $78,800 (Analytics Insight), lower $77,000 (WazirX) and $75,800 (Mudrex). With the US midterms on Tuesday and jobs data on Friday, this analysis assumes a wider consolidation."
+    ],
+    zrodla: [
+      { nazwa: "Analytics Insight: Bitcoin climbs near USD 78,500 as Binance restores withdrawals (2 lis 2026)", url: "https://www.analyticsinsight.net/price-analysis/crypto-prices-today-bitcoin-climbs-near-usd-78500-as-binance-restores-withdrawals" },
+      { nazwa: "investingLive: Bitcoin forecast today, the rebound looks better, but $79,000 is the real test", url: "https://investinglive.com/cryptocurrency/bitcoin-forecast-today-the-rebound-looks-better-but-79-000-is-the-real-test/" },
+      { nazwa: "KuCoin: Crypto Daily Market Report (30 paź 2026)", url: "https://www.kucoin.com/news/articles/crypto-daily-market-report-october-30-2026" },
+      { nazwa: "Coinbase: świece dzienne BTC-USD", url: "https://www.coinbase.com/price/bitcoin" }
+    ]
+  },
+  {
     id: "2026-10-30-zloto", instrument: "xauusd", data: "2026-10-30", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Złoto najniżej od roku, celem 3 800 USD", tytul_en: "Gold at a one-year low, eyeing $3,800",
@@ -109,6 +192,7 @@ window.ANALIZY = [
   {
     id: "2026-10-30-bitcoin", instrument: "btcusd", data: "2026-10-30", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-10-30", komentarz: "30 paź po publikacji (cena 78 447) bitcoin spadł do 76 141 USD, poniżej celu S1 76 500, a żadna świeca dzienna nie zamknęła się nad R1 80 000. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 30 Oct, after publication (price $78,447), bitcoin fell to $76,141, below the S1 target of $76,500, and no daily candle closed above R1 $80,000. Price source: Coinbase daily candles." },
     tytul: "Bitcoin pod 80 000 USD po włamaniu na Binance, celem 76 500", tytul_en: "Bitcoin below $80,000 after the Binance hack, eyeing $76,500",
     lead: "Bitcoin przełamał wsparcia 80 000 i 78 000 USD i jest najniżej od sześciu tygodni. Dopóki kurs jest pod 80 000, bazą jest test średniego kosztu krótkoterminowych posiadaczy przy 76 500.",
     lead_en: "Bitcoin broke the $80,000 and $78,000 supports and is at a six-week low. While the price stays below $80,000, a test of the short-term holders' average cost near $76,500 is the base case.",
@@ -785,6 +869,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-gbpusd", instrument: "gbpusd", data: "2026-10-18", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
+    wynik: { status: "bez rozstrzygnięcia", data: "2026-10-30", komentarz: "Przez 10 sesji (19–30 paź) kurs nie dotknął R1 1,3435 (najwyżej 1,3433 30 paź) ani nie zamknął się poniżej S1 1,3268 (najniżej 1,3302). Horyzont minął bez rozstrzygnięcia. Źródło ceny: świece dzienne CNBC.", komentarz_en: "Over 10 sessions (19–30 Oct) the pair neither touched R1 1.3435 (high 1.3433 on 30 Oct) nor closed below S1 1.3268 (lowest close 1.3302). The horizon ended without a result. Price source: CNBC daily candles." },
     tytul: "GBP/USD wybija 1,3350, rynek liczy na podwyżkę BoE", tytul_en: "GBP/USD breaks 1.3350 as markets bet on a BoE hike",
     lead: "Funt zyskał po sygnałach, że Bank Anglii podniesie stopy 5 lis. Krótkoterminowo trend jest wzrostowy, ale RSI wskazuje na wykupienie.",
     lead_en: "Sterling gained on signs the Bank of England will hike on 5 Nov. The short-term trend is up, though the RSI shows overbought conditions.",
@@ -899,6 +984,7 @@ window.ANALIZY = [
   {
     id: "2026-10-18-sp500", instrument: "sp500", data: "2026-10-18", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "bez rozstrzygnięcia", data: "2026-10-30", komentarz: "Przez 10 sesji (19–30 paź) indeks nie dotknął celu S1 7 520 (najniżej 7 527,56 30 paź) ani nie zamknął się powyżej R1 7 790 (najwyżej 7 757,17). Horyzont minął bez rozstrzygnięcia. Źródło ceny: świece dzienne CNBC.", komentarz_en: "Over 10 sessions (19–30 Oct) the index neither touched the S1 target of 7,520 (low 7,527.56 on 30 Oct) nor closed above R1 7,790 (highest close 7,757.17). The horizon ended without a result. Price source: CNBC daily candles." },
     tytul: "S&P 500 w korekcie, celem strefa 7515–7525", tytul_en: "S&P 500 in a correction, targeting the 7,515–7,525 zone",
     lead: "Najgorszy tydzień od czerwca. Krótkoterminowo przewagę mają sprzedający, choć długoterminowy trend wzrostowy pozostaje nienaruszony.",
     lead_en: "The worst week since June. Sellers have the short-term edge, though the long-term uptrend remains intact.",
