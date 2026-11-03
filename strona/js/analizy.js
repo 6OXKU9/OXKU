@@ -24,6 +24,59 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-03-srebro", instrument: "xagusd", data: "2026-11-03", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro znów pod 50 USD, celem 48,85", tytul_en: "Silver back below $50, eyeing $48.85",
+    lead: "Srebro zamknęło poniedziałek nad 50 USD, ale we wtorek rano znów spadło do około 49,4. Dopóki cena jest pod 51,27, bazą jest powrót do piątkowego dołka przy 48,85.",
+    lead_en: "Silver closed Monday above $50 but fell back to around $49.4 on Tuesday morning. While the price stays below $51.27, a return to Friday's low near $48.85 is the base case.",
+    poziomy: { cena: 49.40, opory: [51.27, 53.28], wsparcia: [48.85, 47.06] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 48,85 USD (wsparcie według FXEmpire, piątkowe minimum), a po zamknięciu poniżej tego poziomu do 47,06.", tekst_en: "Base case: a drop to $48.85 (support according to FXEmpire, Friday's low), and after a close below it to $47.06." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 51,27 USD (opór według FXEmpire) unieważnia scenariusz i otwiera drogę do 53,28.", tekst_en: "A daily close above $51.27 (resistance according to FXEmpire) invalidates the setup and opens the way to $53.28." }
+    ],
+    tresc: [
+      "Srebro zamknęło poniedziałek na 50,65 USD (dzienne maksimum 51,27), co unieważniło poprzednią analizę spadkową. We wtorek rano kosztuje około 49,4 USD (−2,5% według Trading Economics), bo zbliżenie USA i Iranu obniża ropę i obawy inflacyjne, a jednocześnie rynek wycenia grudniową podwyżkę stóp Fed.",
+      "FXEmpire utrzymuje spadkowe nastawienie, dopóki srebro jest pod 51,27 USD. Wsparcia to 48,85 i 47,06, opory 51,27 i 53,28. RSI w okolicy 31 jest blisko wyprzedania, więc możliwe są szybkie odbicia.",
+      "Dziś wybory połówkowe w USA, w czwartek decyzja BoE, a w piątek raport z rynku pracy w USA."
+    ],
+    tresc_en: [
+      "Silver closed Monday at $50.65 (daily high $51.27), which invalidated the previous bearish analysis. On Tuesday morning it trades around $49.4 (−2.5% according to Trading Economics), as the US-Iran rapprochement lowers oil and inflation fears, while markets price a December Fed hike.",
+      "FXEmpire keeps a bearish bias while silver stays below $51.27. Support is at $48.85 and $47.06, resistance at $51.27 and $53.28. The RSI near 31 is close to oversold, so quick rebounds are possible.",
+      "Today brings the US midterms, Thursday the BoE decision and Friday the US jobs report."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Gold (XAUUSD) & Silver Price Forecast, US midterms in focus (3 lis 2026)", url: "https://www.fxempire.com/forecasts/article/gold-xauusd-silver-price-forecast-us-midterms-in-focus-can-gold-reclaim-3975-1642120" },
+      { nazwa: "Trading Economics: złoto (z tabelą srebro), 3 lis 2026", url: "https://tradingeconomics.com/commodity/gold" }
+    ]
+  },
+  {
+    id: "2026-11-03-gbpusd", instrument: "gbpusd", data: "2026-11-03", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Funt nad 1,34 przed podwyżką BoE, celem 1,3489", tytul_en: "Sterling above 1.34 ahead of a BoE hike, eyeing 1.3489",
+    lead: "GBP/USD przebił w poniedziałek opór 1,3428 i doszedł do 1,3449. Przed czwartkową decyzją BoE, od której rynek oczekuje podwyżki, bazą jest wzrost do kolejnego oporu przy 1,3489.",
+    lead_en: "GBP/USD broke the 1.3428 resistance on Monday and reached 1.3449. Ahead of Thursday's BoE decision, where markets expect a hike, a rise to the next resistance near 1.3489 is the base case.",
+    poziomy: { cena: 1.3406, opory: [1.3489, 1.3550], wsparcia: [1.3306, 1.3245] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 1,3489 (opór R2 według InstaForex), a wyżej do 1,3550.", tekst_en: "Base case: a rise to 1.3489 (R2 resistance according to InstaForex), and higher to 1.3550." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,3306 (wsparcie według InstaForex) unieważnia scenariusz i otwiera drogę do 1,3245.", tekst_en: "A daily close below 1.3306 (support according to InstaForex) invalidates the setup and opens the way to 1.3245." }
+    ],
+    tresc: [
+      "GBP/USD zamknął poniedziałek na 1,3405 po maksimum 1,3449, a poprzednia analiza wzrostowa z celem 1,3428 została rozliczona jako trafiona. We wtorek rano kurs jest przy 1,3406.",
+      "InstaForex oczekuje, że Bank Anglii podniesie w czwartek stopy po raz pierwszy w tym cyklu, i widzi średnioterminowy trend wzrostowy funta przy słabszym dolarze. Kolejne opory to 1,3489 i 1,3550, wsparcia 1,3306 i 1,3245.",
+      "Ryzykiem są wtorkowe wybory w USA i piątkowe dane z rynku pracy, które mogą wzmocnić dolara przy wysokich oczekiwaniach podwyżki stóp Fed (76% według CME)."
+    ],
+    tresc_en: [
+      "GBP/USD closed Monday at 1.3405 after a high of 1.3449, and the previous bullish analysis with a 1.3428 target was settled as a hit. On Tuesday morning the pair is at 1.3406.",
+      "InstaForex expects the Bank of England to raise rates on Thursday for the first time this cycle and sees a medium-term uptrend for sterling amid a weaker dollar. The next resistance levels are 1.3489 and 1.3550, support 1.3306 and 1.3245.",
+      "The risks are Tuesday's US midterms and Friday's jobs data, which could lift the dollar given high Fed hike expectations (76% according to CME)."
+    ],
+    zrodla: [
+      { nazwa: "InstaForex: Overview of the GBP/USD pair, 2 lis 2026", url: "https://www.instaforex.com/forex_analysis/461875" },
+      { nazwa: "Trading Economics: dolar australijski (z tabelą walut), 3 lis 2026", url: "https://tradingeconomics.com/australia/currency" },
+      { nazwa: "Yahoo Finance: Stock market today, 2 lis 2026", url: "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html" }
+    ]
+  },
+  {
     id: "2026-11-02-nasdaq", instrument: "nasdaq", data: "2026-11-02", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Nasdaq 100 pod 200-dniową średnią, celem 27 645", tytul_en: "Nasdaq 100 below its 200-day average, eyeing 27,645",
@@ -81,6 +134,7 @@ window.ANALIZY = [
   {
     id: "2026-11-02-gbpusd", instrument: "gbpusd", data: "2026-11-02", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
+    wynik: { status: "trafiona", data: "2026-11-02", komentarz: "2 lis po publikacji (cena 1,3396) kurs wzrósł do 1,3449, powyżej celu R1 1,3428; najniżej 1,3376, bez zamknięcia poniżej S1 1,3306. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 2 Nov, after publication (price 1.3396), the pair rose to 1.3449, above the R1 target of 1.3428; the low was 1.3376, with no close below S1 1.3306. Price source: CNBC daily candles." },
     tytul: "Funt przy 1,34 przed spodziewaną podwyżką BoE", tytul_en: "Sterling near 1.34 ahead of an expected BoE hike",
     lead: "GBP/USD utrzymuje się blisko 1,34, bo rynek oczekuje w czwartek pierwszej podwyżki stóp Banku Anglii w tym cyklu. Dopóki kurs jest nad 1,3306, bazą jest wzrost do oporu 1,3428.",
     lead_en: "GBP/USD holds near 1.34 as markets expect the Bank of England's first hike of this cycle on Thursday. While the pair stays above 1.3306, a rise to 1.3428 resistance is the base case.",
@@ -165,6 +219,7 @@ window.ANALIZY = [
   {
     id: "2026-10-30-srebro", instrument: "xagusd", data: "2026-10-30", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
+    wynik: { status: "nietrafiona", data: "2026-11-02", komentarz: "2 lis srebro zamknęło dzień na 50,65 USD, powyżej R1 50, zanim cena dotknęła celu S1 48,29 (najniżej 48,85). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 2 Nov silver closed the day at $50.65, above R1 $50, before reaching the S1 target of $48.29 (low $48.85). Price source: CNBC daily candles." },
     tytul: "Srebro pod 50 USD, celem 48,29", tytul_en: "Silver below $50, eyeing $48.29",
     lead: "Srebro straciło w piątek blisko 6% i spadło poniżej 50 USD po raz pierwszy od listopada. Dopóki cena jest pod 50, bazą jest test zniesienia Fibonacciego przy 48,29.",
     lead_en: "Silver lost nearly 6% on Friday and fell below $50 for the first time since November. While the price stays below $50, a test of the Fibonacci retracement at $48.29 is the base case.",
