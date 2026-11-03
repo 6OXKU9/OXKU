@@ -472,20 +472,25 @@
   };
 
   // Wykres TradingView na zakładce Rynki z przełącznikiem instrumentów.
-  var rynekWykres = null;
+  var rynekWykres = null, rynekTryb = "poziomy";
   function sekcjaWykresu() {
-    var ins = byId[rynekWykres] || INS[0];
-    return '<div class="segs rw-segs" role="group" aria-label="' + L("Instrument na wykresie", "Instrument on the chart") + '">' + INS.map(function (i) {
+    var ins = byId[rynekWykres] || INS[0], a = ostatnia(ins.id), moze = !!(a && maWykres(ins)), tryb = moze ? rynekTryb : "tv";
+    var tryby = '<div class="segs rw-tryb" role="group" aria-label="' + L("Rodzaj wykresu", "Chart type") + '">' +
+      [["poziomy", L("Strefy i poziomy z analizy", "Zones and levels from the analysis")], ["tv", L("TradingView na żywo", "Live TradingView")]].map(function (t) {
+        var on = t[0] === tryb, dis = t[0] === "poziomy" && !moze;
+        return '<button type="button" class="seg' + (on ? " is-on" : "") + '" data-rtryb="' + t[0] + '" aria-pressed="' + on + '"' + (dis ? " disabled" : "") + ">" + t[1] + "</button>";
+      }).join("") + "</div>";
+    return tryby + '<div class="segs rw-segs" role="group" aria-label="' + L("Instrument na wykresie", "Instrument on the chart") + '">' + INS.map(function (i) {
       return '<button type="button" class="seg' + (i === ins ? " is-on" : "") + '" data-rwyk="' + esc(i.id) + '" aria-pressed="' + (i === ins) + '">' + esc(i.symbol) + "</button>";
-    }).join("") + "</div>" + wykres(ins) +
+    }).join("") + "</div>" + (tryb === "poziomy" ? wykresAnalizy(ins, a) : wykres(ins)) +
       '<p class="muted rw-link"><a href="#' + esc(ins.id) + '">' + L("Analizy i poziomy dla ", "Analyses and levels for ") + esc(ins.symbol) + " →</a></p>";
   }
   document.addEventListener("click", function (e) {
-    var b = e.target.closest && e.target.closest("[data-rwyk]");
+    var b = e.target.closest && e.target.closest("[data-rwyk],[data-rtryb]");
     if (!b) return;
-    rynekWykres = b.getAttribute("data-rwyk");
+    if (b.hasAttribute("data-rwyk")) rynekWykres = b.getAttribute("data-rwyk"); else rynekTryb = b.getAttribute("data-rtryb");
     var box = document.getElementById("rynki-wykres");
-    if (box) box.innerHTML = sekcjaWykresu();
+    if (box) { box.innerHTML = sekcjaWykresu(); if (box.querySelector("[data-lw]")) rysujWykresy(); }
   });
   V.rynki = function () {
     return phead("", L("Rynki", "Markets"), L("Przegląd rynków", "Markets overview"), L("Nastawienie i najbliższe poziomy z ostatnich analiz dla wszystkich obserwowanych instrumentów.", "Bias and nearest levels from the latest analyses for every instrument we cover.")) +
@@ -824,11 +829,33 @@
     return '<div class="lwbox"><div class="lwbox__head"><h3>' + L("Wykres z poziomami analizy", "Chart with analysis levels") + "</h3>" +
       '<span class="muted">' + L("Analiza z ", "Analysis of ") + data(a.data) + " · D1</span></div>" +
       '<div class="lw" data-lw="' + esc(ins.id) + '" data-an="' + esc(a.id) + '"></div>' +
-      '<p class="lwbox__legend"><span class="lg lg--r">R1, R2 ' + L("opory", "resistance") + '</span><span class="lg lg--s">S1, S2 ' + L("wsparcia", "support") + '</span><span class="lg lg--p">' + L("cena w analizie", "price in analysis") + '</span><span class="lg lg--m">▼ ' + L("dzień publikacji", "publication day") + "</span></p>" +
+      '<p class="lwbox__legend"><span class="lg lg--r">R1, R2 ' + L("opory", "resistance") + '</span><span class="lg lg--s">S1, S2 ' + L("wsparcia", "support") + '</span><span class="lg lg--p">' + L("cena w analizie", "price in analysis") + '</span><span class="lg lg--m">▼ ' + L("dzień publikacji", "publication day") + '</span><span class="lg lg--zs">' + L("strefa wsparcia S1–S2", "support zone S1–S2") + '</span><span class="lg lg--zr">' + L("strefa oporu R1–R2", "resistance zone R1–R2") + "</span></p>" +
       (k ? '<p class="muted lwbox__note">' + esc(P(k, "opis")) + "</p>" : "") +
       '<p class="muted lwbox__note">' + L("Świece dzienne: ", "Daily candles: ") + esc(OHLC[ins.id].zrodlo) + ", " + L("stan na ", "as of ") + czasPL(window.OHLC.aktualizacja) + "</p></div>";
   }
   function kolor(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+  // Strefy wsparcia (S1–S2) i oporu (R1–R2) jako półprzezroczyste pasy pod świecami.
+  function strefy(el, c, s, a, lv) {
+    var o = (a.poziomy.opory || []).slice().sort(function (x, y) { return x - y; }), w = (a.poziomy.wsparcia || []).slice().sort(function (x, y) { return y - x; });
+    var pasy = [];
+    if (o.length) pasy.push({ k: "r", a: lv(o[0]), b: lv(o.length > 1 ? o[1] : o[0]), t: L("Strefa oporu", "Resistance zone") });
+    if (w.length) pasy.push({ k: "s", a: lv(w[0]), b: lv(w.length > 1 ? w[1] : w[0]), t: L("Strefa wsparcia", "Support zone") });
+    var divs = pasy.map(function (p) { var d = document.createElement("div"); d.className = "lwzone lwzone--" + p.k; d.innerHTML = "<span>" + p.t + "</span>"; el.appendChild(d); return d; });
+    function ustaw() {
+      if (!el.isConnected || wykresy.indexOf(c) < 0) return;
+      var szer; try { szer = c.priceScale("right").width(); } catch (e) { return; }
+      pasy.forEach(function (p, i) {
+        var y1 = s.priceToCoordinate(p.a), y2 = s.priceToCoordinate(p.b), d = divs[i];
+        if (y1 == null || y2 == null) { d.style.display = "none"; return; }
+        var top = Math.min(y1, y2), h = Math.max(Math.abs(y2 - y1), 6);
+        if (Math.abs(y2 - y1) < 6) top -= 3;
+        d.style.display = ""; d.style.top = top + "px"; d.style.height = h + "px"; d.style.right = szer + "px";
+      });
+    }
+    c.timeScale().subscribeVisibleLogicalRangeChange(function () { requestAnimationFrame(ustaw); });
+    if (window.ResizeObserver) new ResizeObserver(function () { requestAnimationFrame(ustaw); }).observe(el);
+    setTimeout(ustaw, 50);
+  }
   function rysujWykresy() {
     wykresy.forEach(function (c) { try { c.remove(); } catch (e) {} });
     wykresy = [];
@@ -873,6 +900,7 @@
       m.sort(function (x, y) { return x.time < y.time ? -1 : x.time > y.time ? 1 : 0; });
       s.setMarkers(m);
       c.timeScale().setVisibleLogicalRange({ from: Math.max(0, sw.length - 70), to: sw.length + 2 });
+      strefy(el, c, s, a, lv);
       wykresy.push(c);
     });
   }

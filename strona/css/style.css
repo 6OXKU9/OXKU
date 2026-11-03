@@ -584,4 +584,16 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 .lg--r::before { color: var(--down); } .lg--s::before { color: var(--up); } .lg--p::before { color: var(--muted); border-top-style: dotted; }
 .lg--m::before { display: none; } .lg--m { color: var(--gold); }
 .lwbox__note { margin: 0; font-size: 12px; }
+.lwzone { position: absolute; left: 0; pointer-events: none; z-index: 1; border-block: 1px dashed transparent; }
+.lwzone span { position: absolute; left: 8px; top: 2px; font: 500 11px/1.2 var(--f-body); white-space: nowrap; }
+.lwzone--r { background: color-mix(in srgb, var(--down) 12%, transparent); border-color: color-mix(in srgb, var(--down) 45%, transparent); }
+.lwzone--r span { color: var(--down); }
+.lwzone--s { background: color-mix(in srgb, var(--up) 12%, transparent); border-color: color-mix(in srgb, var(--up) 45%, transparent); }
+.lwzone--s span { color: var(--up); top: auto; bottom: 2px; }
+.lg--zr::before, .lg--zs::before { content: ""; display: inline-block; width: 14px; height: 10px; margin-right: 6px; vertical-align: -1px; border-radius: 2px; border: 0; }
+.lg--zr::before { background: color-mix(in srgb, var(--down) 25%, transparent); }
+.lg--zs::before { background: color-mix(in srgb, var(--up) 25%, transparent); }
+.rw-tryb { display: flex; margin-bottom: 8px; }
+.rw-tryb .seg { flex: 1 1 0; }
+.seg[disabled] { opacity: .45; cursor: not-allowed; }
 @media (max-width: 640px) { .lw { height: 280px; } }
