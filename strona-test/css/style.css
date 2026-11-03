@@ -378,6 +378,9 @@ h2 .ai-badge { position: relative; top: -3px; margin-left: 4px; }
 .seg { font: 500 14px/1 var(--f-body); color: var(--muted); background: none; border: 0; border-right: 1px solid var(--line); padding: 11px 14px; cursor: pointer; }
 .seg:last-child { border-right: 0; }
 .seg.is-on { background: var(--primary); color: var(--primary-ink); }
+.rw-segs { display: flex; margin-bottom: 12px; }
+.rw-segs .seg { flex: 1 0 auto; padding: 10px 12px; font-size: 13px; }
+.rw-link { margin: 10px 0 0; font-size: 14px; }
 .seg:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 #kal-lista { display: grid; gap: 22px; }
 .day { display: grid; gap: 8px; }

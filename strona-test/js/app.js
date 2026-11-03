@@ -471,9 +471,25 @@
       "</div></section></div>";
   };
 
+  // Wykres TradingView na zakładce Rynki z przełącznikiem instrumentów.
+  var rynekWykres = null;
+  function sekcjaWykresu() {
+    var ins = byId[rynekWykres] || INS[0];
+    return '<div class="segs rw-segs" role="group" aria-label="' + L("Instrument na wykresie", "Instrument on the chart") + '">' + INS.map(function (i) {
+      return '<button type="button" class="seg' + (i === ins ? " is-on" : "") + '" data-rwyk="' + esc(i.id) + '" aria-pressed="' + (i === ins) + '">' + esc(i.symbol) + "</button>";
+    }).join("") + "</div>" + wykres(ins) +
+      '<p class="muted rw-link"><a href="#' + esc(ins.id) + '">' + L("Analizy i poziomy dla ", "Analyses and levels for ") + esc(ins.symbol) + " →</a></p>";
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-rwyk]");
+    if (!b) return;
+    rynekWykres = b.getAttribute("data-rwyk");
+    var box = document.getElementById("rynki-wykres");
+    if (box) box.innerHTML = sekcjaWykresu();
+  });
   V.rynki = function () {
     return phead("", L("Rynki", "Markets"), L("Przegląd rynków", "Markets overview"), L("Nastawienie i najbliższe poziomy z ostatnich analiz dla wszystkich obserwowanych instrumentów.", "Bias and nearest levels from the latest analyses for every instrument we cover.")) +
-      '<div class="wrap page"><section><div class="sec-head"><div><p class="eyebrow">' + L("Kursy i poziomy", "Prices and levels") + "</p><h2>" + L("Notowania", "Quotes") + '</h2></div><span class="muted" style="font-size:13px">' + L("Kurs: przegląd AI", "Price: AI overview") + (PR ? ", " + esc(P(PR, "stanNa")) : "") + "</span></div>" + jakCzytac() +
+      '<div class="wrap page"><section><div class="sec-head"><div><p class="eyebrow">' + L("Na żywo", "Live") + "</p><h2>" + L("Wykres", "Chart") + '</h2></div><span class="muted" style="font-size:13px">' + L("Dane: TradingView", "Data: TradingView") + '</span></div><div id="rynki-wykres">' + sekcjaWykresu() + '</div></section><section><div class="sec-head"><div><p class="eyebrow">' + L("Kursy i poziomy", "Prices and levels") + "</p><h2>" + L("Notowania", "Quotes") + '</h2></div><span class="muted" style="font-size:13px">' + L("Kurs: przegląd AI", "Price: AI overview") + (PR ? ", " + esc(P(PR, "stanNa")) : "") + "</span></div>" + jakCzytac() +
       GRUPY.map(function (g) {
         var items = INS.filter(function (i) { return i.grupa === g; });
         return items.length ? '<div class="tiles-group"><h4 class="grp-title">' + grupa(g) + '</h4><div class="tiles">' + items.map(kafelek).join("") + "</div></div>" : "";
