@@ -137,9 +137,18 @@
       .sort(function (a, b) { return new Date(a.czas) - new Date(b.czas); }).slice(0, n) : [];
   }
   function listaWyd(arr) { return arr.map(function (e) { return "• " + godz(e) + " " + e.kraj + " " + pole(e, "nazwa") + " (" + L("wpływ ", "impact ") + e.wplyw + "/4)"; }).join("\n"); }
+  function ostZamk(id) { var o = window.OHLC && window.OHLC.instrumenty && window.OHLC.instrumenty[id], sw = o && o.swiece; if (!sw || !sw.length) return null; var z = sw[sw.length - 1]; return { kurs: z[4], data: z[0] }; }
+  function otwarte() { var by = {}; return AN.filter(function (a) { var st = a.wynik && a.wynik.status; if ((st && st !== "w toku") || by[a.instrument]) return false; by[a.instrument] = 1; return true; }); }
+  function opisAnalizy(a) {
+    var i = INS.filter(function (x) { return x.id === a.instrument; })[0] || { symbol: a.instrument, dec: 2 }, po = a.poziomy,
+      r = po.opory.filter(function (v) { return v > po.cena; }), s = po.wsparcia.filter(function (v) { return v < po.cena; });
+    return "• " + i.symbol + " " + (I.lang === "en" ? KIER_EN[a.kierunek] : a.kierunek) + " (" + a.data + ")" +
+      (s.length ? ", S1 " + liczba(Math.max.apply(null, s), i.dec) : "") + (r.length ? ", R1 " + liczba(Math.min.apply(null, r), i.dec) : "");
+  }
   function oInstrumencie(i) {
     var p = PR && PR.instrumenty[i.id], a = AN.filter(function (x) { return x.instrument === i.id; })[0], t = i.symbol + " (" + pole(i, "nazwa") + ")";
     if (p && p.kurs != null) t += ": " + L("kurs ", "price ") + liczba(p.kurs, i.dec) + (p.zmiana != null ? " (" + (p.zmiana > 0 ? "+" : "") + liczba(p.zmiana, 2) + "% " + L("dziennie", "on the day") + ")" : "");
+    else { var oz = ostZamk(i.id); if (oz) t += ": " + L("zamknięcie ", "close ") + oz.data + " " + liczba(oz.kurs, i.dec); }
     t += ". " + (pole(p || {}, "notka") || "");
     if (a) {
       var po = a.poziomy, r = po.opory.filter(function (v) { return v > po.cena; }), s = po.wsparcia.filter(function (v) { return v < po.cena; });
@@ -164,6 +173,20 @@
       return z ? L("Trafność: " + Math.round(c.trafiona / z * 100) + "% (" + c.trafiona + " z " + z + " rozliczonych). W toku: " + otw + ".", "Hit rate: " + Math.round(c.trafiona / z * 100) + "% (" + c.trafiona + " of " + z + " settled). Open: " + otw + ".")
         : L("Żadna analiza nie jest jeszcze rozliczona; w toku: " + otw + ". Trafność pojawi się po pierwszych rozliczeniach.", "No analysis has been settled yet; open: " + otw + ". The hit rate appears after the first settlements.");
     }
+    if (/metodolog|rozlicz|zasad|jak licz|jak oce|method|settle|rules/i.test(q))
+      return L("Każda analiza ma horyzont 10 sesji na wykresie dziennym. Wzrostowa jest trafiona, gdy kurs dotknie pierwszego oporu (R1), zanim zamknie dzień poniżej pierwszego wsparcia (S1); spadkowa odwrotnie. Neutralna jest trafiona, gdy żadne dzienne zamknięcie nie wyjdzie poza S1–R1. Bez rozstrzygnięcia w horyzoncie wynik nie liczy się do trafności.",
+        "Each analysis has a 10-session horizon on the daily chart. A bullish call hits when price touches the first resistance (R1) before a daily close below the first support (S1); bearish is the reverse. A neutral call hits when no daily close leaves S1–R1. Without an outcome in the horizon it does not count towards the hit rate.");
+    var kier = /wzrost|byczy|kupi|kupn|long|bull/i.test(q) ? "wzrostowy" : /spad|nied[źz]wi|sprzed|short|bear/i.test(q) ? "spadkowy" : /neutral|bocz|konsolid|range/i.test(q) ? "neutralny" : null;
+    if (kier || /otwart|w toku|aktualn|bie[żz][aą]c|analiz|open|current|idea|pomys/i.test(q)) {
+      var lst = otwarte().filter(function (a) { return !kier || a.kierunek === kier; });
+      return (lst.length ? L("Analizy w toku", "Open analyses") + (kier ? " (" + (I.lang === "en" ? KIER_EN[kier] : kier) + ")" : "") + ":\n" + lst.map(opisAnalizy).join("\n")
+        : L("Brak analiz w toku o tym nastawieniu.", "No open analyses with this bias.")) + "\n" + L("To materiał analityczny, nie rekomendacja inwestycyjna.", "This is research, not investment advice.");
+    }
+    if (/jutr|tomorrow/i.test(q)) {
+      var jt = new Date(Date.now() + 864e5).toLocaleDateString("en-CA", { timeZone: "Europe/Warsaw" });
+      var jw = wydarzenia(function (e) { return new Date(e.czas).toLocaleDateString("en-CA", { timeZone: "Europe/Warsaw" }) === jt; }, 10);
+      return jw.length ? L("Jutro w kalendarzu:", "Tomorrow in the calendar:") + "\n" + listaWyd(jw) : L("Jutro nie ma zaplanowanych wydarzeń. Najbliższe ważne:", "No events scheduled tomorrow. Next major ones:") + "\n" + listaWyd(wydarzenia(function (e) { return e.wplyw >= 3; }, 4));
+    }
     if (/dzi[śs]|dzisiaj|today/i.test(q)) {
       var d = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Warsaw" });
       var dz = wydarzenia(function (e) { return new Date(e.czas).toLocaleDateString("en-CA", { timeZone: "Europe/Warsaw" }) === d; }, 10);
@@ -173,8 +196,8 @@
       return L("Najważniejsze nadchodzące wydarzenia:", "Key upcoming events:") + "\n" + listaWyd(wydarzenia(function (e) { return e.wplyw >= 3; }, 6));
     if (/podsumuj|rynek|rynk|zmieni|nowego|najważniejsz|summary|market|changed|new|developments/i.test(q) && PR)
       return pole(PR, "naglowek") + "\n• " + pole(PR, "punkty").join("\n• ") + "\n" + L("Stan na: ", "As of: ") + pole(PR, "stanNa") + ".";
-    return L("W trybie podstawowym odpowiadam na pytania o konkretny rynek (np. „złoto”, „EUR/USD”, „DAX”), kalendarz („co dziś?”, „ten tydzień”), podsumowanie rynku i skuteczność analiz. Swobodna rozmowa z AI ruszy po podłączeniu klucza API.",
-      "In basic mode I answer questions about a specific market (e.g. “gold”, “EUR/USD”, “DAX”), the calendar (“today”, “this week”), a market summary and the track record. Free-form AI chat starts once an API key is connected.");
+    return L("W trybie podstawowym odpowiadam na pytania o konkretny rynek (np. „złoto”, „EUR/USD”, „DAX”), kalendarz („co dziś?”, „ten tydzień”), podsumowanie rynku i skuteczność analiz, analizy w toku („co jest wzrostowe?”), jutrzejszy kalendarz i zasady rozliczania.",
+      "In basic mode I answer questions about a specific market (e.g. “gold”, “EUR/USD”, “DAX”), the calendar (“today”, “this week”), a market summary the track record, open analyses (“what is bullish?”), tomorrow's calendar and the settlement rules.");
   }
   // Gotowe pytania. Pierwsze dotyczą instrumentu z otwartej podstrony, jeśli jest.
   var PYTANIA_EN = [
