@@ -1,4 +1,4 @@
-# Pobiera dzienne notowania do wykresów z poziomami analiz i publikuje je (Netlify wdraża po każdym pushu).
+# Pobiera dzienne notowania do wykresów z poziomami analiz i publikuje je (Cloudflare Pages wdraża po każdym pushu).
 name: Notowania do wykresów
 on:
   schedule:

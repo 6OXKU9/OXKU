@@ -1,4 +1,4 @@
-// Hasło dla Cloudflare Pages (to samo co netlify/edge-functions/haslo.js, ten sam login i hasło).
+// Hasło dla Cloudflare Pages (ten sam login i hasło co wcześniej na Netlify).
 // Cloudflare uruchamia ten plik przed każdym wejściem na stronę. W repozytorium jest tylko skrót SHA-256 z "login:hasło".
 // Nowe hasło: printf 'login:haslo' | sha256sum. Żeby udostępnić stronę wszystkim, usuń ten plik.
 const SKROT = "1cb94cfce97c86fa494bd53361c9c3a3a15e6586df34adc50d6fc44e51151c05";
