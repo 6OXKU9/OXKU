@@ -127,6 +127,8 @@
     return '<div class="feed">' + arr.map(wiersz).join("") + "</div>";
   }
 
+  // Mniej ważne treści chowamy pod rozwijanym przyciskiem.
+  function zwin(tytul, html) { return '<details class="more"><summary>' + tytul + "</summary>" + html + "</details>"; }
   function tabelaRynkow() {
     var h = '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>' + L("Instrument", "Instrument") + "</th><th>" + L("Nastawienie", "Bias") + "</th><th>" + L("Interwał", "Timeframe") + "</th>" +
       '<th class="r">' + L("Najbliższy opór", "Nearest resistance") + '</th><th class="r">' + L("Najbliższe wsparcie", "Nearest support") + '</th><th class="r">' + L("Aktualizacja", "Updated") + "</th></tr></thead><tbody>";
@@ -272,11 +274,11 @@
   // Dwie warstwy: zdanie prostym językiem dla początkujących i wiersz szczegółów (S2/R2, interwał, data, status) dla zaawansowanych.
   function odl(v, px) { var d = (v - px) / px * 100; return (d > 0 ? "+" : d < 0 ? "−" : "") + Math.abs(d).toLocaleString(NLOC(), { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "%"; }
   function gdzieCena(px, s1, r1) {
-    if (px < s1) return [L("Cena spadła poniżej wsparcia. To sygnał słabości: sprzedający mają przewagę.", "The price has fallen below support. A sign of weakness: sellers are in control."), "dn"];
-    if (px > r1) return [L("Cena przebiła opór. To sygnał siły: kupujący mają przewagę.", "The price has broken above resistance. A sign of strength: buyers are in control."), "up"];
+    if (px < s1) return [L("Cena spadła poniżej wsparcia. To sygnał słabości: sprzedający mają przewagę.", "The price has fallen below support. A sign of weakness: sellers are in control."), "dn", L("Poniżej wsparcia S1", "Below support S1")];
+    if (px > r1) return [L("Cena przebiła opór. To sygnał siły: kupujący mają przewagę.", "The price has broken above resistance. A sign of strength: buyers are in control."), "up", L("Powyżej oporu R1", "Above resistance R1")];
     var r = (px - s1) / (r1 - s1 || 1);
-    if (r < 0.25) return [L("Cena jest blisko wsparcia, czyli poziomu, przy którym spadki często się zatrzymują.", "The price is near support, a level where declines often stall."), ""];
-    if (r > 0.75) return [L("Cena jest blisko oporu, czyli poziomu, przy którym wzrosty często się zatrzymują.", "The price is near resistance, a level where rallies often stall."), ""];
+    if (r < 0.25) return [L("Cena jest blisko wsparcia, czyli poziomu, przy którym spadki często się zatrzymują.", "The price is near support, a level where declines often stall."), "", L("Blisko wsparcia S1", "Near support S1")];
+    if (r > 0.75) return [L("Cena jest blisko oporu, czyli poziomu, przy którym wzrosty często się zatrzymują.", "The price is near resistance, a level where rallies often stall."), "", L("Blisko oporu R1", "Near resistance R1")];
     return [L("Cena jest mniej więcej w połowie drogi między wsparciem a oporem.", "The price is roughly halfway between support and resistance."), ""];
   }
   // Ostatnie zamknięcie ze świec dziennych: zapas, gdy przegląd nie podał kursu.
@@ -309,7 +311,7 @@
         '<span class="lvl__px" style="left:' + x(px) + '"></span></div>' +
         '<div class="lvl__lab"><span><b class="lv-dn">' + L("Wsparcie S1", "Support S1") + "</b><span>" + cena(S[0], ins) + ' <i>' + odl(S[0], px) + "</i></span></span>" +
         '<span class="r"><b class="lv-up">' + L("Opór R1", "Resistance R1") + "</b><span>" + cena(R[0], ins) + ' <i>' + odl(R[0], px) + "</i></span></span></div>" +
-        '<p class="lvl__txt' + (g[1] ? " lvl__txt--" + g[1] : "") + '">' + g[0] + "</p>" +
+        (g[2] ? '<p class="lvl__txt' + (g[1] ? " lvl__txt--" + g[1] : "") + '" title="' + esc(g[0]) + '">' + g[2] + "</p>" : "") +
         '<div class="lvl__adv"><span>' + adv.join(" · ") + "</span>" + wynikTag(a) + "</div></div>";
     }
     return '<div class="tile"><div class="tile__head"><a class="ins" href="#' + ins.id + '"><b>' + esc(ins.symbol) + "</b><span>" + esc(P(ins, "nazwa")) + "</span></a>" + bias(a && a.kierunek) + "</div>" +
@@ -460,8 +462,8 @@
       (demo && AUTOR ? '<div class="notice"><span class="tag-ex">' + L("przykład", "example") + "</span><p>" + L("Analizy widoczne teraz to treść demonstracyjna z ilustracyjnymi poziomami cen. Zastąp je własnymi w pliku", "The analyses shown now are demo content with illustrative price levels. Replace them with your own in") + ' <span class="num">js/analizy.js</span>.</p></div>' : "") +
       (szkice && AUTOR ? '<div class="notice"><span class="tag-ex">' + L("szkic AI", "AI draft") + "</span><p>" + L(szkice + " analiz przygotowała AI na podstawie danych ze źródeł. To szkice do Twojej akceptacji: sprawdź je i usuń pole szkic w pliku", szkice + " analyses were prepared by AI from sourced data. They are drafts awaiting approval: review them and remove the szkic field in") + ' <span class="num">js/analizy.js</span>.</p></div>' : "") +
       przegladSkrot() +
-      '<section><div class="sec-head"><div><p class="eyebrow">' + L("Przegląd", "Overview") + "</p><h2>" + L("Nastawienie na rynkach", "Market bias") + '</h2></div><a href="#rynki">' + L("Wszystkie rynki →", "All markets →") + "</a></div>" + tabelaRynkow() + "</section>" +
-      '<section><div class="sec-head"><div><p class="eyebrow">Research</p><h2>' + L("Najnowsze analizy", "Latest analyses") + '</h2></div><a href="#analizy">' + L("Archiwum i skuteczność →", "Archive and track record →") + "</a></div>" + feed(AN.slice(0, 5)) + "</section>" +
+      '<section><div class="sec-head"><div><p class="eyebrow">' + L("Przegląd", "Overview") + "</p><h2>" + L("Nastawienie na rynkach", "Market bias") + '</h2></div><a href="#rynki">' + L("Wszystkie rynki →", "All markets →") + "</a></div>" + zwin(L("Pokaż tabelę nastawienia i poziomów dla wszystkich rynków", "Show the bias and levels table for all markets"), tabelaRynkow()) + "</section>" +
+      '<section><div class="sec-head"><div><p class="eyebrow">Research</p><h2>' + L("Najnowsze analizy", "Latest analyses") + '</h2></div><a href="#analizy">' + L("Archiwum i skuteczność →", "Archive and track record →") + "</a></div>" + feed(AN.slice(0, 3)) + zwin(L("Pokaż starsze analizy", "Show older analyses"), feed(AN.slice(3, 8))) + "</section>" +
       "<section>" + powiadomienia(true) + "</section>" +
       '<section><div class="sec-head"><div><p class="eyebrow">' + L("Metodologia", "Methodology") + "</p><h2>" + L("Jak powstaje każda analiza", "How every analysis is made") + '</h2></div><a href="#o-stronie">' + L("Więcej →", "More →") + "</a></div>" +
       '<div class="pillars">' +
@@ -499,7 +501,7 @@
         var items = INS.filter(function (i) { return i.grupa === g; });
         return items.length ? '<div class="tiles-group"><h4 class="grp-title">' + grupa(g) + '</h4><div class="tiles">' + items.map(kafelek).join("") + "</div></div>" : "";
       }).join("") + "</section>" +
-      '<section><div class="sec-head"><div><p class="eyebrow">' + L("Z analiz", "From analyses") + "</p><h2>" + L("Nastawienie i poziomy", "Bias and levels") + "</h2></div></div>" + tabelaRynkow() + "</section></div>";
+      '<section><div class="sec-head"><div><p class="eyebrow">' + L("Z analiz", "From analyses") + "</p><h2>" + L("Nastawienie i poziomy", "Bias and levels") + "</h2></div></div>" + zwin(L("Pokaż tabelę nastawienia i poziomów", "Show the bias and levels table"), tabelaRynkow()) + "</section></div>";
   };
 
   V.analizy = function () {
@@ -550,7 +552,7 @@
       wykresAnalizy(ins, a) +
       (P(a, "tresc") || []).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("") +
       (a.scenariusze && a.scenariusze.length ? '<div class="sec-head"><div><h2>' + L("Scenariusze", "Scenarios") + '</h2></div></div><ul class="scen">' + a.scenariusze.map(function (s) { return "<li><span>" + bias(s.typ) + "</span><p>" + esc(P(s, "tekst")) + "</p></li>"; }).join("") + "</ul>" : "") +
-      (a.zrodla && a.zrodla.length ? '<div class="sec-head"><div><h2>' + L("Źródła", "Sources") + '</h2></div></div><ol class="sources">' + a.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol>" : "") +
+      (a.zrodla && a.zrodla.length ? zwin(L("Źródła", "Sources") + " (" + a.zrodla.length + ")", '<ol class="sources">' + a.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol>") : "") +
       '<div class="sec-head"><div><h2>' + L("Wykres i aktualny kurs", "Chart and live quote") + '</h2></div><a href="#' + esc(ins.id) + '">' + L("Strona instrumentu →", "Instrument page →") + "</a></div>" + kurs(ins) + wykres(ins) + "</div>" +
       '<aside class="aside"><div class="panel"><h4>' + L("Wynik analizy", "Result") + "</h4>" +
       '<div class="res-box">' + wynikTag(a) + (w.data ? '<span class="muted">' + data(w.data) + "</span>" : "") + "</div>" +
@@ -578,7 +580,7 @@
       '<ul class="points">' + P(PR, "punkty").map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></section>" +
       '<section><div class="sec-head"><div><h2>' + L("Instrumenty", "Instruments") + '</h2></div></div><div class="tbl-wrap"><table class="tbl"><thead><tr><th>' + L("Instrument", "Instrument") + '</th><th class="r">' + L("Kurs", "Price") + '</th><th class="r">' + L("Dzień", "Day") + '</th><th class="r">' + L("Tydzień", "Week") + "</th><th>" + L("Komentarz", "Comment") + "</th></tr></thead><tbody>" + rows + "</tbody></table></div></section>" +
       '<section><div class="sec-head"><div><h2>' + L("Najbliższe wydarzenia", "Upcoming events") + '</h2></div><a href="#kalendarz">' + L("Pełny kalendarz →", "Full calendar →") + '</a></div><div class="panel">' + (KAL ? kalMini(nadchodzace(10), L("Brak zaplanowanych wydarzeń.", "No scheduled events.")) : kalendarzLista(PR.kalendarz)) + "</div></section>" +
-      '<section><div class="sec-head"><div><h2>' + L("Źródła", "Sources") + '</h2></div></div><ol class="sources">' + PR.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol>" +
+      '<section>' + zwin(L("Źródła", "Sources") + " (" + PR.zrodla.length + ")", '<ol class="sources">' + PR.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol>") +
       '<p class="muted" style="font-size:13px;margin:0">' + L("Przegląd przygotowuje AI. Liczby pochodzą wyłącznie z podanych źródeł; gdy dana nie została potwierdzona, widnieje „brak danych”. Przed decyzją sprawdź kurs na wykresie na żywo.", "This brief is prepared by AI. Figures come only from the listed sources; anything unconfirmed shows as “no data”. Check the live chart before making any decision.") + "</p></section></div>";
   };
 

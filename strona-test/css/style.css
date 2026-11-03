@@ -564,6 +564,13 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 .lvl__adv { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; font: 500 11px/1.4 var(--f-mono); color: var(--muted); }
 .lvl__adv .res { font-size: 10px; }
 .howto { margin: 0 0 4px; font-size: 14px; }
+.more { margin-top: 4px; }
+.more > summary { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--surface); color: var(--ink); font: 500 14px/1.2 var(--f-body); list-style: none; }
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::before { content: "+"; font: 600 16px/1 var(--f-mono, monospace); color: var(--muted); }
+.more[open] > summary::before { content: "−"; }
+.more[open] > summary { margin-bottom: 14px; }
+.more > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .howto summary { cursor: pointer; color: var(--accent, var(--primary)); font-weight: 500; }
 .howto__body { display: grid; gap: 10px; margin-top: 10px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; max-width: 720px; }
 .howto__bar { max-width: 320px; margin: 4px 0; }

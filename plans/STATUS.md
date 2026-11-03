@@ -64,6 +64,8 @@ flowchart TD
 | --- | --- | --- | --- |
 | Przeniesienie na Cloudflare Pages | 2026-11-03 | cc8c20e | Netlify przestał aktualizować stronę po wyczerpaniu kredytów |
 | Poprawki wyglądu i darmowy asystent | 2026-11-03 | 1fa209e | Tablet bez przewijania w bok, asystent odpowiada na więcej pytań |
+| Wykres ze strefami na Rynkach | 2026-11-03 | a4b74d0 | Strefy S1–S2 i R1–R2 z analiz na wykresie, przełącznik na TradingView |
+| Czytelniejsza strona | 2026-11-03 | (ten commit) | Tabele i źródła zwinięte, krótsze opisy na kafelkach |
 
 ## Monthly log: append-only history
 
@@ -73,7 +75,7 @@ flowchart TD
 
 ### 2026-11
 
-- Przeniesienie na Cloudflare Pages, trzecia aktualizacja dziennie (przed USA), poprawki tabletu, rozbudowany asystent, plany w /plans.
+- Przeniesienie na Cloudflare Pages, trzecia aktualizacja dziennie (przed USA), poprawki tabletu, rozbudowany asystent, plany w /plans, wykres ze strefami na Rynkach, zwinięte mniej ważne sekcje.
 
 ---
 
