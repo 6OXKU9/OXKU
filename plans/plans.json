@@ -1,0 +1,222 @@
+{
+  "project": {
+    "name": "AnalizyRynku",
+    "description": "Analizy rynków (forex, metale, ropa, indeksy, bitcoin) z poziomami i rozliczaniem trafności, aktualizowane przez Claude przed każdą sesją.",
+    "repo": "https://github.com/6OXKU9/OXKU"
+  },
+  "plans": [
+    {
+      "file": "HOSTING_CLOUDFLARE.md",
+      "title": "Przeniesienie strony na Cloudflare Pages",
+      "status": "shipped",
+      "priority": "P0",
+      "owner": "Claude + Bartek",
+      "type": "infra",
+      "depends_on": [],
+      "blocks": [
+        "WERYFIKACJA_TRADINGVIEW"
+      ],
+      "last_updated": "2026-11-03",
+      "start_date": "2026-11-03",
+      "overall": "Done",
+      "eta": "2026-11-03",
+      "in_flight": false,
+      "next_action": "Bartek usuwa stary projekt w panelu Netlify.",
+      "phase_summary": [
+        {
+          "phase": 0,
+          "name": "Diagnoza (limit kredytów Netlify)",
+          "status": "shipped",
+          "date": "2026-11-03"
+        },
+        {
+          "phase": 1,
+          "name": "Hasło dla Cloudflare (functions/_middleware.js)",
+          "status": "shipped",
+          "date": "2026-11-03"
+        },
+        {
+          "phase": 2,
+          "name": "Przełączenie adresu na oxku.pages.dev",
+          "status": "shipped",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "file": "WYGLAD_I_ASYSTENT.md",
+      "title": "Poprawki wyglądu i darmowy asystent",
+      "status": "shipped",
+      "priority": "P1",
+      "owner": "Claude + Bartek",
+      "type": "feature",
+      "depends_on": [],
+      "blocks": [],
+      "last_updated": "2026-11-03",
+      "start_date": "2026-11-03",
+      "overall": "Done",
+      "eta": "2026-11-03",
+      "in_flight": false,
+      "next_action": "Brak; kolejne poprawki z przeglądu wyglądu trafiają do zaległości.",
+      "phase_summary": [
+        {
+          "phase": 0,
+          "name": "Przegląd na telefonie, tablecie i komputerze",
+          "status": "shipped",
+          "date": "2026-11-03"
+        },
+        {
+          "phase": 1,
+          "name": "Nagłówek na tablecie, wykres poziomów, zapasowe kursy",
+          "status": "shipped",
+          "date": "2026-11-03"
+        },
+        {
+          "phase": 2,
+          "name": "Asystent: analizy w toku, nastawienie, zasady, jutro",
+          "status": "shipped",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "file": "AUTOMATYCZNE_AKTUALIZACJE.md",
+      "title": "Automatyczne aktualizacje przed sesjami",
+      "status": "active",
+      "priority": "P0",
+      "owner": "Claude + Bartek",
+      "type": "ops",
+      "depends_on": [
+        "HOSTING_CLOUDFLARE"
+      ],
+      "blocks": [],
+      "last_updated": "2026-11-03",
+      "start_date": "2026-10-18",
+      "overall": "In progress (Phase 2 of 3)",
+      "eta": "2026-11-10",
+      "in_flight": true,
+      "next_action": "Sprawdzić, że jutrzejsze trzy aktualizacje (7:44, 13:47, 22:24) docierają na oxku.pages.dev.",
+      "phase_summary": [
+        {
+          "phase": 0,
+          "name": "Przegląd rano i wieczorem",
+          "status": "shipped",
+          "date": "2026-10-18"
+        },
+        {
+          "phase": 1,
+          "name": "Aktualizacja przed sesją w USA i częstsze świece",
+          "status": "shipped",
+          "date": "2026-11-03"
+        },
+        {
+          "phase": 2,
+          "name": "Tydzień obserwacji bez braków danych",
+          "status": "in_progress",
+          "eta": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "file": "WERYFIKACJA_TRADINGVIEW.md",
+      "title": "Wykresy TradingView na żywej stronie",
+      "status": "active",
+      "priority": "P1",
+      "owner": "Claude + Bartek",
+      "type": "feature",
+      "depends_on": [
+        "HOSTING_CLOUDFLARE"
+      ],
+      "blocks": [],
+      "last_updated": "2026-11-03",
+      "start_date": "2026-11-03",
+      "overall": "Blocked (Phase 1 of 2)",
+      "eta": "2026-11-05",
+      "in_flight": true,
+      "next_action": "Bartek otwiera oxku.pages.dev, klika Akceptuję i sprawdza wykres EUR/USD.",
+      "phase_summary": [
+        {
+          "phase": 0,
+          "name": "Kod widżetów i test z podstawionym skryptem",
+          "status": "shipped",
+          "date": "2026-11-03"
+        },
+        {
+          "phase": 1,
+          "name": "Potwierdzenie na żywej stronie",
+          "status": "blocked",
+          "eta": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "file": "STATYSTYKI_ODWIEDZIN.md",
+      "title": "Statystyki odwiedzin (GoatCounter)",
+      "status": "active",
+      "priority": "P2",
+      "owner": "Claude + Bartek",
+      "type": "feature",
+      "depends_on": [],
+      "blocks": [],
+      "last_updated": "2026-11-03",
+      "start_date": "2026-11-03",
+      "overall": "Blocked (Phase 0 of 1)",
+      "eta": "2026-11-17",
+      "in_flight": false,
+      "next_action": "Bartek zakłada darmowe konto GoatCounter i podaje kod strony.",
+      "phase_summary": [
+        {
+          "phase": 0,
+          "name": "Kod od Bartka",
+          "status": "blocked",
+          "eta": "2026-11-10"
+        },
+        {
+          "phase": 1,
+          "name": "Wpięcie kodu i opis w polityce prywatności",
+          "status": "not_started",
+          "eta": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "file": "PUBLIKACJA_PUBLICZNA.md",
+      "title": "Publikacja publiczna strony",
+      "status": "active",
+      "priority": "P2",
+      "owner": "Claude + Bartek",
+      "type": "launch",
+      "depends_on": [
+        "WERYFIKACJA_TRADINGVIEW",
+        "STATYSTYKI_ODWIEDZIN"
+      ],
+      "blocks": [],
+      "last_updated": "2026-11-03",
+      "start_date": "2026-11-17",
+      "overall": "Not started (Phase 0 of 3)",
+      "eta": "2026-12-15",
+      "in_flight": false,
+      "next_action": "Bartek decyduje o domenie i dostawcy newslettera; bez jego zgody nic nie idzie publicznie.",
+      "phase_summary": [
+        {
+          "phase": 0,
+          "name": "Decyzje: domena, newsletter, nazwy usług w polityce",
+          "status": "not_started",
+          "eta": "2026-11-24"
+        },
+        {
+          "phase": 1,
+          "name": "Uzupełnienie luk w polityce i regulaminie",
+          "status": "not_started",
+          "eta": "2026-12-01"
+        },
+        {
+          "phase": 2,
+          "name": "Zdjęcie hasła i indeksowanie",
+          "status": "not_started",
+          "eta": "2026-12-15"
+        }
+      ]
+    }
+  ]
+}
