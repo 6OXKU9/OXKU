@@ -229,7 +229,7 @@ section { display: grid; gap: 20px; min-width: 0; }
 .author b { color: var(--ink); display: block; font-weight: 600; }
 
 /* Drabinka poziomów */
-.ladder { width: 100%; height: auto; display: block; }
+.ladder { width: 100%; max-width: 520px; height: auto; display: block; margin-inline: auto; }
 .ladder text { font-family: var(--f-mono); font-size: 12px; }
 .ladder .lbl { fill: var(--muted); font-family: var(--f-body); font-size: 10px; letter-spacing: .08em; }
 .ladder .ln-up { stroke: var(--down); }
@@ -490,6 +490,13 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
   .pillar { border-right: 0; border-bottom: 1px solid var(--line); }
   .pillar:last-child { border-bottom: 0; }
   .chart { height: 380px; }
+}
+@media (max-width: 1100px) {
+  .top__in { height: auto; flex-wrap: wrap; gap: 0 16px; padding-block: 12px 0; }
+  .lang { margin-left: auto; }
+  .top__cta { margin-left: 8px; padding: 9px 14px; }
+  .nav { order: 3; flex-basis: 100%; overflow-x: auto; margin-inline: -8px; }
+  .nav a { padding: 12px 8px 10px; white-space: nowrap; }
 }
 @media (max-width: 720px) {
   .legend { grid-template-columns: 1fr 1fr; }

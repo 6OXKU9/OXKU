@@ -165,6 +165,9 @@
     for (var i = 1; i < ly.length; i++) if (ly[i] - ly[i - 1] < 16) ly[i] = ly[i - 1] + 16;
     var over = ly[ly.length - 1] - bot;
     if (over > 0) for (var j = ly.length - 1; j >= 0; j--) { ly[j] -= over; if (j && ly[j] - ly[j - 1] >= 16) break; }
+    // Etykiety cen po prawej też nie mogą na siebie nachodzić.
+    var ry = pts.map(function (q) { return y(q.v) - 5; });
+    for (var m = 1; m < ry.length; m++) if (ry[m] - ry[m - 1] < 14) ry[m] = ry[m - 1] + 14;
     var n = najblizsze(a);
     var svg = '<svg class="ladder" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + L("Kluczowe poziomy cenowe", "Key price levels") + '">';
     if (n.opor != null && n.wsparcie != null) svg += '<rect class="band" x="' + X0 + '" y="' + y(n.opor).toFixed(1) + '" width="' + (W - X0) + '" height="' + (y(n.wsparcie) - y(n.opor)).toFixed(1) + '"/>';
@@ -173,7 +176,7 @@
       var yy = y(q.v).toFixed(1);
       svg += '<line class="ln-' + q.t + '" x1="' + X0 + '" x2="' + W + '" y1="' + yy + '" y2="' + yy + '" stroke-width="' + (q.t === "now" ? 2 : 1.25) + '"' + (q.t === "now" || q.t === "pub" ? "" : ' stroke-dasharray="4 4"') + "/>";
       svg += '<text class="lbl" x="0" y="' + (ly[k] + 4).toFixed(1) + '">' + q.n + "</text>";
-      svg += '<text class="t-' + q.t + '" x="' + W + '" y="' + (y(q.v) - 5).toFixed(1) + '" text-anchor="end">' + cena(q.v, ins) + "</text>";
+      svg += '<text class="t-' + q.t + '" x="' + W + '" y="' + ry[k].toFixed(1) + '" text-anchor="end">' + cena(q.v, ins) + "</text>";
     });
     return svg + "</svg>";
   }
@@ -276,11 +279,20 @@
     if (r > 0.75) return [L("Cena jest blisko oporu, czyli poziomu, przy którym wzrosty często się zatrzymują.", "The price is near resistance, a level where rallies often stall."), ""];
     return [L("Cena jest mniej więcej w połowie drogi między wsparciem a oporem.", "The price is roughly halfway between support and resistance."), ""];
   }
+  // Ostatnie zamknięcie ze świec dziennych: zapas, gdy przegląd nie podał kursu.
+  function ostatnieZamkniecie(id) {
+    var o = window.OHLC && window.OHLC.instrumenty && window.OHLC.instrumenty[id], sw = o && o.swiece;
+    if (!sw || !sw.length) return null;
+    var z = sw[sw.length - 1];
+    return { kurs: z[4], data: z[0] };
+  }
+  function dataKrotka(d) { return new Date(d + "T12:00:00Z").toLocaleDateString(I.lang === "en" ? "en-GB" : "pl-PL", { day: "numeric", month: "short" }); }
   function kafelek(ins) {
     var a = ostatnia(ins.id), p = (PR && PR.instrumenty && PR.instrumenty[ins.id]) || {};
     var poz = a && a.poziomy, S = (poz && poz.wsparcia) || [], R = (poz && poz.opory) || [];
-    var px = p.kurs != null ? p.kurs : poz && poz.cena;
-    var cenaHtml = px != null ? '<span class="num tile__px">' + cena(px, ins) + "</span>" + (p.kurs != null ? zmianaTxt(p.zmiana) + '<span class="tile__hint">' + L("dziś", "today") + "</span>" : '<span class="muted">' + L("cena z analizy", "price from analysis") + "</span>")
+    var oz = p.kurs == null ? ostatnieZamkniecie(ins.id) : null;
+    var px = p.kurs != null ? p.kurs : oz ? oz.kurs : poz && poz.cena;
+    var cenaHtml = px != null ? '<span class="num tile__px">' + cena(px, ins) + "</span>" + (p.kurs != null ? zmianaTxt(p.zmiana) + '<span class="tile__hint">' + L("dziś", "today") + "</span>" : oz ? '<span class="muted">' + L("zamknięcie ", "close ") + dataKrotka(oz.data) + "</span>" : '<span class="muted">' + L("cena z analizy", "price from analysis") + "</span>")
       : '<span class="muted">' + L("brak danych", "no data") + "</span>";
     var pasek = "";
     if (px != null && S.length && R.length) {
@@ -535,7 +547,7 @@
     var rows = INS.map(function (i) {
       var p = PR.instrumenty[i.id] || {};
       return '<tr data-href="#' + i.id + '" tabindex="0"><td><a class="ins" href="#' + i.id + '"><b>' + esc(i.symbol) + "</b><span>" + esc(P(i, "nazwa")) + "</span></a></td>" +
-        '<td class="r num">' + (p.kurs != null ? cena(p.kurs, i) : '<span class="muted">' + brakDanych() + "</span>") + "</td>" +
+        '<td class="r num">' + (p.kurs != null ? cena(p.kurs, i) : (function (oz) { return oz ? cena(oz.kurs, i) + '<br><span class="muted" style="font-size:12px">' + L("zamknięcie ", "close ") + dataKrotka(oz.data) + "</span>" : '<span class="muted">' + brakDanych() + "</span>"; })(ostatnieZamkniecie(i.id))) + "</td>" +
         '<td class="r">' + zmianaTxt(p.zmiana) + '</td><td class="r">' + zmianaTxt(p.tydzien) + "</td>" +
         '<td class="note">' + esc(P(p, "notka") || "") + (p.zrodlo != null ? " " + zrodloLink(p.zrodlo) : "") + "</td></tr>";
     }).join("");

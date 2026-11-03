@@ -3,6 +3,8 @@ name: Notowania do wykresów
 on:
   schedule:
     - cron: "15 21 * * 1-5"   # po zamknięciu sesji w USA
+    - cron: "45 22 * * 1-5"   # powtórka: źródło czasem publikuje świecę dnia z opóźnieniem
+    - cron: "15 5 * * *"      # rano, z zapasem przed porannym przeglądem (GitHub bywa opóźniony)
     - cron: "0 6 * * *"       # rano (bitcoin handluje też w weekend)
   workflow_dispatch:
 permissions:
