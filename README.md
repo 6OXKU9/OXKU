@@ -3,7 +3,7 @@
 - `strona/` – źródła strony (opis w `strona/README.md`).
 - `strona-test/` – wygenerowana wersja próbna, którą publikuje Cloudflare Pages.
 
-Claude aktualizuje dane przed sesjami (Europa i Londyn, USA, Azja) i wysyła zmiany tutaj; Cloudflare Pages publikuje je automatycznie. Od 3 lis 2026 projekt nie korzysta z Netlify (darmowy plan nie starczał na liczbę aktualizacji).
+Claude aktualizuje dane przed sesjami (Europa i Londyn, USA, Azja) i wysyła zmiany tutaj; Cloudflare Pages publikuje je automatycznie pod adresem https://oxku.pages.dev. Od 3 lis 2026 projekt nie korzysta z Netlify (darmowy plan nie starczał na liczbę aktualizacji).
 
 ## Cloudflare Pages
 
