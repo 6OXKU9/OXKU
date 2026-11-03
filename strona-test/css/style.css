@@ -565,6 +565,10 @@ mark.todo { background: var(--gold-soft); color: var(--ink); padding: 0 4px; bor
 .lvl__adv .res { font-size: 10px; }
 .howto { margin: 0 0 4px; font-size: 14px; }
 .more { margin-top: 4px; }
+.tvoff { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; padding: 16px 18px; border: 1px dashed var(--line-strong); border-radius: 6px; background: var(--surface); }
+.tvoff p { margin: 0; font-size: 14px; color: var(--muted); max-width: 520px; }
+.tvoff p b { display: block; color: var(--ink); margin-bottom: 2px; }
+.tvoff__b { display: flex; gap: 8px; flex-wrap: wrap; }
 .more > summary { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--surface); color: var(--ink); font: 500 14px/1.2 var(--f-body); list-style: none; }
 .more > summary::-webkit-details-marker { display: none; }
 .more > summary::before { content: "+"; font: 600 16px/1 var(--f-mono, monospace); color: var(--muted); }

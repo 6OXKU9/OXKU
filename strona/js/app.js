@@ -257,8 +257,17 @@
   function tvLink(ins) { return "https://www.tradingview.com/chart/?symbol=" + encodeURIComponent(ins.tv); }
 
   // Pełny wykres świecowy instrumentu.
+  // Bez zgody na pliki cookie: jedno małe pole z przyciskiem zamiast pustych okienek.
+  function tvOff(ins, co) {
+    return '<div class="tvoff"><p><b>' + (co === "news" ? L("Wiadomości z TradingView", "News from TradingView") : L("Wykres na żywo z TradingView", "Live chart from TradingView")) + "</b>" +
+      L("TradingView zapisuje własne pliki cookie, więc włączamy go dopiero na Twoje życzenie.", "TradingView sets its own cookies, so we only turn it on when you ask.") + "</p>" +
+      '<div class="tvoff__b"><button type="button" class="btn btn--primary" data-zgoda="tak">' + L("Włącz TradingView", "Turn on TradingView") + "</button>" +
+      '<a class="btn btn--line" href="' + tvLink(ins) + '" target="_blank" rel="noopener">' + L("Otwórz w nowej karcie", "Open in a new tab") + "</a></div></div>";
+  }
+  function tvBlad() { return L("Wczytywanie TradingView… Jeśli to pole zostaje puste, wyłącz bloker reklam dla tej strony.", "Loading TradingView… If this stays empty, turn off your ad blocker for this site."); }
   function wykres(ins) {
-    return '<div class="chart" data-tv><div class="chart__fallback tv-fallback"><p>' + L("Wykres na żywo z TradingView pojawi się tutaj na opublikowanej stronie.", "A live TradingView chart appears here on the published site.") + "</p>" +
+    if (zgoda() !== "tak") return tvOff(ins, "wykres");
+    return '<div class="chart" data-tv><div class="chart__fallback tv-fallback"><p>' + tvBlad() + "</p>" +
       '<a class="btn btn--primary" href="' + tvLink(ins) + '" target="_blank" rel="noopener">' + L("Otwórz ", "Open ") + esc(ins.symbol) + L(" w TradingView", " in TradingView") + "</a></div>" +
       tvWidget("tv-chart-" + ins.id, "advanced-chart", {
         autosize: true, symbol: ins.tv, interval: "D", timezone: "Europe/Warsaw", style: "1",
@@ -267,7 +276,8 @@
   }
   // Aktualny kurs, zmiana dzienna i zakres dnia.
   function kurs(ins) {
-    return '<div class="quote" data-tv><div class="quote__fallback tv-fallback"><span class="num">' + esc(ins.symbol) + "</span><span>" + L("Aktualny kurs pojawi się tutaj na opublikowanej stronie.", "The live quote appears here on the published site.") + "</span></div>" +
+    if (zgoda() !== "tak") return "";
+    return '<div class="quote" data-tv><div class="quote__fallback tv-fallback"><span class="num">' + esc(ins.symbol) + "</span><span>" + L("Wczytywanie kursu z TradingView…", "Loading the quote from TradingView…") + "</span></div>" +
       tvWidget("tv-quote-" + ins.id, "symbol-info", { symbol: ins.tv, width: "100%", isTransparent: true }) + "</div>";
   }
   // Kafelek rynku (strona Rynki): kurs i zmiana z przeglądu AI oraz pasek poziomów z ostatniej analizy.
@@ -386,7 +396,8 @@
       '<p class="brief__meta" style="margin:0">' + L("Stan na: ", "As of: ") + esc(P(PR, "stanNa")) + '</p><a href="#przeglad" style="font-size:14px">' + L("Cały przegląd →", "Full brief →") + "</a></div>";
   }
   function newsy(ins) {
-    return '<div class="news" data-tv><div class="tv-fallback news__fallback">' + L("Najnowsze wiadomości o " + esc(ins.symbol) + " z TradingView pojawią się tutaj na opublikowanej stronie.", "Latest " + esc(ins.symbol) + " news from TradingView appears here on the published site.") + "</div>" +
+    if (zgoda() !== "tak") return tvOff(ins, "news");
+    return '<div class="news" data-tv><div class="tv-fallback news__fallback">' + tvBlad() + "</div>" +
       tvWidget("tv-news-" + ins.id, "timeline", { feedMode: "symbol", symbol: ins.tv, isTransparent: true, displayMode: "regular", width: "100%", height: "100%" }) + "</div>";
   }
 
@@ -400,6 +411,7 @@
   // ---------- Powiadomienia ----------
   function powiadomienia(naglowek) {
     var p = CFG.powiadomienia || {}, mailOn = !!p.emailFormularz, tgOn = !!p.telegram, dis = mailOn ? "" : " disabled";
+    if (!mailOn && !tgOn && !AUTOR) return naglowek ? "" : '<div class="notice"><p>' + L("Powiadomienia o nowych analizach (e-mail i Telegram) uruchomimy wkrótce. Do tego czasu nowe analizy znajdziesz w zakładce Analizy.", "Alerts about new analyses (e-mail and Telegram) are coming soon. Until then, find new analyses in the Analyses tab.") + "</p></div>";
     return '<div class="sub">' +
       (naglowek ? '<div class="sub__copy"><p class="eyebrow">' + L("Powiadomienia", "Alerts") + "</p><h2>" + L("Nie przegap nowej analizy", "Never miss a new analysis") + "</h2>" +
         "<p>" + L("Powiadomimy Cię o każdej nowej analizie i dzień przed wydarzeniem z czterema głowami byka w kalendarzu.", "Get notified about every new analysis and a day before any four-bull-head event in the calendar.") + "</p></div>" : "") +
@@ -451,7 +463,7 @@
       '<div class="hero__cta"><a class="btn btn--gold" href="#analizy">' + L("Przeglądaj analizy", "Browse analyses") + '</a><a class="btn btn--ghost" href="#rynki">' + L("Przegląd rynków", "Markets overview") + "</a></div>" +
       '<div class="stats"><div class="stat"><b>' + INS.length + "</b><span>" + L("Instrumentów", "Instruments") + "</span></div>" +
       '<div class="stat"><b>' + AN.length + "</b><span>" + L("Analiz", "Analyses") + "</span></div>" +
-      '<div class="stat"><b>' + trafnoscTxt(sk) + "</b><span>" + (sk.zamkniete > 0 && sk.zamkniete < MIN_ROZLICZONYCH ? L("Trafione / rozliczone", "Hits / settled") : L("Trafność", "Hit rate")) + "</span></div>" +
+      '<div class="stat"><b>' + trafnoscTxt(sk) + "</b><span>" + (sk.zamkniete > 0 && sk.zamkniete < MIN_ROZLICZONYCH ? L("Trafione / rozliczone", "Hits / settled") : L("Trafność", "Hit rate") + " (" + sk.trafiona + L(" z ", " of ") + sk.zamkniete + ")") + "</span></div>" +
       '<div class="stat"><b>' + (PR ? czasPL(PR.aktualizacja) : f ? data(f.data) : "–") + "</b><span>" + L("Aktualizacja danych", "Data updated") + "</span></div></div></div>" +
       (f ? '<article class="feature"><div class="feature__tag"><span>' + L("Najnowsza analiza", "Latest analysis") + "</span>" + ex(f) + "</div>" +
         '<div class="meta"><b class="num" style="color:var(--ink)">' + esc(fi.symbol) + "</b>" + bias(f.kierunek) + '<span class="num">' + esc(f.interwal) + '</span><span class="sep"></span><span>' + data(f.data) + "</span></div>" +
@@ -464,7 +476,7 @@
       przegladSkrot() +
       '<section><div class="sec-head"><div><p class="eyebrow">' + L("Przegląd", "Overview") + "</p><h2>" + L("Nastawienie na rynkach", "Market bias") + '</h2></div><a href="#rynki">' + L("Wszystkie rynki →", "All markets →") + "</a></div>" + zwin(L("Pokaż tabelę nastawienia i poziomów dla wszystkich rynków", "Show the bias and levels table for all markets"), tabelaRynkow()) + "</section>" +
       '<section><div class="sec-head"><div><p class="eyebrow">Research</p><h2>' + L("Najnowsze analizy", "Latest analyses") + '</h2></div><a href="#analizy">' + L("Archiwum i skuteczność →", "Archive and track record →") + "</a></div>" + feed(AN.slice(0, 3)) + zwin(L("Pokaż starsze analizy", "Show older analyses"), feed(AN.slice(3, 8))) + "</section>" +
-      "<section>" + powiadomienia(true) + "</section>" +
+      (powiadomienia(true) ? "<section>" + powiadomienia(true) + "</section>" : "") +
       '<section><div class="sec-head"><div><p class="eyebrow">' + L("Metodologia", "Methodology") + "</p><h2>" + L("Jak powstaje każda analiza", "How every analysis is made") + '</h2></div><a href="#o-stronie">' + L("Więcej →", "More →") + "</a></div>" +
       '<div class="pillars">' +
       '<div class="pillar">' + IKONY.tech + "<h3>" + L("Analiza techniczna", "Technical analysis") + "</h3><p>" + L("Struktura trendu, strefy podaży i popytu oraz poziomy, przy których rynek wcześniej reagował.", "Trend structure, supply and demand zones, and levels where the market has reacted before.") + "</p></div>" +
@@ -558,8 +570,7 @@
       '<div class="res-box">' + wynikTag(a) + (w.data ? '<span class="muted">' + data(w.data) + "</span>" : "") + "</div>" +
       '<p class="muted" style="margin:0;font-size:14px">' + (P(w, "komentarz") ? esc(P(w, "komentarz")) : L("Analiza jest w toku. Rozliczymy ją, gdy cena dotrze do celu albo poziomu unieważnienia.", "This analysis is still open. It will be settled when price reaches the target or the invalidation level.")) +
       ' <a href="#o-stronie">' + L("Zasady", "Rules") + "</a></p></div>" +
-      '<div class="panel"><h4>' + L("Kluczowe poziomy", "Key levels") + "</h4>" + drabinka(a) + tabelaPoziomow(a) +
-      '<p class="muted" style="margin:0;font-size:12px">' + L("Zaznaczony pas to zakres między najbliższym oporem a wsparciem.", "The shaded band spans the nearest resistance and support.") + "</p></div>" +
+      '<div class="panel"><h4>' + L("Kluczowe poziomy", "Key levels") + "</h4>" + (maWykres(ins) ? "" : drabinka(a)) + tabelaPoziomow(a) + "</div>" +
       udostepnij(a) +
       '<div class="panel"><h4>' + L("Ostrzeżenie", "Disclaimer") + '</h4><p class="muted" style="margin:0;font-size:13px">' + L("Analiza ma charakter edukacyjny i nie stanowi rekomendacji inwestycyjnej.", "This analysis is educational and is not investment advice.") + ' <a href="#ryzyko">' + L("Pełne zastrzeżenie", "Full disclaimer") + "</a></p></div></aside></div></div>";
   };
@@ -637,11 +648,13 @@
     if (!arr.length) return '<div class="feed"><div class="empty">' + L("Brak wydarzeń dla wybranych filtrów.", "No events match these filters.") + "</div></div>";
     var dzis = plDzien(new Date()), grupy = {}, kolej = [];
     arr.forEach(function (e) { var k = plDzien(e.d); if (!grupy[k]) { grupy[k] = []; kolej.push(k); } grupy[k].push(e); });
-    return kolej.map(function (k) {
+    function dzien(k) {
       return '<section class="day' + (k === dzis ? " is-today" : "") + '"><h3 class="day__h">' + nazwaDnia(k) + (k === dzis ? ' <span class="today">' + L("dziś", "today") + "</span>" : "") +
         '<span class="day__n">' + ileWyd(grupy[k].length) + "</span></h3>" +
         '<ol class="evs">' + grupy[k].map(wiersz_kal).join("") + "</ol></section>";
-    }).join("");
+    }
+    var minione = kolej.filter(function (k) { return k < dzis; }), dalej = kolej.filter(function (k) { return k >= dzis; });
+    return (minione.length ? zwin(L("Pokaż minione dni", "Show past days") + " (" + minione.length + ")", minione.map(dzien).join("")) : "") + dalej.map(dzien).join("");
   }
   function legenda() {
     var opis = { pl: ["", "Zwykle bez reakcji rynku", "Możliwy ruch na powiązanych rynkach", "Wyraźny ruch, większa zmienność", "Silne ruchy na wielu rynkach naraz"],
@@ -681,8 +694,8 @@
       '<label for="k-kraj">' + L("Kraj", "Country") + '<select id="k-kraj"><option value="">' + L("Wszystkie kraje", "All countries") + "</option>" + kraje.map(function (k) { return '<option value="' + k + '"' + (filtrKal.kraj === k ? " selected" : "") + ">" + esc(krajNazwa(k)) + "</option>"; }).join("") + "</select></label>" +
       '<label for="k-ins">' + L("Instrument", "Instrument") + '<select id="k-ins"><option value="">' + L("Wszystkie", "All") + "</option>" + INS.map(function (i) { return '<option value="' + i.id + '"' + (filtrKal.instrument === i.id ? " selected" : "") + ">" + esc(i.symbol) + "</option>"; }).join("") + "</select></label></div>" +
       '<div id="kal-lista">' + listaKal(wszystkie.filter(pasujeKal)) + "</div>" +
-      '<p class="muted" style="font-size:13px;margin:0">' + esc(P(KAL, "uwaga") || "") + " " + L("Ocenę wpływu nadaje AI na podstawie typowej reakcji rynku na daną publikację.", "Impact ratings are assigned by AI based on the typical market reaction to each release.") + "</p>" +
-      '<ol class="sources">' + KAL.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol></section></div>";
+      zwin(L("Źródła i uwagi", "Sources and notes") + " (" + KAL.zrodla.length + ")", '<p class="muted" style="font-size:13px;margin:0 0 10px">' + esc(P(KAL, "uwaga") || "") + " " + L("Ocenę wpływu nadaje AI na podstawie typowej reakcji rynku na daną publikację.", "Impact ratings are assigned by AI based on the typical market reaction to each release.") + "</p>" +
+      '<ol class="sources">' + KAL.zrodla.map(function (z) { return '<li><a href="' + esc(z.url) + '" target="_blank" rel="noopener">' + esc(P(z, "nazwa")) + "</a></li>"; }).join("") + "</ol>") + "</section></div>";
   };
   function podepnijKal() {
     function odswiez() { document.getElementById("kal-lista").innerHTML = listaKal(wydarzenia().filter(pasujeKal)); }
@@ -796,7 +809,7 @@
       "<h2>Jakie dane i po co</h2><ul><li><b>Adres e-mail</b> przy zapisie na powiadomienia: wysyłka powiadomień na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO), do czasu jej wycofania.</li>" +
       "<li><b>Korespondencja</b>, gdy do nas piszesz: odpowiedź na wiadomość, na podstawie naszego prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</li>" +
       "<li><b>Dane techniczne</b> (adres IP, typ przeglądarki) w logach serwera hostingu: bezpieczeństwo i działanie strony (art. 6 ust. 1 lit. f RODO).</li></ul>" +
-      "<h2>Odbiorcy danych</h2><p>Dane mogą otrzymać: dostawca usługi newslettera " + luka("", "nazwa usługi", "service name") + ", dostawca hostingu " + luka("", "nazwa usługi", "service name") + ", a po Twojej zgodzie na pliki cookie TradingView (widżety notowań). Strona korzysta też z czcionek Google Fonts, co oznacza przekazanie adresu IP do Google." + (GC ? " Liczbę odwiedzin mierzy GoatCounter: bez plików cookie i bez zapisywania adresu IP, tylko zbiorcze statystyki (odsłony, strona odsyłająca, kraj, typ urządzenia)." : "") + " Część tych dostawców może przetwarzać dane poza Europejskim Obszarem Gospodarczym na podstawie standardowych klauzul umownych lub decyzji o adekwatności.</p>" +
+      "<h2>Odbiorcy danych</h2><p>Dane mogą otrzymać: " + (CFG.powiadomienia && CFG.powiadomienia.emailFormularz ? "dostawca usługi newslettera " + luka(CFG.powiadomienia.uslugaNazwa, "nazwa usługi", "service name") + ", " : "") + "dostawca hostingu Cloudflare, Inc. (Cloudflare Pages), a po Twojej zgodzie na pliki cookie TradingView (widżety notowań). Strona korzysta też z czcionek Google Fonts, co oznacza przekazanie adresu IP do Google." + (GC ? " Liczbę odwiedzin mierzy GoatCounter: bez plików cookie i bez zapisywania adresu IP, tylko zbiorcze statystyki (odsłony, strona odsyłająca, kraj, typ urządzenia)." : "") + " Część tych dostawców może przetwarzać dane poza Europejskim Obszarem Gospodarczym na podstawie standardowych klauzul umownych lub decyzji o adekwatności.</p>" +
       "<p>Kanał na Telegramie prowadzi Telegram według własnej polityki prywatności; nie widzimy numerów telefonów subskrybentów.</p>" +
       "<h2>Twoje prawa</h2><p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia, sprzeciwu oraz wycofania zgody w dowolnym momencie. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.</p>" +
       "<h2>Pliki cookie</h2><p>Szczegóły na stronie <a href=\"#cookies\">Pliki cookie</a>.</p>",
@@ -804,7 +817,7 @@
       "<h2>What data and why</h2><ul><li><b>E-mail address</b> when you sign up for alerts: sending alerts based on your consent (Art. 6(1)(a) GDPR), until you withdraw it.</li>" +
       "<li><b>Correspondence</b> when you write to us: replying, based on our legitimate interest (Art. 6(1)(f) GDPR).</li>" +
       "<li><b>Technical data</b> (IP address, browser type) in the hosting server logs: site security and operation (Art. 6(1)(f) GDPR).</li></ul>" +
-      "<h2>Recipients</h2><p>Data may be received by the newsletter provider " + luka("", "nazwa usługi", "service name") + ", the hosting provider " + luka("", "nazwa usługi", "service name") + ", and, once you accept cookies, TradingView (quote widgets). The site also uses Google Fonts, which passes your IP address to Google." + (GC ? " Visits are measured by GoatCounter: no cookies and no stored IP addresses, only aggregate statistics (pageviews, referrer, country, device type)." : "") + " Some of these providers may process data outside the European Economic Area under standard contractual clauses or adequacy decisions.</p>" +
+      "<h2>Recipients</h2><p>Data may be received by " + (CFG.powiadomienia && CFG.powiadomienia.emailFormularz ? "the newsletter provider " + luka(CFG.powiadomienia.uslugaNazwa, "nazwa usługi", "service name") + ", " : "") + "the hosting provider Cloudflare, Inc. (Cloudflare Pages)" + ", and, once you accept cookies, TradingView (quote widgets). The site also uses Google Fonts, which passes your IP address to Google." + (GC ? " Visits are measured by GoatCounter: no cookies and no stored IP addresses, only aggregate statistics (pageviews, referrer, country, device type)." : "") + " Some of these providers may process data outside the European Economic Area under standard contractual clauses or adequacy decisions.</p>" +
       "<p>The Telegram channel is run by Telegram under its own privacy policy; we cannot see subscribers' phone numbers.</p>" +
       "<h2>Your rights</h2><p>You have the right to access, rectify and erase your data, to restrict processing, to data portability, to object, and to withdraw consent at any time. You may also lodge a complaint with the Polish data protection authority (Prezes UODO).</p>" +
       "<h2>Cookies</h2><p>See <a href=\"#cookies\">Cookies</a>.</p>"));

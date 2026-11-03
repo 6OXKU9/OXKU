@@ -65,7 +65,8 @@ flowchart TD
 | Przeniesienie na Cloudflare Pages | 2026-11-03 | cc8c20e | Netlify przestał aktualizować stronę po wyczerpaniu kredytów |
 | Poprawki wyglądu i darmowy asystent | 2026-11-03 | 1fa209e | Tablet bez przewijania w bok, asystent odpowiada na więcej pytań |
 | Wykres ze strefami na Rynkach | 2026-11-03 | a4b74d0 | Strefy S1–S2 i R1–R2 z analiz na wykresie, przełącznik na TradingView |
-| Czytelniejsza strona | 2026-11-03 | (ten commit) | Tabele i źródła zwinięte, krótsze opisy na kafelkach |
+| Czytelniejsza strona | 2026-11-03 | 099c212 | Tabele i źródła zwinięte, krótsze opisy na kafelkach |
+| Poprawki z przeglądu | 2026-11-03 | (ten commit) | Jedno pole TradingView zamiast pustych okienek, krótszy kalendarz, ukryty niedziałający newsletter |
 
 ## Monthly log: append-only history
 
@@ -81,7 +82,6 @@ flowchart TD
 
 ## Backlog / ideas: captured, not committed
 
-- **Jednolite formatowanie liczb w tabelach:** 4000 vs 28 300, WTI 105,00; drobna poprawka z przeglądu wyglądu.
 - **Analiza trafności:** przy 46% (12 z 26) sprawdzić, które instrumenty i nastawienia zawodzą najczęściej.
 - **Newsletter lub powiadomienia:** dopiero po wyborze usługi i zgodzie Bartka.
 
