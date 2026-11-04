@@ -24,6 +24,33 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-04-dax", instrument: "dax", data: "2026-11-04", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "DAX blisko rekordu, celem 26 628", tytul_en: "DAX near its record, eyeing 26,628",
+    lead: "DAX zyskał w środę 2,2% do 26 438 pkt po wygranej Demokratów w USA i spadku ropy. Dopóki indeks trzyma się nad przebitym szczytem z 4 września (26 164), bazą jest test rekordu z sierpnia przy 26 628.",
+    lead_en: "The DAX gained 2.2% on Wednesday to 26,438 after the Democrats' win in the US and the drop in oil. While the index holds above the broken 4 September high (26,164), a test of the August record near 26,628 is the base case.",
+    poziomy: { cena: 26438, opory: [26627.7], wsparcia: [26164, 25665] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 26 628 pkt (rekord wszech czasów z sierpnia według Trading Economics).", tekst_en: "Base case: a rise to 26,628 (the all-time high from August according to Trading Economics)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 164 (szczyt z 4 września, wcześniej opór według DZ Banku) unieważnia scenariusz i otwiera drogę do 25 665 (poziom trendu według onvista).", tekst_en: "A daily close below 26,164 (the 4 September high, earlier resistance according to DZ Bank) invalidates the setup and opens the way to 25,665 (the trend level according to onvista)." }
+    ],
+    tresc: [
+      "DAX zamknął środę na 26 438 pkt (+2,2%), najwyżej od końca sierpnia, a poprzednia analiza wzrostowa z celem 26 164 została rozliczona jako trafiona. Prowadziły banki (Deutsche Bank +7,7%, Commerzbank +4,8%) przy spadku rentowności, słabsze były spółki technologiczne i Rheinmetall (−3%).",
+      "Rynek odebrał wygraną Demokratów w Kongresie jako mniej ryzyka fiskalnego, a nadzieje na deeskalację z Iranem obniżyły ropę o prawie 8%. Rekord wszech czasów z sierpnia to 26 627,7 pkt; przebity szczyt z 4 września (26 164) jest teraz pierwszym wsparciem.",
+      "Jutro dane o zamówieniach w niemieckim przemyśle, decyzja BoE i wystąpienia Lagarde oraz Lane'a z EBC, w piątek raport z rynku pracy w USA. Po tak dużym wzroście możliwa jest realizacja zysków."
+    ],
+    tresc_en: [
+      "The DAX closed Wednesday at 26,438 (+2.2%), the highest since late August, and the previous bullish analysis with a 26,164 target was settled as a hit. Banks led (Deutsche Bank +7.7%, Commerzbank +4.8%) as yields fell, while tech stocks and Rheinmetall (−3%) lagged.",
+      "Markets read the Democrats' win in Congress as lower fiscal risk, and hopes of de-escalation with Iran cut oil by almost 8%. The all-time high from August is 26,627.7; the broken 4 September high (26,164) is now the first support.",
+      "Tomorrow brings German factory orders, the BoE decision and speeches by the ECB's Lagarde and Lane, and Friday the US jobs report. After such a strong rise, profit-taking is possible."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX Joins Global Rally (4 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "DZ BANK / TraderFox: Technische Analyse DAX (29 paź 2026)", url: "https://www.dzbank-wertpapiere.de/markets/daxanalyse" },
+      { nazwa: "onvista: Dax überwindet letzte Hürde vor einem Anstieg auf 26.000 Punkte (29 paź 2026)", url: "https://www.onvista.de/news/2026/10-29-dax-ueberwindet-letzte-huerde-vor-einem-anstieg-auf-26-000-punkte-41123281-19-26569831" }
+    ]
+  },
+  {
     id: "2026-11-04-srebro", instrument: "xagusd", data: "2026-11-04", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Srebro przy rocznych minimach, celem 48,29", tytul_en: "Silver near one-year lows, eyeing $48.29",
