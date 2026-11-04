@@ -24,12 +24,40 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-04-srebro", instrument: "xagusd", data: "2026-11-04", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro przy rocznych minimach, celem 48,29", tytul_en: "Silver near one-year lows, eyeing $48.29",
+    lead: "Srebro dotknęło we wtorek 48,53 USD i w środę rano kosztuje około 49,75. Trend spadkowy trwa, a dopóki cena jest pod 52,50, bazą jest zejście do wsparcia 48,29.",
+    lead_en: "Silver touched $48.53 on Tuesday and trades around $49.75 on Wednesday morning. The downtrend continues, and while the price stays below $52.50, a drop to the $48.29 support is the base case.",
+    poziomy: { cena: 49.75, opory: [52.50, 54.75], wsparcia: [48.29, 45.55] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 48,29 USD (78,6% zniesienia Fibonacciego według FXEmpire), a po zamknięciu poniżej do 45,55.", tekst_en: "Base case: a drop to $48.29 (the 78.6% Fibonacci retracement according to FXEmpire), and after a close below it to $45.55." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 52,50 USD (opór według FXStreet) unieważnia scenariusz i otwiera drogę do 54,75.", tekst_en: "A daily close above $52.50 (resistance according to FXStreet) invalidates the setup and opens the way to $54.75." }
+    ],
+    tresc: [
+      "Srebro zamknęło wtorek na 49,79 USD po minimum 48,53, a poprzednia analiza spadkowa z celem 48,85 została rozliczona jako trafiona. W środę rano kosztuje około 49,75 USD (Trading Economics), blisko rocznych minimów.",
+      "W nocy Demokraci wygrali wczesne wyścigi do Senatu; dolar i rentowności spadły, co zwykle wspiera metale, ale srebro na razie stoi w miejscu. FXEmpire wskazuje 48,29 (78,6% zniesienia) i 45,55 jako wsparcia, a FXStreet widzi opór przy 52,50 po wyprzedaniu.",
+      "Dziś ADP i ISM usługi, w czwartek decyzja BoE, w piątek raport z rynku pracy w USA. Przy wyprzedaniu możliwe są szybkie odbicia."
+    ],
+    tresc_en: [
+      "Silver closed Tuesday at $49.79 after a low of $48.53, and the previous bearish analysis with a $48.85 target was settled as a hit. On Wednesday morning it trades around $49.75 (Trading Economics), close to one-year lows.",
+      "Overnight Democrats won early Senate races; the dollar and yields fell, which usually supports metals, but silver is flat so far. FXEmpire names $48.29 (78.6% retracement) and $45.55 as support, and FXStreet sees resistance at $52.50 after the oversold rebound.",
+      "Today brings ADP and ISM services, Thursday the BoE decision and Friday the US jobs report. Oversold conditions allow quick rebounds."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Silver (XAG/USD) Price Forecast, bearish signals put $48.29 support in focus (26 paź 2026)", url: "https://www.fxempire.com/forecasts/article/silver-xag-usd-price-forecast-bearish-signals-put-48-29-support-in-focus-1640544" },
+      { nazwa: "FXStreet: Silver Price Forecast, oversold rebound faces $52.50 resistance (2 lis 2026)", url: "https://www.fxstreet.com/news/silver-price-forecast-oversold-rebound-faces-5250-resistance-202611022145" },
+      { nazwa: "Trading Economics: surowce, 4 lis 2026", url: "https://tradingeconomics.com/commodities" }
+    ]
+  },
+  {
     id: "2026-11-03-srebro", instrument: "xagusd", data: "2026-11-03", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Srebro znów pod 50 USD, celem 48,85", tytul_en: "Silver back below $50, eyeing $48.85",
     lead: "Srebro zamknęło poniedziałek nad 50 USD, ale we wtorek rano znów spadło do około 49,4. Dopóki cena jest pod 51,27, bazą jest powrót do piątkowego dołka przy 48,85.",
     lead_en: "Silver closed Monday above $50 but fell back to around $49.4 on Tuesday morning. While the price stays below $51.27, a return to Friday's low near $48.85 is the base case.",
     poziomy: { cena: 49.40, opory: [51.27, 53.28], wsparcia: [48.85, 47.06] },
+    wynik: { status: "trafiona", data: "2026-11-03", komentarz: "3 lis po publikacji (cena 49,40) srebro spadło do 48,53 USD, poniżej celu S1 48,85; najwyżej 50,93, bez zamknięcia powyżej R1 51,27 (zamknięcie 49,79). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 3 Nov, after publication (price 49.40), silver fell to $48.53, below the S1 target of $48.85; the high was $50.93, with no close above R1 $51.27 (close $49.79). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 48,85 USD (wsparcie według FXEmpire, piątkowe minimum), a po zamknięciu poniżej tego poziomu do 47,06.", tekst_en: "Base case: a drop to $48.85 (support according to FXEmpire, Friday's low), and after a close below it to $47.06." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 51,27 USD (opór według FXEmpire) unieważnia scenariusz i otwiera drogę do 53,28.", tekst_en: "A daily close above $51.27 (resistance according to FXEmpire) invalidates the setup and opens the way to $53.28." }
