@@ -1,50 +1,52 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-11-04T08:00:00+01:00",
-  stanNa_en: "Wednesday morning, 4 Nov 2026 (before Europe and London open)",
-  stanNa: "środa rano, 4 lis 2026 (przed sesją w Europie i Londynie)",
-  naglowek_en: "Democrats win early Senate races and markets bet on a “blue sweep”: US index futures fall (Nasdaq 100 −1%), and the dollar and yields drop. The Nikkei loses almost 3%. AMD beat forecasts. Silver hit its target of $48.85.",
-  naglowek: "Demokraci wygrywają wczesne wyścigi do Senatu i rynek gra pod „niebieską falę”: kontrakty na indeksy USA spadają (Nasdaq 100 −1%), spadają dolar i rentowności obligacji. Nikkei traci prawie 3%. AMD powyżej prognoz. Srebro doszło do celu 48,85 USD.",
+  aktualizacja: "2026-11-04T13:55:00+01:00",
+  stanNa_en: "Wednesday, 4 Nov 2026, before the US open",
+  stanNa: "środa, 4 lis 2026, przed sesją w USA",
+  naglowek_en: "Democrats take the House and flip 7 Senate seats. The dollar falls to a five-week low, gold jumps 2.9% back above $4,000 and silver 4.6%. The DAX gains 1.6% and hit our 26,164 target. US futures recovered overnight losses. Euro area inflation rose to 4.0%.",
+  naglowek: "Demokraci przejmują Izbę Reprezentantów i odbijają 7 miejsc w Senacie. Dolar spada do 5-tygodniowego minimum, złoto rośnie o 2,9% i wraca nad 4 000 USD, srebro o 4,6%. DAX zyskuje 1,6% i doszedł do naszego celu 26 164. Kontrakty w USA odrobiły nocne straty. Inflacja w strefie euro wzrosła do 4,0%.",
   punkty: [
-    "Wybory w USA: Demokraci wygrali wczesne wyścigi do Senatu, co według Reutersa rozbudziło zakłady na przejęcie przez nich obu izb Kongresu. Ostateczny wynik nie jest jeszcze pewny. Kontrakty na indeksy USA spadają, a rentowności i dolar idą w dół.",
-    "Indeksy przed otwarciem: S&P 500 około 7 515 (−0,7%), Nasdaq 100 około 27 894 (−1,0%), DAX około 25 710 (−0,6%). W Azji Nikkei traci 2,9%, Hang Seng +0,3%.",
-    "Waluty: słabszy dolar. EUR/USD 1,1232 (+0,35%), GBP/USD 1,3455 (+0,3%), USD/JPY 157,9 (−0,5%), USD/PLN 3,9306 (−0,3%). Indeks dolara 101,5 (−0,4%).",
-    "Surowce: złoto około 3 948 USD (+0,4%), srebro około 49,75 USD (bez zmian), WTI około 96,5 USD (+0,5%), Brent około 104,2 USD. Bitcoin około 77 600 USD.",
-    "AMD: przychody 13,4 mld USD (+45% r/r), centra danych rekordowe 8,5 mld USD (+97%), prognoza na IV kw. około 17 mld USD. Rozliczenie: wtorkowa analiza spadkowa srebra trafiona (minimum 48,53 poniżej celu 48,85); trafność 13 z 27. Dziś ADP (14:15), ISM usługi (16:00) i zapasy ropy EIA (16:30)."
+    "Wybory w USA: według Euronews o 10:05 Demokraci mieli co najmniej 228 miejsc w Izbie Reprezentantów (większość to 218) i odbili Republikanom 7 miejsc w Senacie, m.in. w Teksasie, Ohio, Kansas i Maine. Rynek zakłada mniej nowych cięć podatków i wydatków oraz ostrzejsze regulacje AI.",
+    "Dolar: indeks DXY około 101,3 (−0,6%), najniżej od pięciu tygodni, przy spadku rentowności obligacji USA. EUR/USD około 1,1247 (+0,5%). Kurs GBP/USD, USD/JPY i USD/PLN według porannej tabeli: 1,3455, 157,9 i 3,9306.",
+    "Europa: DAX około 26 278 pkt (+1,6%), najwyżej od końca sierpnia; prowadzą banki, motoryzacja i handel, Heidelberg Materials i Continental po wynikach. Inflacja w strefie euro w październiku 4,0% r/r (wrz 3,8%), w tym energia +20,8%.",
+    "Kontrakty w USA odrobiły nocne spadki (Nasdaq 100 tracił w nocy około 2%): S&P 500 około 7 637, Nasdaq 100 około 28 267. Nasdaq jest blisko poziomu unieważnienia naszej analizy spadkowej (28 300 na zamknięciu dnia).",
+    "Surowce: złoto około 4 044 USD (+2,9%), czyli nad poziomem unieważnienia analizy spadkowej (4 000), rozstrzygnie zamknięcie dnia. Srebro około 52,10 USD (+4,6%), blisko unieważnienia nowego szkicu (52,50). WTI około 95,9 USD, Brent około 102,8 USD. Rozliczenie: analiza wzrostowa DAX trafiona, trafność 14 z 28. O 14:15 ADP, o 16:00 ISM usługi, o 16:30 zapasy ropy EIA."
   ],
   punkty_en: [
-    "US elections: Democrats won early Senate races, which according to Reuters fuelled bets they could take both chambers of Congress. The final outcome is not yet certain. US index futures fall, and yields and the dollar move lower.",
-    "Indices before the open: S&P 500 around 7,515 (−0.7%), Nasdaq 100 around 27,894 (−1.0%), DAX around 25,710 (−0.6%). In Asia the Nikkei loses 2.9%, Hang Seng +0.3%.",
-    "Currencies: a weaker dollar. EUR/USD 1.1232 (+0.35%), GBP/USD 1.3455 (+0.3%), USD/JPY 157.9 (−0.5%), USD/PLN 3.9306 (−0.3%). Dollar index 101.5 (−0.4%).",
-    "Commodities: gold around $3,948 (+0.4%), silver around $49.75 (flat), WTI around $96.5 (+0.5%), Brent around $104.2. Bitcoin around $77,600.",
-    "AMD: revenue $13.4bn (+45% y/y), record data center revenue of $8.5bn (+97%), Q4 guidance about $17bn. Settlement: Tuesday's bearish silver analysis hit (low $48.53, below the $48.85 target); hit rate 13 of 27. Today ADP (14:15), ISM services (16:00) and EIA crude stocks (16:30)."
+    "US elections: according to Euronews at 10:05, Democrats held at least 228 House seats (218 is a majority) and flipped 7 Senate seats from Republicans, including Texas, Ohio, Kansas and Maine. Markets expect fewer new tax cuts and less spending, and tighter AI regulation.",
+    "The dollar: the DXY is around 101.3 (−0.6%), a five-week low, as US Treasury yields fall. EUR/USD around 1.1247 (+0.5%). GBP/USD, USD/JPY and USD/PLN from the morning table: 1.3455, 157.9 and 3.9306.",
+    "Europe: the DAX is around 26,278 (+1.6%), the highest since late August, led by banks, carmakers and retailers, with Heidelberg Materials and Continental up after results. Euro area inflation was 4.0% y/y in October (Sep 3.8%), with energy +20.8%.",
+    "US futures recovered overnight losses (the Nasdaq 100 was down about 2% overnight): S&P 500 around 7,637, Nasdaq 100 around 28,267. The Nasdaq is close to the invalidation level of our bearish analysis (28,300 on a daily close).",
+    "Commodities: gold around $4,044 (+2.9%), above the invalidation level of the bearish analysis ($4,000); the daily close decides. Silver around $52.10 (+4.6%), close to the new draft's invalidation ($52.50). WTI around $95.9, Brent around $102.8. Settlement: the bullish DAX analysis hit, hit rate 14 of 28. ADP at 14:15, ISM services at 16:00, EIA crude stocks at 16:30."
   ],
   instrumenty: {
-    sp500:  { kurs: 7515.02, zmiana: -0.71, tydzien: -2.96, notka: "Notowanie CFD. Analiza spadkowa: cel 7 500, unieważnienie 7 700; kurs blisko celu.", notka_en: "CFD quote. Bearish analysis: target 7,500, invalidation 7,700; price near the target.", zrodlo: 1 },
-    nasdaq: { kurs: 27894, zmiana: -1.01, tydzien: -6.44, notka: "Notowanie CFD. Analiza spadkowa: cel 27 645, unieważnienie 28 300.", notka_en: "CFD quote. Bearish analysis: target 27,645, invalidation 28,300.", zrodlo: 1 },
-    xauusd: { kurs: 3947.66, zmiana: 0.41, tydzien: -2.93, notka: "Analiza spadkowa: cel 3 800, unieważnienie 4 000.", notka_en: "Bearish analysis: target $3,800, invalidation $4,000.", zrodlo: 0 },
-    eurusd: { kurs: 1.1232, zmiana: 0.35, tydzien: 0.72, notka: "Analiza neutralna: zakres 1,1113–1,1260.", notka_en: "Neutral analysis: 1.1113–1.1260 range.", zrodlo: 2 },
-    gbpusd: { kurs: 1.3455, zmiana: 0.30, tydzien: 0.98, notka: "Analiza wzrostowa: cel 1,3489, unieważnienie 1,3306. Jutro decyzja BoE.", notka_en: "Bullish analysis: target 1.3489, invalidation 1.3306. BoE decides tomorrow.", zrodlo: 2 },
-    usdjpy: { kurs: 157.88, zmiana: -0.51, tydzien: 0.04, notka: "Analiza neutralna: zakres 156,75–159,05.", notka_en: "Neutral analysis: 156.75–159.05 range.", zrodlo: 2 },
-    xagusd: { kurs: 49.75, zmiana: -0.08, tydzien: -7.77, notka: "Nowa analiza spadkowa: cel 48,29, unieważnienie 52,50.", notka_en: "New bearish analysis: target $48.29, invalidation $52.50.", zrodlo: 0 },
-    usdpln: { kurs: 3.9306, zmiana: -0.30, tydzien: -0.29, notka: "Analiza wzrostowa: cel 3,98, wsparcie 3,92.", notka_en: "Bullish analysis: target 3.98, support 3.92.", zrodlo: 2 },
-    wti:    { kurs: 96.54, zmiana: 0.47, tydzien: -6.07, notka: "Kontrakt grudniowy. Analiza wzrostowa: cel 105, wsparcie 95; horyzont mija 6 lis.", notka_en: "December contract. Bullish analysis: target $105, support $95; the horizon ends on 6 Nov.", zrodlo: 0 },
-    dax:    { kurs: 25710, zmiana: -0.60, tydzien: 0.02, notka: "Notowanie CFD. Analiza wzrostowa: cel 26 164, unieważnienie 25 665; kurs blisko unieważnienia.", notka_en: "CFD quote. Bullish analysis: target 26,164, invalidation 25,665; price near invalidation.", zrodlo: 1 },
-    btcusd: { kurs: 77582, zmiana: 0.33, tydzien: -4.51, notka: "Analiza neutralna: zakres 75 800–80 000.", notka_en: "Neutral analysis: $75,800–80,000 range.", zrodlo: 4 }
+    sp500:  { kurs: 7637.06, zmiana: 0.90, tydzien: -1.38, notka: "Notowanie CFD. Analiza spadkowa: cel 7 500, unieważnienie 7 700.", notka_en: "CFD quote. Bearish analysis: target 7,500, invalidation 7,700.", zrodlo: 1 },
+    nasdaq: { kurs: 28266.74, zmiana: 0.31, tydzien: -5.19, notka: "Notowanie CFD. Analiza spadkowa: cel 27 645, unieważnienie 28 300; kurs tuż pod unieważnieniem.", notka_en: "CFD quote. Bearish analysis: target 27,645, invalidation 28,300; price just below invalidation.", zrodlo: 1 },
+    xauusd: { kurs: 4043.97, zmiana: 2.90, tydzien: -0.56, notka: "Analiza spadkowa: cel 3 800, unieważnienie 4 000; kurs nad unieważnieniem, rozstrzygnie zamknięcie dnia.", notka_en: "Bearish analysis: target $3,800, invalidation $4,000; price above invalidation, the daily close decides.", zrodlo: 0 },
+    eurusd: { kurs: 1.1247, zmiana: 0.48, tydzien: 0.85, notka: "Analiza neutralna: zakres 1,1113–1,1260; kurs blisko górnej granicy.", notka_en: "Neutral analysis: 1.1113–1.1260 range; price near the upper bound.", zrodlo: 3 },
+    gbpusd: { kurs: 1.3455, zmiana: 0.33, tydzien: 0.98, notka: "Kurs z porannej tabeli. Analiza wzrostowa: cel 1,3489, unieważnienie 1,3306. Jutro decyzja BoE.", notka_en: "Morning table quote. Bullish analysis: target 1.3489, invalidation 1.3306. BoE decides tomorrow.", zrodlo: 2 },
+    usdjpy: { kurs: 157.88, zmiana: -0.49, tydzien: 0.04, notka: "Kurs z porannej tabeli. Analiza neutralna: zakres 156,75–159,05.", notka_en: "Morning table quote. Neutral analysis: 156.75–159.05 range.", zrodlo: 2 },
+    xagusd: { kurs: 52.10, zmiana: 4.64, tydzien: -3.43, notka: "Szkic spadkowy: cel 48,29, unieważnienie 52,50; kurs blisko unieważnienia.", notka_en: "Bearish draft: target $48.29, invalidation $52.50; price near invalidation.", zrodlo: 0 },
+    usdpln: { kurs: 3.9306, zmiana: -0.22, tydzien: -0.29, notka: "Kurs z porannej tabeli. Analiza wzrostowa: cel 3,98, wsparcie 3,92.", notka_en: "Morning table quote. Bullish analysis: target 3.98, support 3.92.", zrodlo: 2 },
+    wti:    { kurs: 95.92, zmiana: -0.18, tydzien: -6.67, notka: "Kontrakt grudniowy. Analiza wzrostowa: cel 105, wsparcie 95; horyzont mija 6 lis.", notka_en: "December contract. Bullish analysis: target $105, support $95; the horizon ends on 6 Nov.", zrodlo: 0 },
+    dax:    { kurs: 26278, zmiana: 1.60, tydzien: 2.23, notka: "Notowanie CFD. Analiza wzrostowa trafiona (cel 26 164). Nowa analiza po zebraniu poziomów od analityków.", notka_en: "CFD quote. Bullish analysis hit (target 26,164). A new analysis follows once analysts' levels are available.", zrodlo: 5 },
+    btcusd: { kurs: 77582, zmiana: 0.32, tydzien: -4.51, notka: "Analiza neutralna: zakres 75 800–80 000.", notka_en: "Neutral analysis: $75,800–80,000 range.", zrodlo: 4 }
   },
   kalendarz: [
-    { dzien: "Śr 4 lis", wydarzenia: ["USA: ADP (14:15), ISM usługi (16:00), zapasy ropy EIA (16:30)", "Dalsze wyniki wyborów w USA"] },
+    { dzien: "Śr 4 lis", wydarzenia: ["USA: ADP (14:15), ISM usługi (16:00), zapasy ropy EIA (16:30)"] },
     { dzien: "Czw 5 lis", wydarzenia: ["BoE: decyzja w sprawie stóp (14:00), rynek oczekuje podwyżki"] },
     { dzien: "Pt 6 lis", wydarzenia: ["USA: raport z rynku pracy (14:30)"] }
   ],
   zrodla: [
-    { nazwa: "Trading Economics: surowce (ropa, Brent, złoto, srebro), 4 lis 2026", nazwa_en: "Trading Economics: commodities (crude, Brent, gold, silver), 4 Nov 2026", url: "https://tradingeconomics.com/commodities" },
-    { nazwa: "Trading Economics: indeksy giełdowe (US500, US100, DE40, JP225, HK50), 4 lis 2026", nazwa_en: "Trading Economics: stock indices (US500, US100, DE40, JP225, HK50), 4 Nov 2026", url: "https://tradingeconomics.com/stocks" },
-    { nazwa: "Trading Economics: waluty (EUR/USD, GBP/USD, USD/JPY, USD/PLN, DXY), 4 lis 2026", nazwa_en: "Trading Economics: currencies (EUR/USD, GBP/USD, USD/JPY, USD/PLN, DXY), 4 Nov 2026", url: "https://tradingeconomics.com/currencies" },
-    { nazwa: "Yahoo Finance / Reuters: Analysts react to US midterm election results (4 lis 2026)", nazwa_en: "Yahoo Finance / Reuters: Analysts react to US midterm election results (4 Nov 2026)", url: "https://finance.yahoo.com/markets/stocks/articles/analysts-react-us-midterm-election-025738421.html" },
+    { nazwa: "Trading Economics: złoto i srebro, ropa, Brent, 4 lis 2026", nazwa_en: "Trading Economics: gold and silver, crude, Brent, 4 Nov 2026", url: "https://tradingeconomics.com/commodity/gold" },
+    { nazwa: "Trading Economics: rynek akcji USA (US500, US100), 4 lis 2026", nazwa_en: "Trading Economics: US stock market (US500, US100), 4 Nov 2026", url: "https://tradingeconomics.com/united-states/stock-market" },
+    { nazwa: "Trading Economics: waluty (poranna tabela), 4 lis 2026", nazwa_en: "Trading Economics: currencies (morning table), 4 Nov 2026", url: "https://tradingeconomics.com/currencies" },
+    { nazwa: "Euronews: US midterms, what Trump's defeat means for Europe and global markets (4 lis 2026)", nazwa_en: "Euronews: US midterms, what Trump's defeat means for Europe and global markets (4 Nov 2026)", url: "https://www.euronews.com/2026/11/04/us-midterms-what-trumps-defeat-means-for-europe-and-global-markets" },
     { nazwa: "Trading Economics: kryptowaluty (bitcoin), 4 lis 2026", nazwa_en: "Trading Economics: crypto (bitcoin), 4 Nov 2026", url: "https://tradingeconomics.com/crypto" },
-    { nazwa: "Yahoo Finance: AMD Reports Third Quarter 2026 Financial Results (3 lis 2026)", nazwa_en: "Yahoo Finance: AMD Reports Third Quarter 2026 Financial Results (3 Nov 2026)", url: "https://finance.yahoo.com/markets/stocks/articles/amd-reports-third-quarter-2026-211500470.html" },
-    { nazwa: "CNBC: świece dzienne (dane wykresów na stronie), rozliczenie srebra", nazwa_en: "CNBC: daily candles (site chart data), silver settlement", url: "https://www.cnbc.com/quotes/XAGUSD=" }
+    { nazwa: "Trading Economics: DAX Hits Over 2-Month High (4 lis 2026)", nazwa_en: "Trading Economics: DAX Hits Over 2-Month High (4 Nov 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+    { nazwa: "Trading Economics: Dollar Falls to 5-Week Lows (4 lis 2026)", nazwa_en: "Trading Economics: Dollar Falls to 5-Week Lows (4 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+    { nazwa: "Eurostat: Euro area annual inflation up to 4.0% (4 lis 2026)", nazwa_en: "Eurostat: Euro area annual inflation up to 4.0% (4 Nov 2026)", url: "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-04112026-ap" },
+    { nazwa: "MarketScreener / Reuters: Europe set to open lower as Democratic sweep fuels AI regulation fears (4 lis 2026)", nazwa_en: "MarketScreener / Reuters: Europe set to open lower as Democratic sweep fuels AI regulation fears (4 Nov 2026)", url: "https://www.marketscreener.com/news/europe-set-to-open-lower-as-democratic-sweep-fuels-ai-regulation-fears-ce785fded180f120" }
   ]
 };
