@@ -24,6 +24,34 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-05-dax", instrument: "dax", data: "2026-11-05", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "DAX zawraca spod rekordu, celem 25 877", tytul_en: "DAX turns back from its record, eyeing 25,877",
+    lead: "DAX ustanowił w czwartek rekord przy 26 693 pkt, ale zamknął się na minusie, a wieczorem Wall Street straciła ponad 4% na wyprzedaży spółek chipowych. Dopóki indeks jest pod rekordem, bazą jest zejście do środowego minimum przy 25 877.",
+    lead_en: "The DAX set a record near 26,693 on Thursday but closed lower, and in the evening Wall Street lost more than 4% in a chip stock selloff. While the index stays below the record, a drop to Wednesday's low near 25,877 is the base case.",
+    poziomy: { cena: 26330, opory: [26693], wsparcia: [25876.8, 25665] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 25 876,8 pkt (minimum z 4 listopada), a po zamknięciu poniżej do 25 665 (poziom trendu według onvista).", tekst_en: "Base case: a drop to 25,876.8 (the 4 November low), and after a close below it to 25,665 (the trend level according to onvista)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 693 (rekord z 5 listopada według Trading Economics) unieważnia scenariusz.", tekst_en: "A daily close above 26,693 (the 5 November record according to Trading Economics) invalidates the setup." }
+    ],
+    tresc: [
+      "DAX doszedł w czwartek do rekordu 26 693 pkt, więc poprzednia analiza wzrostowa z celem 26 628 została rozliczona jako trafiona. Po południu indeks zawrócił i zamknął się około 26 330 (−0,4%): Infineon stracił ponad 10%, Siemens Energy ponad 5%, a Rheinmetall ponad 16% po drugim w tym roku ostrzeżeniu o zyskach.",
+      "Wieczorem S&P 500 spadł o około 4,5%, a Nasdaq 100 o ponad 6%: indeks półprzewodników PHLX stracił około 11% na obawach, że Kongres z większością Demokratów zaostrzy zasady dla centrów danych AI. VIX wzrósł o ponad 60%.",
+      "W piątek o 14:30 raport z rynku pracy w USA (prognoza 65 tys.). Ryzykiem dla scenariusza jest szybkie odbicie po wyprzedaży, jeśli dane uspokoją rynek."
+    ],
+    tresc_en: [
+      "The DAX reached a record of 26,693 on Thursday, so the previous bullish analysis with a 26,628 target was settled as a hit. In the afternoon the index turned back and closed around 26,330 (−0.4%): Infineon lost more than 10%, Siemens Energy more than 5% and Rheinmetall more than 16% after its second profit warning this year.",
+      "In the evening the S&P 500 fell about 4.5% and the Nasdaq 100 more than 6%: the PHLX semiconductor index lost about 11% on fears that a Democratic-majority Congress will tighten rules for AI data centres. The VIX jumped more than 60%.",
+      "Friday at 14:30 brings the US jobs report (forecast 65k). A quick rebound after the selloff, if the data calm markets, is the risk to this setup."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX Retreats (5 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "Yahoo Finance: Dow plunges 1,800 points, Nasdaq enters correction in AI trade meltdown (5 lis 2026)", url: "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html" },
+      { nazwa: "CNBC: świece dzienne DAX (minimum z 4 listopada)", url: "https://www.cnbc.com/quotes/.GDAXI" },
+      { nazwa: "onvista: Dax überwindet letzte Hürde vor einem Anstieg auf 26.000 Punkte (29 paź 2026)", url: "https://www.onvista.de/news/2026/10-29-dax-ueberwindet-letzte-huerde-vor-einem-anstieg-auf-26-000-punkte-41123281-19-26569831" }
+    ]
+  },
+  {
     id: "2026-11-05-zloto", instrument: "xauusd", data: "2026-11-05", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "Złoto wraca nad 4 100, celem 4 205", tytul_en: "Gold back above $4,100, eyeing $4,205",
@@ -187,7 +215,7 @@ window.ANALIZY = [
     lead: "DAX zyskał w środę 2,2% do 26 438 pkt po wygranej Demokratów w USA i spadku ropy. Dopóki indeks trzyma się nad przebitym szczytem z 4 września (26 164), bazą jest test rekordu z sierpnia przy 26 628.",
     lead_en: "The DAX gained 2.2% on Wednesday to 26,438 after the Democrats' win in the US and the drop in oil. While the index holds above the broken 4 September high (26,164), a test of the August record near 26,628 is the base case.",
     poziomy: { cena: 26438, opory: [26627.7], wsparcia: [26164, 25665] },
-    wynik: { status: "trafiona", data: "2026-11-05", komentarz: "5 lis DAX ustanowił rekord wszech czasów przy około 26 650–26 682 pkt, powyżej celu R1 26 627,7, bez zamknięcia poniżej S1 26 164. Źródło ceny: Trading Economics (notowanie CFD).", komentarz_en: "On 5 Nov the DAX set an all-time high near 26,650–26,682, above the R1 target of 26,627.7, with no close below S1 26,164. Price source: Trading Economics (CFD quote)." },
+    wynik: { status: "trafiona", data: "2026-11-05", komentarz: "5 lis DAX ustanowił rekord wszech czasów przy 26 693 pkt, powyżej celu R1 26 627,7, bez zamknięcia poniżej S1 26 164. Źródło ceny: Trading Economics (notowanie CFD).", komentarz_en: "On 5 Nov the DAX set an all-time high near 26,693, above the R1 target of 26,627.7, with no close below S1 26,164. Price source: Trading Economics (CFD quote)." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 26 628 pkt (rekord wszech czasów z sierpnia według Trading Economics).", tekst_en: "Base case: a rise to 26,628 (the all-time high from August according to Trading Economics)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 164 (szczyt z 4 września, wcześniej opór według DZ Banku) unieważnia scenariusz i otwiera drogę do 25 665 (poziom trendu według onvista).", tekst_en: "A daily close below 26,164 (the 4 September high, earlier resistance according to DZ Bank) invalidates the setup and opens the way to 25,665 (the trend level according to onvista)." }
