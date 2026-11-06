@@ -24,6 +24,87 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-06-sp500", instrument: "sp500", data: "2026-11-06", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "S&P 500 po najgorszym dniu od 2025 roku, celem 7 238", tytul_en: "S&P 500 after its worst day since 2025, eyeing 7,238",
+    lead: "S&P 500 stracił w czwartek 4,3% i zamknął się na 7 354 pkt. Dopóki indeks jest pod przełamanym wsparciem 7 545 (minimum z 3 listopada), bazą jest zejście do czerwcowego dołka przy 7 238.",
+    lead_en: "The S&P 500 lost 4.3% on Thursday and closed at 7,354. While the index stays below the broken 7,545 support (the 3 November low), a drop to the June low near 7,238 is the base case.",
+    poziomy: { cena: 7347.18, opory: [7545.39, 7622.1], wsparcia: [7237.85, 7174.12] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 7 237,85 pkt (minimum z 9 czerwca), a niżej do 7 174,12 (minimum z 4 maja).", tekst_en: "Base case: a drop to 7,237.85 (the 9 June low), and lower to 7,174.12 (the 4 May low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 545,39 (minimum z 3 listopada) unieważnia scenariusz i otwiera drogę do 7 622 (średnia ze 100 sesji).", tekst_en: "A daily close above 7,545.39 (the 3 November low) invalidates the setup and opens the way to 7,622 (the 100-session average)." }
+    ],
+    tresc: [
+      "S&P 500 zamknął czwartek na 7 353,73 (−4,3%), a poprzednia analiza spadkowa z celem 7 500 została rozliczona jako trafiona. To najgorszy dzień od zawirowań celnych z kwietnia 2025.",
+      "Wyprzedaż prowadziły spółki chipowe i AI (indeks PHLX −11%) na obawach, że Kongres z większością Demokratów zaostrzy zasady dla centrów danych. VIX wzrósł o ponad 60%. W piątek rano kontrakty lekko odbijają, prawdopodobnie technicznie.",
+      "Dziś o 14:30 raport z rynku pracy w USA (prognoza 65 tys.). Po tak dużym spadku możliwe są gwałtowne odbicia, więc unieważnienie leży na przełamanym wsparciu 7 545."
+    ],
+    tresc_en: [
+      "The S&P 500 closed Thursday at 7,353.73 (−4.3%), and the previous bearish analysis with a 7,500 target was settled as a hit. It was the worst day since the tariff turmoil of April 2025.",
+      "Chip and AI stocks led the selloff (PHLX index −11%) on fears that a Democratic-majority Congress will tighten rules for data centres. The VIX jumped more than 60%. On Friday morning futures rebound slightly, probably on technical buying.",
+      "The US jobs report is due today at 14:30 (forecast 65k). After such a big drop sharp rebounds are possible, so the invalidation sits at the broken 7,545 support."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: kontrakty w USA po najgorszym dniu od kwietnia 2025 (6 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "Yahoo Finance: Dow plunges 1,800 points, Nasdaq enters correction in AI trade meltdown (5 lis 2026)", url: "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html" },
+      { nazwa: "CNBC: świece dzienne S&P 500 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.SPX" }
+    ]
+  },
+  {
+    id: "2026-11-06-nasdaq", instrument: "nasdaq", data: "2026-11-06", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "Nasdaq 100 w korekcie, zakres 26 606–27 967", tytul_en: "Nasdaq 100 in a correction, range 26,606–27,967",
+    lead: "Nasdaq 100 stracił w czwartek 6,4% i wszedł w korektę. Po takim spadku bazą jest konsolidacja między czwartkowym minimum 26 606 a przełamanym wsparciem 27 967.",
+    lead_en: "The Nasdaq 100 lost 6.4% on Thursday and entered a correction. After such a drop, consolidation between Thursday's low of 26,606 and the broken 27,967 support is the base case.",
+    poziomy: { cena: 26797.45, opory: [27967.4], wsparcia: [26606.4] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo konsolidacja: żadne zamknięcie dnia poza zakresem 26 606,4 (minimum z 5 listopada) – 27 967,4 (minimum z 2 listopada) przez 10 sesji.", tekst_en: "Base case: consolidation, with no daily close outside the 26,606.4 (the 5 November low) – 27,967.4 (the 2 November low) range for 10 sessions." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 606,4 oznacza dalszą wyprzedaż spółek AI.", tekst_en: "A daily close below 26,606.4 means the AI stock selloff continues." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 27 967,4 oznacza szybkie odrobienie strat.", tekst_en: "A daily close above 27,967.4 means losses are quickly recovered." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął czwartek na 26 629,8 (−6,4%), poniżej 27 967, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. Według Yahoo Finance indeks wszedł w korektę, a indeks półprzewodników PHLX stracił około 11%.",
+      "Inwestorzy indywidualni sprzedali akcje za około 358 mln USD netto, najwięcej od 2020 roku, a fundusze realizowały zyski z 2026. W piątek rano kontrakty odbijają (notowanie CFD około 26 797), a w Tokio Nikkei traci prawie 6% na spadkach spółek AI.",
+      "Dziś raport z rynku pracy w USA. Zakres 26 606–27 967 wyznaczają czwartkowe minimum i poniedziałkowe minimum, które teraz jest oporem."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Thursday at 26,629.8 (−6.4%), below 27,967, so the previous bullish analysis was settled as a miss. According to Yahoo Finance the index entered a correction, and the PHLX semiconductor index lost about 11%.",
+      "Retail investors net sold about $358m of stocks, the most since 2020, and funds locked in 2026 profits. On Friday morning futures rebound (CFD around 26,797), while in Tokyo the Nikkei loses almost 6% on AI stocks.",
+      "The US jobs report is due today. The 26,606–27,967 range is set by Thursday's low and Monday's low, which is now resistance."
+    ],
+    zrodla: [
+      { nazwa: "Yahoo Finance: Dow plunges 1,800 points, Nasdaq enters correction in AI trade meltdown (5 lis 2026)", url: "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html" },
+      { nazwa: "Trading Economics: kontrakty w USA po najgorszym dniu od kwietnia 2025 (6 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne Nasdaq 100 (minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.NDX" }
+    ]
+  },
+  {
+    id: "2026-11-06-bitcoin", instrument: "btcusd", data: "2026-11-06", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin pod 76 000, celem 74 888", tytul_en: "Bitcoin below $76,000, eyeing $74,888",
+    lead: "Bitcoin zamknął czwartek na 75 969 USD po spadku razem z giełdami i w piątek rano kosztuje około 75 600. Dopóki cena jest pod 77 699, bazą jest zejście do wrześniowego minimum przy 74 888.",
+    lead_en: "Bitcoin closed Thursday at $75,969 after falling with stocks and trades around $75,600 on Friday morning. While the price stays below $77,699, a drop to the September low near $74,888 is the base case.",
+    poziomy: { cena: 75617.36, opory: [77699, 81130.8], wsparcia: [74887.5, 73004.7] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 74 887,5 USD (minimum z 15 września), a niżej do 73 004,7 (minimum z 21 sierpnia).", tekst_en: "Base case: a drop to $74,887.5 (the 15 September low), and lower to $73,004.7 (the 21 August low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 77 699 USD (minimum z 29 października) unieważnia scenariusz i otwiera drogę do 81 131 (maksimum z 4 listopada).", tekst_en: "A daily close above $77,699 (the 29 October low) invalidates the setup and opens the way to $81,131 (the 4 November high)." }
+    ],
+    tresc: [
+      "Bitcoin zamknął czwartek na 75 969 USD, poniżej 77 699, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. W piątek rano kosztuje około 75 600 USD (Gemini), po minimum 75 100.",
+      "Kryptowaluty spadały razem z wyprzedażą spółek AI na Wall Street; VIX wzrósł o ponad 60%. Najbliższe wsparcia to wrześniowe i sierpniowe minima 74 888 i 73 005.",
+      "Dziś raport z rynku pracy w USA. Ryzykiem dla scenariusza jest odbicie na giełdach, jeśli dane uspokoją rynek."
+    ],
+    tresc_en: [
+      "Bitcoin closed Thursday at $75,969, below $77,699, so the previous bullish analysis was settled as a miss. On Friday morning it trades around $75,600 (Gemini), after a low of $75,100.",
+      "Crypto fell together with the AI stock selloff on Wall Street; the VIX jumped more than 60%. The nearest support levels are the September and August lows at $74,888 and $73,005.",
+      "The US jobs report is due today. A rebound in stocks, if the data calm markets, is the risk to this setup."
+    ],
+    zrodla: [
+      { nazwa: "Coinbase: świece dzienne BTC/USD (maksima i minima z danych wykresów na stronie)", url: "https://www.coinbase.com/price/bitcoin" },
+      { nazwa: "Gemini: notowanie BTC/USD (6 lis 2026)", url: "https://www.gemini.com/prices/bitcoin" }
+    ]
+  },
+  {
     id: "2026-11-05-dax", instrument: "dax", data: "2026-11-05", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "DAX zawraca spod rekordu, celem 25 877", tytul_en: "DAX turns back from its record, eyeing 25,877",
@@ -84,6 +165,7 @@ window.ANALIZY = [
     lead: "Nasdaq 100 zamknął środę na 28 437 pkt po wzroście o 0,9%. Dopóki indeks jest nad poniedziałkowym dołkiem 27 967, bazą jest powrót do środowego maksimum przy 28 830.",
     lead_en: "The Nasdaq 100 closed Wednesday at 28,437 after a 0.9% gain. While the index stays above Monday's low of 27,967, a return to Wednesday's high near 28,830 is the base case.",
     poziomy: { cena: 28437.2, opory: [28829.7, 29404.4], wsparcia: [27967.4, 27645] },
+    wynik: { status: "nietrafiona", data: "2026-11-05", komentarz: "5 lis Nasdaq 100 zamknął dzień na 26 629,8 (−6,4%), poniżej S1 27 967,4, zanim indeks dotknął celu R1 28 829,7. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 5 Nov the Nasdaq 100 closed at 26,629.8 (−6.4%), below S1 27,967.4, before reaching the R1 target of 28,829.7. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 28 829,7 pkt (maksimum z 4 listopada), a wyżej do 29 404,4 (maksimum z 26 października).", tekst_en: "Base case: a rise to 28,829.7 (the 4 November high), and higher to 29,404.4 (the 26 October high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 27 967,4 (minimum z 2 listopada) unieważnia scenariusz i otwiera drogę do 27 645 (50-tygodniowa EMA według DailyForex).", tekst_en: "A daily close below 27,967.4 (the 2 November low) invalidates the setup and opens the way to 27,645 (the 50-week EMA according to DailyForex)." }
@@ -137,6 +219,7 @@ window.ANALIZY = [
     lead: "Bitcoin zamknął środę na 80 428 USD po odbiciu od 75 600. Dopóki cena nie zamknie dnia poniżej 77 699, bazą jest powrót do maksimum z 21 października przy 84 856.",
     lead_en: "Bitcoin closed Wednesday at $80,428 after rebounding from $75,600. Unless the price closes a day below $77,699, a return to the 21 October high near $84,856 is the base case.",
     poziomy: { cena: 80356.5, opory: [84856.1, 85601.1], wsparcia: [77699, 75600.6] },
+    wynik: { status: "nietrafiona", data: "2026-11-05", komentarz: "5 lis bitcoin zamknął dzień na 75 969 USD, poniżej S1 77 699, zanim cena dotknęła celu R1 84 856. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 5 Nov bitcoin closed at $75,969, below S1 $77,699, before reaching the R1 target of $84,856. Price source: Coinbase daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 84 856 USD (maksimum z 21 października), a wyżej do 85 601 (maksimum z 7 października).", tekst_en: "Base case: a rise to $84,856 (the 21 October high), and higher to $85,601 (the 7 October high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 77 699 USD (minimum z 29 października) unieważnia scenariusz i otwiera drogę do 75 600 (minimum z 4 listopada).", tekst_en: "A daily close below $77,699 (the 29 October low) invalidates the setup and opens the way to $75,600 (the 4 November low)." }
@@ -354,6 +437,7 @@ window.ANALIZY = [
     lead: "S&P 500 stracił w piątek 1,8% i zamknął się pod linią szyi formacji głowy z ramionami. Dopóki indeks jest pod 7 700, bazą jest test wsparcia 7 500.",
     lead_en: "The S&P 500 lost 1.8% on Friday and closed below the neckline of a head-and-shoulders pattern. While the index stays below 7,700, a test of 7,500 support is the base case.",
     poziomy: { cena: 7580.07, opory: [7700, 7800], wsparcia: [7500, 7330] },
+    wynik: { status: "trafiona", data: "2026-11-05", komentarz: "5 lis S&P 500 spadł do 7 350,35, poniżej celu S1 7 500, a wcześniej żadna świeca dzienna nie zamknęła się nad R1 7 700 (4 lis zamknięcie 7 688,62). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 5 Nov the S&P 500 fell to 7,350.35, below the S1 target of 7,500, and no daily candle had closed above R1 7,700 before that (4 Nov close 7,688.62). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 7 500 pkt (kluczowe wsparcie według StoneX i DailyForex), a przy jego przełamaniu do 200-dniowej średniej przy 7 330.", tekst_en: "Base case: a drop to 7,500 (key support according to StoneX and DailyForex), and on a break to the 200-day average near 7,330." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 700 (50-okresowa średnia według StoneX) unieważnia scenariusz i otwiera drogę do 7 800 (okolice rekordu).", tekst_en: "A daily close above 7,700 (the 50-period average according to StoneX) invalidates the setup and opens the way to 7,800 (near the record)." }
