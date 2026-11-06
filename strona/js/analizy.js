@@ -24,6 +24,32 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-06-dax", instrument: "dax", data: "2026-11-06", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "DAX drugi dzień w dół, celem 25 340", tytul_en: "DAX down for a second day, eyeing 25,340",
+    lead: "DAX traci w piątek ponad 2% i jest przy 25 720 pkt, bo wyprzedaż spółek technologicznych rozlała się na inne sektory. Dopóki indeks jest pod czwartkowym minimum 26 223, bazą jest zejście do dołka z 27 października przy 25 340.",
+    lead_en: "The DAX loses more than 2% on Friday and stands near 25,720, as the tech selloff spreads to other sectors. While the index stays below Thursday's low of 26,223, a drop to the 27 October low near 25,340 is the base case.",
+    poziomy: { cena: 25720, opory: [26223.3], wsparcia: [25340.2, 25013.5] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 25 340,2 pkt (minimum z 27 października), a niżej do 25 013,5 (minimum z 23 października).", tekst_en: "Base case: a drop to 25,340.2 (the 27 October low), and lower to 25,013.5 (the 23 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 223,3 (minimum z 5 listopada) unieważnia scenariusz.", tekst_en: "A daily close above 26,223.3 (the 5 November low) invalidates the setup." }
+    ],
+    tresc: [
+      "DAX spadł w piątek poniżej 25 877, więc czwartkowa analiza spadkowa została rozliczona jako trafiona. Według Trading Economics indeks traci ponad 2%, a obawy o ostrzejsze zasady dla AI w USA najpierw uderzyły w spółki technologiczne, a potem w inne sektory; najmocniej tracą Deutsche Post, Rheinmetall i Bayer.",
+      "W czwartek Wall Street zaliczyła najgorszy dzień od kwietnia 2025, a w piątek Nikkei stracił prawie 6%. Kontrakty w USA odbijają przed raportem z rynku pracy (Nasdaq 100 +1,5%).",
+      "O 14:30 raport z rynku pracy w USA (prognoza 65 tys.). Wsparcia to październikowe minima 25 340 i 25 014, a oporem czwartkowe minimum 26 223."
+    ],
+    tresc_en: [
+      "The DAX fell below 25,877 on Friday, so Thursday's bearish analysis was settled as a hit. According to Trading Economics the index loses more than 2%: fears of tighter US AI rules first hit tech stocks and then spread to other sectors, with Deutsche Post, Rheinmetall and Bayer among the biggest decliners.",
+      "On Thursday Wall Street had its worst day since April 2025, and on Friday the Nikkei lost almost 6%. US futures rebound ahead of the jobs report (Nasdaq 100 +1.5%).",
+      "The US jobs report is due at 14:30 (forecast 65k). Support is at the October lows of 25,340 and 25,014, resistance at Thursday's low of 26,223."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX Slips for 2nd Day (6 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
     id: "2026-11-06-sp500", instrument: "sp500", data: "2026-11-06", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "S&P 500 po najgorszym dniu od 2025 roku, celem 7 238", tytul_en: "S&P 500 after its worst day since 2025, eyeing 7,238",
@@ -111,6 +137,7 @@ window.ANALIZY = [
     lead: "DAX ustanowił w czwartek rekord przy 26 693 pkt, ale zamknął się na minusie, a wieczorem Wall Street straciła ponad 4% na wyprzedaży spółek chipowych. Dopóki indeks jest pod rekordem, bazą jest zejście do środowego minimum przy 25 877.",
     lead_en: "The DAX set a record near 26,693 on Thursday but closed lower, and in the evening Wall Street lost more than 4% in a chip stock selloff. While the index stays below the record, a drop to Wednesday's low near 25,877 is the base case.",
     poziomy: { cena: 26330, opory: [26693], wsparcia: [25876.8, 25665] },
+    wynik: { status: "trafiona", data: "2026-11-06", komentarz: "6 lis DAX spadł do około 25 690–25 750 pkt (−2,2%), poniżej celu S1 25 876,8, bez zamknięcia powyżej R1 26 693. Źródło ceny: Trading Economics (notowanie CFD).", komentarz_en: "On 6 Nov the DAX fell to about 25,690–25,750 (−2.2%), below the S1 target of 25,876.8, with no close above R1 26,693. Price source: Trading Economics (CFD quote)." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 25 876,8 pkt (minimum z 4 listopada), a po zamknięciu poniżej do 25 665 (poziom trendu według onvista).", tekst_en: "Base case: a drop to 25,876.8 (the 4 November low), and after a close below it to 25,665 (the trend level according to onvista)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 693 (rekord z 5 listopada według Trading Economics) unieważnia scenariusz.", tekst_en: "A daily close above 26,693 (the 5 November record according to Trading Economics) invalidates the setup." }
