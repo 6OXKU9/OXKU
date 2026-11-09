@@ -24,6 +24,83 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-09-zloto", instrument: "xauusd", data: "2026-11-09", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Złoto znów nad 4 100, celem 4 205", tytul_en: "Gold above $4,100 again, eyeing $4,205",
+    lead: "Złoto zamknęło piątek na 4 066 USD po danych z rynku pracy, ale w poniedziałek rano wraca nad 4 100. Dopóki cena nie zamknie dnia poniżej piątkowego minimum 4 031, bazą jest wzrost do maksimum z 9 października przy 4 205.",
+    lead_en: "Gold closed Friday at $4,066 after the jobs data, but returns above $4,100 on Monday morning. Unless the price closes a day below Friday's low of $4,031, a rise to the 9 October high near $4,205 is the base case.",
+    poziomy: { cena: 4110.93, opory: [4205.61, 4223.95], wsparcia: [4031.06, 3978.13] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 4 205,61 USD (maksimum z 9 października), a wyżej do 4 223,95 (maksimum z 2 października).", tekst_en: "Base case: a rise to $4,205.61 (the 9 October high), and higher to $4,223.95 (the 2 October high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 4 031,06 USD (minimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 3 978,13 (minimum z 23 października).", tekst_en: "A daily close below $4,031.06 (the 6 November low) invalidates the setup and opens the way to $3,978.13 (the 23 October low)." }
+    ],
+    tresc: [
+      "Złoto zamknęło piątek na 4 066,28 USD, poniżej 4 074,90, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. Mocny raport z rynku pracy (165 tys. miejsc pracy) wzmocnił dolara i oczekiwania podwyżki stóp Fed.",
+      "W poniedziałek rano złoto kosztuje około 4 111 USD (+1,0% według Trading Economics). Tańsza ropa po słowach Trumpa o małym prawdopodobieństwie nowych uderzeń na Iran zmniejsza obawy inflacyjne. W ubiegłym tygodniu złoto zyskało około 5%.",
+      "We wtorek inflacja CPI w USA, w piątek ceny producentów. Oporami są maksima z 9 i 2 października (4 205,61 i 4 223,95), wsparciami piątkowe minimum 4 031,06 i 3 978,13."
+    ],
+    tresc_en: [
+      "Gold closed Friday at $4,066.28, below $4,074.90, so the previous bullish analysis was settled as a miss. The strong jobs report (165k jobs) lifted the dollar and expectations of a Fed hike.",
+      "On Monday morning gold trades around $4,111 (+1.0% according to Trading Economics). Cheaper oil after Trump said new strikes on Iran are unlikely eases inflation fears. Last week gold gained about 5%.",
+      "US CPI inflation is due Tuesday and producer prices on Friday. Resistance is at the 9 and 2 October highs ($4,205.61 and $4,223.95), support at Friday's low of $4,031.06 and $3,978.13."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: złoto w poniedziałek nad 4 100 USD (9 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne złota (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAU=" }
+    ]
+  },
+  {
+    id: "2026-11-09-gbpusd", instrument: "gbpusd", data: "2026-11-09", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Funt pod 1,34 po danych z USA, celem 1,3269", tytul_en: "Sterling below 1.34 after US data, eyeing 1.3269",
+    lead: "GBP/USD spadł w piątek do 1,3339 po mocnym raporcie z rynku pracy w USA. Dopóki kurs jest pod piątkowym maksimum 1,3463, bazą jest zejście do minimum z 28 października przy 1,3269.",
+    lead_en: "GBP/USD fell to 1.3339 on Friday after the strong US jobs report. While the pair stays below Friday's high of 1.3463, a drop to the 28 October low near 1.3269 is the base case.",
+    poziomy: { cena: 1.3379, opory: [1.3463, 1.3506], wsparcia: [1.3269, 1.3132] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 1,3269 (minimum z 28 października), a niżej do 1,3132 (minimum z 14 października).", tekst_en: "Base case: a drop to 1.3269 (the 28 October low), and lower to 1.3132 (the 14 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3463 (maksimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 1,3506 (maksimum z 5 listopada).", tekst_en: "A daily close above 1.3463 (the 6 November high) invalidates the setup and opens the way to 1.3506 (the 5 November high)." }
+    ],
+    tresc: [
+      "GBP/USD zamknął piątek na 1,3349, poniżej 1,3376, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. Po podwyżce BoE do 4,00% funt doszedł do 1,3506, ale mocne dane z USA odwróciły ruch.",
+      "Dolar zyskał w piątek około 0,7%, bo rynek mocniej wycenia grudniową podwyżkę stóp Fed. W poniedziałek rano kurs jest przy 1,3379 (Trading Economics).",
+      "We wtorek inflacja CPI w USA. Opory to 1,3463 i 1,3506 (maksima z 6 i 5 listopada), wsparcia 1,3269 i 1,3132 (minima z października)."
+    ],
+    tresc_en: [
+      "GBP/USD closed Friday at 1.3349, below 1.3376, so the previous bullish analysis was settled as a miss. After the BoE hike to 4.00% sterling reached 1.3506, but the strong US data reversed the move.",
+      "The dollar gained about 0.7% on Friday as markets priced a December Fed hike more strongly. On Monday morning the pair is at 1.3379 (Trading Economics).",
+      "US CPI inflation is due Tuesday. Resistance is at 1.3463 and 1.3506 (the 6 and 5 November highs), support at 1.3269 and 1.3132 (October lows)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: waluty, 9 lis 2026", url: "https://tradingeconomics.com/currencies" },
+      { nazwa: "CNBC: świece dzienne GBP/USD (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/GBP=" }
+    ]
+  },
+  {
+    id: "2026-11-09-bitcoin", instrument: "btcusd", data: "2026-11-09", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin przy 74 000, celem 73 005", tytul_en: "Bitcoin near $74,000, eyeing $73,005",
+    lead: "Bitcoin spadł w weekend do 73 477 USD i w poniedziałek rano kosztuje około 74 250. Dopóki cena jest pod piątkowym maksimum 76 306, bazą jest zejście do sierpniowego minimum przy 73 005.",
+    lead_en: "Bitcoin fell to $73,477 over the weekend and trades around $74,250 on Monday morning. While the price stays below Friday's high of $76,306, a drop to the August low near $73,005 is the base case.",
+    poziomy: { cena: 74249.8, opory: [76306.3, 77699], wsparcia: [73004.7, 68853.2] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 73 004,7 USD (minimum z 21 sierpnia), a niżej do 68 853 (minimum z 20 sierpnia).", tekst_en: "Base case: a drop to $73,004.7 (the 21 August low), and lower to $68,853 (the 20 August low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 76 306 USD (maksimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 77 699 (minimum z 29 października).", tekst_en: "A daily close above $76,306 (the 6 November high) invalidates the setup and opens the way to $77,699 (the 29 October low)." }
+    ],
+    tresc: [
+      "Bitcoin spadł w piątek do 74 722 USD, poniżej celu 74 888, więc poprzednia analiza spadkowa została rozliczona jako trafiona. W niedzielę cena zeszła do 73 477, a w poniedziałek rano jest przy 74 250 (świece Coinbase).",
+      "Słabość kryptowalut trwa od wyprzedaży spółek AI po wyborach w USA, a mocne dane z rynku pracy wzmocniły dolara. Średnia z 20 dni jest przy 78 540, wyraźnie nad ceną.",
+      "We wtorek inflacja CPI w USA. Opory to 76 306 i 77 699, wsparcia sierpniowe minima 73 005 i 68 853."
+    ],
+    tresc_en: [
+      "Bitcoin fell to $74,722 on Friday, below the $74,888 target, so the previous bearish analysis was settled as a hit. On Sunday the price dropped to $73,477, and on Monday morning it is near $74,250 (Coinbase candles).",
+      "Crypto weakness has lasted since the AI stock selloff after the US elections, and strong jobs data lifted the dollar. The 20-day average is near $78,540, well above the price.",
+      "US CPI inflation is due Tuesday. Resistance is at $76,306 and $77,699, support at the August lows of $73,005 and $68,853."
+    ],
+    zrodla: [
+      { nazwa: "Coinbase: świece dzienne BTC/USD (maksima i minima z danych wykresów na stronie)", url: "https://www.coinbase.com/price/bitcoin" }
+    ]
+  },
+  {
     id: "2026-11-06-dax", instrument: "dax", data: "2026-11-06", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "DAX drugi dzień w dół, celem 25 340", tytul_en: "DAX down for a second day, eyeing 25,340",
@@ -111,6 +188,7 @@ window.ANALIZY = [
     lead: "Bitcoin zamknął czwartek na 75 969 USD po spadku razem z giełdami i w piątek rano kosztuje około 75 600. Dopóki cena jest pod 77 699, bazą jest zejście do wrześniowego minimum przy 74 888.",
     lead_en: "Bitcoin closed Thursday at $75,969 after falling with stocks and trades around $75,600 on Friday morning. While the price stays below $77,699, a drop to the September low near $74,888 is the base case.",
     poziomy: { cena: 75617.36, opory: [77699, 81130.8], wsparcia: [74887.5, 73004.7] },
+    wynik: { status: "trafiona", data: "2026-11-06", komentarz: "6 lis bitcoin spadł do 74 722 USD, poniżej celu S1 74 887,5, bez zamknięcia powyżej R1 77 699. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 6 Nov bitcoin fell to $74,722, below the S1 target of $74,887.5, with no close above R1 $77,699. Price source: Coinbase daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 74 887,5 USD (minimum z 15 września), a niżej do 73 004,7 (minimum z 21 sierpnia).", tekst_en: "Base case: a drop to $74,887.5 (the 15 September low), and lower to $73,004.7 (the 21 August low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 77 699 USD (minimum z 29 października) unieważnia scenariusz i otwiera drogę do 81 131 (maksimum z 4 listopada).", tekst_en: "A daily close above $77,699 (the 29 October low) invalidates the setup and opens the way to $81,131 (the 4 November high)." }
@@ -166,6 +244,7 @@ window.ANALIZY = [
     lead: "Złoto zyskało w środę 3,3% i w czwartek rano kosztuje około 4 124 USD, najwięcej od dwóch tygodni. Dopóki cena trzyma się nad średnią z 20 sesji (4 075), bazą jest wzrost do maksimum z 9 października przy 4 205.",
     lead_en: "Gold gained 3.3% on Wednesday and trades around $4,124 on Thursday morning, a two-week high. While the price holds above its 20-session average ($4,075), a rise to the 9 October high near $4,205 is the base case.",
     poziomy: { cena: 4123.69, opory: [4205.61, 4223.95], wsparcia: [4074.9, 4005.76] },
+    wynik: { status: "nietrafiona", data: "2026-11-06", komentarz: "6 lis złoto zamknęło dzień na 4 066,28 USD, poniżej S1 4 074,90, zanim cena dotknęła celu R1 4 205,61 (najwyżej 4 144,89). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 6 Nov gold closed at $4,066.28, below S1 $4,074.90, before reaching the R1 target of $4,205.61 (high $4,144.89). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 4 205,61 USD (maksimum z 9 października), a wyżej do 4 223,95 (maksimum z 2 października).", tekst_en: "Base case: a rise to $4,205.61 (the 9 October high), and higher to $4,223.95 (the 2 October high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 4 074,90 USD (średnia z 20 sesji) unieważnia scenariusz i otwiera drogę do 4 005,76 (minimum z 29 października).", tekst_en: "A daily close below $4,074.90 (the 20-session average) invalidates the setup and opens the way to $4,005.76 (the 29 October low)." }
@@ -272,6 +351,7 @@ window.ANALIZY = [
     lead: "GBP/USD doszedł w środę do 1,3503 i w czwartek rano jest przy 1,3492. Rynek w ponad 96% wycenia dzisiejszą podwyżkę stóp BoE do 4,00%. Dopóki kurs jest nad 1,3376, bazą jest wzrost do 1,3550.",
     lead_en: "GBP/USD reached 1.3503 on Wednesday and is at 1.3492 on Thursday morning. Markets price a more than 96% chance of a BoE hike to 4.00% today. While the pair stays above 1.3376, a rise to 1.3550 is the base case.",
     poziomy: { cena: 1.3492, opory: [1.355, 1.36], wsparcia: [1.3376, 1.3306] },
+    wynik: { status: "nietrafiona", data: "2026-11-06", komentarz: "6 lis GBP/USD zamknął dzień na 1,3349, poniżej S1 1,3376, zanim kurs dotknął celu R1 1,3550 (najwyżej 1,3506). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 6 Nov GBP/USD closed at 1.3349, below S1 1.3376, before reaching the R1 target of 1.3550 (high 1.3506). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 1,3550 (opór według InstaForex).", tekst_en: "Base case: a rise to 1.3550 (resistance according to InstaForex)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,3376 (minimum z 2 listopada) unieważnia scenariusz i otwiera drogę do 1,3306 (wsparcie według InstaForex).", tekst_en: "A daily close below 1.3376 (the 2 November low) invalidates the setup and opens the way to 1.3306 (support according to InstaForex)." }
