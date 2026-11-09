@@ -1,48 +1,47 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-11-09T08:00:00+01:00",
-  stanNa_en: "Monday morning, 9 Nov 2026 (before the European and London open)",
-  stanNa: "poniedziałek rano, 9 lis 2026 (przed sesją w Europie i Londynie)",
-  naglowek_en: "Asia rebounds at the start of the week: Nikkei +2.4%, TAIEX +4.9%. US futures rise ahead of Tuesday's CPI. Oil falls 1.3% after Trump played down new strikes on Iran; gold gains 1%. Bitcoin dipped to $73,477 over the weekend.",
-  naglowek: "Azja odbija na początek tygodnia: Nikkei +2,4%, TAIEX +4,9%. Kontrakty w USA rosną przed wtorkowym odczytem CPI. Ropa tanieje o 1,3% po tym, jak Trump osłabił obawy przed nowymi atakami na Iran; złoto zyskuje 1%. Bitcoin w weekend spadł do 73 477 USD.",
+  aktualizacja: "2026-11-09T13:50:00+01:00",
+  stanNa_en: "Monday afternoon, 9 Nov 2026 (before the US open)",
+  stanNa: "poniedziałek po południu, 9 lis 2026 (przed sesją w USA)",
+  naglowek_en: "Europe rebounds: DAX +1.0%, Euro Stoxx 50 +1.2%. US futures recover after Friday, but Nvidia falls more than 5% on reports about its CEO. Oil drops almost 3%, gold rises above $4,100. No major US data today; CPI on Tuesday.",
+  naglowek: "Europa odbija: DAX +1,0%, Euro Stoxx 50 +1,2%. Kontrakty w USA odrabiają piątek, ale Nvidia traci ponad 5% po doniesieniach dotyczących prezesa. Ropa tanieje o prawie 3%, złoto powyżej 4 100 USD. Dziś bez ważnych danych z USA; CPI we wtorek.",
   punkty: [
-    "Azja zaczyna tydzień odbiciem: Nikkei około 58 800 (+2,4%), tajwański TAIEX +4,9%, Chiny +0,4%, Hang Seng +0,2%. Po czwartkowej wyprzedaży spółek AI inwestorzy wracają do producentów chipów.",
-    "Kontrakty na Wall Street rosną: S&P 500 około 7 406 (+0,4% wobec piątku), Nasdaq 100 około 26 944. Rada nadzorcza Nvidii wszczęła wewnętrzne dochodzenie w sprawie zarzutów wobec Jensena Huanga, co może ważyć na spółce.",
-    "Ropa tanieje: WTI około 89,7 USD (−1,3%), Brent około 96,5 USD, po słowach Trumpa, że nowe ataki na Iran są „bardzo mało prawdopodobne”, jeśli rozmowy będą postępować. Złoto około 4 111 USD (+1,0%), srebro około 52,5 USD (+1,3%).",
-    "Dolar lekko słabnie po piątkowym skoku: indeks około 102,1 (−0,2%). EUR/USD 1,1158, GBP/USD 1,3379, USD/JPY 158,3, USD/PLN 3,9340. Bitcoin około 74 250 USD, w weekend spadł do 73 477.",
-    "Rozliczenia: trafiona analiza spadkowa bitcoina (minimum 74 722), nietrafione analizy wzrostowe złota i funta. Skuteczność 19 z 42. Nowe szkice: złoto w górę, funt i bitcoin w dół. We wtorek bilans handlowy Chin (4:00) i inflacja CPI w USA (14:30), w piątek PPI."
+    "Europa odrabia straty z zeszłego tygodnia: DAX około 26 077 (+1,0%), Euro Stoxx 50 +1,2%, banki strefy euro +2,5%. SAP zyskuje prawie 2% po podwyższeniu rekomendacji przez JPMorgan, Commerzbank ponad 3%, Rheinmetall 2%; Hochtief traci 4%.",
+    "Nvidia traci we Frankfurcie około 6%, a przed sesją w USA ponad 5,5%, po doniesieniach o śledztwie w sprawie domniemanego spisku wymierzonego w prezesa Jensena Huanga i o możliwych ostrzejszych kontrolach eksportu.",
+    "Kontrakty na Wall Street odbijają po piątku: S&P 500 około 7 429 (+0,7% wobec piątkowego zamknięcia), Nasdaq 100 około 27 110 (+0,4%), Dow mocniej. Zyskują Broadcom i AMD. Dziś w USA nie ma ważnych odczytów; uwaga rynku jest na wtorkowej inflacji CPI.",
+    "Ropa tanieje dalej: WTI około 88,3 USD (−2,8%), Brent około 94,9 USD, bo Trump osłabił obawy przed nowymi atakami na Iran. Tańsza ropa zmniejsza obawy o inflację i wspiera złoto: około 4 115 USD (+1,2%). Srebro około 52,7 USD, powyżej unieważnienia szkicu spadkowego (52,50); decyduje zamknięcie dnia.",
+    "Dolar lekko słabszy: indeks około 102,1 (−0,2%), EUR/USD 1,1158, GBP/USD 1,3379, USD/JPY 158,3, USD/PLN 3,9340. Bitcoin około 74 900 USD, minimum z doby 73 415 nad celem szkicu (73 005). W ciągu dnia żaden poziom analiz nie został rozstrzygnięty; rozliczenia wieczorem."
   ],
   punkty_en: [
-    "Asia opens the week with a rebound: the Nikkei around 58,800 (+2.4%), Taiwan's TAIEX +4.9%, China +0.4%, Hang Seng +0.2%. After Thursday's AI selloff, investors return to chipmakers.",
-    "Wall Street futures are higher: S&P 500 around 7,406 (+0.4% versus Friday), Nasdaq 100 around 26,944. Nvidia's board opened an internal investigation into allegations involving Jensen Huang, which may weigh on the stock.",
-    "Oil falls: WTI around $89.7 (−1.3%), Brent around $96.5, after Trump said new strikes on Iran are \"highly unlikely\" if talks progress. Gold around $4,111 (+1.0%), silver around $52.5 (+1.3%).",
-    "The dollar eases after Friday's jump: the index around 102.1 (−0.2%). EUR/USD 1.1158, GBP/USD 1.3379, USD/JPY 158.3, USD/PLN 3.9340. Bitcoin around $74,250, down to $73,477 over the weekend.",
-    "Settlements: the bearish bitcoin analysis hit (low $74,722); the bullish gold and pound analyses missed. Hit rate 19 of 42. New drafts: gold up, the pound and bitcoin down. On Tuesday China's trade balance (4:00) and US CPI inflation (14:30), PPI on Friday."
+    "Europe recovers last week's losses: DAX around 26,077 (+1.0%), Euro Stoxx 50 +1.2%, eurozone banks +2.5%. SAP gains almost 2% after a JPMorgan upgrade, Commerzbank over 3%, Rheinmetall 2%; Hochtief falls 4%.",
+    "Nvidia falls about 6% in Frankfurt and more than 5.5% before the US open, on reports of an investigation into an alleged plot targeting CEO Jensen Huang and possible tighter export controls.",
+    "Wall Street futures rebound after Friday: S&P 500 around 7,429 (+0.7% versus Friday's close), Nasdaq 100 around 27,110 (+0.4%), the Dow stronger. Broadcom and AMD gain. No major US data today; attention is on Tuesday's CPI inflation.",
+    "Oil keeps falling: WTI around $88.3 (−2.8%), Brent around $94.9, as Trump played down fears of new strikes on Iran. Cheaper oil eases inflation worries and supports gold: around $4,115 (+1.2%). Silver around $52.7, above the bearish draft's invalidation ($52.50); the daily close decides.",
+    "The dollar is slightly weaker: the index around 102.1 (−0.2%), EUR/USD 1.1158, GBP/USD 1.3379, USD/JPY 158.3, USD/PLN 3.9340. Bitcoin around $74,900; the 24-hour low of $73,415 stayed above the draft's target ($73,005). No analysis level was decided intraday; settlements in the evening."
   ],
   instrumenty: {
-    sp500: { kurs: 7406.47, zmiana: 0.4, tydzien: -1.79, notka: "Kontrakt CFD przed sesją. Analiza spadkowa: cel 7 238, unieważnienie 7 545.", notka_en: "Pre-market CFD quote. Bearish analysis: target 7,238, invalidation 7,545.", zrodlo: 1 },
-    nasdaq: { kurs: 26943.52, zmiana: -0.17, tydzien: -3.74, notka: "Kontrakt CFD przed sesją. Analiza neutralna: zakres 26 606–27 967.", notka_en: "Pre-market CFD quote. Neutral analysis: 26,606–27,967 range.", zrodlo: 1 },
-    xauusd: { kurs: 4110.93, zmiana: 1.1, tydzien: 4.18, notka: "Nowy szkic wzrostowy: cel 4 206, unieważnienie 4 031.", notka_en: "New bullish draft: target $4,206, invalidation $4,031.", zrodlo: 0 },
+    sp500: { kurs: 7428.9, zmiana: 0.71, tydzien: -1.49, notka: "Kontrakt CFD przed sesją. Analiza spadkowa: cel 7 238, unieważnienie 7 545.", notka_en: "Pre-market CFD quote. Bearish analysis: target 7,238, invalidation 7,545.", zrodlo: 1 },
+    nasdaq: { kurs: 27110.44, zmiana: 0.45, tydzien: -3.14, notka: "Kontrakt CFD przed sesją. Analiza neutralna: zakres 26 606–27 967.", notka_en: "Pre-market CFD quote. Neutral analysis: 26,606–27,967 range.", zrodlo: 1 },
+    xauusd: { kurs: 4114.96, zmiana: 1.2, tydzien: 4.28, notka: "Szkic wzrostowy: cel 4 206, unieważnienie 4 031.", notka_en: "Bullish draft: target $4,206, invalidation $4,031.", zrodlo: 0 },
     eurusd: { kurs: 1.1158, zmiana: 0.13, tydzien: -0.24, notka: "Analiza neutralna: zakres 1,1113–1,1260.", notka_en: "Neutral analysis: 1.1113–1.1260 range.", zrodlo: 2 },
-    gbpusd: { kurs: 1.3379, zmiana: 0.22, tydzien: -0.19, notka: "Nowy szkic spadkowy: cel 1,3269, unieważnienie 1,3463.", notka_en: "New bearish draft: target 1.3269, invalidation 1.3463.", zrodlo: 2 },
+    gbpusd: { kurs: 1.3379, zmiana: 0.22, tydzien: -0.19, notka: "Szkic spadkowy: cel 1,3269, unieważnienie 1,3463.", notka_en: "Bearish draft: target 1.3269, invalidation 1.3463.", zrodlo: 2 },
     usdjpy: { kurs: 158.26, zmiana: -0.12, tydzien: 0.2, notka: "Analiza neutralna: zakres 156,75–159,05, termin około 11 lis.", notka_en: "Neutral analysis: 156.75–159.05 range, horizon around 11 Nov.", zrodlo: 2 },
-    xagusd: { kurs: 52.53, zmiana: 1.25, tydzien: 3.71, notka: "Szkic spadkowy: cel 48,29, unieważnienie 52,50; kurs tuż powyżej, decyduje zamknięcie dnia.", notka_en: "Bearish draft: target $48.29, invalidation $52.50; price just above it, the daily close decides.", zrodlo: 0 },
-    usdpln: { kurs: 3.934, zmiana: -0.18, tydzien: -0.31, notka: "Analiza spadkowa: cel 3,8674, unieważnienie 3,9423; piątkowe zamknięcie 3,9409 było tuż pod nim.", notka_en: "Bearish analysis: target 3.8674, invalidation 3.9423; Friday's close of 3.9409 was just below it.", zrodlo: 2 },
-    wti: { kurs: 89.66, zmiana: -1.29, tydzien: -7.05, notka: "Najbliższy kontrakt. Analiza spadkowa: cel 84,11, unieważnienie 93,59.", notka_en: "Front-month contract. Bearish analysis: target $84.11, invalidation $93.59.", zrodlo: 0 },
-    dax: { kurs: 25820.4, zmiana: 0.0, tydzien: -0.62, notka: "Zamknięcie z piątku, przed otwarciem. Analiza spadkowa: cel 25 340, unieważnienie 26 223.", notka_en: "Friday close, before the open. Bearish analysis: target 25,340, invalidation 26,223.", zrodlo: 3 },
-    btcusd: { kurs: 74249.8, zmiana: -0.67, tydzien: -3.16, notka: "Coinbase. Nowy szkic spadkowy: cel 73 005, unieważnienie 76 306; w weekend minimum 73 477.", notka_en: "Coinbase. New bearish draft: target $73,005, invalidation $76,306; weekend low $73,477.", zrodlo: 4 }
+    xagusd: { kurs: 52.69, zmiana: 1.56, tydzien: 4.02, notka: "Szkic spadkowy: cel 48,29, unieważnienie 52,50; kurs powyżej, decyduje zamknięcie dnia.", notka_en: "Bearish draft: target $48.29, invalidation $52.50; price above it, the daily close decides.", zrodlo: 0 },
+    usdpln: { kurs: 3.934, zmiana: -0.18, tydzien: -0.31, notka: "Analiza spadkowa: cel 3,8674, unieważnienie 3,9423.", notka_en: "Bearish analysis: target 3.8674, invalidation 3.9423.", zrodlo: 2 },
+    wti: { kurs: 88.29, zmiana: -2.8, tydzien: -8.47, notka: "Najbliższy kontrakt. Analiza spadkowa: cel 84,11, unieważnienie 93,59.", notka_en: "Front-month contract. Bearish analysis: target $84.11, invalidation $93.59.", zrodlo: 0 },
+    dax: { kurs: 26076.6, zmiana: 0.99, tydzien: 0.37, notka: "W trakcie sesji. Analiza spadkowa: cel 25 340, unieważnienie 26 223.", notka_en: "During the session. Bearish analysis: target 25,340, invalidation 26,223.", zrodlo: 3 },
+    btcusd: { kurs: 74906, zmiana: 0.2, tydzien: -2.31, notka: "Gemini. Szkic spadkowy: cel 73 005, unieważnienie 76 306; minimum z 24 godzin 73 415.", notka_en: "Gemini. Bearish draft: target $73,005, invalidation $76,306; 24-hour low $73,415.", zrodlo: 4 }
   },
   kalendarz: [
     { dzien: "Wt 10 lis", wydarzenia: ["Chiny: bilans handlowy (4:00)", "USA: inflacja CPI (14:30)"] }
   ],
   zrodla: [
-    { nazwa: "Trading Economics: złoto, srebro, ropa WTI i Brent (9 lis 2026)", nazwa_en: "Trading Economics: gold, silver, WTI and Brent crude (9 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
-    { nazwa: "Trading Economics: rynek akcji USA, kontrakty przed sesją 9 lis 2026", nazwa_en: "Trading Economics: US stock market, pre-market 9 Nov 2026", url: "https://tradingeconomics.com/united-states/stock-market" },
+    { nazwa: "Trading Economics: Gold Advances on Softer Oil Prices; srebro, ropa WTI i Brent (9 lis 2026)", nazwa_en: "Trading Economics: Gold Advances on Softer Oil Prices; silver, WTI and Brent crude (9 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+    { nazwa: "Trading Economics: US Futures Rebound from Friday Plunge (9 lis 2026)", nazwa_en: "Trading Economics: US Futures Rebound from Friday Plunge (9 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
     { nazwa: "Trading Economics: waluty i indeks dolara (9 lis 2026)", nazwa_en: "Trading Economics: currencies and the dollar index (9 Nov 2026)", url: "https://tradingeconomics.com/currencies" },
-    { nazwa: "Trading Economics: DAX, zamknięcie 6 lis 2026", nazwa_en: "Trading Economics: DAX, 6 Nov 2026 close", url: "https://tradingeconomics.com/germany/stock-market" },
-    { nazwa: "Coinbase: świeca dzienna BTC/USD (9 lis 2026)", nazwa_en: "Coinbase: BTC/USD daily candle (9 Nov 2026)", url: "https://www.coinbase.com/price/bitcoin" },
-    { nazwa: "Trading Economics: giełda w Japonii i Azji (9 lis 2026)", nazwa_en: "Trading Economics: Japan and Asian stock markets (9 Nov 2026)", url: "https://tradingeconomics.com/japan/stock-market" },
+    { nazwa: "Trading Economics: DAX Edges Higher as Market Sentiment Stabilizes (9 lis 2026)", nazwa_en: "Trading Economics: DAX Edges Higher as Market Sentiment Stabilizes (9 Nov 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+    { nazwa: "Gemini: notowanie BTC/USD (9 lis 2026)", nazwa_en: "Gemini: BTC/USD quote (9 Nov 2026)", url: "https://www.gemini.com/prices/bitcoin" },
     { nazwa: "Trading Economics: inflacja CPI w USA, termin i poprzedni odczyt", nazwa_en: "Trading Economics: US CPI inflation, release date and previous reading", url: "https://tradingeconomics.com/united-states/inflation-cpi" }
   ]
 };
