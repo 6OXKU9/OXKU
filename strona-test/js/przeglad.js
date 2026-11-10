@@ -1,47 +1,48 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-11-10T13:50:00+01:00",
-  stanNa_en: "Tuesday afternoon, 10 Nov 2026 (before the US open and CPI)",
-  stanNa: "wtorek po południu, 10 lis 2026 (przed sesją w USA i odczytem CPI)",
-  naglowek_en: "The DAX gains 1.2% and nears its record, led by Infineon after record results. US futures are flat ahead of the 14:30 CPI. Gold and silver fall about 1.5–2%, WTI drops to around $85.",
-  naglowek: "DAX zyskuje 1,2% i zbliża się do rekordu, na czele Infineon po rekordowych wynikach. Kontrakty w USA bez zmian przed odczytem CPI o 14:30. Złoto i srebro tracą około 1,5–2%, WTI spada do około 85 USD.",
+  aktualizacja: "2026-11-10T22:30:00+01:00",
+  stanNa_en: "Tuesday evening, 10 Nov 2026 (after the US close, before Asia)",
+  stanNa: "wtorek wieczorem, 10 lis 2026 (po sesji w USA, przed Azją)",
+  naglowek_en: "US inflation above forecasts: CPI +0.4% m/m, core +0.3%. The Fed's Waller sounds hawkish and a bigger December hike enters the debate. The dollar gains 0.6%, gold falls 2.6% to around $4,032. S&P 500 −0.3%, Nasdaq 100 −0.6%, Nvidia −5.5%.",
+  naglowek: "Inflacja w USA powyżej prognoz: CPI +0,4% m/m, bazowa +0,3%. Waller z Fed mówi jastrzębio, a rynek bierze pod uwagę większą podwyżkę w grudniu. Dolar zyskuje 0,6%, złoto traci 2,6%, do około 4 032 USD. S&P 500 −0,3%, Nasdaq 100 −0,6%, Nvidia −5,5%.",
   punkty: [
-    "DAX rośnie o około 1,2% do około 26 580, blisko rekordu z 5 listopada (26 693). Infineon zyskuje do 7% po rekordowych wynikach za czwarty kwartał i rok obrotowy 2026 oraz mocnej prognozie. Rosną Rheinmetall, MTU, Continental, Daimler Truck i Siemens Energy (2–4,5%), banki około 2%, Lufthansa 1,7% dzięki tańszej ropie.",
-    "Euro Stoxx 50 +0,9%, giełda w Londynie +0,5%. Kontrakty w USA stoją w miejscu po poniedziałkowym odbiciu: S&P 500 około 7 552, Nasdaq 100 około 27 800 (lekko w dół), Dow około +0,4%; banki JPMorgan i Citigroup około +1% przed sesją.",
-    "Dziś o 14:30 inflacja CPI w USA za październik: prognoza +0,3% m/m i bazowa +0,2% m/m. BLS może nie podać zmian rocznych. Rynek wycenia około 84% szans na grudniową podwyżkę stóp Fed, wobec około 74% tydzień temu.",
-    "Metale tracą przed danymi: złoto około 4 078 USD (−1,5%), srebro około 52,2 USD (−2,2%). Ropa dalej tanieje na nadziejach na porozumienie USA z Iranem: WTI około 84,9 USD (−2,2%), blisko celu analizy spadkowej (84,11), Brent około 90,1 USD.",
-    "Dolar stabilny: indeks około 101,7, EUR/USD 1,1218, GBP/USD 1,3429, USD/JPY 158,2. Bitcoin około 74 200 USD. W ciągu dnia żaden poziom analiz nie został rozstrzygnięty; rozliczenia rano po świecach."
+    "Inflacja CPI w USA za październik wyższa od prognoz: +0,4% m/m wobec 0,3%, bazowa +0,3% m/m wobec 0,2%. BLS nie podał zmian rocznych, bo dane z października 2025 nie zostały zebrane w czasie zamknięcia rządu. Członek zarządu Fed Christopher Waller mówił jastrzębio; rynek bierze pod uwagę nawet podwyżkę o 0,5 pkt proc. w grudniu.",
+    "Wall Street traci: S&P 500 około 7 530 (−0,3%), Nasdaq 100 około 27 750 (−0,6%), Dow Jones około 52 284 (−0,2%). Nvidia spada o kolejne 5,5%, Microsoft o 2,2%, Oracle o 1,5%; inwestorzy pytają, czy wydatki na AI są do utrzymania. Tanieją też obligacje.",
+    "Europa przed danymi: DAX zamknął się około 26 409 (+0,5%) po rekordzie w ciągu dnia (26 634); Henkel +3,7%, Zalando +3,3%, Daimler Truck +2,8%; Siemens Energy −3,8%, Porsche SE −3,6%, Volkswagen −2,5%.",
+    "Dolar zyskuje po danych: indeks około 102,3 (+0,6%), EUR/USD 1,1163, GBP/USD 1,3342, USD/JPY 158,8. Złoto mocno tanieje: około 4 032 USD (−2,6%), tuż nad unieważnieniem szkicu wzrostowego (4 031); srebro około 51,5 USD (−3,5%), tuż nad 51,38. Ropa WTI około 86,4 USD, Brent około 92,0 USD.",
+    "Bitcoin spadł w ciągu doby do 72 680 USD, poniżej celu szkicu spadkowego (73 005), i jest przy 73 850. Rozliczenia rano po świecach; o złocie i srebrze zdecydują zamknięcia dnia. W tym tygodniu jeszcze ceny producentów PPI w USA."
   ],
   punkty_en: [
-    "The DAX rises about 1.2% to around 26,580, close to the 5 November record (26,693). Infineon gains up to 7% after record fourth-quarter and fiscal 2026 results and a strong outlook. Rheinmetall, MTU, Continental, Daimler Truck and Siemens Energy rise (2–4.5%), banks about 2%, Lufthansa 1.7% on cheaper oil.",
-    "Euro Stoxx 50 +0.9%, London +0.5%. US futures hold steady after Monday's rebound: S&P 500 around 7,552, Nasdaq 100 around 27,800 (slightly lower), Dow about +0.4%; JPMorgan and Citigroup about +1% pre-market.",
-    "US October CPI inflation is due today at 14:30: the forecast is +0.3% m/m and core +0.2% m/m. The BLS may not publish annual changes. Markets price about 84% odds of a December Fed hike, up from about 74% a week ago.",
-    "Metals fall ahead of the data: gold around $4,078 (−1.5%), silver around $52.2 (−2.2%). Oil keeps falling on hopes of a US-Iran deal: WTI around $84.9 (−2.2%), close to the bearish analysis target ($84.11), Brent around $90.1.",
-    "The dollar is steady: the index around 101.7, EUR/USD 1.1218, GBP/USD 1.3429, USD/JPY 158.2. Bitcoin around $74,200. No analysis level was decided intraday; settlements in the morning after the candles."
+    "US October CPI inflation came in above forecasts: +0.4% m/m versus 0.3%, core +0.3% m/m versus 0.2%. The BLS did not publish annual changes, because October 2025 data were not collected during the government shutdown. Fed Governor Christopher Waller sounded hawkish; markets now consider even a 0.5-point hike in December.",
+    "Wall Street falls: S&P 500 around 7,530 (−0.3%), Nasdaq 100 around 27,750 (−0.6%), Dow Jones around 52,284 (−0.2%). Nvidia drops another 5.5%, Microsoft 2.2%, Oracle 1.5%; investors question whether AI spending is sustainable. Bonds also sell off.",
+    "Europe before the data: the DAX closed around 26,409 (+0.5%) after an intraday record (26,634); Henkel +3.7%, Zalando +3.3%, Daimler Truck +2.8%; Siemens Energy −3.8%, Porsche SE −3.6%, Volkswagen −2.5%.",
+    "The dollar gains after the data: the index around 102.3 (+0.6%), EUR/USD 1.1163, GBP/USD 1.3342, USD/JPY 158.8. Gold falls sharply: around $4,032 (−2.6%), just above the bullish draft's invalidation ($4,031); silver around $51.5 (−3.5%), just above $51.38. WTI crude around $86.4, Brent around $92.0.",
+    "Bitcoin fell to $72,680 within the day, below the bearish draft's target ($73,005), and is near $73,850. Settlements in the morning after the candles; daily closes will decide gold and silver. US producer prices (PPI) are still due this week."
   ],
   instrumenty: {
-    sp500: { kurs: 7551.67, zmiana: 0.02, tydzien: -0.23, notka: "Kontrakt CFD przed sesją. Szkic wzrostowy: cel 7 716, unieważnienie 7 422.", notka_en: "Pre-market CFD quote. Bullish draft: target 7,716, invalidation 7,422.", zrodlo: 1 },
-    nasdaq: { kurs: 27799.52, zmiana: -0.39, tydzien: -1.35, notka: "Kontrakt CFD przed sesją. Analiza neutralna: zakres 26 606–27 967.", notka_en: "Pre-market CFD quote. Neutral analysis: 26,606–27,967 range.", zrodlo: 1 },
-    xauusd: { kurs: 4077.54, zmiana: -1.53, tydzien: 3.76, notka: "Szkic wzrostowy: cel 4 206, unieważnienie 4 031.", notka_en: "Bullish draft: target $4,206, invalidation $4,031.", zrodlo: 0 },
-    eurusd: { kurs: 1.1218, zmiana: -0.04, tydzien: 0.22, notka: "Analiza neutralna: zakres 1,1113–1,1260.", notka_en: "Neutral analysis: 1.1113–1.1260 range.", zrodlo: 2 },
-    gbpusd: { kurs: 1.3429, zmiana: -0.08, tydzien: 0.13, notka: "Szkic spadkowy: cel 1,3269, unieważnienie 1,3463.", notka_en: "Bearish draft: target 1.3269, invalidation 1.3463.", zrodlo: 2 },
-    usdjpy: { kurs: 158.2, zmiana: 0.19, tydzien: -0.29, notka: "Analiza neutralna: zakres 156,75–159,05, termin około 11 lis.", notka_en: "Neutral analysis: 156.75–159.05 range, horizon around 11 Nov.", zrodlo: 2 },
-    xagusd: { kurs: 52.22, zmiana: -2.2, tydzien: 4.88, notka: "Szkic wzrostowy: cel 54,73, unieważnienie 51,38.", notka_en: "Bullish draft: target $54.73, invalidation $51.38.", zrodlo: 0 },
+    sp500: { kurs: 7529.5, zmiana: -0.27, tydzien: -0.52, notka: "Zamknięcie (CFD). Szkic wzrostowy: cel 7 716, unieważnienie 7 422.", notka_en: "Close (CFD). Bullish draft: target 7,716, invalidation 7,422.", zrodlo: 1 },
+    nasdaq: { kurs: 27749.81, zmiana: -0.57, tydzien: -1.53, notka: "Zamknięcie (CFD). Analiza neutralna: zakres 26 606–27 967.", notka_en: "Close (CFD). Neutral analysis: 26,606–27,967 range.", zrodlo: 1 },
+    xauusd: { kurs: 4031.87, zmiana: -2.63, tydzien: 2.59, notka: "Szkic wzrostowy: cel 4 206, unieważnienie 4 031; kurs tuż nad unieważnieniem, rozliczenie rano.", notka_en: "Bullish draft: target $4,206, invalidation $4,031; price just above invalidation, settlement in the morning.", zrodlo: 0 },
+    eurusd: { kurs: 1.1163, zmiana: -0.53, tydzien: -0.27, notka: "Analiza neutralna: zakres 1,1113–1,1260.", notka_en: "Neutral analysis: 1.1113–1.1260 range.", zrodlo: 2 },
+    gbpusd: { kurs: 1.3342, zmiana: -0.73, tydzien: -0.51, notka: "Szkic spadkowy: cel 1,3269, unieważnienie 1,3463.", notka_en: "Bearish draft: target 1.3269, invalidation 1.3463.", zrodlo: 2 },
+    usdjpy: { kurs: 158.78, zmiana: 0.56, tydzien: 0.08, notka: "Analiza neutralna: zakres 156,75–159,05, termin około 11 lis.", notka_en: "Neutral analysis: 156.75–159.05 range, horizon around 11 Nov.", zrodlo: 2 },
+    xagusd: { kurs: 51.53, zmiana: -3.49, tydzien: 3.49, notka: "Szkic wzrostowy: cel 54,73, unieważnienie 51,38; kurs tuż nad unieważnieniem.", notka_en: "Bullish draft: target $54.73, invalidation $51.38; price just above invalidation.", zrodlo: 0 },
     usdpln: { kurs: 3.9064, zmiana: 0.0, tydzien: -0.84, notka: "Zamknięcie z poniedziałku. Analiza spadkowa: cel 3,8674, unieważnienie 3,9423.", notka_en: "Monday close. Bearish analysis: target 3.8674, invalidation 3.9423.", zrodlo: 3 },
-    wti: { kurs: 84.95, zmiana: -2.19, tydzien: -11.59, notka: "Najbliższy kontrakt. Analiza spadkowa: cel 84,11, unieważnienie 93,59; kurs blisko celu.", notka_en: "Front-month contract. Bearish analysis: target $84.11, invalidation $93.59; price close to the target.", zrodlo: 0 },
-    dax: { kurs: 26579, zmiana: 1.19, tydzien: 2.76, notka: "W trakcie sesji (CFD). Szkic wzrostowy: cel 26 693, unieważnienie 25 793.", notka_en: "During the session (CFD). Bullish draft: target 26,693, invalidation 25,793.", zrodlo: 3 },
-    btcusd: { kurs: 74204, zmiana: -1.4, tydzien: -4.05, notka: "Gemini. Szkic spadkowy: cel 73 005, unieważnienie 76 306.", notka_en: "Gemini. Bearish draft: target $73,005, invalidation $76,306.", zrodlo: 4 }
+    wti: { kurs: 86.38, zmiana: -0.54, tydzien: -10.11, notka: "Najbliższy kontrakt. Analiza spadkowa: cel 84,11, unieważnienie 93,59.", notka_en: "Front-month contract. Bearish analysis: target $84.11, invalidation $93.59.", zrodlo: 0 },
+    dax: { kurs: 26409, zmiana: 0.54, tydzien: 2.1, notka: "Zamknięcie sesji. Szkic wzrostowy: cel 26 693, unieważnienie 25 793; w ciągu dnia rekord 26 634.", notka_en: "Session close. Bullish draft: target 26,693, invalidation 25,793; intraday record 26,634.", zrodlo: 4 },
+    btcusd: { kurs: 73852, zmiana: -1.87, tydzien: -4.51, notka: "Gemini. Szkic spadkowy: cel 73 005; minimum doby 72 680, rozliczenie rano.", notka_en: "Gemini. Bearish draft: target $73,005; 24-hour low $72,680, settlement in the morning.", zrodlo: 5 }
   },
   kalendarz: [
-    { dzien: "Wt 10 lis", wydarzenia: ["USA: inflacja CPI (14:30)"] }
+    { dzien: "Ten tydzień", wydarzenia: ["USA: ceny producentów PPI"] }
   ],
   zrodla: [
-    { nazwa: "Trading Economics: Gold Eases Ahead of US Inflation Data; srebro, ropa WTI i Brent (10 lis 2026)", nazwa_en: "Trading Economics: Gold Eases Ahead of US Inflation Data; silver, WTI and Brent crude (10 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
-    { nazwa: "Trading Economics: US Futures Hold Steady (10 lis 2026)", nazwa_en: "Trading Economics: US Futures Hold Steady (10 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
-    { nazwa: "Trading Economics: indeks dolara i główne pary walutowe (10 lis 2026)", nazwa_en: "Trading Economics: the dollar index and major currency pairs (10 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
-    { nazwa: "Trading Economics: DAX Hovers Near Record Highs (10 lis 2026); USD/PLN: zamknięcie CNBC z 9 lis", nazwa_en: "Trading Economics: DAX Hovers Near Record Highs (10 Nov 2026); USD/PLN: CNBC close on 9 Nov", url: "https://tradingeconomics.com/germany/stock-market" },
+    { nazwa: "Trading Economics: Gold Slumps on Hotter Inflation and Hawkish Fed Comments; srebro, ropa (10 lis 2026)", nazwa_en: "Trading Economics: Gold Slumps on Hotter Inflation and Hawkish Fed Comments; silver, crude (10 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+    { nazwa: "Trading Economics: rynek akcji USA, zamknięcie 10 lis 2026", nazwa_en: "Trading Economics: US stock market, 10 Nov 2026 close", url: "https://tradingeconomics.com/united-states/stock-market" },
+    { nazwa: "Trading Economics: Dollar Extends Gains on Hotter CPI, Hawkish Fed Comments (10 lis 2026)", nazwa_en: "Trading Economics: Dollar Extends Gains on Hotter CPI, Hawkish Fed Comments (10 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+    { nazwa: "CNBC: zamknięcie USD/PLN z 9 lis 2026 (świece dzienne)", nazwa_en: "CNBC: USD/PLN close on 9 Nov 2026 (daily candles)", url: "https://www.cnbc.com/quotes/PLN=" },
+    { nazwa: "Trading Economics: DAX, zamknięcie 10 lis 2026", nazwa_en: "Trading Economics: DAX, 10 Nov 2026 close", url: "https://tradingeconomics.com/germany/stock-market" },
     { nazwa: "Gemini: notowanie BTC/USD (10 lis 2026)", nazwa_en: "Gemini: BTC/USD quote (10 Nov 2026)", url: "https://www.gemini.com/prices/bitcoin" },
-    { nazwa: "Trading Economics: inflacja CPI w USA, prognoza na październik", nazwa_en: "Trading Economics: US CPI inflation, October forecast", url: "https://tradingeconomics.com/united-states/inflation-cpi" }
+    { nazwa: "Trading Economics: inflacja CPI w USA, październik 2026", nazwa_en: "Trading Economics: US CPI inflation, October 2026", url: "https://tradingeconomics.com/united-states/inflation-cpi" }
   ]
 };
