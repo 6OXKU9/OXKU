@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-09T22:30:00+01:00",
+  aktualizacja: "2026-11-10T08:00:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -94,8 +94,7 @@ window.KALENDARZ = {
 
 
 
-    { czas: "2026-11-06T14:30:00+01:00", kraj: "US", nazwa: "Raport z rynku pracy (paź)", poprzednio: "29 tys.; stopa bezrobocia 4,2%", prognoza: "65 tys.; 4,2%", poprzednio_en: "29k; unemployment rate 4.2%", prognoza_en: "65k; 4.2%", aktualnie: "165 tys.; bezrobocie 4,1%; płace +0,4% m/m (wrzesień po korekcie 60 tys.)", aktualnie_en: "165k; unemployment 4.1%; wages +0.4% m/m (September revised to 60k)", wplyw: 4, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "xagusd", "nasdaq", "sp500", "usdpln"], opis: "Po wyborach w USA (wt 3 lis) dane mogą zmienić oczekiwania co do podwyżki stóp Fed w grudniu. Od 1 listopada USA są na czasie zimowym, więc 8:30 czasu NY to 14:30.", nazwa_en: "Jobs report (Oct)", opis_en: "After the US midterms (Tue 3 Nov), the data could shift expectations of a December Fed hike. The US is on standard time from 1 November, so 8:30 New York time is 14:30.", zrodlo: 70 },
-    { czas: "2026-11-10T04:00:00+01:00", kraj: "CN", nazwa: "Bilans handlowy Chin (paź)", wplyw: 2, instrumenty: ["xauusd", "wti"], poprzednio: "133,53 mld USD", prognoza: null, aktualnie: null, opis: "Sygnał popytu z Chin na surowce i kondycji handlu światowego.", nazwa_en: "China trade balance (Oct)", opis_en: "A signal of Chinese demand for commodities and of world trade.", poprzednio_en: "$133.53bn", zrodlo: 72 },
-    { czas: "2026-11-10T14:30:00+01:00", kraj: "US", nazwa: "Inflacja CPI w USA (paź)", wplyw: 4, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "xagusd", "nasdaq", "sp500", "usdpln"], poprzednio: "3,7% r/r; bazowa 2,6%", prognoza: null, aktualnie: null, opis: "Po mocnym raporcie z rynku pracy inflacja zdecyduje o szansach na grudniową podwyżkę stóp Fed.", nazwa_en: "US CPI inflation (Oct)", opis_en: "After a strong jobs report, inflation decides the odds of a December Fed hike.", poprzednio_en: "3.7% y/y; core 2.6%", zrodlo: 71 },
+    { czas: "2026-11-10T04:00:00+01:00", kraj: "CN", nazwa: "Bilans handlowy Chin (paź)", wplyw: 2, instrumenty: ["xauusd", "wti"], poprzednio: "133,53 mld USD", prognoza: "125,8 mld USD", aktualnie: "105,28 mld USD; eksport +35,2% r/r, import +41,6% r/r", prognoza_en: "$125.8bn", aktualnie_en: "$105.28bn; exports +35.2% y/y, imports +41.6% y/y", opis: "Sygnał popytu z Chin na surowce i kondycji handlu światowego.", nazwa_en: "China trade balance (Oct)", opis_en: "A signal of Chinese demand for commodities and of world trade.", poprzednio_en: "$133.53bn", zrodlo: 72 },
+    { czas: "2026-11-10T14:30:00+01:00", kraj: "US", nazwa: "Inflacja CPI w USA (paź)", wplyw: 4, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "xagusd", "nasdaq", "sp500", "usdpln"], poprzednio: "3,7% r/r; bazowa 2,6%", prognoza: "3,9% r/r (BLS może nie podać zmian rocznych); +0,3% m/m; bazowa +0,2% m/m", prognoza_en: "3.9% y/y (the BLS may not publish annual changes); +0.3% m/m; core +0.2% m/m", aktualnie: null, opis: "Po mocnym raporcie z rynku pracy inflacja zdecyduje o szansach na grudniową podwyżkę stóp Fed.", nazwa_en: "US CPI inflation (Oct)", opis_en: "After a strong jobs report, inflation decides the odds of a December Fed hike.", poprzednio_en: "3.7% y/y; core 2.6%", zrodlo: 71 },
   ]
 };

@@ -24,6 +24,84 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-10-srebro", instrument: "xagusd", data: "2026-11-10", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Srebro nad 53, celem 54,73", tytul_en: "Silver above $53, eyeing $54.73",
+    lead: "Srebro zamknęło poniedziałek na 53,40 USD, najwyżej od 28 października. Dopóki cena nie zamknie dnia poniżej poniedziałkowego minimum 51,38, bazą jest wzrost do maksimum z 23 października przy 54,73.",
+    lead_en: "Silver closed Monday at $53.40, the highest since 28 October. Unless the price closes a day below Monday's low of $51.38, a rise to the 23 October high near $54.73 is the base case.",
+    poziomy: { cena: 53.22, opory: [54.73, 57.97], wsparcia: [51.38, 48.53] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 54,73 USD (maksimum z 23 października), a wyżej do 57,97 (maksimum z 22 października).", tekst_en: "Base case: a rise to $54.73 (the 23 October high), and higher to $57.97 (the 22 October high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 51,38 USD (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 48,53 (minimum z 3 listopada).", tekst_en: "A daily close below $51.38 (the 9 November low) invalidates the setup and opens the way to $48.53 (the 3 November low)." }
+    ],
+    tresc: [
+      "Srebro zamknęło poniedziałek na 53,40 USD, powyżej 52,50, więc poprzednia analiza spadkowa została rozliczona jako nietrafiona. Metal zyskał w poniedziałek około 2,7%, razem ze złotem, które doszło do najwyższego poziomu od 21 października.",
+      "Tańsza ropa po nadziejach na porozumienie USA z Iranem zmniejsza obawy inflacyjne, a słabszy dolar wspiera metale. We wtorek rano srebro kosztuje około 53,22 USD (−0,3% według Trading Economics).",
+      "Dziś o 14:30 inflacja CPI w USA; rynek wycenia około 84% szans na grudniową podwyżkę stóp Fed. Średnia z 20 dni jest przy 54,60. Opory to 54,73 i 57,97, wsparcia 51,38 i 48,53."
+    ],
+    tresc_en: [
+      "Silver closed Monday at $53.40, above $52.50, so the previous bearish analysis was settled as a miss. The metal gained about 2.7% on Monday, together with gold, which reached its highest level since 21 October.",
+      "Cheaper oil on hopes of a US-Iran deal eases inflation fears, and a weaker dollar supports metals. On Tuesday morning silver trades around $53.22 (−0.3% according to Trading Economics).",
+      "US CPI inflation is due today at 14:30; markets price about 84% odds of a December Fed hike. The 20-day average is near $54.60. Resistance is at $54.73 and $57.97, support at $51.38 and $48.53."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: złoto i srebro przed odczytem CPI (10 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne srebra (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAG=" }
+    ]
+  },
+  {
+    id: "2026-11-10-dax", instrument: "dax", data: "2026-11-10", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "DAX nad 26 200, celem rekord 26 693", tytul_en: "DAX above 26,200, eyeing the 26,693 record",
+    lead: "DAX zyskał w poniedziałek 1,7% i zamknął się na 26 267. Dopóki indeks nie zamknie dnia poniżej poniedziałkowego minimum 25 793, bazą jest powrót do maksimum z 5 listopada przy 26 693.",
+    lead_en: "The DAX gained 1.7% on Monday and closed at 26,267. Unless the index closes a day below Monday's low of 25,793, a return to the 5 November high near 26,693 is the base case.",
+    poziomy: { cena: 26267.2, opory: [26692.9], wsparcia: [25793.1, 25617.5] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 26 692,9 (maksimum z 5 listopada, najwyższe w danych wykresu).", tekst_en: "Base case: a rise to 26,692.9 (the 5 November high, the highest in the chart data)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 793,1 (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 25 617,5 (minimum z 6 listopada).", tekst_en: "A daily close below 25,793.1 (the 9 November low) invalidates the setup and opens the way to 25,617.5 (the 6 November low)." }
+    ],
+    tresc: [
+      "DAX zamknął poniedziałek na 26 267, powyżej 26 223, więc poprzednia analiza spadkowa została rozliczona jako nietrafiona. Indeks odrobił piątkowe straty dzięki tańszej ropie i odbiciu spółek technologicznych; Infineon zyskał 6,3%, Siemens Energy 5,1%.",
+      "Wall Street miała w poniedziałek najlepszy dzień od kwietnia, a w Azji Kospi wzrósł o ponad 5%, a Nikkei o około 3%. Średnie z 20 i 50 dni (25 682 i 25 556) są pod ceną.",
+      "Dziś o 14:30 inflacja CPI w USA. Oporem jest maksimum z 5 listopada (26 692,9), wsparciami minima z 9 i 6 listopada (25 793,1 i 25 617,5)."
+    ],
+    tresc_en: [
+      "The DAX closed Monday at 26,267, above 26,223, so the previous bearish analysis was settled as a miss. The index recovered Friday's losses on cheaper oil and a tech rebound; Infineon gained 6.3%, Siemens Energy 5.1%.",
+      "Wall Street had its best day since April on Monday, and in Asia the Kospi rose more than 5% and the Nikkei about 3%. The 20- and 50-day averages (25,682 and 25,556) are below the price.",
+      "US CPI inflation is due today at 14:30. Resistance is the 5 November high (26,692.9), support the 9 and 6 November lows (25,793.1 and 25,617.5)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX, zamknięcie 9 lis 2026", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
+    id: "2026-11-10-sp500", instrument: "sp500", data: "2026-11-10", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "S&P 500 odbija, celem 7 716", tytul_en: "S&P 500 rebounds, eyeing 7,716",
+    lead: "S&P 500 zyskał w poniedziałek 2,3%, najwięcej od kwietnia, i zamknął się na 7 550. Dopóki indeks nie zamknie dnia poniżej poniedziałkowego minimum 7 422, bazą jest wzrost do maksimum z 4 listopada przy 7 716.",
+    lead_en: "The S&P 500 gained 2.3% on Monday, the most since April, and closed at 7,550. Unless the index closes a day below Monday's low of 7,422, a rise to the 4 November high near 7,716 is the base case.",
+    poziomy: { cena: 7568.12, opory: [7715.57, 7758.43], wsparcia: [7422.24, 7350.35] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 7 715,57 (maksimum z 4 listopada), a wyżej do 7 758,43 (maksimum z 28 października).", tekst_en: "Base case: a rise to 7,715.57 (the 4 November high), and higher to 7,758.43 (the 28 October high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 7 422,24 (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 7 350,35 (minimum z 5 listopada).", tekst_en: "A daily close below 7,422.24 (the 9 November low) invalidates the setup and opens the way to 7,350.35 (the 5 November low)." }
+    ],
+    tresc: [
+      "S&P 500 zamknął poniedziałek na 7 549,94, powyżej 7 545,39, więc poprzednia analiza spadkowa została rozliczona jako nietrafiona. Inwestorzy odkupili spadki po wyprzedaży spółek AI; AMD zyskało 13%, Applied Materials 11,5%, Broadcom i Lam Research blisko 9%. Nvidia straciła około 5%.",
+      "We wtorek rano kontrakty są stabilne (CFD około 7 568). Średnia z 20 dni (7 645) jest nad ceną, więc odbicie musi jeszcze ją pokonać.",
+      "Dziś o 14:30 inflacja CPI w USA; prognoza to 0,3% m/m, a rynek wycenia około 84% szans na grudniową podwyżkę stóp Fed. Opory to 7 715,57 i 7 758,43, wsparcia 7 422,24 i 7 350,35."
+    ],
+    tresc_en: [
+      "The S&P 500 closed Monday at 7,549.94, above 7,545.39, so the previous bearish analysis was settled as a miss. Investors bought the dip after the AI selloff; AMD gained 13%, Applied Materials 11.5%, Broadcom and Lam Research near 9%. Nvidia fell about 5%.",
+      "On Tuesday morning futures are steady (CFD around 7,568). The 20-day average (7,645) is above the price, so the rebound still has to clear it.",
+      "US CPI inflation is due today at 14:30; the forecast is 0.3% m/m, and markets price about 84% odds of a December Fed hike. Resistance is at 7,715.57 and 7,758.43, support at 7,422.24 and 7,350.35."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: rynek akcji USA, zamknięcie 9 lis i kontrakty 10 lis 2026", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne S&P 500 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.SPX" }
+    ]
+  },
+  {
     id: "2026-11-09-zloto", instrument: "xauusd", data: "2026-11-09", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "Złoto znów nad 4 100, celem 4 205", tytul_en: "Gold above $4,100 again, eyeing $4,205",
@@ -107,6 +185,7 @@ window.ANALIZY = [
     lead: "DAX traci w piątek ponad 2% i jest przy 25 720 pkt, bo wyprzedaż spółek technologicznych rozlała się na inne sektory. Dopóki indeks jest pod czwartkowym minimum 26 223, bazą jest zejście do dołka z 27 października przy 25 340.",
     lead_en: "The DAX loses more than 2% on Friday and stands near 25,720, as the tech selloff spreads to other sectors. While the index stays below Thursday's low of 26,223, a drop to the 27 October low near 25,340 is the base case.",
     poziomy: { cena: 25720, opory: [26223.3], wsparcia: [25340.2, 25013.5] },
+    wynik: { status: "nietrafiona", data: "2026-11-09", komentarz: "9 lis DAX zamknął dzień na 26 267, powyżej R1 26 223, zanim indeks dotknął celu S1 25 340 (najniżej 25 617). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 9 Nov the DAX closed at 26,267, above R1 26,223, before reaching the S1 target of 25,340 (low 25,617). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 25 340,2 pkt (minimum z 27 października), a niżej do 25 013,5 (minimum z 23 października).", tekst_en: "Base case: a drop to 25,340.2 (the 27 October low), and lower to 25,013.5 (the 23 October low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 223,3 (minimum z 5 listopada) unieważnia scenariusz.", tekst_en: "A daily close above 26,223.3 (the 5 November low) invalidates the setup." }
@@ -133,6 +212,7 @@ window.ANALIZY = [
     lead: "S&P 500 stracił w czwartek 4,3% i zamknął się na 7 354 pkt. Dopóki indeks jest pod przełamanym wsparciem 7 545 (minimum z 3 listopada), bazą jest zejście do czerwcowego dołka przy 7 238.",
     lead_en: "The S&P 500 lost 4.3% on Thursday and closed at 7,354. While the index stays below the broken 7,545 support (the 3 November low), a drop to the June low near 7,238 is the base case.",
     poziomy: { cena: 7347.18, opory: [7545.39, 7622.1], wsparcia: [7237.85, 7174.12] },
+    wynik: { status: "nietrafiona", data: "2026-11-09", komentarz: "9 lis S&P 500 zamknął dzień na 7 549,94, powyżej R1 7 545,39, zanim indeks dotknął celu S1 7 237,85 (najniżej 7 369,55). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 9 Nov the S&P 500 closed at 7,549.94, above R1 7,545.39, before reaching the S1 target of 7,237.85 (low 7,369.55). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 7 237,85 pkt (minimum z 9 czerwca), a niżej do 7 174,12 (minimum z 4 maja).", tekst_en: "Base case: a drop to 7,237.85 (the 9 June low), and lower to 7,174.12 (the 4 May low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 545,39 (minimum z 3 listopada) unieważnia scenariusz i otwiera drogę do 7 622 (średnia ze 100 sesji).", tekst_en: "A daily close above 7,545.39 (the 3 November low) invalidates the setup and opens the way to 7,622 (the 100-session average)." }
@@ -433,6 +513,7 @@ window.ANALIZY = [
     lead: "Srebro dotknęło we wtorek 48,53 USD i w środę rano kosztuje około 49,75. Trend spadkowy trwa, a dopóki cena jest pod 52,50, bazą jest zejście do wsparcia 48,29.",
     lead_en: "Silver touched $48.53 on Tuesday and trades around $49.75 on Wednesday morning. The downtrend continues, and while the price stays below $52.50, a drop to the $48.29 support is the base case.",
     poziomy: { cena: 49.75, opory: [52.50, 54.75], wsparcia: [48.29, 45.55] },
+    wynik: { status: "nietrafiona", data: "2026-11-09", komentarz: "9 lis srebro zamknęło dzień na 53,40 USD, powyżej R1 52,50, zanim cena dotknęła celu S1 48,29 (najniżej 48,94). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 9 Nov silver closed at $53.40, above R1 $52.50, before reaching the S1 target of $48.29 (low $48.94). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 48,29 USD (78,6% zniesienia Fibonacciego według FXEmpire), a po zamknięciu poniżej do 45,55.", tekst_en: "Base case: a drop to $48.29 (the 78.6% Fibonacci retracement according to FXEmpire), and after a close below it to $45.55." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 52,50 USD (opór według FXStreet) unieważnia scenariusz i otwiera drogę do 54,75.", tekst_en: "A daily close above $52.50 (resistance according to FXStreet) invalidates the setup and opens the way to $54.75." }
