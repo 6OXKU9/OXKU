@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-10T22:30:00+01:00",
+  aktualizacja: "2026-11-11T08:00:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -85,7 +85,8 @@ window.KALENDARZ = {
     { nazwa: "Trading Economics: zatrudnienie poza rolnictwem w USA, prognoza na październik 2026", nazwa_en: "Trading Economics: US nonfarm payrolls, October 2026 forecast", url: "https://tradingeconomics.com/united-states/non-farm-payrolls" },
     { nazwa: "Trading Economics: zatrudnienie poza rolnictwem w USA, październik 2026 (6 lis 2026)", nazwa_en: "Trading Economics: US nonfarm payrolls, October 2026 (6 Nov 2026)", url: "https://tradingeconomics.com/united-states/non-farm-payrolls" },
     { nazwa: "Trading Economics: inflacja CPI w USA, termin i poprzedni odczyt", nazwa_en: "Trading Economics: US CPI inflation, release date and previous reading", url: "https://tradingeconomics.com/united-states/inflation-cpi" },
-    { nazwa: "Trading Economics: bilans handlowy Chin, termin i poprzedni odczyt", nazwa_en: "Trading Economics: China trade balance, release date and previous reading", url: "https://tradingeconomics.com/china/balance-of-trade" }
+    { nazwa: "Trading Economics: bilans handlowy Chin, termin i poprzedni odczyt", nazwa_en: "Trading Economics: China trade balance, release date and previous reading", url: "https://tradingeconomics.com/china/balance-of-trade" },
+    { nazwa: "Trading Economics: ceny producentów PPI w USA, termin i prognoza", nazwa_en: "Trading Economics: US PPI, release date and forecast", url: "https://tradingeconomics.com/united-states/producer-prices-change" }
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
@@ -96,5 +97,6 @@ window.KALENDARZ = {
 
     { czas: "2026-11-10T04:00:00+01:00", kraj: "CN", nazwa: "Bilans handlowy Chin (paź)", wplyw: 2, instrumenty: ["xauusd", "wti"], poprzednio: "133,53 mld USD", prognoza: "125,8 mld USD", aktualnie: "105,28 mld USD; eksport +35,2% r/r, import +41,6% r/r", prognoza_en: "$125.8bn", aktualnie_en: "$105.28bn; exports +35.2% y/y, imports +41.6% y/y", opis: "Sygnał popytu z Chin na surowce i kondycji handlu światowego.", nazwa_en: "China trade balance (Oct)", opis_en: "A signal of Chinese demand for commodities and of world trade.", poprzednio_en: "$133.53bn", zrodlo: 72 },
     { czas: "2026-11-10T14:30:00+01:00", kraj: "US", nazwa: "Inflacja CPI w USA (paź)", wplyw: 4, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "xagusd", "nasdaq", "sp500", "usdpln"], poprzednio: "3,7% r/r; bazowa 2,6%", prognoza: "3,9% r/r (BLS może nie podać zmian rocznych); +0,3% m/m; bazowa +0,2% m/m", prognoza_en: "3.9% y/y (the BLS may not publish annual changes); +0.3% m/m; core +0.2% m/m", aktualnie: "+0,4% m/m; bazowa +0,3% m/m (BLS nie podał zmian rocznych)", aktualnie_en: "+0.4% m/m; core +0.3% m/m (the BLS did not publish annual changes)", opis: "Po mocnym raporcie z rynku pracy inflacja zdecyduje o szansach na grudniową podwyżkę stóp Fed.", nazwa_en: "US CPI inflation (Oct)", opis_en: "After a strong jobs report, inflation decides the odds of a December Fed hike.", poprzednio_en: "3.7% y/y; core 2.6%", zrodlo: 71 },
+    { czas: "2026-11-13T14:30:00+01:00", kraj: "US", nazwa: "Ceny producentów PPI w USA (paź)", wplyw: 3, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "nasdaq", "sp500"], poprzednio: "6,3% r/r", prognoza: "6,6% r/r", aktualnie: null, opis: "Po wyższej od prognoz inflacji CPI ceny producentów pokażą, czy presja cenowa w USA rośnie dalej.", nazwa_en: "US PPI (Oct)", opis_en: "After the hotter-than-expected CPI, producer prices will show whether US price pressure keeps rising.", poprzednio_en: "6.3% y/y", prognoza_en: "6.6% y/y", zrodlo: 73 },
   ]
 };

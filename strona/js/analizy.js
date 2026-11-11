@@ -24,6 +24,59 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-11-bitcoin", instrument: "btcusd", data: "2026-11-11", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "Bitcoin w zakresie 72 600–76 300", tytul_en: "Bitcoin in a $72,600–76,300 range",
+    lead: "Bitcoin dotarł we wtorek do 72 644 USD i wrócił nad 73 700. Po spadku z 81 000 na początku listopada bazą jest ruch boczny między wtorkowym minimum 72 644 a maksimum z 6 listopada przy 76 306.",
+    lead_en: "Bitcoin reached $72,644 on Tuesday and returned above $73,700. After the drop from $81,000 in early November, sideways trading between Tuesday's low of $72,644 and the 6 November high near $76,306 is the base case.",
+    poziomy: { cena: 73742.9, opory: [76306.3], wsparcia: [72643.5] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo ruch w zakresie 72 643,5–76 306,3 USD przez najbliższe 10 dni.", tekst_en: "Base case: trading within the $72,643.5–76,306.3 range over the next 10 days." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 72 643,5 USD unieważnia scenariusz i otwiera drogę do sierpniowego minimum 68 853.", tekst_en: "A daily close below $72,643.5 invalidates the setup and opens the way to the August low of $68,853." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 76 306,3 USD unieważnia scenariusz i otwiera drogę do 77 699 (minimum z 29 października).", tekst_en: "A daily close above $76,306.3 invalidates the setup and opens the way to $77,699 (the 29 October low)." }
+    ],
+    tresc: [
+      "Bitcoin spadł we wtorek do 72 643,5 USD, poniżej celu 73 004,7, więc poprzednia analiza spadkowa została rozliczona jako trafiona. W środę rano cena jest przy 73 743 (świece Coinbase).",
+      "Wyższa od prognoz inflacja w USA i jastrzębie wypowiedzi Fed wzmocniły dolara; rynek wycenia około 91% szans na grudniową podwyżkę stóp. Z drugiej strony dobre wyniki CoreWeave poprawiają nastroje wokół AI.",
+      "Średnie z 20 i 50 dni (77 696 i 81 117) są wyraźnie nad ceną, więc trend pozostaje spadkowy, ale od tygodnia cena porusza się między 72 600 a 76 300. W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "Bitcoin fell to $72,643.5 on Tuesday, below the $73,004.7 target, so the previous bearish analysis was settled as a hit. On Wednesday morning the price is near $73,743 (Coinbase candles).",
+      "Hotter-than-expected US inflation and hawkish Fed comments lifted the dollar; markets price about 91% odds of a December hike. On the other hand, strong CoreWeave results improve sentiment around AI.",
+      "The 20- and 50-day averages ($77,696 and $81,117) are well above the price, so the trend stays bearish, but for a week the price has moved between $72,600 and $76,300. US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Coinbase: świece dzienne BTC/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.coinbase.com/price/bitcoin" },
+      { nazwa: "Trading Economics: Dollar Holds Gains on Hawkish Fed Outlook (11 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" }
+    ]
+  },
+  {
+    id: "2026-11-11-usdjpy", instrument: "usdjpy", data: "2026-11-11", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "USD/JPY przy 158,8, celem 159,52", tytul_en: "USD/JPY near 158.8, eyeing 159.52",
+    lead: "Po wyższej od prognoz inflacji w USA dolar zyskuje, a USD/JPY doszedł do 158,85. Dopóki kurs nie zamknie dnia poniżej wtorkowego minimum 157,85, bazą jest wzrost do maksimum z 27 sierpnia przy 159,52.",
+    lead_en: "After hotter-than-expected US inflation the dollar gains, and USD/JPY reached 158.85. Unless the pair closes a day below Tuesday's low of 157.85, a rise to the 27 August high near 159.52 is the base case.",
+    poziomy: { cena: 158.82, opory: [159.52, 160.39], wsparcia: [157.85, 157.21] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 159,52 (maksimum z 27 sierpnia), a wyżej do 160,39 (maksimum z 2 września).", tekst_en: "Base case: a rise to 159.52 (the 27 August high), and higher to 160.39 (the 2 September high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 157,85 (minimum z 10 listopada) unieważnia scenariusz i otwiera drogę do 157,21 (minimum z 6 listopada).", tekst_en: "A daily close below 157.85 (the 10 November low) invalidates the setup and opens the way to 157.21 (the 6 November low)." }
+    ],
+    tresc: [
+      "Przez 10 sesji USD/JPY zamykał się w zakresie 156,75–159,05, więc poprzednia analiza neutralna została rozliczona jako trafiona. We wtorek kurs zamknął się na 158,73, najwyżej od początku tego okresu.",
+      "Inflacja CPI w USA wzrosła w październiku o 0,4% m/m, bazowa o 0,3%, powyżej prognoz. Rynek wycenia około 91% szans na grudniową podwyżkę stóp Fed, a BoJ trzyma stopy na 1,25%, co wspiera dolara wobec jena.",
+      "Średnie z 20 i 50 dni (157,95 i 157,24) są pod ceną. Opory to 159,52 i 160,39 (maksima z przełomu sierpnia i września), wsparcia 157,85 i 157,21. Ryzykiem jest interwencja władz Japonii przy 160."
+    ],
+    tresc_en: [
+      "Over 10 sessions USD/JPY closed within the 156.75–159.05 range, so the previous neutral analysis was settled as a hit. On Tuesday the pair closed at 158.73, the highest of that period.",
+      "US CPI inflation rose 0.4% m/m in October, core 0.3%, above forecasts. Markets price about 91% odds of a December Fed hike, while the BoJ keeps rates at 1.25%, which supports the dollar against the yen.",
+      "The 20- and 50-day averages (157.95 and 157.24) are below the price. Resistance is at 159.52 and 160.39 (late August and early September highs), support at 157.85 and 157.21. The risk is intervention by Japanese authorities near 160."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Dollar Holds Gains on Hawkish Fed Outlook (11 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne USD/JPY (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/JPY=" }
+    ]
+  },
+  {
     id: "2026-11-10-srebro", instrument: "xagusd", data: "2026-11-10", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "Srebro nad 53, celem 54,73", tytul_en: "Silver above $53, eyeing $54.73",
@@ -160,6 +213,7 @@ window.ANALIZY = [
     lead: "Bitcoin spadł w weekend do 73 477 USD i w poniedziałek rano kosztuje około 74 250. Dopóki cena jest pod piątkowym maksimum 76 306, bazą jest zejście do sierpniowego minimum przy 73 005.",
     lead_en: "Bitcoin fell to $73,477 over the weekend and trades around $74,250 on Monday morning. While the price stays below Friday's high of $76,306, a drop to the August low near $73,005 is the base case.",
     poziomy: { cena: 74249.8, opory: [76306.3, 77699], wsparcia: [73004.7, 68853.2] },
+    wynik: { status: "trafiona", data: "2026-11-10", komentarz: "10 lis bitcoin spadł do 72 643,5 USD, poniżej celu S1 73 004,7, bez zamknięcia powyżej R1 76 306,3. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 10 Nov bitcoin fell to $72,643.5, below the S1 target of $73,004.7, with no close above R1 $76,306.3. Price source: Coinbase daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 73 004,7 USD (minimum z 21 sierpnia), a niżej do 68 853 (minimum z 20 sierpnia).", tekst_en: "Base case: a drop to $73,004.7 (the 21 August low), and lower to $68,853 (the 20 August low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 76 306 USD (maksimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 77 699 (minimum z 29 października).", tekst_en: "A daily close above $76,306 (the 6 November high) invalidates the setup and opens the way to $77,699 (the 29 October low)." }
@@ -964,6 +1018,7 @@ window.ANALIZY = [
     lead: "Para wróciła do 158, ale przed decyzjami Fed i Banku Japonii wzrosty ogranicza ryzyko interwencji. Bazą jest ruch w zakresie 156,75–159,05.",
     lead_en: "The pair is back at 158, but ahead of the Fed and Bank of Japan decisions intervention risk caps gains. Trading within 156.75–159.05 is the base case.",
     poziomy: { cena: 157.95, opory: [159.05, 160.00], wsparcia: [156.75, 155.11] },
+    wynik: { status: "trafiona", data: "2026-11-10", komentarz: "Przez 10 sesji (28 paź – 10 lis) każde zamknięcie dnia USD/JPY mieściło się w zakresie 156,75–159,05 (od 157,53 do 158,73). Źródło ceny: świece dzienne CNBC.", komentarz_en: "Over 10 sessions (28 Oct – 10 Nov) every USD/JPY daily close stayed within the 156.75–159.05 range (from 157.53 to 158.73). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo konsolidacja między wrześniowym minimum 156,75 a październikowym maksimum 159,05.", tekst_en: "Base case: consolidation between the September low of 156.75 and the October high of 159.05." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 159,05 otwiera drogę do 160,00, gdzie ryzyko interwencji jest największe.", tekst_en: "A daily close above 159.05 opens the way to 160.00, where intervention risk is highest." },
