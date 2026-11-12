@@ -24,6 +24,192 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-12-usdjpy", instrument: "usdjpy", data: "2026-11-12", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "USD/JPY blisko 160, celem 160,39", tytul_en: "USD/JPY near 160, eyeing 160.39",
+    lead: "USD/JPY doszedł w środę do 159,93, najwyżej od sierpnia. Dopóki kurs nie zamknie dnia poniżej środowego minimum 158,64, bazą jest wzrost do maksimum z 2 września przy 160,39.",
+    lead_en: "USD/JPY reached 159.93 on Wednesday, the highest since August. Unless the pair closes a day below Wednesday's low of 158.64, a rise to the 2 September high near 160.39 is the base case.",
+    poziomy: { cena: 159.77, opory: [160.39], wsparcia: [158.64, 157.85] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 160,39 (maksimum z 2 września).", tekst_en: "Base case: a rise to 160.39 (the 2 September high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 158,64 (minimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 157,85 (minimum z 10 listopada).", tekst_en: "A daily close below 158.64 (the 11 November low) invalidates the setup and opens the way to 157.85 (the 10 November low)." }
+    ],
+    tresc: [
+      "USD/JPY doszedł w środę do 159,93, powyżej celu 159,52, więc poprzednia analiza wzrostowa została rozliczona jako trafiona. Dolar jest najmocniejszy od kwietnia 2025, a indeks dolara jest tuż pod 103.",
+      "Po wyższej od prognoz inflacji CPI rynek wycenia około 91% szans na grudniową podwyżkę stóp Fed. Różnica stóp między USA a Japonią wspiera dolara wobec jena.",
+      "Oporem jest maksimum z 2 września (160,39), wsparciami minima z 11 i 10 listopada (158,64 i 157,85). Ryzykiem jest interwencja władz Japonii w okolicy 160. W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "USD/JPY reached 159.93 on Wednesday, above the 159.52 target, so the previous bullish analysis was settled as a hit. The dollar is the strongest since April 2025, and the dollar index is just below 103.",
+      "After the hotter-than-expected CPI, markets price about 91% odds of a December Fed hike. The rate gap between the US and Japan supports the dollar against the yen.",
+      "Resistance is the 2 September high (160.39), support the 11 and 10 November lows (158.64 and 157.85). The risk is intervention by Japanese authorities near 160. US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Dollar Holds Gains on Hawkish Fed Bets (12 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne USD/JPY (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/JPY=" }
+    ]
+  },
+  {
+    id: "2026-11-12-zloto", instrument: "xauusd", data: "2026-11-12", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Złoto pod 4 000, celem 3 886", tytul_en: "Gold below $4,000, eyeing $3,886",
+    lead: "Złoto spadło dwa dni z rzędu i jest poniżej 4 000 USD. Dopóki cena jest pod środowym maksimum 4 066, bazą jest zejście do 3 886, poziomu, który według Standard Chartered musi się utrzymać.",
+    lead_en: "Gold has fallen two days in a row and is below $4,000. While the price stays below Wednesday's high of $4,066, a drop to $3,886, a level Standard Chartered says must hold, is the base case.",
+    poziomy: { cena: 3974.14, opory: [4065.58, 4147.29], wsparcia: [3886, 3870.41] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 3 886 USD (poziom wskazany przez Standard Chartered), a niżej do 3 870,41 (minimum z 30 października).", tekst_en: "Base case: a drop to $3,886 (the level named by Standard Chartered), and lower to $3,870.41 (the 30 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 4 065,58 USD (maksimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 4 147,29 (maksimum z 9 listopada).", tekst_en: "A daily close above $4,065.58 (the 11 November high) invalidates the setup and opens the way to $4,147.29 (the 9 November high)." }
+    ],
+    tresc: [
+      "Złoto zamknęło środę na 3 987,22 USD, poniżej 4 031,06, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. W czwartek rano kosztuje około 3 974 USD (Trading Economics).",
+      "Najmocniejszy od kwietnia 2025 dolar i zakłady na grudniową podwyżkę stóp Fed (około 91%) zwiększają koszt trzymania złota, które nie daje odsetek.",
+      "Średnie z 20 i 50 dni (4 052 i 4 177) są nad ceną. Wsparciami są 3 886 (Standard Chartered) i minimum z 30 października 3 870,41, oporami 4 065,58 i 4 147,29."
+    ],
+    tresc_en: [
+      "Gold closed Wednesday at $3,987.22, below $4,031.06, so the previous bullish analysis was settled as a miss. On Thursday morning it trades around $3,974 (Trading Economics).",
+      "The strongest dollar since April 2025 and bets on a December Fed hike (about 91%) raise the cost of holding gold, which pays no interest.",
+      "The 20- and 50-day averages ($4,052 and $4,177) are above the price. Support is at $3,886 (Standard Chartered) and the 30 October low of $3,870.41, resistance at $4,065.58 and $4,147.29."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Gold Holds Decline on Hawkish Fed View (12 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "investingLive: Standard Chartered, złoto musi utrzymać 3 886 USD", url: "https://investinglive.com/commodities/standard-chartered-gold-must-hold-3-886-or-risk-deeper-correction-as-oil-fuels-hike-bets/" },
+      { nazwa: "CNBC: świece dzienne złota (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAU=" }
+    ]
+  },
+  {
+    id: "2026-11-12-gbpusd", instrument: "gbpusd", data: "2026-11-12", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Funt przy 1,326, celem 1,3177", tytul_en: "Sterling near 1.326, eyeing 1.3177",
+    lead: "GBP/USD spadł w środę do 1,3263, najniżej od 28 października. Dopóki kurs jest pod środowym maksimum 1,3385, bazą jest zejście do minimum z 1 października przy 1,3177.",
+    lead_en: "GBP/USD fell to 1.3263 on Wednesday, the lowest since 28 October. While the pair stays below Wednesday's high of 1.3385, a drop to the 1 October low near 1.3177 is the base case.",
+    poziomy: { cena: 1.3258, opory: [1.3385, 1.3463], wsparcia: [1.3177, 1.3132] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 1,3177 (minimum z 1 października), a niżej do 1,3132 (minimum z 14 października).", tekst_en: "Base case: a drop to 1.3177 (the 1 October low), and lower to 1.3132 (the 14 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3385 (maksimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 1,3463 (maksimum z 6 listopada).", tekst_en: "A daily close above 1.3385 (the 11 November high) invalidates the setup and opens the way to 1.3463 (the 6 November high)." }
+    ],
+    tresc: [
+      "GBP/USD spadł w środę do 1,3263, poniżej celu 1,3269, więc poprzednia analiza spadkowa została rozliczona jako trafiona. W czwartek rano kurs jest przy 1,3258 (Trading Economics).",
+      "Dolar zyskał w dwa dni ponad 1% po wyższej od prognoz inflacji w USA i jastrzębich wypowiedziach Fed. Średnie z 20 i 50 dni (1,3366 i 1,3350) są nad ceną.",
+      "Wsparciami są minima z 1 i 14 października (1,3177 i 1,3132), oporami 1,3385 i 1,3463. W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "GBP/USD fell to 1.3263 on Wednesday, below the 1.3269 target, so the previous bearish analysis was settled as a hit. On Thursday morning the pair is at 1.3258 (Trading Economics).",
+      "The dollar gained more than 1% in two days after hotter-than-expected US inflation and hawkish Fed comments. The 20- and 50-day averages (1.3366 and 1.3350) are above the price.",
+      "Support is at the 1 and 14 October lows (1.3177 and 1.3132), resistance at 1.3385 and 1.3463. US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Dollar Holds Gains on Hawkish Fed Bets (12 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne GBP/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/GBP=" }
+    ]
+  },
+  {
+    id: "2026-11-12-nasdaq", instrument: "nasdaq", data: "2026-11-12", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "Nasdaq 100 w zakresie 27 421–28 830", tytul_en: "Nasdaq 100 in a 27,421–28,830 range",
+    lead: "Nasdaq 100 zyskał w środę 2,3% dzięki CoreWeave, ale w czwartek kontrakty tracą przez doniesienia o Nvidii. Bazą jest ruch między wtorkowym minimum 27 421 a maksimum z 4 listopada przy 28 830.",
+    lead_en: "The Nasdaq 100 gained 2.3% on Wednesday on CoreWeave, but futures fall on Thursday on reports about Nvidia. Trading between Tuesday's low of 27,421 and the 4 November high near 28,830 is the base case.",
+    poziomy: { cena: 28085.83, opory: [28829.7], wsparcia: [27421.2] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo ruch w zakresie 27 421,2–28 829,7 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 27,421.2–28,829.7 range over the next 10 sessions." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 27 421,2 unieważnia scenariusz i otwiera drogę do minimum z 5 listopada (26 606,4).", tekst_en: "A daily close below 27,421.2 invalidates the setup and opens the way to the 5 November low (26,606.4)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 28 829,7 unieważnia scenariusz i otwiera drogę w stronę średniej z 50 sesji (około 29 554).", tekst_en: "A daily close above 28,829.7 invalidates the setup and opens the way toward the 50-session average (around 29,554)." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął środę na 28 374,3, powyżej 27 967,4, więc poprzednia analiza neutralna została rozliczona jako nietrafiona. Wzrosty prowadził CoreWeave (+15%) oraz producenci chipów.",
+      "W czwartek rano kontrakty na Nasdaq 100 tracą około 0,9% (CFD około 28 086). Akcje Nvidii spadały po sesji nawet o 10% po doniesieniach, że rada nadzorcza przygotowuje odwołanie prezesa Jensena Huanga.",
+      "Średnie z 20 i 50 sesji (28 733 i 29 554) są nad ceną. Granice zakresu to minimum z 10 listopada (27 421,2) i maksimum z 4 listopada (28 829,7). W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Wednesday at 28,374.3, above 27,967.4, so the previous neutral analysis was settled as a miss. CoreWeave (+15%) and chipmakers led the gains.",
+      "On Thursday morning Nasdaq 100 futures fall about 0.9% (CFD around 28,086). Nvidia shares fell as much as 10% after hours on reports that its board is preparing to remove CEO Jensen Huang.",
+      "The 20- and 50-session averages (28,733 and 29,554) are above the price. The range bounds are the 10 November low (27,421.2) and the 4 November high (28,829.7). US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: US Stock Futures Slide as Nvidia Drags (12 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne Nasdaq 100 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.NDX" }
+    ]
+  },
+  {
+    id: "2026-11-12-ropa", instrument: "wti", data: "2026-11-12", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Ropa WTI przy 86, celem 83,88", tytul_en: "WTI crude near $86, eyeing $83.88",
+    lead: "WTI spadła we wtorek do 83,88 USD, najniżej od 10 tygodni, i odbiła do około 86. Dopóki cena jest pod maksimum z 6 listopada przy 92,53, bazą jest powrót do wtorkowego minimum.",
+    lead_en: "WTI fell to $83.88 on Tuesday, a 10-week low, and rebounded to around $86. While the price stays below the 6 November high near $92.53, a return to Tuesday's low is the base case.",
+    poziomy: { cena: 86.27, opory: [92.53, 97.15], wsparcia: [83.88, 80.23] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 83,88 USD (minimum z 10 listopada), a niżej do 80,23 (minimum z 25 sierpnia).", tekst_en: "Base case: a drop to $83.88 (the 10 November low), and lower to $80.23 (the 25 August low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 92,53 USD (maksimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 97,15 (maksimum z 4 listopada).", tekst_en: "A daily close above $92.53 (the 6 November high) invalidates the setup and opens the way to $97.15 (the 4 November high)." }
+    ],
+    tresc: [
+      "WTI spadła we wtorek do 83,88 USD, poniżej celu 84,11, więc poprzednia analiza spadkowa została rozliczona jako trafiona. Od 30 października ropa straciła około 17%.",
+      "Ceny obniżają nadzieje na porozumienie USA z Iranem. W czwartek rano WTI kosztuje około 86,3 USD, a Brent około 92,5 USD (Trading Economics). Średnie z 20 i 50 dni (96,5 i 95,2) są wyraźnie nad ceną.",
+      "Wsparciami są minima z 10 listopada i 25 sierpnia (83,88 i 80,23), oporami maksima z 6 i 4 listopada (92,53 i 97,15)."
+    ],
+    tresc_en: [
+      "WTI fell to $83.88 on Tuesday, below the $84.11 target, so the previous bearish analysis was settled as a hit. Since 30 October crude has lost about 17%.",
+      "Hopes of a US-Iran deal weigh on prices. On Thursday morning WTI trades around $86.3 and Brent around $92.5 (Trading Economics). The 20- and 50-day averages ($96.5 and $95.2) are well above the price.",
+      "Support is at the 10 November and 25 August lows ($83.88 and $80.23), resistance at the 6 and 4 November highs ($92.53 and $97.15)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: ropa WTI i Brent (12 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne WTI (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/@CL.1" }
+    ]
+  },
+  {
+    id: "2026-11-12-usdpln", instrument: "usdpln", data: "2026-11-12", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "USD/PLN w zakresie 3,9308–3,9833", tytul_en: "USD/PLN in a 3.9308–3.9833 range",
+    lead: "USD/PLN wzrósł w środę o 1% do 3,9768, blisko maksimum dnia 3,9833, najwyższego w danych wykresu od maja. Bazą jest ruch między środowym minimum 3,9308 a tym maksimum.",
+    lead_en: "USD/PLN rose 1% on Wednesday to 3.9768, close to the day's high of 3.9833, the highest in the chart data since May. Trading between Wednesday's low of 3.9308 and that high is the base case.",
+    poziomy: { cena: 3.9768, opory: [3.9833], wsparcia: [3.9308] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo ruch w zakresie 3,9308–3,9833 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 3.9308–3.9833 range over the next 10 sessions." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3,9833 unieważnia scenariusz i oznacza nowe maksimum od maja.", tekst_en: "A daily close above 3.9833 invalidates the setup and marks a new high since May." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3,9308 unieważnia scenariusz i otwiera drogę do 3,8946 (minimum z 10 listopada).", tekst_en: "A daily close below 3.9308 invalidates the setup and opens the way to 3.8946 (the 10 November low)." }
+    ],
+    tresc: [
+      "USD/PLN zamknął środę na 3,9768, powyżej 3,9423, więc poprzednia analiza spadkowa została rozliczona jako nietrafiona. Złoty traci, bo dolar zyskał w dwa dni ponad 1%.",
+      "Po wyższej od prognoz inflacji w USA rynek wycenia około 91% szans na grudniową podwyżkę stóp Fed. Średnie z 20 i 50 dni (3,9211 i 3,8599) są pod ceną.",
+      "Kurs jest blisko górnej granicy zakresu, więc analiza zakłada wyhamowanie wzrostu po szybkim ruchu. W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "USD/PLN closed Wednesday at 3.9768, above 3.9423, so the previous bearish analysis was settled as a miss. The zloty weakens as the dollar gained more than 1% in two days.",
+      "After the hotter-than-expected US inflation, markets price about 91% odds of a December Fed hike. The 20- and 50-day averages (3.9211 and 3.8599) are below the price.",
+      "The rate is close to the upper bound of the range, so the analysis assumes the rise pauses after a fast move. US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: złoty, USD/PLN 3,9708 (11 lis 2026)", url: "https://tradingeconomics.com/poland/currency" },
+      { nazwa: "CNBC: świece dzienne USD/PLN (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/PLN=" }
+    ]
+  },
+  {
+    id: "2026-11-12-eurusd", instrument: "eurusd", data: "2026-11-12", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "EUR/USD pod 1,11, celem 1,1065", tytul_en: "EUR/USD below 1.11, eyeing 1.1065",
+    lead: "EUR/USD spadł w środę do 1,1082, najniżej w danych wykresu od maja. Dopóki kurs jest pod środowym maksimum 1,1170, bazą jest zejście do minimum z maja 2025 przy 1,1065.",
+    lead_en: "EUR/USD fell to 1.1082 on Wednesday, the lowest in the chart data since May. While the pair stays below Wednesday's high of 1.1170, a drop to the May 2025 low near 1.1065 is the base case.",
+    poziomy: { cena: 1.1078, opory: [1.117, 1.12], wsparcia: [1.1065] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 1,1065 (minimum z maja 2025 według Continuum Economics).", tekst_en: "Base case: a drop to 1.1065 (the May 2025 low according to Continuum Economics)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,1170 (maksimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 1,1200 (poziom przełamania według Continuum Economics).", tekst_en: "A daily close above 1.1170 (the 11 November high) invalidates the setup and opens the way to 1.1200 (the break level according to Continuum Economics)." }
+    ],
+    tresc: [
+      "EUR/USD zamknął środę na 1,1089, poniżej 1,1113, więc poprzednia analiza neutralna została rozliczona jako nietrafiona. Kurs wyszedł dołem z zakresu, w którym poruszał się od października.",
+      "Dolar jest najmocniejszy od kwietnia 2025 po wyższej od prognoz inflacji w USA; rynek wycenia około 91% szans na grudniową podwyżkę stóp Fed. W czwartek rano kurs jest przy 1,1078 (Trading Economics).",
+      "Według Continuum Economics wsparciem jest minimum z maja 2025 przy 1,1065, a oporem poziom 1,1200. Bliższym oporem jest środowe maksimum 1,1170. W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "EUR/USD closed Wednesday at 1.1089, below 1.1113, so the previous neutral analysis was settled as a miss. The pair broke out below the range it had held since October.",
+      "The dollar is the strongest since April 2025 after hotter-than-expected US inflation; markets price about 91% odds of a December Fed hike. On Thursday morning the pair is at 1.1078 (Trading Economics).",
+      "According to Continuum Economics, support is the May 2025 low near 1.1065 and resistance is 1.1200. Nearer resistance is Wednesday's high of 1.1170. US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Dollar Holds Gains on Hawkish Fed Bets (12 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "Continuum Economics: EUR/USD update, choppy in broad range (9 lis 2026)", url: "https://continuumeconomics.com/a/42baf40b/chart-eurusd-update-choppy-in-broad-range" },
+      { nazwa: "CNBC: świece dzienne EUR/USD (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/EUR=" }
+    ]
+  },
+  {
     id: "2026-11-11-bitcoin", instrument: "btcusd", data: "2026-11-11", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
     tytul: "Bitcoin w zakresie 72 600–76 300", tytul_en: "Bitcoin in a $72,600–76,300 range",
@@ -57,6 +243,7 @@ window.ANALIZY = [
     lead: "Po wyższej od prognoz inflacji w USA dolar zyskuje, a USD/JPY doszedł do 158,85. Dopóki kurs nie zamknie dnia poniżej wtorkowego minimum 157,85, bazą jest wzrost do maksimum z 27 sierpnia przy 159,52.",
     lead_en: "After hotter-than-expected US inflation the dollar gains, and USD/JPY reached 158.85. Unless the pair closes a day below Tuesday's low of 157.85, a rise to the 27 August high near 159.52 is the base case.",
     poziomy: { cena: 158.82, opory: [159.52, 160.39], wsparcia: [157.85, 157.21] },
+    wynik: { status: "trafiona", data: "2026-11-11", komentarz: "11 lis USD/JPY doszedł do 159,93, powyżej celu R1 159,52, bez zamknięcia poniżej S1 157,85. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 11 Nov USD/JPY reached 159.93, above the R1 target of 159.52, with no close below S1 157.85. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 159,52 (maksimum z 27 sierpnia), a wyżej do 160,39 (maksimum z 2 września).", tekst_en: "Base case: a rise to 159.52 (the 27 August high), and higher to 160.39 (the 2 September high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 157,85 (minimum z 10 listopada) unieważnia scenariusz i otwiera drogę do 157,21 (minimum z 6 listopada).", tekst_en: "A daily close below 157.85 (the 10 November low) invalidates the setup and opens the way to 157.21 (the 6 November low)." }
@@ -161,6 +348,7 @@ window.ANALIZY = [
     lead: "Złoto zamknęło piątek na 4 066 USD po danych z rynku pracy, ale w poniedziałek rano wraca nad 4 100. Dopóki cena nie zamknie dnia poniżej piątkowego minimum 4 031, bazą jest wzrost do maksimum z 9 października przy 4 205.",
     lead_en: "Gold closed Friday at $4,066 after the jobs data, but returns above $4,100 on Monday morning. Unless the price closes a day below Friday's low of $4,031, a rise to the 9 October high near $4,205 is the base case.",
     poziomy: { cena: 4110.93, opory: [4205.61, 4223.95], wsparcia: [4031.06, 3978.13] },
+    wynik: { status: "nietrafiona", data: "2026-11-11", komentarz: "11 lis złoto zamknęło dzień na 3 987,22 USD, poniżej S1 4 031,06, zanim cena dotknęła celu R1 4 205,61 (najwyżej 4 147,29). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 11 Nov gold closed at $3,987.22, below S1 $4,031.06, before reaching the R1 target of $4,205.61 (high $4,147.29). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 4 205,61 USD (maksimum z 9 października), a wyżej do 4 223,95 (maksimum z 2 października).", tekst_en: "Base case: a rise to $4,205.61 (the 9 October high), and higher to $4,223.95 (the 2 October high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 4 031,06 USD (minimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 3 978,13 (minimum z 23 października).", tekst_en: "A daily close below $4,031.06 (the 6 November low) invalidates the setup and opens the way to $3,978.13 (the 23 October low)." }
@@ -187,6 +375,7 @@ window.ANALIZY = [
     lead: "GBP/USD spadł w piątek do 1,3339 po mocnym raporcie z rynku pracy w USA. Dopóki kurs jest pod piątkowym maksimum 1,3463, bazą jest zejście do minimum z 28 października przy 1,3269.",
     lead_en: "GBP/USD fell to 1.3339 on Friday after the strong US jobs report. While the pair stays below Friday's high of 1.3463, a drop to the 28 October low near 1.3269 is the base case.",
     poziomy: { cena: 1.3379, opory: [1.3463, 1.3506], wsparcia: [1.3269, 1.3132] },
+    wynik: { status: "trafiona", data: "2026-11-11", komentarz: "11 lis GBP/USD spadł do 1,3263, poniżej celu S1 1,3269, bez zamknięcia powyżej R1 1,3463. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 11 Nov GBP/USD fell to 1.3263, below the S1 target of 1.3269, with no close above R1 1.3463. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 1,3269 (minimum z 28 października), a niżej do 1,3132 (minimum z 14 października).", tekst_en: "Base case: a drop to 1.3269 (the 28 October low), and lower to 1.3132 (the 14 October low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3463 (maksimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 1,3506 (maksimum z 5 listopada).", tekst_en: "A daily close above 1.3463 (the 6 November high) invalidates the setup and opens the way to 1.3506 (the 5 November high)." }
@@ -294,6 +483,7 @@ window.ANALIZY = [
     lead: "Nasdaq 100 stracił w czwartek 6,4% i wszedł w korektę. Po takim spadku bazą jest konsolidacja między czwartkowym minimum 26 606 a przełamanym wsparciem 27 967.",
     lead_en: "The Nasdaq 100 lost 6.4% on Thursday and entered a correction. After such a drop, consolidation between Thursday's low of 26,606 and the broken 27,967 support is the base case.",
     poziomy: { cena: 26797.45, opory: [27967.4], wsparcia: [26606.4] },
+    wynik: { status: "nietrafiona", data: "2026-11-11", komentarz: "11 lis Nasdaq 100 zamknął dzień na 28 374,3, powyżej górnej granicy zakresu R1 27 967,4. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 11 Nov the Nasdaq 100 closed at 28,374.3, above the R1 upper bound of 27,967.4. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo konsolidacja: żadne zamknięcie dnia poza zakresem 26 606,4 (minimum z 5 listopada) – 27 967,4 (minimum z 2 listopada) przez 10 sesji.", tekst_en: "Base case: consolidation, with no daily close outside the 26,606.4 (the 5 November low) – 27,967.4 (the 2 November low) range for 10 sessions." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 606,4 oznacza dalszą wyprzedaż spółek AI.", tekst_en: "A daily close below 26,606.4 means the AI stock selloff continues." },
@@ -433,6 +623,7 @@ window.ANALIZY = [
     lead: "WTI stracił w środę 8% i w czwartek rano kosztuje około 87,1 USD, najmniej od dwóch miesięcy. Dopóki cena jest pod 93,59, bazą jest dalszy spadek do sierpniowego minimum przy 84,11.",
     lead_en: "WTI lost 8% on Wednesday and trades around $87.1 on Thursday morning, a two-month low. While the price stays below $93.59, a further drop to the August low near $84.11 is the base case.",
     poziomy: { cena: 87.1, opory: [93.59, 97.15], wsparcia: [84.11, 80.23] },
+    wynik: { status: "trafiona", data: "2026-11-10", komentarz: "10 lis ropa WTI spadła do 83,88 USD, poniżej celu S1 84,11, bez zamknięcia powyżej R1 93,59. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 10 Nov WTI crude fell to $83.88, below the S1 target of $84.11, with no close above R1 $93.59. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 84,11 USD (minimum z 31 sierpnia), a niżej do 80,23 (minimum z 25 sierpnia).", tekst_en: "Base case: a drop to $84.11 (the 31 August low), and lower to $80.23 (the 25 August low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 93,59 USD (minimum z 3 listopada) unieważnia scenariusz i otwiera drogę do 97,15 (maksimum z 4 listopada).", tekst_en: "A daily close above $93.59 (the 3 November low) invalidates the setup and opens the way to $97.15 (the 4 November high)." }
@@ -512,6 +703,7 @@ window.ANALIZY = [
     lead: "USD/PLN spadł w środę o prawie 1% do 3,9032 po wyborach w USA. Dopóki kurs jest pod 3,9423, bazą jest zejście do minimum z 22 października przy 3,8674.",
     lead_en: "USD/PLN fell almost 1% on Wednesday to 3.9032 after the US elections. While the pair stays below 3.9423, a drop to the 22 October low near 3.8674 is the base case.",
     poziomy: { cena: 3.9039, opory: [3.9423, 3.9649], wsparcia: [3.8674, 3.8294] },
+    wynik: { status: "nietrafiona", data: "2026-11-11", komentarz: "11 lis USD/PLN zamknął dzień na 3,9768, powyżej R1 3,9423, zanim kurs dotknął celu S1 3,8674 (najniżej 3,8911). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 11 Nov USD/PLN closed at 3.9768, above R1 3.9423, before reaching the S1 target of 3.8674 (low 3.8911). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 3,8674 (minimum z 22 października), a niżej do 3,8294 (minimum z 25 września).", tekst_en: "Base case: a drop to 3.8674 (the 22 October low), and lower to 3.8294 (the 25 September low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3,9423 (maksimum z 4 listopada) unieważnia scenariusz i otwiera drogę do 3,9649 (maksimum z 28 października).", tekst_en: "A daily close above 3.9423 (the 4 November high) invalidates the setup and opens the way to 3.9649 (the 28 October high)." }
@@ -879,6 +1071,7 @@ window.ANALIZY = [
     lead: "Euro odbiło po spadku do najniższego poziomu od maja 2025 roku, bo spadek rentowności w USA osłabił dolara. Po decyzjach Fed i EBC bazą jest ruch w zakresie 1,1113–1,1260.",
     lead_en: "The euro rebounded after falling to its lowest since May 2025, as lower US yields weighed on the dollar. After the Fed and ECB decisions, trading within 1.1113–1.1260 is the base case.",
     poziomy: { cena: 1.1183, opory: [1.1260, 1.1355], wsparcia: [1.1113, 1.1000] },
+    wynik: { status: "nietrafiona", data: "2026-11-11", komentarz: "11 lis EUR/USD zamknął dzień na 1,1089, poniżej dolnej granicy zakresu S1 1,1113. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 11 Nov EUR/USD closed at 1.1089, below the S1 lower bound of 1.1113. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo konsolidacja między wsparciem 1,1113 (tegoroczne minimum z 14 października) a oporem 1,1260 (NordFX).", tekst_en: "Base case: consolidation between 1.1113 support (this year's 14 October low) and 1.1260 resistance (NordFX)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,1260 otwiera drogę do 1,1355.", tekst_en: "A daily close above 1.1260 opens the way to 1.1355." },
