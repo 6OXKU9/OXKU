@@ -24,6 +24,32 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-12-dax", instrument: "dax", data: "2026-11-12", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "DAX na rekordzie, celem 27 011", tytul_en: "DAX at a record, eyeing 27,011",
+    lead: "DAX czwartą sesję z rzędu bije rekord i przekroczył 26 900 pkt. Dopóki indeks nie zamknie dnia poniżej środowego minimum 26 492, bazą jest wzrost do 27 011, które Trading Economics podaje jako maksimum wszech czasów.",
+    lead_en: "The DAX set a record for a fourth straight session and passed 26,900. Unless the index closes a day below Wednesday's low of 26,492, a rise to 27,011, which Trading Economics lists as the all-time high, is the base case.",
+    poziomy: { cena: 26848, opory: [27011], wsparcia: [26491.8, 26347.5] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 27 011 (maksimum wszech czasów według Trading Economics).", tekst_en: "Base case: a rise to 27,011 (the all-time high according to Trading Economics)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 491,8 (minimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 26 347,5 (minimum z 10 listopada).", tekst_en: "A daily close below 26,491.8 (the 11 November low) invalidates the setup and opens the way to 26,347.5 (the 10 November low)." }
+    ],
+    tresc: [
+      "DAX przekroczył w czwartek 26 900 pkt, powyżej celu 26 692,9, więc poprzednia analiza wzrostowa została rozliczona jako trafiona. Indeks zyskuje czwartą sesję z rzędu.",
+      "Prowadzi Siemens (+4,5%) po wynikach lepszych od oczekiwań, Merck rośnie o około 3% po podniesieniu prognozy, Allianz o 2,2%. Tańsza ropa wspiera nastroje mimo spadków Nvidii w USA; Infineon traci prawie 2%.",
+      "Oporem jest 27 011 (maksimum wszech czasów według Trading Economics), wsparciami minima z 11 i 10 listopada (26 491,8 i 26 347,5). W piątek ceny producentów PPI w USA."
+    ],
+    tresc_en: [
+      "The DAX passed 26,900 on Thursday, above the 26,692.9 target, so the previous bullish analysis was settled as a hit. The index is gaining for a fourth straight session.",
+      "Siemens leads (+4.5%) after beating expectations, Merck rises about 3% after raising guidance, Allianz 2.2%. Cheaper oil supports sentiment despite Nvidia's drop in the US; Infineon falls almost 2%.",
+      "Resistance is 27,011 (the all-time high according to Trading Economics), support the 11 and 10 November lows (26,491.8 and 26,347.5). US producer prices (PPI) are due Friday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX bije rekord (12 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
     id: "2026-11-12-usdjpy", instrument: "usdjpy", data: "2026-11-12", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "USD/JPY blisko 160, celem 160,39", tytul_en: "USD/JPY near 160, eyeing 160.39",
@@ -296,6 +322,7 @@ window.ANALIZY = [
     lead: "DAX zyskał w poniedziałek 1,7% i zamknął się na 26 267. Dopóki indeks nie zamknie dnia poniżej poniedziałkowego minimum 25 793, bazą jest powrót do maksimum z 5 listopada przy 26 693.",
     lead_en: "The DAX gained 1.7% on Monday and closed at 26,267. Unless the index closes a day below Monday's low of 25,793, a return to the 5 November high near 26,693 is the base case.",
     poziomy: { cena: 26267.2, opory: [26692.9], wsparcia: [25793.1, 25617.5] },
+    wynik: { status: "trafiona", data: "2026-11-12", komentarz: "12 lis DAX wzrósł w ciągu sesji powyżej 26 900 pkt, nad cel R1 26 692,9, bez zamknięcia poniżej S1 25 793,1. Źródło ceny: Trading Economics (DAX Hits Record High, 12 lis 2026).", komentarz_en: "On 12 Nov the DAX rose above 26,900 intraday, past the R1 target of 26,692.9, with no close below S1 25,793.1. Price source: Trading Economics (DAX record high, 12 Nov 2026)." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 26 692,9 (maksimum z 5 listopada, najwyższe w danych wykresu).", tekst_en: "Base case: a rise to 26,692.9 (the 5 November high, the highest in the chart data)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 793,1 (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 25 617,5 (minimum z 6 listopada).", tekst_en: "A daily close below 25,793.1 (the 9 November low) invalidates the setup and opens the way to 25,617.5 (the 6 November low)." }
