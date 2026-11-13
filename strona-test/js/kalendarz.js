@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-13T13:50:00+01:00",
+  aktualizacja: "2026-11-13T22:30:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -86,7 +86,10 @@ window.KALENDARZ = {
     { nazwa: "Trading Economics: zatrudnienie poza rolnictwem w USA, październik 2026 (6 lis 2026)", nazwa_en: "Trading Economics: US nonfarm payrolls, October 2026 (6 Nov 2026)", url: "https://tradingeconomics.com/united-states/non-farm-payrolls" },
     { nazwa: "Trading Economics: inflacja CPI w USA, termin i poprzedni odczyt", nazwa_en: "Trading Economics: US CPI inflation, release date and previous reading", url: "https://tradingeconomics.com/united-states/inflation-cpi" },
     { nazwa: "Trading Economics: bilans handlowy Chin, termin i poprzedni odczyt", nazwa_en: "Trading Economics: China trade balance, release date and previous reading", url: "https://tradingeconomics.com/china/balance-of-trade" },
-    { nazwa: "Trading Economics: ceny producentów PPI w USA, termin i prognoza", nazwa_en: "Trading Economics: US PPI, release date and forecast", url: "https://tradingeconomics.com/united-states/producer-prices-change" }
+    { nazwa: "Trading Economics: ceny producentów PPI w USA, termin i prognoza", nazwa_en: "Trading Economics: US PPI, release date and forecast", url: "https://tradingeconomics.com/united-states/producer-prices-change" },
+    { nazwa: "Trading Economics: PKB Japonii, termin i prognoza", nazwa_en: "Trading Economics: Japan GDP, release date and forecast", url: "https://tradingeconomics.com/japan/gdp-growth" },
+    { nazwa: "Trading Economics: sprzedaż detaliczna w Chinach, termin i prognoza", nazwa_en: "Trading Economics: China retail sales, release date and forecast", url: "https://tradingeconomics.com/china/retail-sales-annual" },
+    { nazwa: "TipRanks: U.S. Stocks Finish in the Red as the AI Trade Falters (PPI, 13 lis 2026)", nazwa_en: "TipRanks: U.S. Stocks Finish in the Red as the AI Trade Falters (PPI, 13 Nov 2026)", url: "https://www.tipranks.com/news/u-s-stocks-finish-in-the-red-as-the-ai-trade-falters" }
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
@@ -95,6 +98,8 @@ window.KALENDARZ = {
 
 
 
-    { czas: "2026-11-13T14:30:00+01:00", kraj: "US", nazwa: "Ceny producentów PPI w USA (paź)", wplyw: 3, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "nasdaq", "sp500"], poprzednio: "6,3% r/r", prognoza: "6,6% r/r", aktualnie: null, opis: "Po wyższej od prognoz inflacji CPI ceny producentów pokażą, czy presja cenowa w USA rośnie dalej.", nazwa_en: "US PPI (Oct)", opis_en: "After the hotter-than-expected CPI, producer prices will show whether US price pressure keeps rising.", poprzednio_en: "6.3% y/y", prognoza_en: "6.6% y/y", zrodlo: 73 },
+    { czas: "2026-11-13T14:30:00+01:00", kraj: "US", nazwa: "Ceny producentów PPI w USA (paź)", wplyw: 3, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "nasdaq", "sp500"], poprzednio: "6,3% r/r", prognoza: "6,6% r/r", aktualnie: "6,5% r/r", aktualnie_en: "6.5% y/y", opis: "Po wyższej od prognoz inflacji CPI ceny producentów pokażą, czy presja cenowa w USA rośnie dalej.", nazwa_en: "US PPI (Oct)", opis_en: "After the hotter-than-expected CPI, producer prices will show whether US price pressure keeps rising.", poprzednio_en: "6.3% y/y", prognoza_en: "6.6% y/y", zrodlo: 76 },
+    { czas: "2026-11-16T00:50:00+01:00", kraj: "JP", nazwa: "PKB Japonii za III kw. (wstępny, k/k)", wplyw: 2, instrumenty: ["usdjpy"], poprzednio: "0,4% k/k", prognoza: "0,1% k/k", aktualnie: null, opis: "Słabszy wzrost gospodarki utrudniłby BoJ podwyżki stóp przy jenie przy 160 za dolara.", nazwa_en: "Japan Q3 GDP (preliminary, q/q)", opis_en: "Weaker growth would make BoJ rate hikes harder with the yen near 160 per dollar.", poprzednio_en: "0.4% q/q", prognoza_en: "0.1% q/q", zrodlo: 74 },
+    { czas: "2026-11-16T03:00:00+01:00", kraj: "CN", nazwa: "Sprzedaż detaliczna w Chinach (paź, r/r)", wplyw: 2, instrumenty: ["xauusd", "wti", "btcusd"], poprzednio: "1,1% r/r", prognoza: "0,8% r/r", aktualnie: null, opis: "Pokaże siłę popytu konsumpcyjnego w Chinach, ważną dla surowców i nastrojów w Azji.", nazwa_en: "China retail sales (Oct, y/y)", opis_en: "Shows the strength of Chinese consumer demand, which matters for commodities and Asian sentiment.", poprzednio_en: "1.1% y/y", prognoza_en: "0.8% y/y", zrodlo: 75 },
   ]
 };
