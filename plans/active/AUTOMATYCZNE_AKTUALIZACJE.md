@@ -5,7 +5,7 @@ owner: Claude + Bartek
 type: ops
 depends_on: ["HOSTING_CLOUDFLARE"]
 blocks: []
-last_updated: 2026-11-03
+last_updated: 2026-11-16
 start_date: 2026-10-18
 eta: 2026-11-10
 in_flight: true
@@ -15,13 +15,13 @@ in_flight: true
 
 ## Status
 
-- **Overall:** In progress (Phase 2 of 3)
+- **Overall:** Done technicznie; działa w trybie stałym
 - **Phase 0 (Przegląd rano i wieczorem):** Done (2026-10-18)
 - **Phase 1 (Aktualizacja przed sesją w USA i częstsze świece):** Done (2026-11-03)
-- **Phase 2 (Tydzień obserwacji bez braków danych):** In progress (eta 2026-11-10)
+- **Phase 2 (Tydzień obserwacji bez braków danych):** Done (2026-11-16): od 3 lis wszystkie trzy codzienne aktualizacje trafiały na stronę; USD/PLN bywa bez świeżego notowania i jest wtedy podawany z zamknięcia CNBC.
 
-**Next action:** Sprawdzić, że jutrzejsze trzy aktualizacje (7:44, 13:47, 22:24) docierają na oxku.pages.dev.
-**Last updated:** 2026-11-03
+**Next action:** Kontynuować codzienne aktualizacje; przenieść plan do shipped przy następnym /plans sync.
+**Last updated:** 2026-11-16
 
 ---
 

@@ -24,6 +24,113 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-16-eurusd", instrument: "eurusd", data: "2026-11-16", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "EUR/USD pod 1,1044, celem 1,0950", tytul_en: "EUR/USD below 1.1044, eyeing 1.0950",
+    lead: "EUR/USD zamknął piątek na 1,1021, poniżej wsparcia 1,1044, i w poniedziałek rano jest przy 1,1018. Dopóki kurs jest pod 1,1140, bazą jest zejście do 1,0950, celu wskazanego przez RoboForex.",
+    lead_en: "EUR/USD closed Friday at 1.1021, below 1.1044 support, and is near 1.1018 on Monday morning. While the pair stays below 1.1140, a drop to 1.0950, the target named by RoboForex, is the base case.",
+    poziomy: { cena: 1.1018, opory: [1.114, 1.12], wsparcia: [1.095] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 1,0950 (cel RoboForex po przełamaniu 1,1044), po drodze test psychologicznego poziomu 1,1000.", tekst_en: "Base case: a drop to 1.0950 (RoboForex's target after the 1.1044 break), with a test of the psychological 1.1000 on the way." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,1140 (najbliższy opór według RoboForex) unieważnia scenariusz i otwiera drogę do 1,1200.", tekst_en: "A daily close above 1.1140 (the nearest resistance according to RoboForex) invalidates the setup and opens the way to 1.1200." }
+    ],
+    tresc: [
+      "EUR/USD zamknął piątek na 1,1021, poniżej dolnej granicy zakresu 1,1044, więc poprzednia analiza neutralna została rozliczona jako nietrafiona. To najniższy kurs w danych wykresu od maja.",
+      "Dolar trzyma się najwyżej od kwietnia 2025 (indeks około 103,4). Rynek wycenia około 92% szans na grudniową podwyżkę stóp Fed o 25 pb i 8% na 50 pb; w tym tygodniu przemówienie prezesa Fed Kevina Warsha i protokół z październikowego posiedzenia (środa).",
+      "Wsparcia to 1,1000 i 1,0950, opory 1,1140 i 1,1200 (RoboForex). Średnia z 20 sesji jest przy 1,1170, z 50 sesji przy 1,1293."
+    ],
+    tresc_en: [
+      "EUR/USD closed Friday at 1.1021, below the 1.1044 lower bound, so the previous neutral analysis was settled as a miss. That is the lowest in the chart data since May.",
+      "The dollar holds at its highest since April 2025 (index around 103.4). Markets price about a 92% chance of a 25 bp Fed hike in December and 8% for 50 bp; this week brings a speech by Fed Chair Kevin Warsh and the minutes of the October meeting (Wednesday).",
+      "Support is at 1.1000 and 1.0950, resistance at 1.1140 and 1.1200 (RoboForex). The 20-session average is near 1.1170, the 50-session average near 1.1293."
+    ],
+    zrodla: [
+      { nazwa: "RoboForex: EUR/USD, poziomy na 16–20 lis 2026", url: "https://roboforex.com/beginners/analytics/forex-forecast/currencies/eur-usd-weekly-forecast-2026-11-13/" },
+      { nazwa: "Trading Economics: Dollar Holds Near 19-Month High (16 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne EUR/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/EUR=" }
+    ]
+  },
+  {
+    id: "2026-11-16-srebro", instrument: "xagusd", data: "2026-11-16", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro na minimum roku, celem 45", tytul_en: "Silver at a yearly low, eyeing $45",
+    lead: "Srebro spadło w poniedziałek rano do około 47,5 USD, najniżej w tym roku. Dopóki cena jest pod 50,43, bazą jest zejście do długoterminowego wsparcia przy 45 USD, wskazanego przez FXEmpire.",
+    lead_en: "Silver fell to around $47.5 on Monday morning, the lowest this year. While the price stays below $50.43, a drop to long-term support at $45, named by FXEmpire, is the base case.",
+    poziomy: { cena: 47.57, opory: [50.43, 51.955], wsparcia: [45] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 45 USD (długoterminowe wsparcie według FXEmpire).", tekst_en: "Base case: a drop to $45 (long-term support according to FXEmpire)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 50,43 USD (9-okresowa średnia wykładnicza według FXStreet) unieważnia scenariusz i otwiera drogę do 51,96 (maksimum z 12 listopada).", tekst_en: "A daily close above $50.43 (the 9-period EMA according to FXStreet) invalidates the setup and opens the way to $51.96 (the 12 November high)." }
+    ],
+    tresc: [
+      "Srebro spadło w piątek do 48,47 USD, poniżej celu 48,53, więc poprzednia analiza spadkowa została rozliczona jako trafiona. W poniedziałek rano cena zeszła do 47,57 USD (Trading Economics), a minimum roku według FXStreet to 47,34.",
+      "Metale tracą przez mocnego dolara, wysokie rentowności obligacji i zakłady na szybsze podwyżki stóp Fed. RSI z 14 dni jest przy 30, co oznacza mocne wyprzedanie, ale bez sygnału odwrotu.",
+      "Najbliższy opór to 50,43 (średnia wykładnicza), wyżej 51,96; wsparcie 45 USD. Jutro sprzedaż detaliczna w USA, w środę protokół Fed."
+    ],
+    tresc_en: [
+      "Silver fell to $48.47 on Friday, below the $48.53 target, so the previous bearish analysis was settled as a hit. On Monday morning the price dropped to $47.57 (Trading Economics), and the yearly low according to FXStreet is $47.34.",
+      "Metals fall on the strong dollar, high bond yields and bets on faster Fed hikes. The 14-day RSI is near 30, deeply oversold but with no reversal signal.",
+      "The nearest resistance is $50.43 (the exponential average), then $51.96; support is $45. US retail sales are due tomorrow, Fed minutes on Wednesday."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Silver Price Forecast: Tech Sell-Off Raises Risk of a Drop to $45", url: "https://www.fxempire.com/forecasts/article/silver-price-forecast-tech-sell-off-raises-risk-of-a-drop-to-45-1641801" },
+      { nazwa: "FXStreet (Mitrade): XAG/USD hits yearly lows below $47.50 (16 lis 2026)", url: "https://www.mitrade.com/insights/commodity-analysis/metal/fxstreet-XAGUSDXAUUSDUSDOLLARF-202611161345" },
+      { nazwa: "Trading Economics: złoto i srebro (16 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" }
+    ]
+  },
+  {
+    id: "2026-11-16-bitcoin", instrument: "btcusd", data: "2026-11-16", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin pod 68 380, celem 61 946", tytul_en: "Bitcoin below $68,380, eyeing $61,946",
+    lead: "Bitcoin spadł w weekend do 61 946 USD i w poniedziałek rano jest przy 64 580. Dopóki cena jest pod sobotnim maksimum 68 380, bazą jest powrót do niedzielnego minimum przy 61 946.",
+    lead_en: "Bitcoin fell to $61,946 over the weekend and is near $64,580 on Monday morning. While the price stays below Saturday's high of $68,380, a return to Sunday's low near $61,946 is the base case.",
+    poziomy: { cena: 64580, opory: [68380, 71429.5], wsparcia: [61946.2, 61750.9] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 61 946 USD (minimum z 15 listopada), a niżej do 61 751 (minimum z 13 lipca).", tekst_en: "Base case: a drop to $61,946 (the 15 November low), and lower to $61,751 (the 13 July low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 68 380 USD (maksimum z 14 listopada) unieważnia scenariusz i otwiera drogę do 71 430 (maksimum z 13 listopada).", tekst_en: "A daily close above $68,380 (the 14 November high) invalidates the setup and opens the way to $71,430 (the 13 November high)." }
+    ],
+    tresc: [
+      "Bitcoin spadł w sobotę do 63 270 USD, poniżej celu 64 112, więc poprzednia analiza spadkowa została rozliczona jako trafiona. W niedzielę cena zeszła do 61 946, najniżej od lipca (świece Coinbase).",
+      "Kryptowaluty tracą razem ze spółkami AI przed wynikami Nvidii (wtorek po sesji) i przy najmocniejszym od kwietnia 2025 dolarze. Od 4 listopada bitcoin stracił około 20%.",
+      "Opory to 68 380 i 71 430, wsparcia 61 946 i lipcowe minimum 61 751. Średnia z 20 dni jest przy 74 250."
+    ],
+    tresc_en: [
+      "Bitcoin fell to $63,270 on Saturday, below the $64,112 target, so the previous bearish analysis was settled as a hit. On Sunday the price dropped to $61,946, the lowest since July (Coinbase candles).",
+      "Crypto falls along with AI stocks ahead of Nvidia's results (Tuesday after the close) and with the strongest dollar since April 2025. Since 4 November bitcoin has lost about 20%.",
+      "Resistance is at $68,380 and $71,430, support at $61,946 and the July low of $61,751. The 20-day average is near $74,250."
+    ],
+    zrodla: [
+      { nazwa: "Coinbase: świece dzienne BTC/USD (maksima i minima z danych wykresów na stronie)", url: "https://www.coinbase.com/price/bitcoin" },
+      { nazwa: "Gemini: notowanie BTC/USD (16 lis 2026)", url: "https://www.gemini.com/prices/bitcoin" }
+    ]
+  },
+  {
+    id: "2026-11-16-usdpln", instrument: "usdpln", data: "2026-11-16", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "USD/PLN przy 3,99, celem 4,00", tytul_en: "USD/PLN near 3.99, eyeing 4.00",
+    lead: "Dolar zamknął piątek na 3,9931 zł, najwyżej w danych wykresu od maja. Dopóki kurs jest nad czwartkowym minimum 3,9621, bazą jest test poziomu 4,00 zł, o którym piszą Comparic i Bithub.",
+    lead_en: "The dollar closed Friday at 3.9931 zlotys, the highest in the chart data since May. While the rate stays above Thursday's low of 3.9621, a test of the 4.00 level, discussed by Comparic and Bithub, is the base case.",
+    poziomy: { cena: 3.9931, opory: [4.0], wsparcia: [3.9621, 3.9308] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 4,00 zł (poziom psychologiczny wskazywany w komentarzach rynkowych).", tekst_en: "Base case: a rise to 4.00 zlotys (the psychological level cited in market commentary)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3,9621 (minimum z 12 listopada) unieważnia scenariusz i otwiera drogę do 3,9308 (minimum z 11 listopada).", tekst_en: "A daily close below 3.9621 (the 12 November low) invalidates the setup and opens the way to 3.9308 (the 11 November low)." }
+    ],
+    tresc: [
+      "USD/PLN zamknął piątek na 3,9931, powyżej górnej granicy zakresu 3,9833, więc poprzednia analiza neutralna została rozliczona jako nietrafiona. Świeże notowanie z poniedziałku rano nie było dostępne, dlatego analiza wychodzi od piątkowego zamknięcia (CNBC).",
+      "Złoty traci, bo dolar jest najmocniejszy od kwietnia 2025, a rynek oczekuje grudniowej podwyżki stóp Fed; stopy w USA są już wyższe niż w Polsce.",
+      "Oporem jest 4,00 zł, wsparciami minima z 12 i 11 listopada: 3,9621 i 3,9308. Średnia z 20 sesji jest przy 3,9311."
+    ],
+    tresc_en: [
+      "USD/PLN closed Friday at 3.9931, above the 3.9833 upper bound, so the previous neutral analysis was settled as a miss. No fresh Monday-morning quote was available, so the analysis starts from Friday's close (CNBC).",
+      "The zloty weakens as the dollar is the strongest since April 2025 and markets expect a December Fed hike; US rates are already higher than Poland's.",
+      "Resistance is 4.00 zlotys, support the 12 and 11 November lows: 3.9621 and 3.9308. The 20-session average is near 3.9311."
+    ],
+    zrodla: [
+      { nazwa: "Comparic: Kurs USD/PLN wystrzelił do 3,98. Dlaczego Fed może wysłać dolara powyżej 4,00 PLN", url: "https://comparic.pl/kurs-usd-pln-wystrzelil-do-398-dlaczego-fed-moze-wyslac-dolara-powyzej-400-pln/" },
+      { nazwa: "Bithub: Kurs dolara o krok od 4 zł. Stopy w USA już wyższe niż w Polsce", url: "https://bithub.pl/gieldy/kurs-dolara-o-krok-od-4-zl-stopy-w-usa-juz-wyzsze-niz-w-polsce/" },
+      { nazwa: "CNBC: świece dzienne USD/PLN (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/PLN=" }
+    ]
+  },
+  {
     id: "2026-11-13-zloto", instrument: "xauusd", data: "2026-11-13", interwal: "D1",
     kierunek: "neutralny", ai: true, szkic: true,
     tytul: "Złoto w zakresie 3 853–3 999", tytul_en: "Gold in a $3,853–3,999 range",
@@ -57,6 +164,7 @@ window.ANALIZY = [
     lead: "EUR/USD spadł w czwartek do 1,1044, najniżej w danych wykresu od maja, i w piątek rano jest przy 1,1059. Bazą jest ruch między czwartkowym minimum 1,1044 a środowym maksimum 1,1170.",
     lead_en: "EUR/USD fell to 1.1044 on Thursday, the lowest in the chart data since May, and is near 1.1059 on Friday morning. Trading between Thursday's low of 1.1044 and Wednesday's high of 1.1170 is the base case.",
     poziomy: { cena: 1.1059, opory: [1.117], wsparcia: [1.1044] },
+    wynik: { status: "nietrafiona", data: "2026-11-13", komentarz: "13 lis EUR/USD zamknął dzień na 1,1021, poniżej dolnej granicy zakresu S1 1,1044. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 13 Nov EUR/USD closed at 1.1021, below the S1 lower bound of 1.1044. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo ruch w zakresie 1,1044–1,1170 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 1.1044–1.1170 range over the next 10 sessions." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,1044 unieważnia scenariusz i oznacza nowe minimum od maja w danych wykresu.", tekst_en: "A daily close below 1.1044 invalidates the setup and marks a new low since May in the chart data." },
@@ -85,6 +193,7 @@ window.ANALIZY = [
     lead: "Bitcoin spadł w piątek do 67 555 USD, najniżej od sierpnia. Dopóki cena jest pod minimum z 10 listopada przy 72 644, bazą jest zejście do minimum z 19 sierpnia przy 64 112.",
     lead_en: "Bitcoin fell to $67,555 on Friday, the lowest since August. While the price stays below the 10 November low near $72,644, a drop to the 19 August low near $64,112 is the base case.",
     poziomy: { cena: 68233.4, opory: [72643.5, 76306.3], wsparcia: [64112, 62631.2] },
+    wynik: { status: "trafiona", data: "2026-11-14", komentarz: "14 lis bitcoin spadł do 63 270 USD, poniżej celu S1 64 112, bez zamknięcia powyżej R1 72 643,5 (najwyżej 71 429,5). Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 14 Nov bitcoin fell to $63,270, below the S1 target of $64,112, with no close above R1 $72,643.5 (high $71,429.5). Price source: Coinbase daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 64 112 USD (minimum z 19 sierpnia), a niżej do 62 631 (minimum z 16 sierpnia).", tekst_en: "Base case: a drop to $64,112 (the 19 August low), and lower to $62,631 (the 16 August low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 72 643,5 USD (minimum z 10 listopada) unieważnia scenariusz i otwiera drogę do 76 306 (maksimum z 6 listopada).", tekst_en: "A daily close above $72,643.5 (the 10 November low) invalidates the setup and opens the way to $76,306 (the 6 November high)." }
@@ -111,6 +220,7 @@ window.ANALIZY = [
     lead: "Srebro spadło w czwartek o ponad 3% i zamknęło dzień na 50,02 USD. Dopóki cena jest pod czwartkowym maksimum 51,96, bazą jest zejście do minimum z 3 listopada przy 48,53.",
     lead_en: "Silver fell more than 3% on Thursday and closed at $50.02. While the price stays below Thursday's high of $51.96, a drop to the 3 November low near $48.53 is the base case.",
     poziomy: { cena: 49.92, opory: [51.955, 53.715], wsparcia: [48.53] },
+    wynik: { status: "trafiona", data: "2026-11-13", komentarz: "13 lis srebro spadło do 48,47 USD, poniżej celu S1 48,53, bez zamknięcia powyżej R1 51,955 (najwyżej 50,78). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 13 Nov silver fell to $48.47, below the S1 target of $48.53, with no close above R1 $51.955 (high $50.78). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 48,53 USD (minimum z 3 listopada).", tekst_en: "Base case: a drop to $48.53 (the 3 November low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 51,96 USD (maksimum z 12 listopada) unieważnia scenariusz i otwiera drogę do 53,72 (maksimum z 10 listopada).", tekst_en: "A daily close above $51.96 (the 12 November high) invalidates the setup and opens the way to $53.72 (the 10 November high)." }
@@ -296,6 +406,7 @@ window.ANALIZY = [
     lead: "USD/PLN wzrósł w środę o 1% do 3,9768, blisko maksimum dnia 3,9833, najwyższego w danych wykresu od maja. Bazą jest ruch między środowym minimum 3,9308 a tym maksimum.",
     lead_en: "USD/PLN rose 1% on Wednesday to 3.9768, close to the day's high of 3.9833, the highest in the chart data since May. Trading between Wednesday's low of 3.9308 and that high is the base case.",
     poziomy: { cena: 3.9768, opory: [3.9833], wsparcia: [3.9308] },
+    wynik: { status: "nietrafiona", data: "2026-11-13", komentarz: "13 lis USD/PLN zamknął dzień na 3,9931, powyżej górnej granicy zakresu R1 3,9833. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 13 Nov USD/PLN closed at 3.9931, above the R1 upper bound of 3.9833. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo ruch w zakresie 3,9308–3,9833 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 3.9308–3.9833 range over the next 10 sessions." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3,9833 unieważnia scenariusz i oznacza nowe maksimum od maja.", tekst_en: "A daily close above 3.9833 invalidates the setup and marks a new high since May." },
