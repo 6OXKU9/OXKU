@@ -24,6 +24,113 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-17-sp500", instrument: "sp500", data: "2026-11-17", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "S&P 500 pod 7 500, celem 7 350", tytul_en: "S&P 500 below 7,500, eyeing 7,350",
+    lead: "S&P 500 spadł w poniedziałek o 1,9%, trzecią sesję z rzędu, i zamknął się na 7 417. Dopóki indeks jest pod 7 502, bazą jest zejście do minimum z 5 listopada przy 7 350, tuż nad średnią z 200 dni.",
+    lead_en: "The S&P 500 fell 1.9% on Monday, a third straight loss, and closed at 7,417. While the index stays below 7,502, a drop to the 5 November low near 7,350, just above the 200-day average, is the base case.",
+    poziomy: { cena: 7400.89, opory: [7501.56, 7597.44], wsparcia: [7350.35, 7342.71] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 7 350,35 (minimum z 5 listopada), a niżej do 7 342,71 (średnia z 200 dni według FXEmpire).", tekst_en: "Base case: a drop to 7,350.35 (the 5 November low), and lower to 7,342.71 (the 200-day average according to FXEmpire)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 501,56 (poziom 50% według FXEmpire) unieważnia scenariusz i otwiera drogę do 7 597.", tekst_en: "A daily close above 7,501.56 (the 50% level according to FXEmpire) invalidates the setup and opens the way to 7,597." }
+    ],
+    tresc: [
+      "S&P 500 zamknął poniedziałek na 7 416,59, poniżej 7 422,24, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. Spadek prowadziły spółki półprzewodnikowe: Nvidia −4%, Micron −7,6%, AMD −5,6%.",
+      "Dziś po sesji wyniki Nvidii, pierwsze po rezygnacji prezesa Jensena Huanga; na rynki działają też nowe ograniczenia USA dla zdalnego dostępu Chin do zaawansowanych chipów. Kontrakty rano są mieszane.",
+      "Wsparcia to 7 350,35 i średnia z 200 dni przy 7 342,71, opory 7 501,56 i strefa 7 597–7 656 (FXEmpire). Średnie z 20 i 50 sesji są nad ceną."
+    ],
+    tresc_en: [
+      "The S&P 500 closed Monday at 7,416.59, below 7,422.24, so the previous bullish analysis was settled as a miss. Chipmakers led the drop: Nvidia −4%, Micron −7.6%, AMD −5.6%.",
+      "Nvidia reports after today's close, its first results since CEO Jensen Huang's resignation; new US limits on China's remote access to advanced chips also weigh. Futures are mixed this morning.",
+      "Support is at 7,350.35 and the 200-day average near 7,342.71, resistance at 7,501.56 and the 7,597–7,656 zone (FXEmpire). The 20- and 50-session averages are above the price."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: S&P500: Nvidia Sell-Off Drags Index Toward 200-Day Moving Average (16 lis 2026)", url: "https://www.fxempire.com/forecasts/article/sp500-nvidia-sell-off-drags-index-toward-200-day-moving-average-1645014" },
+      { nazwa: "Trading Economics: US Stock Futures Mixed Ahead of Nvidia Earnings (17 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne S&P 500 (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.SPX" }
+    ]
+  },
+  {
+    id: "2026-11-17-nasdaq", instrument: "nasdaq", data: "2026-11-17", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 pod 28 000, celem 26 888", tytul_en: "Nasdaq 100 below 28,000, eyeing 26,888",
+    lead: "Nasdaq 100 stracił w poniedziałek 2,7% i zamknął się na 27 197. Dopóki indeks jest pod maksimum z 9 listopada przy 28 026, bazą jest zejście do minimum z 6 listopada przy 26 888.",
+    lead_en: "The Nasdaq 100 lost 2.7% on Monday and closed at 27,197. While the index stays below the 9 November high near 28,026, a drop to the 6 November low near 26,888 is the base case.",
+    poziomy: { cena: 27183.67, opory: [28025.8, 28548.5], wsparcia: [26887.7, 26606.4] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 26 887,7 (minimum z 6 listopada), a niżej do 26 606,4 (minimum z 5 listopada).", tekst_en: "Base case: a drop to 26,887.7 (the 6 November low), and lower to 26,606.4 (the 5 November low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 28 025,8 (maksimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 28 548,5 (maksimum z 12 listopada).", tekst_en: "A daily close above 28,025.8 (the 9 November high) invalidates the setup and opens the way to 28,548.5 (the 12 November high)." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął poniedziałek na 27 197,2, poniżej dolnej granicy zakresu 27 421,2, więc poprzednia analiza neutralna została rozliczona jako nietrafiona. W miesiąc indeks stracił około 8%.",
+      "Dziś po sesji wyniki Nvidii; analitycy oczekują około 109 mld USD przychodu. Spółki AI tracą też przez nowe ograniczenia USA dla Chin. Rano kontrakty na Nasdaq 100 lekko rosną, a giełdy w Azji spadają o około 1%.",
+      "Opory to 28 025,8 i 28 548,5, wsparcia listopadowe minima 26 887,7 i 26 606,4. Średnia z 20 sesji jest przy 28 472, z 50 sesji przy 29 459."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Monday at 27,197.2, below the 27,421.2 lower bound, so the previous neutral analysis was settled as a miss. The index has lost about 8% in a month.",
+      "Nvidia reports after today's close; analysts expect revenue of about $109B. AI stocks also fall on new US limits for China. This morning Nasdaq 100 futures edge higher while Asian markets fall about 1%.",
+      "Resistance is at 28,025.8 and 28,548.5, support at the November lows of 26,887.7 and 26,606.4. The 20-session average is near 28,472, the 50-session average near 29,459."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: US Stock Futures Mixed Ahead of Nvidia Earnings (17 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne Nasdaq 100 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.NDX" },
+      { nazwa: "News4JAX / AP: Asian shares decline following stocks tumbled on Wall Street (17 lis 2026)", url: "https://www.news4jax.com/business/2026/11/17/asian-shares-decline-following-stocks-tumbled-on-wall-street/" }
+    ]
+  },
+  {
+    id: "2026-11-17-gbpusd", instrument: "gbpusd", data: "2026-11-17", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "GBP/USD pod 1,33, celem 1,3132", tytul_en: "GBP/USD below 1.33, eyeing 1.3132",
+    lead: "GBP/USD spadł w poniedziałek do 1,3174, najniżej od czerwca. Dopóki kurs jest pod maksimum z 12 listopada przy 1,3304, bazą jest zejście do minimum z 14 października przy 1,3132.",
+    lead_en: "GBP/USD fell to 1.3174 on Monday, the lowest since June. While the pair stays below the 12 November high near 1.3304, a drop to the 14 October low near 1.3132 is the base case.",
+    poziomy: { cena: 1.3194, opory: [1.3304, 1.3385], wsparcia: [1.3132] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 1,3132 (minimum z 14 października).", tekst_en: "Base case: a drop to 1.3132 (the 14 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3304 (maksimum z 12 listopada) unieważnia scenariusz i otwiera drogę do 1,3385 (maksimum z 11 listopada).", tekst_en: "A daily close above 1.3304 (the 12 November high) invalidates the setup and opens the way to 1.3385 (the 11 November high)." }
+    ],
+    tresc: [
+      "GBP/USD spadł w poniedziałek do 1,3174, poniżej celu 1,3177, więc poprzednia analiza spadkowa została rozliczona jako trafiona. Rano kurs jest przy 1,3194 (Trading Economics).",
+      "Dolar trzyma się najwyżej od prawie 20 miesięcy (indeks około 103,5) po wysokiej inflacji w USA i jastrzębich wypowiedziach członków Fed, m.in. Beth Hammack. Rynek wycenia ponad 90% szans na grudniową podwyżkę stóp.",
+      "Wsparciem jest minimum z 14 października (1,3132), oporami 1,3304 i 1,3385. Dziś o 14:30 sprzedaż detaliczna w USA, w środę protokół Fed."
+    ],
+    tresc_en: [
+      "GBP/USD fell to 1.3174 on Monday, below the 1.3177 target, so the previous bearish analysis was settled as a hit. This morning the pair is near 1.3194 (Trading Economics).",
+      "The dollar holds at its highest in almost 20 months (index around 103.5) after high US inflation and hawkish remarks from Fed officials, including Beth Hammack. Markets price more than a 90% chance of a December hike.",
+      "Support is the 14 October low (1.3132), resistance 1.3304 and 1.3385. US retail sales are due today at 14:30, the Fed minutes on Wednesday."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: dolar i kursy walut (17 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne GBP/USD (maksima i minima z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/GBP=" }
+    ]
+  },
+  {
+    id: "2026-11-17-usdpln", instrument: "usdpln", data: "2026-11-17", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "USD/PLN nad 4,00, celem 4,08", tytul_en: "USD/PLN above 4.00, eyeing 4.08",
+    lead: "Dolar przekroczył w poniedziałek 4,00 zł, po raz pierwszy od marca 2025, i zamknął się na 4,0002. Dopóki kurs jest nad piątkowym minimum 3,9775, bazą jest dalszy wzrost w stronę 4,08 zł.",
+    lead_en: "The dollar rose above 4.00 zlotys on Monday for the first time since March 2025 and closed at 4.0002. While the rate stays above Friday's low of 3.9775, a further rise towards 4.08 is the base case.",
+    poziomy: { cena: 4.0002, opory: [4.08], wsparcia: [3.9775, 3.9621] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 4,08 zł; według wyliczenia MyBank taki kurs odpowiada spadkowi EUR/USD do 1,08 przy niezmienionym EUR/PLN.", tekst_en: "Base case: a rise to 4.08 zlotys; according to MyBank's calculation that rate matches EUR/USD falling to 1.08 with EUR/PLN unchanged." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3,9775 (minimum z 13 listopada) unieważnia scenariusz i otwiera drogę do 3,9621 (minimum z 12 listopada).", tekst_en: "A daily close below 3.9775 (the 13 November low) invalidates the setup and opens the way to 3.9621 (the 12 November low)." }
+    ],
+    tresc: [
+      "USD/PLN wzrósł w poniedziałek do 4,0055, powyżej celu 4,00, więc poprzednia analiza wzrostowa została rozliczona jako trafiona. Średni kurs NBP z 16 listopada to 4,0007 zł. Świeże notowanie z wtorku rano nie było dostępne, dlatego analiza wychodzi od poniedziałkowego zamknięcia (CNBC).",
+      "Złoty słabnie, bo dolar jest najmocniejszy od prawie 20 miesięcy, a rynek oczekuje grudniowej podwyżki stóp Fed. Nad ceną nie ma w danych wykresu wyższych poziomów, dlatego cel to wyliczenie MyBank, a nie poziom techniczny.",
+      "Wsparcia to minima z 13 i 12 listopada: 3,9775 i 3,9621. Średnia z 20 sesji jest przy 3,9363."
+    ],
+    tresc_en: [
+      "USD/PLN rose to 4.0055 on Monday, above the 4.00 target, so the previous bullish analysis was settled as a hit. The NBP average rate on 16 November was 4.0007 zlotys. No fresh Tuesday-morning quote was available, so the analysis starts from Monday's close (CNBC).",
+      "The zloty weakens as the dollar is the strongest in almost 20 months and markets expect a December Fed hike. There are no higher levels in the chart data above the price, so the target is MyBank's calculation rather than a technical level.",
+      "Support is the 13 and 12 November lows: 3.9775 and 3.9621. The 20-session average is near 3.9363."
+    ],
+    zrodla: [
+      { nazwa: "MyBank: Dolar ponad 4 zł. Fed wspiera USD (16 lis 2026)", url: "https://mybank.pl/news/35898-dolar-ponad-4-zl-fed-wspiera-usd-zloty-czeka-na-dane-o-inflacji.html" },
+      { nazwa: "Bankier.pl: Dolar już po 4 zł i jest najdroższy od 19 miesięcy", url: "https://www.bankier.pl/wiadomosc/Dolar-juz-po-4-zl-i-jest-najdrozszy-od-19-miesiecy-Euro-tez-slabnie-wobec-amerykanskiej-waluty-9229240.html" },
+      { nazwa: "CNBC: świece dzienne USD/PLN (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/PLN=" }
+    ]
+  },
+  {
     id: "2026-11-16-eurusd", instrument: "eurusd", data: "2026-11-16", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "EUR/USD pod 1,1044, celem 1,0950", tytul_en: "EUR/USD below 1.1044, eyeing 1.0950",
@@ -110,6 +217,7 @@ window.ANALIZY = [
     lead: "Dolar zamknął piątek na 3,9931 zł, najwyżej w danych wykresu od maja. Dopóki kurs jest nad czwartkowym minimum 3,9621, bazą jest test poziomu 4,00 zł, o którym piszą Comparic i Bithub.",
     lead_en: "The dollar closed Friday at 3.9931 zlotys, the highest in the chart data since May. While the rate stays above Thursday's low of 3.9621, a test of the 4.00 level, discussed by Comparic and Bithub, is the base case.",
     poziomy: { cena: 3.9931, opory: [4.0], wsparcia: [3.9621, 3.9308] },
+    wynik: { status: "trafiona", data: "2026-11-16", komentarz: "16 lis USD/PLN wzrósł do 4,0055, powyżej celu R1 4,00, bez zamknięcia poniżej S1 3,9621. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 16 Nov USD/PLN rose to 4.0055, above the R1 target of 4.00, with no close below S1 3.9621. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 4,00 zł (poziom psychologiczny wskazywany w komentarzach rynkowych).", tekst_en: "Base case: a rise to 4.00 zlotys (the psychological level cited in market commentary)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3,9621 (minimum z 12 listopada) unieważnia scenariusz i otwiera drogę do 3,9308 (minimum z 11 listopada).", tekst_en: "A daily close below 3.9621 (the 12 November low) invalidates the setup and opens the way to 3.9308 (the 11 November low)." }
@@ -327,6 +435,7 @@ window.ANALIZY = [
     lead: "GBP/USD spadł w środę do 1,3263, najniżej od 28 października. Dopóki kurs jest pod środowym maksimum 1,3385, bazą jest zejście do minimum z 1 października przy 1,3177.",
     lead_en: "GBP/USD fell to 1.3263 on Wednesday, the lowest since 28 October. While the pair stays below Wednesday's high of 1.3385, a drop to the 1 October low near 1.3177 is the base case.",
     poziomy: { cena: 1.3258, opory: [1.3385, 1.3463], wsparcia: [1.3177, 1.3132] },
+    wynik: { status: "trafiona", data: "2026-11-16", komentarz: "16 lis GBP/USD spadł do 1,3174, poniżej celu S1 1,3177, bez zamknięcia powyżej R1 1,3385. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 16 Nov GBP/USD fell to 1.3174, below the S1 target of 1.3177, with no close above R1 1.3385. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 1,3177 (minimum z 1 października), a niżej do 1,3132 (minimum z 14 października).", tekst_en: "Base case: a drop to 1.3177 (the 1 October low), and lower to 1.3132 (the 14 October low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3385 (maksimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 1,3463 (maksimum z 6 listopada).", tekst_en: "A daily close above 1.3385 (the 11 November high) invalidates the setup and opens the way to 1.3463 (the 6 November high)." }
@@ -353,6 +462,7 @@ window.ANALIZY = [
     lead: "Nasdaq 100 zyskał w środę 2,3% dzięki CoreWeave, ale w czwartek kontrakty tracą przez doniesienia o Nvidii. Bazą jest ruch między wtorkowym minimum 27 421 a maksimum z 4 listopada przy 28 830.",
     lead_en: "The Nasdaq 100 gained 2.3% on Wednesday on CoreWeave, but futures fall on Thursday on reports about Nvidia. Trading between Tuesday's low of 27,421 and the 4 November high near 28,830 is the base case.",
     poziomy: { cena: 28085.83, opory: [28829.7], wsparcia: [27421.2] },
+    wynik: { status: "nietrafiona", data: "2026-11-16", komentarz: "16 lis Nasdaq 100 zamknął dzień na 27 197,2, poniżej dolnej granicy zakresu S1 27 421,2. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 16 Nov the Nasdaq 100 closed at 27,197.2, below the S1 lower bound of 27,421.2. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo ruch w zakresie 27 421,2–28 829,7 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 27,421.2–28,829.7 range over the next 10 sessions." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 27 421,2 unieważnia scenariusz i otwiera drogę do minimum z 5 listopada (26 606,4).", tekst_en: "A daily close below 27,421.2 invalidates the setup and opens the way to the 5 November low (26,606.4)." },
@@ -571,6 +681,7 @@ window.ANALIZY = [
     lead: "S&P 500 zyskał w poniedziałek 2,3%, najwięcej od kwietnia, i zamknął się na 7 550. Dopóki indeks nie zamknie dnia poniżej poniedziałkowego minimum 7 422, bazą jest wzrost do maksimum z 4 listopada przy 7 716.",
     lead_en: "The S&P 500 gained 2.3% on Monday, the most since April, and closed at 7,550. Unless the index closes a day below Monday's low of 7,422, a rise to the 4 November high near 7,716 is the base case.",
     poziomy: { cena: 7568.12, opory: [7715.57, 7758.43], wsparcia: [7422.24, 7350.35] },
+    wynik: { status: "nietrafiona", data: "2026-11-16", komentarz: "16 lis S&P 500 zamknął dzień na 7 416,59, poniżej S1 7 422,24, zanim cena dotknęła celu R1 7 715,57 (najwyżej 7 652,76). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 16 Nov the S&P 500 closed at 7,416.59, below S1 7,422.24, before reaching the R1 target of 7,715.57 (high 7,652.76). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 7 715,57 (maksimum z 4 listopada), a wyżej do 7 758,43 (maksimum z 28 października).", tekst_en: "Base case: a rise to 7,715.57 (the 4 November high), and higher to 7,758.43 (the 28 October high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 7 422,24 (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 7 350,35 (minimum z 5 listopada).", tekst_en: "A daily close below 7,422.24 (the 9 November low) invalidates the setup and opens the way to 7,350.35 (the 5 November low)." }

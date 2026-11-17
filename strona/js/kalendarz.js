@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-16T22:30:00+01:00",
+  aktualizacja: "2026-11-17T07:50:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -101,9 +101,6 @@ window.KALENDARZ = {
 
 
 
-    { czas: "2026-11-16T00:50:00+01:00", kraj: "JP", nazwa: "PKB Japonii za III kw. (wstępny, k/k)", wplyw: 2, instrumenty: ["usdjpy"], poprzednio: "0,4% k/k", prognoza: "0,1% k/k", aktualnie: "0,0% k/k", aktualnie_en: "0.0% q/q", opis: "Słabszy wzrost gospodarki utrudniłby BoJ podwyżki stóp przy jenie przy 160 za dolara.", nazwa_en: "Japan Q3 GDP (preliminary, q/q)", opis_en: "Weaker growth would make BoJ rate hikes harder with the yen near 160 per dollar.", poprzednio_en: "0.4% q/q", prognoza_en: "0.1% q/q", zrodlo: 74 },
-    { czas: "2026-11-16T03:00:00+01:00", kraj: "CN", nazwa: "Sprzedaż detaliczna w Chinach (paź, r/r)", wplyw: 2, instrumenty: ["xauusd", "wti", "btcusd"], poprzednio: "1,1% r/r", prognoza: "0,8% r/r", aktualnie: "0,4% r/r", aktualnie_en: "0.4% y/y", opis: "Pokaże siłę popytu konsumpcyjnego w Chinach, ważną dla surowców i nastrojów w Azji.", nazwa_en: "China retail sales (Oct, y/y)", opis_en: "Shows the strength of Chinese consumer demand, which matters for commodities and Asian sentiment.", poprzednio_en: "1.1% y/y", prognoza_en: "0.8% y/y", zrodlo: 75 },
-    { czas: "2026-11-16T14:30:00+01:00", kraj: "US", nazwa: "Indeks Empire State NY Fed (lis)", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500", "nasdaq"], poprzednio: "25,5", prognoza: "18,0", aktualnie: "7,8", poprzednio_en: "25.5", prognoza_en: "18.0", aktualnie_en: "7.8", opis: "Pierwszy listopadowy sygnał o koniunkturze w przemyśle USA przed wtorkową sprzedażą detaliczną.", nazwa_en: "NY Fed Empire State index (Nov)", opis_en: "The first November signal on US manufacturing ahead of Tuesday's retail sales.", zrodlo: 79 },
     { czas: "2026-11-17T14:30:00+01:00", kraj: "US", nazwa: "Sprzedaż detaliczna w USA (paź, m/m)", wplyw: 3, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "sp500", "nasdaq"], poprzednio: "0,8% m/m", prognoza: "0,0% m/m", aktualnie: null, opis: "Siła konsumenta przy wysokiej inflacji wpływa na skalę grudniowej podwyżki stóp Fed.", nazwa_en: "US retail sales (Oct, m/m)", opis_en: "Consumer strength amid high inflation shapes the size of the December Fed hike.", poprzednio_en: "0.8% m/m", prognoza_en: "0.0% m/m", zrodlo: 78 },
     { czas: "2026-11-17T15:15:00+01:00", kraj: "US", nazwa: "Produkcja przemysłowa w USA (paź)", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: null, prognoza: null, aktualnie: null, opis: "Uzupełni obraz przemysłu po słabszym od prognoz indeksie Empire State.", nazwa_en: "US industrial production (Oct)", opis_en: "Completes the manufacturing picture after the weaker-than-expected Empire State index.", zrodlo: 77 },
     { czas: "2026-11-17T22:20:00+01:00", kraj: "US", nazwa: "Wyniki Nvidii za III kw. (po sesji, około 22:20)", wplyw: 4, instrumenty: ["nasdaq", "sp500", "btcusd"], poprzednio: null, prognoza: "około 109 mld USD przychodu", aktualnie: null, opis: "Najważniejszy test dla handlu spółkami AI po rezygnacji prezesa Jensena Huanga; prognoza firmy to około 108 mld USD.", nazwa_en: "Nvidia Q3 results (after the close, around 22:20)", opis_en: "The key test for the AI trade after CEO Jensen Huang's resignation; company guidance is about $108B.", prognoza_en: "about $109B revenue", zrodlo: 77 },
