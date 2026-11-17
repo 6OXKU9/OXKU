@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-17T07:50:00+01:00",
+  aktualizacja: "2026-11-17T13:55:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -92,11 +92,13 @@ window.KALENDARZ = {
     { nazwa: "TipRanks: U.S. Stocks Finish in the Red as the AI Trade Falters (PPI, 13 lis 2026)", nazwa_en: "TipRanks: U.S. Stocks Finish in the Red as the AI Trade Falters (PPI, 13 Nov 2026)", url: "https://www.tipranks.com/news/u-s-stocks-finish-in-the-red-as-the-ai-trade-falters" },
     { nazwa: "TradingKey: The Week Ahead: Nvidia Q3 Earnings, US October Retail Sales, FOMC Minutes (godziny ET)", nazwa_en: "TradingKey: The Week Ahead: Nvidia Q3 Earnings, US October Retail Sales, FOMC Minutes (ET times)", url: "https://www.tradingkey.com/analysis/stocks/us-stocks/262305825-week-ahead-nvidia-q3-earnings-us-october-retail-sales-fomc-minutes-walmart-tradingkey" },
     { nazwa: "Trading Economics: sprzedaż detaliczna w USA, termin i prognoza", nazwa_en: "Trading Economics: US retail sales, release date and forecast", url: "https://tradingeconomics.com/united-states/retail-sales" },
-    { nazwa: "Trading Economics: indeks Empire State NY Fed (lis 2026)", nazwa_en: "Trading Economics: NY Fed Empire State index (Nov 2026)", url: "https://tradingeconomics.com/united-states/ny-empire-state-manufacturing-index" }
+    { nazwa: "Trading Economics: indeks Empire State NY Fed (lis 2026)", nazwa_en: "Trading Economics: NY Fed Empire State index (Nov 2026)", url: "https://tradingeconomics.com/united-states/ny-empire-state-manufacturing-index" },
+    { nazwa: "Trading Economics: indeks ZEW w Niemczech (lis 2026)", nazwa_en: "Trading Economics: German ZEW index (Nov 2026)", url: "https://tradingeconomics.com/germany/zew-economic-sentiment-index" }
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
   wydarzenia: [
+    { czas: "2026-11-17T11:00:00+01:00", kraj: "DE", nazwa: "Indeks nastrojów ZEW w Niemczech (lis)", wplyw: 2, instrumenty: ["dax", "eurusd"], poprzednio: "28,1", prognoza: "29,0", aktualnie: "35,6", poprzednio_en: "28.1", prognoza_en: "29.0", aktualnie_en: "35.6", opis: "Oczekiwania inwestorów co do niemieckiej gospodarki na najbliższe pół roku.", nazwa_en: "German ZEW economic sentiment (Nov)", opis_en: "Investor expectations for the German economy over the next six months.", zrodlo: 80 },
 
 
 
