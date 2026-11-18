@@ -24,12 +24,123 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-18-sp500", instrument: "sp500", data: "2026-11-18", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "S&P 500 odbija po Nvidii, celem 7 502", tytul_en: "S&P 500 rebounds after Nvidia, eyeing 7,502",
+    lead: "S&P 500 zamknął wtorek na 7 341 po czwartej spadkowej sesji, a po lepszych od oczekiwań wynikach Nvidii kontrakty rosną o około 0,7%. Dopóki indeks jest nad wtorkowym minimum 7 288, bazą jest odbicie do 7 502.",
+    lead_en: "The S&P 500 closed Tuesday at 7,341 after a fourth losing session, and futures rise about 0.7% after Nvidia's better-than-expected results. While the index stays above Tuesday's low of 7,288, a rebound to 7,502 is the base case.",
+    poziomy: { cena: 7340.53, opory: [7501.56, 7597.44], wsparcia: [7288.34, 7237.85] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo odbicie do 7 501,56 (poziom 50% według FXEmpire), a wyżej do 7 597.", tekst_en: "Base case: a rebound to 7,501.56 (the 50% level according to FXEmpire), and higher to 7,597." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 7 288,34 (minimum z 17 listopada) unieważnia scenariusz i otwiera drogę do 7 237,85 (minimum z 9 czerwca).", tekst_en: "A daily close below 7,288.34 (the 17 November low) invalidates the setup and opens the way to 7,237.85 (the 9 June low)." }
+    ],
+    tresc: [
+      "S&P 500 spadł we wtorek do 7 288,34, poniżej celu 7 350,35, więc poprzednia analiza spadkowa została rozliczona jako trafiona. Zamknięcie wypadło na 7 340,53 (CNBC).",
+      "Nvidia podała po sesji przychód 115,8 mld USD wobec oczekiwanych około 109 mld i prognozę 130 mld na kolejny kwartał; jej akcje zyskiwały po sesji ponad 4%, a kontrakty na S&P 500 rano około 0,7%. Wieczorem protokół Fed, a rynek wycenia około 96% szans na grudniową podwyżkę.",
+      "Opory to 7 501,56 i 7 597 (FXEmpire), wsparcia wtorkowe minimum 7 288,34 i czerwcowe 7 237,85. Średnie z 20 i 50 sesji (7 581 i 7 655) są nad ceną."
+    ],
+    tresc_en: [
+      "The S&P 500 fell to 7,288.34 on Tuesday, below the 7,350.35 target, so the previous bearish analysis was settled as a hit. It closed at 7,340.53 (CNBC).",
+      "After the close Nvidia reported revenue of $115.8B versus about $109B expected and a $130B outlook for next quarter; its shares rose more than 4% after hours and S&P 500 futures about 0.7% this morning. The Fed minutes are due tonight, and markets price about a 96% chance of a December hike.",
+      "Resistance is at 7,501.56 and 7,597 (FXEmpire), support at Tuesday's low of 7,288.34 and June's 7,237.85. The 20- and 50-session averages (7,581 and 7,655) are above the price."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: US Stock Futures Rise After Nvidia Results (18 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "NVIDIA: Financial Results for Third Quarter Fiscal 2027 (17 lis 2026)", url: "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html" },
+      { nazwa: "FXEmpire: S&P500: Nvidia Sell-Off Drags Index Toward 200-Day Moving Average (16 lis 2026)", url: "https://www.fxempire.com/forecasts/article/sp500-nvidia-sell-off-drags-index-toward-200-day-moving-average-1645014" },
+      { nazwa: "CNBC: świece dzienne S&P 500 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.SPX" }
+    ]
+  },
+  {
+    id: "2026-11-18-nasdaq", instrument: "nasdaq", data: "2026-11-18", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 odbija po Nvidii, celem 27 622", tytul_en: "Nasdaq 100 rebounds after Nvidia, eyeing 27,622",
+    lead: "Nasdaq 100 zamknął wtorek na 27 002, a po wynikach Nvidii kontrakty rosną o ponad 1%. Dopóki indeks jest nad wtorkowym minimum 26 581, bazą jest odbicie do poniedziałkowego maksimum przy 27 622.",
+    lead_en: "The Nasdaq 100 closed Tuesday at 27,002, and futures rise more than 1% after Nvidia's results. While the index stays above Tuesday's low of 26,581, a rebound to Monday's high near 27,622 is the base case.",
+    poziomy: { cena: 27001.8, opory: [27621.6, 28025.8], wsparcia: [26580.9] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo odbicie do 27 621,6 (maksimum z 16 listopada), a wyżej do 28 025,8 (maksimum z 9 listopada).", tekst_en: "Base case: a rebound to 27,621.6 (the 16 November high), and higher to 28,025.8 (the 9 November high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 580,9 (minimum z 17 listopada) unieważnia scenariusz i oznacza nowe minimum od lipca.", tekst_en: "A daily close below 26,580.9 (the 17 November low) invalidates the setup and marks a new low since July." }
+    ],
+    tresc: [
+      "Nasdaq 100 spadł we wtorek do 26 580,9, poniżej celu 26 887,7, więc poprzednia analiza spadkowa została rozliczona jako trafiona. W miesiąc indeks stracił około 8%.",
+      "Wyniki Nvidii były wyraźnie lepsze od oczekiwań (przychód 115,8 mld USD, centra danych 107,6 mld, prognoza 130 mld), a jej akcje zyskiwały po sesji ponad 4%. Kontrakty na Nasdaq 100 rosną rano o ponad 1%; w Azji Kospi i Nikkei w górę, Hongkong w dół przez ograniczenia USA dla Chin.",
+      "Opory to 27 621,6 i 28 025,8, wsparcie wtorkowe minimum 26 580,9. Średnia z 20 sesji jest przy 28 347, z 50 sesji przy 29 409."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 fell to 26,580.9 on Tuesday, below the 26,887.7 target, so the previous bearish analysis was settled as a hit. The index has lost about 8% in a month.",
+      "Nvidia's results clearly beat expectations (revenue $115.8B, data centre $107.6B, outlook $130B), and its shares rose more than 4% after hours. Nasdaq 100 futures rise more than 1% this morning; in Asia the Kospi and Nikkei are up, Hong Kong down on US curbs on China.",
+      "Resistance is at 27,621.6 and 28,025.8, support at Tuesday's low of 26,580.9. The 20-session average is near 28,347, the 50-session average near 29,409."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: US Stock Futures Rise After Nvidia Results (18 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "NVIDIA: Financial Results for Third Quarter Fiscal 2027 (17 lis 2026)", url: "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html" },
+      { nazwa: "CNBC: świece dzienne Nasdaq 100 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.NDX" }
+    ]
+  },
+  {
+    id: "2026-11-18-zloto", instrument: "xauusd", data: "2026-11-18", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Złoto pod 3 800, celem 3 730", tytul_en: "Gold below $3,800, eyeing $3,730",
+    lead: "Złoto spadło w środę rano do około 3 779 USD, najniżej od ponad roku. Dopóki cena jest pod 3 881, bazą jest zejście do dolnej granicy strefy wsparcia 3 730–3 760 wskazanej przez FXEmpire.",
+    lead_en: "Gold fell to around $3,779 on Wednesday morning, the lowest in over a year. While the price stays below $3,881, a drop to the lower edge of the $3,730–3,760 support zone named by FXEmpire is the base case.",
+    poziomy: { cena: 3778.98, opory: [3880.93, 4000], wsparcia: [3730, 3600] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 3 730 USD (dolna granica strefy wsparcia według FXEmpire), a niżej do 3 600 (górna granica głównego celu 3 500–3 600).", tekst_en: "Base case: a drop to $3,730 (the lower edge of the support zone according to FXEmpire), and lower to $3,600 (the top of the $3,500–3,600 main target)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3 880,93 USD (opór R1 według FXEmpire) unieważnia scenariusz i otwiera drogę do 4 000.", tekst_en: "A daily close above $3,880.93 (R1 resistance according to FXEmpire) invalidates the setup and opens the way to $4,000." }
+    ],
+    tresc: [
+      "Złoto zamknęło wtorek na 3 848,57 USD, poniżej dolnej granicy zakresu 3 852,84, więc poprzednia analiza neutralna została rozliczona jako nietrafiona. W środę rano cena spadła o 1,8% do około 3 779 USD (Trading Economics).",
+      "Na złoto naciskają najmocniejszy od kwietnia 2025 dolar, wysokie rentowności obligacji i oczekiwania podwyżek stóp Fed (około 96% szans na podwyżkę w grudniu). Musalem i Williams z Fed popierają dalsze zacieśnianie; wieczorem protokół z posiedzenia.",
+      "Wsparcia to strefa 3 730–3 760 i 3 600, opory 3 880,93 i 4 000 (FXEmpire). Średnia z 20 dni jest przy 3 996."
+    ],
+    tresc_en: [
+      "Gold closed Tuesday at $3,848.57, below the $3,852.84 lower bound, so the previous neutral analysis was settled as a miss. On Wednesday morning the price fell 1.8% to around $3,779 (Trading Economics).",
+      "Gold is pressured by the strongest dollar since April 2025, high bond yields and expectations of Fed hikes (about a 96% chance of a December hike). The Fed's Musalem and Williams back further tightening; the meeting minutes are due tonight.",
+      "Support is the $3,730–3,760 zone and $3,600, resistance $3,880.93 and $4,000 (FXEmpire). The 20-day average is near $3,996."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Gold and Silver Price Forecast: Selloff Deepens Before Fed Minutes (18 lis 2026)", url: "https://www.fxempire.com/forecasts/article/gold-and-silver-price-forecast-selloff-deepens-before-fed-minutes-1645327" },
+      { nazwa: "Trading Economics: złoto (18 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne złota (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAU=" }
+    ]
+  },
+  {
+    id: "2026-11-18-dax", instrument: "dax", data: "2026-11-18", interwal: "D1",
+    kierunek: "neutralny", ai: true, szkic: true,
+    tytul: "DAX w zakresie 25 793–26 600", tytul_en: "DAX in a 25,793–26,600 range",
+    lead: "DAX spadł we wtorek o 2,1% do 26 045, prawie do wsparcia 26 000. Po wynikach Nvidii nastroje się poprawiają, dlatego bazą jest ruch między minimum z 9 listopada przy 25 793 a oporem 26 600.",
+    lead_en: "The DAX fell 2.1% on Tuesday to 26,045, almost to 26,000 support. Sentiment improves after Nvidia's results, so trading between the 9 November low near 25,793 and resistance at 26,600 is the base case.",
+    poziomy: { cena: 26045.4, opory: [26600], wsparcia: [25793.1] },
+    scenariusze: [
+      { typ: "neutralny", tekst: "Bazowo ruch w zakresie 25 793,1–26 600 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 25,793.1–26,600 range over the next 10 sessions." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 793,1 (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 25 617,5 (minimum z 6 listopada).", tekst_en: "A daily close below 25,793.1 (the 9 November low) invalidates the setup and opens the way to 25,617.5 (the 6 November low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 600 (opór według ActionForex) unieważnia scenariusz i otwiera drogę do 27 001,7 (rekord z 12 listopada).", tekst_en: "A daily close above 26,600 (resistance according to ActionForex) invalidates the setup and opens the way to 27,001.7 (the 12 November record)." }
+    ],
+    tresc: [
+      "DAX zamknął wtorek na 26 045,4, poniżej 26 491,8, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona. Spadek prowadziły Deutsche Bank (−5,9%) i SAP (−5,7%).",
+      "Wyniki Nvidii lepsze od oczekiwań podniosły rano kontrakty w USA i giełdy w Japonii i Korei, co może wesprzeć spółki technologiczne w Europie. Wieczorem protokół Fed.",
+      "Wsparcie 26 000 (ActionForex) jest tuż pod ceną, dlatego dolną granicą zakresu jest minimum z 9 listopada (25 793,1); górną granicą opór 26 600. Średnia z 20 sesji jest przy 26 032."
+    ],
+    tresc_en: [
+      "The DAX closed Tuesday at 26,045.4, below 26,491.8, so the previous bullish analysis was settled as a miss. Deutsche Bank (−5.9%) and SAP (−5.7%) led the drop.",
+      "Nvidia's better-than-expected results lifted US futures and Japanese and Korean stocks this morning, which may support European tech. The Fed minutes are due tonight.",
+      "The 26,000 support (ActionForex) sits just below the price, so the range's lower bound is the 9 November low (25,793.1); the upper bound is resistance at 26,600. The 20-session average is near 26,032."
+    ],
+    zrodla: [
+      { nazwa: "ActionForex: DAX Index Wave Analysis (6 lis 2026)", url: "https://www.actionforex.com/contributors/technical-analysis/659983-dax-index-wave-analysis-7/" },
+      { nazwa: "Trading Economics: DAX (17 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
     id: "2026-11-17-sp500", instrument: "sp500", data: "2026-11-17", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "S&P 500 pod 7 500, celem 7 350", tytul_en: "S&P 500 below 7,500, eyeing 7,350",
     lead: "S&P 500 spadł w poniedziałek o 1,9%, trzecią sesję z rzędu, i zamknął się na 7 417. Dopóki indeks jest pod 7 502, bazą jest zejście do minimum z 5 listopada przy 7 350, tuż nad średnią z 200 dni.",
     lead_en: "The S&P 500 fell 1.9% on Monday, a third straight loss, and closed at 7,417. While the index stays below 7,502, a drop to the 5 November low near 7,350, just above the 200-day average, is the base case.",
     poziomy: { cena: 7400.89, opory: [7501.56, 7597.44], wsparcia: [7350.35, 7342.71] },
+    wynik: { status: "trafiona", data: "2026-11-17", komentarz: "17 lis S&P 500 spadł do 7 288,34, poniżej celu S1 7 350,35, bez zamknięcia powyżej R1 7 501,56. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 17 Nov the S&P 500 fell to 7,288.34, below the S1 target of 7,350.35, with no close above R1 7,501.56. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 7 350,35 (minimum z 5 listopada), a niżej do 7 342,71 (średnia z 200 dni według FXEmpire).", tekst_en: "Base case: a drop to 7,350.35 (the 5 November low), and lower to 7,342.71 (the 200-day average according to FXEmpire)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 501,56 (poziom 50% według FXEmpire) unieważnia scenariusz i otwiera drogę do 7 597.", tekst_en: "A daily close above 7,501.56 (the 50% level according to FXEmpire) invalidates the setup and opens the way to 7,597." }
@@ -57,6 +168,7 @@ window.ANALIZY = [
     lead: "Nasdaq 100 stracił w poniedziałek 2,7% i zamknął się na 27 197. Dopóki indeks jest pod maksimum z 9 listopada przy 28 026, bazą jest zejście do minimum z 6 listopada przy 26 888.",
     lead_en: "The Nasdaq 100 lost 2.7% on Monday and closed at 27,197. While the index stays below the 9 November high near 28,026, a drop to the 6 November low near 26,888 is the base case.",
     poziomy: { cena: 27183.67, opory: [28025.8, 28548.5], wsparcia: [26887.7, 26606.4] },
+    wynik: { status: "trafiona", data: "2026-11-17", komentarz: "17 lis Nasdaq 100 spadł do 26 580,9, poniżej celu S1 26 887,7, bez zamknięcia powyżej R1 28 025,8. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 17 Nov the Nasdaq 100 fell to 26,580.9, below the S1 target of 26,887.7, with no close above R1 28,025.8. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 26 887,7 (minimum z 6 listopada), a niżej do 26 606,4 (minimum z 5 listopada).", tekst_en: "Base case: a drop to 26,887.7 (the 6 November low), and lower to 26,606.4 (the 5 November low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 28 025,8 (maksimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 28 548,5 (maksimum z 12 listopada).", tekst_en: "A daily close above 28,025.8 (the 9 November high) invalidates the setup and opens the way to 28,548.5 (the 12 November high)." }
@@ -245,6 +357,7 @@ window.ANALIZY = [
     lead: "Złoto spadło w czwartek do 3 853 USD i w piątek rano odbija do około 3 895. Po spadku o ponad 6% w tydzień bazą jest ruch między czwartkowym minimum 3 853 a maksimum 3 999.",
     lead_en: "Gold fell to $3,853 on Thursday and rebounds to around $3,895 on Friday morning. After a drop of more than 6% in a week, trading between Thursday's low of $3,853 and high of $3,999 is the base case.",
     poziomy: { cena: 3895.34, opory: [3998.91], wsparcia: [3852.84] },
+    wynik: { status: "nietrafiona", data: "2026-11-17", komentarz: "17 lis złoto zamknęło dzień na 3 848,57 USD, poniżej dolnej granicy zakresu S1 3 852,84. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 17 Nov gold closed at $3,848.57, below the S1 lower bound of $3,852.84. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo ruch w zakresie 3 852,84–3 998,91 USD przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the $3,852.84–3,998.91 range over the next 10 sessions." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 3 852,84 USD unieważnia scenariusz i oznacza nowe minimum od maja w danych wykresu.", tekst_en: "A daily close below $3,852.84 invalidates the setup and marks a new low since May in the chart data." },
@@ -355,6 +468,7 @@ window.ANALIZY = [
     lead: "DAX czwartą sesję z rzędu bije rekord i przekroczył 26 900 pkt. Dopóki indeks nie zamknie dnia poniżej środowego minimum 26 492, bazą jest wzrost do 27 011, które Trading Economics podaje jako maksimum wszech czasów.",
     lead_en: "The DAX set a record for a fourth straight session and passed 26,900. Unless the index closes a day below Wednesday's low of 26,492, a rise to 27,011, which Trading Economics lists as the all-time high, is the base case.",
     poziomy: { cena: 26848, opory: [27011], wsparcia: [26491.8, 26347.5] },
+    wynik: { status: "nietrafiona", data: "2026-11-17", komentarz: "17 lis DAX zamknął dzień na 26 045,4, poniżej S1 26 491,8, zanim indeks dotknął celu R1 27 011 (najwyżej 27 001,7). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 17 Nov the DAX closed at 26,045.4, below S1 26,491.8, before reaching the R1 target of 27,011 (high 27,001.7). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 27 011 (maksimum wszech czasów według Trading Economics).", tekst_en: "Base case: a rise to 27,011 (the all-time high according to Trading Economics)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 491,8 (minimum z 11 listopada) unieważnia scenariusz i otwiera drogę do 26 347,5 (minimum z 10 listopada).", tekst_en: "A daily close below 26,491.8 (the 11 November low) invalidates the setup and opens the way to 26,347.5 (the 10 November low)." }

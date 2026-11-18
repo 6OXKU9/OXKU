@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-17T22:35:00+01:00",
+  aktualizacja: "2026-11-18T07:50:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -99,14 +99,10 @@ window.KALENDARZ = {
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
   wydarzenia: [
-    { czas: "2026-11-17T11:00:00+01:00", kraj: "DE", nazwa: "Indeks nastrojów ZEW w Niemczech (lis)", wplyw: 2, instrumenty: ["dax", "eurusd"], poprzednio: "28,1", prognoza: "29,0", aktualnie: "35,6", poprzednio_en: "28.1", prognoza_en: "29.0", aktualnie_en: "35.6", opis: "Oczekiwania inwestorów co do niemieckiej gospodarki na najbliższe pół roku.", nazwa_en: "German ZEW economic sentiment (Nov)", opis_en: "Investor expectations for the German economy over the next six months.", zrodlo: 80 },
 
 
 
 
-    { czas: "2026-11-17T14:30:00+01:00", kraj: "US", nazwa: "Sprzedaż detaliczna w USA (paź, m/m)", wplyw: 3, instrumenty: ["eurusd", "gbpusd", "usdjpy", "xauusd", "sp500", "nasdaq"], poprzednio: "0,8% m/m", prognoza: "0,2% m/m", aktualnie: "0,2% m/m", aktualnie_en: "0.2% m/m", opis: "Siła konsumenta przy wysokiej inflacji wpływa na skalę grudniowej podwyżki stóp Fed.", nazwa_en: "US retail sales (Oct, m/m)", opis_en: "Consumer strength amid high inflation shapes the size of the December Fed hike.", poprzednio_en: "0.8% m/m", prognoza_en: "0.2% m/m", zrodlo: 78 },
-    { czas: "2026-11-17T15:15:00+01:00", kraj: "US", nazwa: "Produkcja przemysłowa w USA (paź)", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: null, prognoza: null, aktualnie: null, opis: "Uzupełni obraz przemysłu po słabszym od prognoz indeksie Empire State.", nazwa_en: "US industrial production (Oct)", opis_en: "Completes the manufacturing picture after the weaker-than-expected Empire State index.", zrodlo: 77 },
-    { czas: "2026-11-17T22:20:00+01:00", kraj: "US", nazwa: "Wyniki Nvidii za III kw. (po sesji, około 22:20)", wplyw: 4, instrumenty: ["nasdaq", "sp500", "btcusd"], poprzednio: null, prognoza: "około 109 mld USD przychodu", aktualnie: "115,8 mld USD przychodu", aktualnie_en: "$115.8B revenue", opis: "Najważniejszy test dla handlu spółkami AI po rezygnacji prezesa Jensena Huanga; prognoza firmy to około 108 mld USD.", nazwa_en: "Nvidia Q3 results (after the close, around 22:20)", opis_en: "The key test for the AI trade after CEO Jensen Huang's resignation; company guidance is about $108B.", prognoza_en: "about $109B revenue", zrodlo: 81 },
     { czas: "2026-11-18T20:00:00+01:00", kraj: "US", nazwa: "Protokół z posiedzenia FOMC (27–28 paź)", wplyw: 3, instrumenty: ["eurusd", "usdjpy", "xauusd", "sp500", "nasdaq"], poprzednio: null, prognoza: null, aktualnie: null, opis: "Pokaże, jak szeroko w Fed popierane są dalsze podwyżki; dwóch członków chciało podwyżki już w październiku.", nazwa_en: "FOMC minutes (27–28 Oct)", opis_en: "Shows how broad support for further hikes is at the Fed; two members wanted a hike already in October.", zrodlo: 77 },
   ]
 };

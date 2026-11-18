@@ -5,7 +5,7 @@ owner: Claude + Bartek
 type: ops
 depends_on: ["HOSTING_CLOUDFLARE"]
 blocks: []
-last_updated: 2026-11-17
+last_updated: 2026-11-18
 start_date: 2026-10-18
 eta: 2026-11-10
 in_flight: true
@@ -21,7 +21,7 @@ in_flight: true
 - **Phase 2 (Tydzień obserwacji bez braków danych):** Done (2026-11-16): od 3 lis wszystkie trzy codzienne aktualizacje trafiały na stronę; USD/PLN bywa bez świeżego notowania i jest wtedy podawany z zamknięcia CNBC.
 
 **Next action:** Kontynuować codzienne aktualizacje; przenieść plan do shipped przy następnym /plans sync.
-**Last updated:** 2026-11-17
+**Last updated:** 2026-11-18
 
 ---
 
