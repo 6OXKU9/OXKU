@@ -1,49 +1,49 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-11-18T13:55:00+01:00",
-  stanNa_en: "Wednesday afternoon, 18 Nov 2026 (before the US open)",
-  stanNa: "środa po południu, 18 lis 2026 (przed sesją w USA)",
-  naglowek_en: "US futures rise after Nvidia's results: Nasdaq 100 more than +1%, S&P 500 +0.7%. The DAX lacks direction at 26,030–26,100. Gold loses 2.5% to $3,754 and silver 4% to $45.35 as the dollar rises (103.8). The Fed minutes are due tonight.",
-  naglowek: "Kontrakty w USA w górę po wynikach Nvidii: Nasdaq 100 ponad +1%, S&P 500 +0,7%. DAX bez wyraźnego kierunku przy 26 030–26 100. Złoto traci 2,5% do 3 754 USD, srebro 4% do 45,35 przy rosnącym dolarze (103,8). Wieczorem protokół Fed.",
+  aktualizacja: "2026-11-18T22:35:00+01:00",
+  stanNa_en: "Wednesday evening, 18 Nov 2026 (after the US close)",
+  stanNa: "środa wieczorem, 18 lis 2026 (po zamknięciu sesji w USA)",
+  naglowek_en: "Fed minutes: a majority of members favour further rate hikes. Gold loses 3.2% to $3,727, WTI crude 3.4% to $83.1. Nvidia gives back its post-results gains (−2.9%), S&P 500 −0.1%, DAX −1.2% to around 25,750.",
+  naglowek: "Protokół Fed: większość członków za dalszymi podwyżkami stóp. Złoto traci 3,2% do 3 727 USD, ropa WTI 3,4% do 83,1. Nvidia oddaje zyski po wynikach (−2,9%), S&P 500 −0,1%, DAX −1,2% do około 25 750.",
   punkty: [
-    "Europa bez kierunku po wtorkowym spadku: DAX między 26 030 a 26 100; Siemens Energy +3,2%, Infineon +1,8%, a Deutsche Bank traci do 2% po kolejnych doniesieniach z wycieku. Przewodniczący rady nadzorczej Nvidii odrzucił powrót Jensena Huanga. Euro Stoxx 50 bez zmian, Londyn −0,5%.",
-    "Kontrakty w USA rosną po lepszych od oczekiwań wynikach Nvidii: Nasdaq 100 ponad +1%, S&P 500 około +0,7%, Dow +0,3%. Akcje Nvidii zyskiwały po wtorkowej sesji ponad 4%, CoreWeave ponad 7%, Nebius ponad 10%. Wieczorem wycena debiutu Anthropic, notowania od czwartku.",
-    "Dolar mocniejszy: indeks około 103,8, najwyżej od kwietnia 2025. EUR/USD 1,0967 (cel szkicu 1,0950), GBP/USD 1,3166 (cel 1,3132), USD/JPY 159,4.",
-    "Złoto 3 754 USD (−2,5%), blisko celu szkicu (3 730); srebro 45,35 USD (−4%), tuż nad celem 45. Ropa: WTI 85,4 USD, Brent 93,0. Bitcoin około 64 000 USD.",
-    "Dziś o 20:00 protokół z październikowego posiedzenia Fed; rynek wycenia około 96% szans na grudniową podwyżkę stóp o 25 pb. W ciągu dnia żaden poziom analiz nie został rozstrzygnięty."
+    "Protokół z październikowego posiedzenia Fed: wyraźna większość członków uważa dalsze podwyżki stóp za uzasadnione, a decyzja o utrzymaniu stóp zapadła przy dwóch głosach za podwyżką. Waller opowiada się nawet za podwyżką o 50 pb; rynek wycenia około 95% szans na 25 pb w grudniu i kolejny ruch w styczniu.",
+    "Wall Street mieszana: S&P 500 około 7 329 (−0,1%), Nasdaq 100 około 27 158 (+0,4%), Dow −1,1%. Nvidia −2,9% mimo mocnych wyników, po zapowiedzi ostrożniejszych inwestycji w inne firmy AI; AMD +5,3%, Broadcom +3,6%.",
+    "DAX spadł o 1,2% do około 25 750, poniżej dolnej granicy zakresu analizy (25 793); SAP −3,5%, Commerzbank −3,4%, Deutsche Bank −3,2%. Rozliczenie rano po świecy CNBC.",
+    "Dolar najmocniejszy od wiosny 2025: indeks 103,9. EUR/USD 1,0965, GBP/USD 1,3141 (blisko celu szkicu 1,3132), USD/JPY 159,4.",
+    "Złoto 3 727 USD (−3,2%), poniżej celu szkicu spadkowego (3 730); srebro 45,13 USD (−4,7%); WTI 83,1 USD (−3,4%), poniżej celu szkicu (83,88); Brent 91,8. Bitcoin około 62 400 USD. Rozliczenia rano po świecach dziennych. Jutro wyniki Walmartu (13:00) i wnioski o zasiłek w USA (14:30)."
   ],
   punkty_en: [
-    "Europe lacks direction after Tuesday's drop: the DAX between 26,030 and 26,100; Siemens Energy +3.2%, Infineon +1.8%, while Deutsche Bank loses up to 2% on further leak reports. Nvidia's board chairman rejected a return of Jensen Huang. Euro Stoxx 50 flat, London −0.5%.",
-    "US futures rise after Nvidia's better-than-expected results: Nasdaq 100 more than +1%, S&P 500 about +0.7%, Dow +0.3%. Nvidia shares rose more than 4% after Tuesday's session, CoreWeave more than 7%, Nebius more than 10%. Anthropic's IPO pricing is due tonight, with trading from Thursday.",
-    "A firmer dollar: the index around 103.8, the highest since April 2025. EUR/USD 1.0967 (draft target 1.0950), GBP/USD 1.3166 (target 1.3132), USD/JPY 159.4.",
-    "Gold $3,754 (−2.5%), close to the draft's target ($3,730); silver $45.35 (−4%), just above the $45 target. Oil: WTI $85.4, Brent $93.0. Bitcoin around $64,000.",
-    "The minutes of the Fed's October meeting are due today at 20:00; markets price about a 96% chance of a 25 bp December hike. No analysis level was decided intraday."
+    "Minutes of the Fed's October meeting: a clear majority sees further hikes as warranted, and the hold was decided with two votes for a hike. Waller even favours a 50 bp hike; markets price about a 95% chance of 25 bp in December and another move in January.",
+    "Wall Street mixed: S&P 500 around 7,329 (−0.1%), Nasdaq 100 around 27,158 (+0.4%), Dow −1.1%. Nvidia −2.9% despite strong results, after signalling more cautious investment in other AI firms; AMD +5.3%, Broadcom +3.6%.",
+    "The DAX fell 1.2% to around 25,750, below the analysis range's lower bound (25,793); SAP −3.5%, Commerzbank −3.4%, Deutsche Bank −3.2%. Settled in the morning from the CNBC candle.",
+    "The dollar is the strongest since spring 2025: index 103.9. EUR/USD 1.0965, GBP/USD 1.3141 (close to the draft's 1.3132 target), USD/JPY 159.4.",
+    "Gold $3,727 (−3.2%), below the bearish draft's target ($3,730); silver $45.13 (−4.7%); WTI $83.1 (−3.4%), below the draft's target ($83.88); Brent $91.8. Bitcoin around $62,400. Settlements in the morning from the daily candles. Tomorrow Walmart's results (13:00) and US jobless claims (14:30)."
   ],
   instrumenty: {
-    sp500: { kurs: 7340.53, zmiana: -1.03, tydzien: -3.66, notka: "Zamknięcie z wtorku (CNBC); kontrakty przed sesją około +0,7%. Szkic wzrostowy: cel 7 502, unieważnienie 7 288.", notka_en: "Tuesday close (CNBC); futures about +0.7% pre-market. Bullish draft: target 7,502, invalidation 7,288.", zrodlo: 1 },
-    nasdaq: { kurs: 27001.8, zmiana: -0.72, tydzien: -4.84, notka: "Zamknięcie z wtorku (CNBC); kontrakty przed sesją ponad +1%. Szkic wzrostowy: cel 27 622, unieważnienie 26 581.", notka_en: "Tuesday close (CNBC); futures more than +1% pre-market. Bullish draft: target 27,622, invalidation 26,581.", zrodlo: 1 },
-    xauusd: { kurs: 3753.53, zmiana: -2.47, tydzien: -5.86, notka: "Szkic spadkowy: cel 3 730 (blisko), unieważnienie 3 881.", notka_en: "Bearish draft: target $3,730 (close), invalidation $3,881.", zrodlo: 0 },
-    eurusd: { kurs: 1.0967, zmiana: -0.27, tydzien: -1.1, notka: "Szkic spadkowy: cel 1,0950, unieważnienie 1,1140.", notka_en: "Bearish draft: target 1.0950, invalidation 1.1140.", zrodlo: 2 },
-    gbpusd: { kurs: 1.3166, zmiana: -0.32, tydzien: -0.86, notka: "Szkic spadkowy: cel 1,3132, unieważnienie 1,3304.", notka_en: "Bearish draft: target 1.3132, invalidation 1.3304.", zrodlo: 2 },
+    sp500: { kurs: 7329.35, zmiana: -0.15, tydzien: -3.81, notka: "Zamknięcie (Trading Economics, CFD). Szkic wzrostowy: cel 7 502, unieważnienie 7 288.", notka_en: "Close (Trading Economics, CFD). Bullish draft: target 7,502, invalidation 7,288.", zrodlo: 1 },
+    nasdaq: { kurs: 27158.37, zmiana: 0.58, tydzien: -4.29, notka: "Zamknięcie (Trading Economics, CFD). Szkic wzrostowy: cel 27 622, unieważnienie 26 581.", notka_en: "Close (Trading Economics, CFD). Bullish draft: target 27,622, invalidation 26,581.", zrodlo: 1 },
+    xauusd: { kurs: 3726.82, zmiana: -3.16, tydzien: -6.53, notka: "Kurs poniżej celu szkicu spadkowego (3 730); rozliczenie rano po świecy CNBC.", notka_en: "Price below the bearish draft's target ($3,730); settled in the morning from the CNBC candle.", zrodlo: 0 },
+    eurusd: { kurs: 1.0965, zmiana: -0.29, tydzien: -1.12, notka: "Szkic spadkowy: cel 1,0950, unieważnienie 1,1140.", notka_en: "Bearish draft: target 1.0950, invalidation 1.1140.", zrodlo: 2 },
+    gbpusd: { kurs: 1.3141, zmiana: -0.51, tydzien: -1.05, notka: "Szkic spadkowy: cel 1,3132 (blisko), unieważnienie 1,3304.", notka_en: "Bearish draft: target 1.3132 (close), invalidation 1.3304.", zrodlo: 2 },
     usdjpy: { kurs: 159.37, zmiana: 0.01, tydzien: -0.25, notka: "Szkic wzrostowy: cel 160,39, unieważnienie 158,64.", notka_en: "Bullish draft: target 160.39, invalidation 158.64.", zrodlo: 2 },
-    xagusd: { kurs: 45.35, zmiana: -4.2, tydzien: -12.22, notka: "Szkic spadkowy: cel 45 (tuż pod ceną), unieważnienie 50,43.", notka_en: "Bearish draft: target $45 (just below the price), invalidation $50.43.", zrodlo: 0 },
+    xagusd: { kurs: 45.13, zmiana: -4.67, tydzien: -12.65, notka: "Szkic spadkowy: cel 45 (tuż pod ceną), unieważnienie 50,43.", notka_en: "Bearish draft: target $45 (just below the price), invalidation $50.43.", zrodlo: 0 },
     usdpln: { kurs: 3.9981, zmiana: -0.05, tydzien: 0.54, notka: "Zamknięcie z wtorku (CNBC), brak świeższego notowania. Szkic wzrostowy: cel 4,08, unieważnienie 3,9775.", notka_en: "Tuesday close (CNBC), no fresher quote. Bullish draft: target 4.08, invalidation 3.9775.", zrodlo: 3 },
-    wti: { kurs: 85.42, zmiana: -0.69, tydzien: -1.28, notka: "Najbliższy kontrakt. Szkic spadkowy: cel 83,88 (blisko), unieważnienie 92,53.", notka_en: "Front-month contract. Bearish draft: target $83.88 (close), invalidation $92.53.", zrodlo: 0 },
-    dax: { kurs: 26065, zmiana: 0.08, tydzien: -2.24, notka: "W trakcie sesji (Trading Economics). Analiza neutralna: zakres 25 793–26 600.", notka_en: "During the session (Trading Economics). Neutral analysis: 25,793–26,600 range.", zrodlo: 3 },
-    btcusd: { kurs: 63980, zmiana: -1.38, tydzien: -13.46, notka: "Gemini. Szkic spadkowy: cel 61 946, unieważnienie 68 380.", notka_en: "Gemini. Bearish draft: target $61,946, invalidation $68,380.", zrodlo: 4 }
+    wti: { kurs: 83.07, zmiana: -3.42, tydzien: -4.0, notka: "Najbliższy kontrakt; kurs poniżej celu szkicu spadkowego (83,88), rozliczenie rano po świecy CNBC.", notka_en: "Front-month contract; price below the bearish draft's target ($83.88), settled in the morning from the CNBC candle.", zrodlo: 0 },
+    dax: { kurs: 25750, zmiana: -1.13, tydzien: -3.42, notka: "Zamknięcie (Trading Economics, źródła podają 25 742–25 823) poniżej dolnej granicy zakresu 25 793; rozliczenie rano po świecy CNBC.", notka_en: "Close (Trading Economics, sources give 25,742–25,823) below the 25,793 lower bound; settled in the morning from the CNBC candle.", zrodlo: 3 },
+    btcusd: { kurs: 62425, zmiana: -3.77, tydzien: -15.56, notka: "Gemini. Szkic spadkowy: cel 61 946, unieważnienie 68 380.", notka_en: "Gemini. Bearish draft: target $61,946, invalidation $68,380.", zrodlo: 4 }
   },
   kalendarz: [
-    { dzien: "Śr 18 lis", wydarzenia: ["USA: protokół z posiedzenia FOMC (20:00)"] }
+    { dzien: "Czw 19 lis", wydarzenia: ["Walmart: wyniki przed sesją (13:00)", "USA: wnioski o zasiłek (14:30)"] }
   ],
   zrodla: [
     { nazwa: "Trading Economics: złoto, srebro, ropa (18 lis 2026)", nazwa_en: "Trading Economics: gold, silver, crude (18 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
-    { nazwa: "CNBC: zamknięcia z 17 lis; Trading Economics: kontrakty w USA po wynikach Nvidii (18 lis 2026)", nazwa_en: "CNBC: 17 Nov closes; Trading Economics: US futures after Nvidia's results (18 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
-    { nazwa: "Trading Economics: dolar i kursy walut (18 lis 2026)", nazwa_en: "Trading Economics: dollar and FX rates (18 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
-    { nazwa: "Trading Economics: DAX i Europa (18 lis 2026); USD/PLN: zamknięcie CNBC z 17 lis", nazwa_en: "Trading Economics: DAX and Europe (18 Nov 2026); USD/PLN: CNBC close on 17 Nov", url: "https://tradingeconomics.com/germany/stock-market" },
+    { nazwa: "Trading Economics: zamknięcie Wall Street i protokół Fed (18 lis 2026)", nazwa_en: "Trading Economics: Wall Street close and Fed minutes (18 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+    { nazwa: "Trading Economics: dolar po protokole Fed (18 lis 2026)", nazwa_en: "Trading Economics: the dollar after the Fed minutes (18 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+    { nazwa: "Trading Economics: DAX (18 lis 2026); USD/PLN: zamknięcie CNBC z 17 lis", nazwa_en: "Trading Economics: DAX (18 Nov 2026); USD/PLN: CNBC close on 17 Nov", url: "https://tradingeconomics.com/germany/stock-market" },
     { nazwa: "Gemini: notowanie BTC/USD (18 lis 2026)", nazwa_en: "Gemini: BTC/USD quote (18 Nov 2026)", url: "https://www.gemini.com/prices/bitcoin" },
     { nazwa: "NVIDIA: Financial Results for Third Quarter Fiscal 2027 (17 lis 2026)", nazwa_en: "NVIDIA: Financial Results for Third Quarter Fiscal 2027 (17 Nov 2026)", url: "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html" },
-    { nazwa: "TokenPost: Nvidia Earnings Support Nikkei and Kospi as Hong Kong Shares Fall (18 lis 2026)", nazwa_en: "TokenPost: Nvidia Earnings Support Nikkei and Kospi as Hong Kong Shares Fall (18 Nov 2026)", url: "https://www.tokenpost.com/news/investing/60182" },
+    { nazwa: "Letters to a Young Investor: Weekly Economic Calendar 16–20 lis 2026", nazwa_en: "Letters to a Young Investor: Weekly Economic Calendar 16–20 Nov 2026", url: "https://letterstoayounginvestor.substack.com/p/weekly-economic-calendar-november-cf0" },
     { nazwa: "TradingKey: The Week Ahead: Nvidia Q3 Earnings, US October Retail Sales, FOMC Minutes", nazwa_en: "TradingKey: The Week Ahead: Nvidia Q3 Earnings, US October Retail Sales, FOMC Minutes", url: "https://www.tradingkey.com/analysis/stocks/us-stocks/262305825-week-ahead-nvidia-q3-earnings-us-october-retail-sales-fomc-minutes-walmart-tradingkey" }
   ]
 };
