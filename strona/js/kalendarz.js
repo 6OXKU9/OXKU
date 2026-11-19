@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-19T07:55:00+01:00",
+  aktualizacja: "2026-11-19T13:55:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -96,7 +96,8 @@ window.KALENDARZ = {
     { nazwa: "Trading Economics: indeks ZEW w Niemczech (lis 2026)", nazwa_en: "Trading Economics: German ZEW index (Nov 2026)", url: "https://tradingeconomics.com/germany/zew-economic-sentiment-index" },
     { nazwa: "NVIDIA: Financial Results for Third Quarter Fiscal 2027 (17 lis 2026)", nazwa_en: "NVIDIA: Financial Results for Third Quarter Fiscal 2027 (17 Nov 2026)", url: "https://www.globenewswire.com/news-release/2026/11/17/3405200/0/en/nvidia-announces-financial-results-for-third-quarter-fiscal-2027.html" },
     { nazwa: "Letters to a Young Investor: Weekly Economic Calendar 16–20 lis 2026", nazwa_en: "Letters to a Young Investor: Weekly Economic Calendar 16–20 Nov 2026", url: "https://letterstoayounginvestor.substack.com/p/weekly-economic-calendar-november-cf0" },
-    { nazwa: "Trading Economics: dolar po protokole Fed (18 lis 2026)", nazwa_en: "Trading Economics: the dollar after the Fed minutes (18 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" }
+    { nazwa: "Trading Economics: dolar po protokole Fed (18 lis 2026)", nazwa_en: "Trading Economics: the dollar after the Fed minutes (18 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+    { nazwa: "Trading Economics: US Futures Jump on Anthropic IPO; wyniki Walmartu (19 lis 2026)", nazwa_en: "Trading Economics: US Futures Jump on Anthropic IPO; Walmart results (19 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
   ],
   uwaga: "Daty i godziny pochodzą ze źródeł. Godziny publikacji z Chin (w tym LPR), Wielkiej Brytanii, Niemiec i Kanady oraz godziny decyzji EBC i BoE podano według stałych harmonogramów tych instytucji, bo źródła ich nie wymieniały. Godzina decyzji BoJ jest przybliżona. Prognozy i poprzednie odczyty uzupełniamy, gdy pojawią się w źródłach.",
   uwaga_en: "Dates and times are taken from the sources. Release times for China (including the LPR), the UK, Germany and Canada, and the ECB and BoE decision times, follow those institutions' fixed schedules, as the sources did not list them. The BoJ decision time is approximate. Forecasts and previous readings are added once they appear in the sources.",
@@ -105,7 +106,7 @@ window.KALENDARZ = {
 
 
 
-    { czas: "2026-11-19T13:00:00+01:00", kraj: "US", nazwa: "Wyniki Walmartu za III kw. (przed sesją)", wplyw: 2, instrumenty: ["sp500"], poprzednio: null, prognoza: "zysk 0,62–0,64 USD na akcję (prognoza firmy)", aktualnie: null, opis: "Obraz kondycji amerykańskiego konsumenta przy wysokiej inflacji.", nazwa_en: "Walmart Q3 results (before the open)", opis_en: "A read on the US consumer amid high inflation.", prognoza_en: "EPS $0.62–0.64 (company guidance)", zrodlo: 77 },
+    { czas: "2026-11-19T13:00:00+01:00", kraj: "US", nazwa: "Wyniki Walmartu za III kw. (przed sesją)", wplyw: 2, instrumenty: ["sp500"], poprzednio: null, prognoza: "zysk 0,62–0,64 USD na akcję (prognoza firmy)", aktualnie: "0,65 USD na akcję", aktualnie_en: "EPS $0.65", opis: "Obraz kondycji amerykańskiego konsumenta przy wysokiej inflacji.", nazwa_en: "Walmart Q3 results (before the open)", opis_en: "A read on the US consumer amid high inflation.", prognoza_en: "EPS $0.62–0.64 (company guidance)", zrodlo: 84 },
     { czas: "2026-11-19T14:30:00+01:00", kraj: "US", nazwa: "Wnioski o zasiłek dla bezrobotnych w USA", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: "średnia 4-tyg. 195 250", prognoza: null, aktualnie: null, opis: "Rynek pracy pozostaje mocny; godzina według stałego harmonogramu Departamentu Pracy.", nazwa_en: "US initial jobless claims", opis_en: "The labour market stays strong; time per the Labor Department's fixed schedule.", poprzednio_en: "4-week average 195,250", zrodlo: 82 },
     { czas: "2026-11-20T16:00:00+01:00", kraj: "US", nazwa: "Nastroje konsumentów Uniwersytetu Michigan (ostateczny odczyt za listopad)", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: null, prognoza: null, aktualnie: null, opis: "Rewizja wstępnego odczytu i oczekiwania inflacyjne konsumentów; godzina według stałego harmonogramu.", nazwa_en: "University of Michigan consumer sentiment (final November)", opis_en: "A revision of the preliminary reading and consumers' inflation expectations; time per the fixed schedule.", zrodlo: 82 },
   ]
