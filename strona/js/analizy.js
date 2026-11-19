@@ -24,6 +24,138 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-19-zloto", instrument: "xauusd", data: "2026-11-19", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Złoto na 14-miesięcznym dnie, celem 3 700", tytul_en: "Gold at a 14-month low, eyeing 3,700",
+    lead: "Złoto spadło w środę o 3,2% do 3 723,71 USD (CNBC), a rano notowane jest około 3 735. Jastrzębi protokół Fed i dolar na 19-miesięcznym szczycie podtrzymują presję, więc bazą jest test 3 700.",
+    lead_en: "Gold fell 3.2% on Wednesday to $3,723.71 (CNBC) and trades around $3,735 this morning. Hawkish Fed minutes and a dollar at a 19-month high keep up the pressure, so a test of $3,700 is the base case.",
+    poziomy: { cena: 3734.91, opory: [3855.09, 3974.71], wsparcia: [3700] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do około 3 700 USD, najniżej od września 2025 (Trading Economics).", tekst_en: "Base case: a drop to around $3,700, the lowest since September 2025 (Trading Economics)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3 855,09 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do średniej z 20 sesji (3 974,71).", tekst_en: "A daily close above $3,855.09 (the 18 November high) invalidates the setup and opens the way to the 20-session average ($3,974.71)." }
+    ],
+    tresc: [
+      "Złoto spadło w środę do 3 720,09 USD, poniżej celu 3 730, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Protokół Fed pokazał, że większość członków popiera dalsze podwyżki, a Waller nie wyklucza podwyżki o 50 pb w grudniu. Rynek wycenia około 90% szans na 25 pb, a indeks dolara zbliża się do 104.",
+      "Wsparciem jest okolica 3 700 USD (Trading Economics), oporami środowe maksimum 3 855,09 i średnia z 20 sesji 3 974,71 (CNBC). Cena jest pod średnimi z 20 i 50 sesji."
+    ],
+    tresc_en: [
+      "Gold fell to $3,720.09 on Wednesday, below the $3,730 target, so the previous bearish analysis was settled as a hit.",
+      "The Fed minutes showed that most members back further hikes, and Waller does not rule out a 50 bp hike in December. Markets price about a 90% chance of 25 bp, and the dollar index is approaching 104.",
+      "Support is around $3,700 (Trading Economics); resistance is Wednesday's high of $3,855.09 and the 20-session average of $3,974.71 (CNBC). The price is below the 20- and 50-session averages."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Gold Prices Hover at 14-Month Lows (19 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "Trading Economics: Dollar Extends Gains on Hawkish Fed Outlook (19 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne złota (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAU=" }
+    ]
+  },
+  {
+    id: "2026-11-19-srebro", instrument: "xagusd", data: "2026-11-19", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro pod 46 USD, celem 44,74", tytul_en: "Silver below $46, eyeing 44.74",
+    lead: "Srebro straciło w środę 4,9% do 45,03 USD (CNBC), a rano odbija do około 45,39. Dopóki cena jest pod środowym maksimum 47,69, bazą jest powrót do środowego minimum 44,74.",
+    lead_en: "Silver lost 4.9% on Wednesday to $45.03 (CNBC) and rebounds to around $45.39 this morning. While the price stays below Wednesday's high of $47.69, a return to Wednesday's low of $44.74 is the base case.",
+    poziomy: { cena: 45.39, opory: [47.69, 48], wsparcia: [44.74] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo powrót do 44,74 USD (minimum z 18 listopada).", tekst_en: "Base case: a return to $44.74 (the 18 November low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 47,69 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do 48 (maksimum z 17 listopada).", tekst_en: "A daily close above $47.69 (the 18 November high) invalidates the setup and opens the way to $48 (the 17 November high)." }
+    ],
+    tresc: [
+      "Srebro spadło w środę do 44,74 USD, poniżej celu 45, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Srebro traci w ciągu miesiąca około 21,7% (Trading Economics) razem ze złotem, pod presją mocnego dolara i oczekiwań na kolejne podwyżki stóp Fed.",
+      "Wsparciem jest środowe minimum 44,74, oporami maksima z 18 i 17 listopada (47,69 i 48). Średnie z 20 i 50 sesji (51,43 i 57,61) są daleko nad ceną (CNBC)."
+    ],
+    tresc_en: [
+      "Silver fell to $44.74 on Wednesday, below the $45 target, so the previous bearish analysis was settled as a hit.",
+      "Silver is down about 21.7% over the month (Trading Economics) alongside gold, under pressure from a strong dollar and expectations of further Fed hikes.",
+      "Support is Wednesday's low of $44.74; resistance is the 18 and 17 November highs ($47.69 and $48). The 20- and 50-session averages ($51.43 and $57.61) are far above the price (CNBC)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: złoto i srebro (19 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne srebra (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAG=" }
+    ]
+  },
+  {
+    id: "2026-11-19-gbpusd", instrument: "gbpusd", data: "2026-11-19", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "GBP/USD na podwójnym dnie 1,3132, celem 1,3227", tytul_en: "GBP/USD on a 1.3132 double bottom, eyeing 1.3227",
+    lead: "Funt spadł w środę do 1,3132, czyli do minimum z 14 października, a rano notowany jest około 1,3144. Rynek wciąż wycenia grudniową podwyżkę BoE, więc dopóki para jest nad 1,3132, bazą jest odbicie do 1,3227.",
+    lead_en: "Sterling fell on Wednesday to 1.3132, matching the 14 October low, and trades around 1.3144 this morning. Markets still price a December BoE hike, so while the pair stays above 1.3132, a rebound to 1.3227 is the base case.",
+    poziomy: { cena: 1.3144, opory: [1.3227, 1.3304], wsparcia: [1.3132] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo odbicie do 1,3227 (maksimum z 17 listopada), a wyżej do 1,3304 (maksimum z 12 listopada).", tekst_en: "Base case: a rebound to 1.3227 (the 17 November high), and higher to 1.3304 (the 12 November high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,3132 (minima z 14 października i 18 listopada) unieważnia scenariusz i oznacza nowe roczne minimum.", tekst_en: "A daily close below 1.3132 (the 14 October and 18 November lows) invalidates the setup and means a new one-year low." }
+    ],
+    tresc: [
+      "GBP/USD spadł w środę do 1,3132, dokładnie do celu, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Inflacja CPI w Wielkiej Brytanii wzrosła w październiku do 3,6%, najwyżej od roku, choć poniżej oczekiwanych 3,7%. Rynek ocenia szanse grudniowej podwyżki BoE na około 80% i wycenia jeszcze trzy podwyżki do czerwca (Trading Economics).",
+      "Wsparciem jest 1,3132, gdzie kurs zatrzymał się 14 października i 18 listopada; oporami maksima z 17 i 12 listopada (1,3227 i 1,3304), a średnia z 20 sesji to 1,3331 (CNBC). Ryzykiem jest dolar na 19-miesięcznym szczycie."
+    ],
+    tresc_en: [
+      "GBP/USD fell to 1.3132 on Wednesday, exactly the target, so the previous bearish analysis was settled as a hit.",
+      "UK CPI inflation rose to 3.6% in October, the highest in a year, though below the expected 3.7%. Markets put the odds of a December BoE hike at about 80% and price three more hikes by June (Trading Economics).",
+      "Support is 1.3132, where the pair stopped on 14 October and 18 November; resistance is the 17 and 12 November highs (1.3227 and 1.3304), and the 20-session average is 1.3331 (CNBC). The risk is a dollar at a 19-month high."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: funt brytyjski, inflacja CPI i oczekiwania wobec BoE (18 lis 2026)", url: "https://tradingeconomics.com/united-kingdom/currency" },
+      { nazwa: "CNBC: świece dzienne GBP/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/GBP=" }
+    ]
+  },
+  {
+    id: "2026-11-19-ropa", instrument: "wti", data: "2026-11-19", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Ropa WTI przy 83 USD, celem 81,97", tytul_en: "WTI crude near $83, eyeing 81.97",
+    lead: "Ropa WTI spadła w środę o około 3,2% do 83,26 USD (CNBC) po wzroście zapasów w USA i rano trzyma się około 83,33. Oczekiwania dużej podaży przeważają nad napięciami na Bliskim Wschodzie, więc bazą jest powrót do 81,97.",
+    lead_en: "WTI crude fell about 3.2% on Wednesday to $83.26 (CNBC) after US inventories rose, and holds around $83.33 this morning. Expectations of ample supply outweigh Middle East tensions, so a return to $81.97 is the base case.",
+    poziomy: { cena: 83.33, opory: [85.95, 89.64], wsparcia: [81.97, 80.23] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo powrót do 81,97 USD (minimum z 18 listopada), a niżej do 80,23 (minimum z 25 sierpnia).", tekst_en: "Base case: a return to $81.97 (the 18 November low), and lower to $80.23 (the 25 August low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 85,95 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do 89,64 (maksimum z 13 listopada).", tekst_en: "A daily close above $85.95 (the 18 November high) invalidates the setup and opens the way to $89.64 (the 13 November high)." }
+    ],
+    tresc: [
+      "Ropa WTI spadła w środę do 81,97 USD, poniżej celu 83,88, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Ceny są najniżej od prawie trzech miesięcy, a w ciągu czterech tygodni straciły ponad 16% (Trading Economics). Środowe dane pokazały wzrost zapasów ropy i paliw w USA.",
+      "Wsparcia to 81,97 i sierpniowe minimum 80,23, opory środowe maksimum 85,95 i 89,64 z 13 listopada. Średnie z 20 i 50 sesji (93,35 i 94,74) są wysoko nad ceną (CNBC)."
+    ],
+    tresc_en: [
+      "WTI crude fell to $81.97 on Wednesday, below the $83.88 target, so the previous bearish analysis was settled as a hit.",
+      "Prices are at their lowest in almost three months and have lost more than 16% in four weeks (Trading Economics). Wednesday's data showed rising US crude and fuel inventories.",
+      "Support is $81.97 and August's low of $80.23; resistance is Wednesday's high of $85.95 and $89.64 from 13 November. The 20- and 50-session averages ($93.35 and $94.74) are well above the price (CNBC)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Oil Holds at Near Three-Month Low (19 lis 2026)", url: "https://tradingeconomics.com/commodity/crude-oil" },
+      { nazwa: "CNBC: świece dzienne ropy WTI (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/@CL.1" }
+    ]
+  },
+  {
+    id: "2026-11-19-dax", instrument: "dax", data: "2026-11-19", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "DAX pod średnią z 20 sesji, celem 25 618", tytul_en: "DAX below its 20-session average, eyeing 25,618",
+    lead: "DAX stracił w środę 1,2% i zamknął się na 25 736,2 (CNBC), pod średnią z 20 sesji. Po jastrzębim protokole Fed i słabości SAP i banków bazą jest spadek do minimum z 6 listopada, 25 617,5.",
+    lead_en: "The DAX lost 1.2% on Wednesday and closed at 25,736.2 (CNBC), below its 20-session average. After hawkish Fed minutes and weakness in SAP and banks, a drop to the 6 November low of 25,617.5 is the base case.",
+    poziomy: { cena: 25820, opory: [26139.2, 26440.6], wsparcia: [25617.5, 25340.2] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 25 617,5 (minimum z 6 listopada, blisko średniej z 50 sesji 25 625), a niżej do 25 340,2 (minimum z 27 października).", tekst_en: "Base case: a drop to 25,617.5 (the 6 November low, near the 50-session average of 25,625), and lower to 25,340.2 (the 27 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 139,2 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do 26 440,6 (maksimum z 17 listopada).", tekst_en: "A daily close above 26,139.2 (the 18 November high) invalidates the setup and opens the way to 26,440.6 (the 17 November high)." }
+    ],
+    tresc: [
+      "DAX zamknął się w środę na 25 736,2, poniżej dolnej granicy zakresu 25 793,1, więc poprzednia analiza neutralna została rozliczona jako nietrafiona.",
+      "Indeks oddał wczesne zyski i spadł o 1,2%; najmocniej traciły SAP, Commerzbank i Deutsche Bank (Trading Economics). Rano kontrakty w USA rosną przed debiutem giełdowym Anthropic, co może dać krótkie odbicie.",
+      "Wsparcia to 25 617,5 (minimum z 6 listopada) i 25 340,2 (27 października), opory 26 139,2 i 26 440,6 (maksima z 18 i 17 listopada). Średnia z 20 sesji to 26 036, z 50 sesji 25 625 (CNBC)."
+    ],
+    tresc_en: [
+      "The DAX closed on Wednesday at 25,736.2, below the 25,793.1 lower bound, so the previous neutral analysis was settled as a miss.",
+      "The index gave up early gains and fell 1.2%; SAP, Commerzbank and Deutsche Bank lost the most (Trading Economics). This morning US futures rise ahead of Anthropic's market debut, which may bring a short rebound.",
+      "Support is 25,617.5 (the 6 November low) and 25,340.2 (27 October); resistance is 26,139.2 and 26,440.6 (the 18 and 17 November highs). The 20-session average is 26,036 and the 50-session one 25,625 (CNBC)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: The DAX Index Closes 1.16% Lower (18 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "Trading Economics: US Futures Climb Ahead of Anthropic's Debut (19 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
     id: "2026-11-18-sp500", instrument: "sp500", data: "2026-11-18", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "S&P 500 odbija po Nvidii, celem 7 502", tytul_en: "S&P 500 rebounds after Nvidia, eyeing 7,502",
@@ -85,6 +217,7 @@ window.ANALIZY = [
     lead: "Złoto spadło w środę rano do około 3 779 USD, najniżej od ponad roku. Dopóki cena jest pod 3 881, bazą jest zejście do dolnej granicy strefy wsparcia 3 730–3 760 wskazanej przez FXEmpire.",
     lead_en: "Gold fell to around $3,779 on Wednesday morning, the lowest in over a year. While the price stays below $3,881, a drop to the lower edge of the $3,730–3,760 support zone named by FXEmpire is the base case.",
     poziomy: { cena: 3778.98, opory: [3880.93, 4000], wsparcia: [3730, 3600] },
+    wynik: { status: "trafiona", data: "2026-11-18", komentarz: "18 lis złoto spadło do 3 720,09 USD, poniżej celu S1 3 730, bez zamknięcia powyżej R1 3 880,93. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 18 Nov gold fell to $3,720.09, below the S1 target of $3,730, with no close above R1 $3,880.93. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 3 730 USD (dolna granica strefy wsparcia według FXEmpire), a niżej do 3 600 (górna granica głównego celu 3 500–3 600).", tekst_en: "Base case: a drop to $3,730 (the lower edge of the support zone according to FXEmpire), and lower to $3,600 (the top of the $3,500–3,600 main target)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3 880,93 USD (opór R1 według FXEmpire) unieważnia scenariusz i otwiera drogę do 4 000.", tekst_en: "A daily close above $3,880.93 (R1 resistance according to FXEmpire) invalidates the setup and opens the way to $4,000." }
@@ -112,6 +245,7 @@ window.ANALIZY = [
     lead: "DAX spadł we wtorek o 2,1% do 26 045, prawie do wsparcia 26 000. Po wynikach Nvidii nastroje się poprawiają, dlatego bazą jest ruch między minimum z 9 listopada przy 25 793 a oporem 26 600.",
     lead_en: "The DAX fell 2.1% on Tuesday to 26,045, almost to 26,000 support. Sentiment improves after Nvidia's results, so trading between the 9 November low near 25,793 and resistance at 26,600 is the base case.",
     poziomy: { cena: 26045.4, opory: [26600], wsparcia: [25793.1] },
+    wynik: { status: "nietrafiona", data: "2026-11-18", komentarz: "18 lis DAX zamknął dzień na 25 736,2, poniżej dolnej granicy zakresu S1 25 793,1. Świeca dzienna zamknęła się poza zakresem S1–R1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 18 Nov the DAX closed at 25,736.2, below the S1 lower bound of 25,793.1. The daily candle closed outside the S1–R1 range. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "neutralny", tekst: "Bazowo ruch w zakresie 25 793,1–26 600 przez najbliższe 10 sesji.", tekst_en: "Base case: trading within the 25,793.1–26,600 range over the next 10 sessions." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 25 793,1 (minimum z 9 listopada) unieważnia scenariusz i otwiera drogę do 25 617,5 (minimum z 6 listopada).", tekst_en: "A daily close below 25,793.1 (the 9 November low) invalidates the setup and opens the way to 25,617.5 (the 6 November low)." },
@@ -196,6 +330,7 @@ window.ANALIZY = [
     lead: "GBP/USD spadł w poniedziałek do 1,3174, najniżej od czerwca. Dopóki kurs jest pod maksimum z 12 listopada przy 1,3304, bazą jest zejście do minimum z 14 października przy 1,3132.",
     lead_en: "GBP/USD fell to 1.3174 on Monday, the lowest since June. While the pair stays below the 12 November high near 1.3304, a drop to the 14 October low near 1.3132 is the base case.",
     poziomy: { cena: 1.3194, opory: [1.3304, 1.3385], wsparcia: [1.3132] },
+    wynik: { status: "trafiona", data: "2026-11-18", komentarz: "18 lis GBP/USD spadł do 1,3132 i dotknął celu S1 1,3132, bez zamknięcia powyżej R1 1,3304. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 18 Nov GBP/USD fell to 1.3132, touching the S1 target of 1.3132, with no close above R1 1.3304. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 1,3132 (minimum z 14 października).", tekst_en: "Base case: a drop to 1.3132 (the 14 October low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3304 (maksimum z 12 listopada) unieważnia scenariusz i otwiera drogę do 1,3385 (maksimum z 11 listopada).", tekst_en: "A daily close above 1.3304 (the 12 November high) invalidates the setup and opens the way to 1.3385 (the 11 November high)." }
@@ -276,6 +411,7 @@ window.ANALIZY = [
     lead: "Srebro spadło w poniedziałek rano do około 47,5 USD, najniżej w tym roku. Dopóki cena jest pod 50,43, bazą jest zejście do długoterminowego wsparcia przy 45 USD, wskazanego przez FXEmpire.",
     lead_en: "Silver fell to around $47.5 on Monday morning, the lowest this year. While the price stays below $50.43, a drop to long-term support at $45, named by FXEmpire, is the base case.",
     poziomy: { cena: 47.57, opory: [50.43, 51.955], wsparcia: [45] },
+    wynik: { status: "trafiona", data: "2026-11-18", komentarz: "18 lis srebro spadło do 44,74 USD, poniżej celu S1 45, bez zamknięcia powyżej R1 50,43. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 18 Nov silver fell to $44.74, below the S1 target of $45, with no close above R1 $50.43. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 45 USD (długoterminowe wsparcie według FXEmpire).", tekst_en: "Base case: a drop to $45 (long-term support according to FXEmpire)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 50,43 USD (9-okresowa średnia wykładnicza według FXStreet) unieważnia scenariusz i otwiera drogę do 51,96 (maksimum z 12 listopada).", tekst_en: "A daily close above $50.43 (the 9-period EMA according to FXStreet) invalidates the setup and opens the way to $51.96 (the 12 November high)." }
@@ -604,6 +740,7 @@ window.ANALIZY = [
     lead: "WTI spadła we wtorek do 83,88 USD, najniżej od 10 tygodni, i odbiła do około 86. Dopóki cena jest pod maksimum z 6 listopada przy 92,53, bazą jest powrót do wtorkowego minimum.",
     lead_en: "WTI fell to $83.88 on Tuesday, a 10-week low, and rebounded to around $86. While the price stays below the 6 November high near $92.53, a return to Tuesday's low is the base case.",
     poziomy: { cena: 86.27, opory: [92.53, 97.15], wsparcia: [83.88, 80.23] },
+    wynik: { status: "trafiona", data: "2026-11-18", komentarz: "18 lis ropa WTI spadła do 81,97 USD, poniżej celu S1 83,88, bez zamknięcia powyżej R1 92,53. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 18 Nov WTI crude fell to $81.97, below the S1 target of $83.88, with no close above R1 $92.53. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 83,88 USD (minimum z 10 listopada), a niżej do 80,23 (minimum z 25 sierpnia).", tekst_en: "Base case: a drop to $83.88 (the 10 November low), and lower to $80.23 (the 25 August low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 92,53 USD (maksimum z 6 listopada) unieważnia scenariusz i otwiera drogę do 97,15 (maksimum z 4 listopada).", tekst_en: "A daily close above $92.53 (the 6 November high) invalidates the setup and opens the way to $97.15 (the 4 November high)." }

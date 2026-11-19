@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-18T22:35:00+01:00",
+  aktualizacja: "2026-11-19T07:55:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -105,8 +105,8 @@ window.KALENDARZ = {
 
 
 
-    { czas: "2026-11-18T20:00:00+01:00", kraj: "US", nazwa: "Protokół z posiedzenia FOMC (27–28 paź)", wplyw: 3, instrumenty: ["eurusd", "usdjpy", "xauusd", "sp500", "nasdaq"], poprzednio: null, prognoza: null, aktualnie: "większość za dalszymi podwyżkami", aktualnie_en: "majority favours further hikes", opis: "Pokaże, jak szeroko w Fed popierane są dalsze podwyżki; dwóch członków chciało podwyżki już w październiku.", nazwa_en: "FOMC minutes (27–28 Oct)", opis_en: "Shows how broad support for further hikes is at the Fed; two members wanted a hike already in October.", zrodlo: 83 },
     { czas: "2026-11-19T13:00:00+01:00", kraj: "US", nazwa: "Wyniki Walmartu za III kw. (przed sesją)", wplyw: 2, instrumenty: ["sp500"], poprzednio: null, prognoza: "zysk 0,62–0,64 USD na akcję (prognoza firmy)", aktualnie: null, opis: "Obraz kondycji amerykańskiego konsumenta przy wysokiej inflacji.", nazwa_en: "Walmart Q3 results (before the open)", opis_en: "A read on the US consumer amid high inflation.", prognoza_en: "EPS $0.62–0.64 (company guidance)", zrodlo: 77 },
     { czas: "2026-11-19T14:30:00+01:00", kraj: "US", nazwa: "Wnioski o zasiłek dla bezrobotnych w USA", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: "średnia 4-tyg. 195 250", prognoza: null, aktualnie: null, opis: "Rynek pracy pozostaje mocny; godzina według stałego harmonogramu Departamentu Pracy.", nazwa_en: "US initial jobless claims", opis_en: "The labour market stays strong; time per the Labor Department's fixed schedule.", poprzednio_en: "4-week average 195,250", zrodlo: 82 },
+    { czas: "2026-11-20T16:00:00+01:00", kraj: "US", nazwa: "Nastroje konsumentów Uniwersytetu Michigan (ostateczny odczyt za listopad)", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: null, prognoza: null, aktualnie: null, opis: "Rewizja wstępnego odczytu i oczekiwania inflacyjne konsumentów; godzina według stałego harmonogramu.", nazwa_en: "University of Michigan consumer sentiment (final November)", opis_en: "A revision of the preliminary reading and consumers' inflation expectations; time per the fixed schedule.", zrodlo: 82 },
   ]
 };
