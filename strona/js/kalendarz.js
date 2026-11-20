@@ -11,7 +11,7 @@
 //   opis        jedno zdanie: dlaczego to ważne
 //   zrodlo      numer źródła z listy `zrodla` (od 0)
 window.KALENDARZ = {
-  aktualizacja: "2026-11-19T22:35:00+01:00",
+  aktualizacja: "2026-11-20T08:00:00+01:00",
   zrodla: [
     { nazwa: "Investrade: Weekly Event Calendar 19–23 paź 2026 (godziny ET)", url: "https://investrade.com/weekly-event-calendar-10-19-2026-10-23-2026/" },
     { nazwa: "Yelza: Economic Calendar 19–23 paź 2026", url: "https://yelza.com/research/economic-calendar-october-19-23-2026" },
@@ -107,8 +107,6 @@ window.KALENDARZ = {
 
 
 
-    { czas: "2026-11-19T13:00:00+01:00", kraj: "US", nazwa: "Wyniki Walmartu za III kw. (przed sesją)", wplyw: 2, instrumenty: ["sp500"], poprzednio: null, prognoza: "zysk 0,62–0,64 USD na akcję (prognoza firmy)", aktualnie: "0,65 USD na akcję", aktualnie_en: "EPS $0.65", opis: "Obraz kondycji amerykańskiego konsumenta przy wysokiej inflacji.", nazwa_en: "Walmart Q3 results (before the open)", opis_en: "A read on the US consumer amid high inflation.", prognoza_en: "EPS $0.62–0.64 (company guidance)", zrodlo: 84 },
-    { czas: "2026-11-19T14:30:00+01:00", kraj: "US", nazwa: "Wnioski o zasiłek dla bezrobotnych w USA", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: "202 tys.", prognoza: "197 tys.", aktualnie: "203 tys.", aktualnie_en: "203K", prognoza_en: "197K", opis: "Rynek pracy pozostaje mocny; godzina według stałego harmonogramu Departamentu Pracy.", nazwa_en: "US initial jobless claims", opis_en: "The labour market stays strong; time per the Labor Department's fixed schedule.", poprzednio_en: "202K", zrodlo: 85 },
     { czas: "2026-11-20T16:00:00+01:00", kraj: "US", nazwa: "Nastroje konsumentów Uniwersytetu Michigan (ostateczny odczyt za listopad)", wplyw: 2, instrumenty: ["eurusd", "usdjpy", "sp500"], poprzednio: null, prognoza: null, aktualnie: null, opis: "Rewizja wstępnego odczytu i oczekiwania inflacyjne konsumentów; godzina według stałego harmonogramu.", nazwa_en: "University of Michigan consumer sentiment (final November)", opis_en: "A revision of the preliminary reading and consumers' inflation expectations; time per the fixed schedule.", zrodlo: 82 },
   ]
 };

@@ -24,12 +24,201 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-20-zloto", instrument: "xauusd", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Złoto zmierza po najgorszy tydzień od miesięcy, celem 3 518", tytul_en: "Gold heads for its worst week in months, eyeing 3,518",
+    lead: "Złoto spadło w czwartek do 3 624 USD (CNBC), a w piątek rano kosztuje około 3 552 (−2%). Jest na drodze do tygodniowego spadku o blisko 9%, więc dopóki cena jest pod 3 597, bazą jest test 3 518.",
+    lead_en: "Gold fell on Thursday to $3,624 (CNBC) and costs around $3,552 on Friday morning (−2%). It is on track for a weekly drop of nearly 9%, so while the price stays below $3,597, a test of $3,518 is the base case.",
+    poziomy: { cena: 3551.71, opory: [3597, 3699], wsparcia: [3518, 3421] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 3 518 USD (wsparcie według FXEmpire), a po zamknięciu dnia poniżej niego do 3 421.", tekst_en: "Base case: a drop to $3,518 (support according to FXEmpire), and after a daily close below it to $3,421." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3 597 (punkt pivot według FXEmpire) unieważnia scenariusz i otwiera drogę do 3 699.", tekst_en: "A daily close above $3,597 (the pivot according to FXEmpire) invalidates the setup and opens the way to $3,699." }
+    ],
+    tresc: [
+      "Złoto spadło w czwartek do 3 621,27 USD, poniżej celu 3 700, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Według Trading Economics złoto jest najtańsze od września 2025: dolar zyskuje na oczekiwaniach podwyżek stóp Fed, a inwestorzy sprzedają kruszec, by pokryć straty na akcjach po wyprzedaży spółek AI. Waller dopuszcza podwyżkę o 50 pb w grudniu.",
+      "Wsparcia to 3 518 i 3 421, opory 3 597 i 3 699 (FXEmpire). Cena jest poniżej malejących średnich, ale rynek jest mocno wyprzedany, co grozi gwałtownym odbiciem."
+    ],
+    tresc_en: [
+      "Gold fell to $3,621.27 on Thursday, below the $3,700 target, so the previous bearish analysis was settled as a hit.",
+      "According to Trading Economics gold is the cheapest since September 2025: the dollar gains on expectations of Fed hikes, and investors sell bullion to cover losses on stocks after the AI sell-off. Waller allows for a 50 bp hike in December.",
+      "Support is at $3,518 and $3,421, resistance at $3,597 and $3,699 (FXEmpire). The price is below falling averages, but the market is deeply oversold, which risks a sharp rebound."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Gold (XAUUSD) & Silver Price Forecast: Gold Heads for Worst Week in Eight Months, Can $3,518 Hold? (20 lis 2026)", url: "https://www.fxempire.com/forecasts/article/gold-xauusd-silver-price-forecast-gold-heads-for-worst-week-in-eight-months-can-3518-hold-1645958" },
+      { nazwa: "Trading Economics: Gold Set for Steepest Weekly Decline in Months (20 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne złota (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAU=" }
+    ]
+  },
+  {
+    id: "2026-11-20-srebro", instrument: "xagusd", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Srebro pod 42 USD, celem 41,01", tytul_en: "Silver below $42, eyeing 41.01",
+    lead: "Srebro spadło w czwartek do 42,85 USD (CNBC), a w piątek rano kosztuje około 41,90. Dopóki cena jest pod pivotem 42,06, bazą jest spadek do 41,01.",
+    lead_en: "Silver fell on Thursday to $42.85 (CNBC) and costs around $41.90 on Friday morning. While the price stays below the $42.06 pivot, a drop to $41.01 is the base case.",
+    poziomy: { cena: 41.9, opory: [42.06, 42.78], wsparcia: [41.01, 40.29] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 41,01 USD, a po zamknięciu dnia poniżej niego do 40,29 (FXEmpire).", tekst_en: "Base case: a drop to $41.01, and after a daily close below it to $40.29 (FXEmpire)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 42,06 (pivot według FXEmpire) unieważnia scenariusz i otwiera drogę do 42,78.", tekst_en: "A daily close above $42.06 (the pivot according to FXEmpire) invalidates the setup and opens the way to $42.78." }
+    ],
+    tresc: [
+      "Srebro spadło w czwartek do 42,695 USD, poniżej celu 44,74, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "W ciągu miesiąca srebro straciło około 27,7% (Trading Economics). FXEmpire podaje RSI blisko 15, czyli skrajne wyprzedanie, ale trend i malejące średnie wciąż wskazują w dół.",
+      "Wsparcia to 41,01 i 40,29, opory 42,06 i 42,78 (FXEmpire). Unieważnienie leży blisko ceny, więc scenariusz łatwo zanegować odbiciem."
+    ],
+    tresc_en: [
+      "Silver fell to $42.695 on Thursday, below the $44.74 target, so the previous bearish analysis was settled as a hit.",
+      "Over the month silver has lost about 27.7% (Trading Economics). FXEmpire puts the RSI near 15, extreme oversold territory, but the trend and falling averages still point down.",
+      "Support is at $41.01 and $40.29, resistance at $42.06 and $42.78 (FXEmpire). The invalidation level is close to the price, so a rebound can easily negate the setup."
+    ],
+    zrodla: [
+      { nazwa: "FXEmpire: Gold (XAUUSD) & Silver Price Forecast: Gold Heads for Worst Week in Eight Months, Can $3,518 Hold? (20 lis 2026)", url: "https://www.fxempire.com/forecasts/article/gold-xauusd-silver-price-forecast-gold-heads-for-worst-week-in-eight-months-can-3518-hold-1645958" },
+      { nazwa: "Trading Economics: złoto i srebro (20 lis 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+      { nazwa: "CNBC: świece dzienne srebra (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/XAG=" }
+    ]
+  },
+  {
+    id: "2026-11-20-sp500", instrument: "sp500", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "S&P 500 pod 200-sesyjną średnią, celem 7 081", tytul_en: "S&P 500 below its 200-day average, eyeing 7,081",
+    lead: "S&P 500 stracił w czwartek 2% i zamknął się na 7 175,83 (CNBC), pod 200-sesyjną średnią, a kontrakty rano lekko spadają. Dopóki indeks jest pod czerwcowym minimum 7 237,85, bazą jest spadek do strefy zniesień 7 081–6 900.",
+    lead_en: "The S&P 500 lost 2% on Thursday and closed at 7,175.83 (CNBC), below its 200-day average, and futures edge lower this morning. While the index stays below June's low of 7,237.85, a drop to the 7,081–6,900 retracement zone is the base case.",
+    poziomy: { cena: 7134.61, opory: [7237.85, 7348.6], wsparcia: [7080.72, 6900.46] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 7 080,72 (zniesienie 50% długoterminowego zakresu według FXEmpire), a niżej do 6 900,46 (61,8%).", tekst_en: "Base case: a drop to 7,080.72 (the 50% retracement of the long-term range according to FXEmpire), and lower to 6,900.46 (61.8%)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 7 237,85 (minimum z 9 czerwca) unieważnia scenariusz i otwiera drogę do 200-sesyjnej średniej 7 348,60.", tekst_en: "A daily close above 7,237.85 (the 9 June low) invalidates the setup and opens the way to the 200-day average of 7,348.60." }
+    ],
+    tresc: [
+      "S&P 500 zamknął się w czwartek na 7 175,83, poniżej unieważnienia 7 288,34, zanim dotknął celu 7 501,56, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona.",
+      "Indeks otworzył się mocno w górę po debiucie Anthropic, a potem odwrócił i stracił 2%, w najdłuższej serii spadków od kwietnia 2024 (Trading Economics). Rynek wątpi, czy boom AI zarobi na wysokie zadłużenie; Nvidia −3,3%, AMD −7,7%.",
+      "Wsparcia to strefa 7 080,72–6 900,46, opory 7 237,85 i 200-sesyjna średnia 7 348,60 (FXEmpire). VIX wzrósł do 28,5, co oznacza duże wahania w obie strony."
+    ],
+    tresc_en: [
+      "The S&P 500 closed on Thursday at 7,175.83, below the 7,288.34 invalidation level, before reaching the 7,501.56 target, so the previous bullish analysis was settled as a miss.",
+      "The index opened sharply higher after Anthropic's debut, then reversed and lost 2%, in its longest losing streak since April 2024 (Trading Economics). Markets doubt the AI boom will earn enough to cover heavy borrowing; Nvidia −3.3%, AMD −7.7%.",
+      "Support is the 7,080.72–6,900.46 zone; resistance is 7,237.85 and the 200-day average of 7,348.60 (FXEmpire). The VIX rose to 28.5, which means large swings in both directions."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: US Stocks Slide as Anthropic's IPO Enthusiasm Fades (19 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "FXEmpire: Dow Jones and Nasdaq Index: US Stocks Give Up Gains Ahead of Anthropic Debut (19 lis 2026)", url: "https://www.fxempire.com/forecasts/article/dow-jones-and-nasdaq-index-us-stocks-give-up-gains-ahead-of-anthropic-debut-1645853" },
+      { nazwa: "CNBC: świece dzienne S&P 500 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.SPX" }
+    ]
+  },
+  {
+    id: "2026-11-20-nasdaq", instrument: "nasdaq", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 traci impet AI, celem 26 140", tytul_en: "Nasdaq 100 loses its AI momentum, eyeing 26,140",
+    lead: "Nasdaq 100 oddał w czwartek poranne zyski i zamknął się na 26 517,1 (CNBC), a rano notowany jest około 26 192. Dopóki indeks jest pod środowym minimum 26 848,9, bazą jest test wsparcia 26 140.",
+    lead_en: "The Nasdaq 100 gave up its morning gains on Thursday and closed at 26,517.1 (CNBC), and trades around 26,192 this morning. While the index stays below Wednesday's low of 26,848.9, a test of 26,140 support is the base case.",
+    poziomy: { cena: 26191.96, opory: [26848.9, 27749.3], wsparcia: [26140] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do okolic 26 140, które Silvio Pascali nazywa ważnym wsparciem.", tekst_en: "Base case: a drop to around 26,140, which Silvio Pascali calls an important support." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 848,9 (minimum z 18 listopada) unieważnia scenariusz i otwiera drogę do 27 749,3 (maksimum z 19 listopada).", tekst_en: "A daily close above 26,848.9 (the 18 November low) invalidates the setup and opens the way to 27,749.3 (the 19 November high)." }
+    ],
+    tresc: [
+      "Nasdaq 100 dotknął w czwartek rano celu 27 621,6, zanim sesja zamknęła się poniżej 26 580,9, więc poprzednia analiza wzrostowa została rozliczona jako trafiona.",
+      "Po debiucie Anthropic indeks odwrócił się i stracił 2,2%. Nvidia −3,3%, AMD −7,7% po raporcie Hunterbrook o ekspozycji na Chiny, Amazon −3,9%, Meta −3,3% (Trading Economics). W nocy Nikkei stracił około 5%, a tajwański TAIEX ponad 6%.",
+      "Wsparciem jest okolica 26 140 (Silvio Pascali), oporami minimum z 18 listopada 26 848,9 i czwartkowe maksimum 27 749,3 (CNBC). Wsparcie jest blisko ceny, a niżej źródła nie podają kolejnego poziomu."
+    ],
+    tresc_en: [
+      "On Thursday morning the Nasdaq 100 touched the 27,621.6 target before the session closed below 26,580.9, so the previous bullish analysis was settled as a hit.",
+      "After Anthropic's debut the index reversed and lost 2.2%. Nvidia −3.3%, AMD −7.7% after a Hunterbrook report on China exposure, Amazon −3.9%, Meta −3.3% (Trading Economics). Overnight the Nikkei lost about 5% and Taiwan's TAIEX more than 6%.",
+      "Support is around 26,140 (Silvio Pascali); resistance is the 18 November low of 26,848.9 and Thursday's high of 27,749.3 (CNBC). Support is close to the price, and the sources give no further level below it."
+    ],
+    zrodla: [
+      { nazwa: "Silvio Pascali: Daily Intermarket Analysis (20 lis 2026)", url: "https://silviopascali.substack.com/p/daily-intermarket-analysis-20november2026" },
+      { nazwa: "Trading Economics: US Stocks Slide as Anthropic's IPO Enthusiasm Fades (19 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne Nasdaq 100 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.NDX" }
+    ]
+  },
+  {
+    id: "2026-11-20-dax", instrument: "dax", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "DAX szósty dzień w dół, celem 25 050", tytul_en: "DAX down for a sixth day, eyeing 25,050",
+    lead: "DAX zamknął czwartek na 25 463,8 (CNBC), po piątej spadkowej sesji z rzędu, a przed otwarciem kontrakty wskazują około 25 140. Dopóki indeks jest pod 25 463,8, bazą jest spadek do październikowego minimum 25 050.",
+    lead_en: "The DAX closed Thursday at 25,463.8 (CNBC) after a fifth straight losing session, and futures point to around 25,140 before the open. While the index stays below 25,463.8, a drop to October's low of 25,050 is the base case.",
+    poziomy: { cena: 25139.4, opory: [25463.8, 25627.1], wsparcia: [25050.1, 25013.5] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 25 050,1 (minimum z 20 października), a niżej do 25 013,5 (minimum z 23 października).", tekst_en: "Base case: a drop to 25,050.1 (the 20 October low), and lower to 25,013.5 (the 23 October low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 25 463,8 (czwartkowe zamknięcie i minimum) unieważnia scenariusz i otwiera drogę do średniej z 50 sesji 25 627,1.", tekst_en: "A daily close above 25,463.8 (Thursday's close and low) invalidates the setup and opens the way to the 50-session average of 25,627.1." }
+    ],
+    tresc: [
+      "DAX spadł w czwartek do 25 463,8, poniżej celu 25 617,5, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Indeks stracił 1,1%, a poranne odbicie do 25 900 nie utrzymało się po wzroście cen ropy przy napięciach między USA a Iranem; najmocniej traciły Fresenius Medical Care, SAP i Rheinmetall (Trading Economics). W nocy giełdy w Azji spadały o 2–5%.",
+      "Wsparcia to październikowe minima 25 050,1 i 25 013,5, opory 25 463,8 i średnia z 50 sesji 25 627,1 (CNBC). Średnia z 20 sesji, 26 040,9, jest wyraźnie nad ceną."
+    ],
+    tresc_en: [
+      "The DAX fell to 25,463.8 on Thursday, below the 25,617.5 target, so the previous bearish analysis was settled as a hit.",
+      "The index lost 1.1%, and the morning rebound to 25,900 did not hold after oil rose on US-Iran tensions; Fresenius Medical Care, SAP and Rheinmetall lost the most (Trading Economics). Overnight Asian markets fell 2–5%.",
+      "Support is October's lows of 25,050.1 and 25,013.5; resistance is 25,463.8 and the 50-session average of 25,627.1 (CNBC). The 20-session average, 26,040.9, is well above the price."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: The DAX Index Closes 1.06% Lower (19 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "Trading Economics: US Stocks Slide as Anthropic's IPO Enthusiasm Fades (19 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
+    id: "2026-11-20-gbpusd", instrument: "gbpusd", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "GBP/USD na rocznym dnie, celem 1,3078", tytul_en: "GBP/USD at a one-year low, eyeing 1.3078",
+    lead: "Funt zamknął czwartek na 1,3086 (CNBC), najniżej od roku, a rano odbija do około 1,3112. Dopóki para jest pod czwartkowym maksimum 1,3174, bazą jest powrót do czwartkowego minimum 1,3078.",
+    lead_en: "Sterling closed Thursday at 1.3086 (CNBC), the lowest in a year, and rebounds to around 1.3112 this morning. While the pair stays below Thursday's high of 1.3174, a return to Thursday's low of 1.3078 is the base case.",
+    poziomy: { cena: 1.3112, opory: [1.3174, 1.3227], wsparcia: [1.3078] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo powrót do 1,3078 (minimum z 19 listopada).", tekst_en: "Base case: a return to 1.3078 (the 19 November low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 1,3174 (maksimum z 19 listopada) unieważnia scenariusz i otwiera drogę do 1,3227 (maksimum z 17 listopada).", tekst_en: "A daily close above 1.3174 (the 19 November high) invalidates the setup and opens the way to 1.3227 (the 17 November high)." }
+    ],
+    tresc: [
+      "GBP/USD zamknął się w czwartek na 1,3086, poniżej unieważnienia 1,3132, zanim dotknął celu 1,3227, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona.",
+      "Dolar zmierza po czwarty z rzędu tydzień wzrostów dzięki popytowi na bezpieczne aktywa i oczekiwaniom podwyżek Fed. Szanse grudniowej podwyżki BoE spadły do około 80% (Trading Economics).",
+      "Wsparciem jest czwartkowe minimum 1,3078, oporami maksima z 19 i 17 listopada (1,3174 i 1,3227). Średnia z 20 sesji, około 1,33, jest nad ceną (CNBC)."
+    ],
+    tresc_en: [
+      "GBP/USD closed on Thursday at 1.3086, below the 1.3132 invalidation level, before reaching the 1.3227 target, so the previous bullish analysis was settled as a miss.",
+      "The dollar is heading for a fourth straight weekly gain on safe-haven demand and expectations of Fed hikes. The odds of a December BoE hike fell to about 80% (Trading Economics).",
+      "Support is Thursday's low of 1.3078; resistance is the 19 and 17 November highs (1.3174 and 1.3227). The 20-session average, about 1.33, is above the price (CNBC)."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: Pound Remains at One-Year Low (19 lis 2026)", url: "https://tradingeconomics.com/united-kingdom/currency" },
+      { nazwa: "Trading Economics: Dollar Set for Fourth Consecutive Weekly Gain (20 lis 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+      { nazwa: "CNBC: świece dzienne GBP/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/GBP=" }
+    ]
+  },
+  {
+    id: "2026-11-20-bitcoin", instrument: "btcusd", data: "2026-11-20", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin przy 61 800 USD, celem 61 250", tytul_en: "Bitcoin near $61,800, eyeing 61,250",
+    lead: "Bitcoin zamknął czwartek na 61 913 USD (Coinbase) i w piątek rano kosztuje około 61 800. Dopóki kurs jest pod piątkowym maksimum 62 562, bazą jest test lipcowego minimum 61 250.",
+    lead_en: "Bitcoin closed Thursday at $61,913 (Coinbase) and costs around $61,800 on Friday morning. While the price stays below Friday's high of $62,562, a test of July's low of $61,250 is the base case.",
+    poziomy: { cena: 61783.21, opory: [62562.2, 64023.7], wsparcia: [61250] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 61 250 USD (minimum z 6 lipca).", tekst_en: "Base case: a drop to $61,250 (the 6 July low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 62 562,2 (maksimum z 20 listopada) unieważnia scenariusz i otwiera drogę do 64 023,7 (maksimum z 19 listopada).", tekst_en: "A daily close above $62,562.2 (the 20 November high) invalidates the setup and opens the way to $64,023.7 (the 19 November high)." }
+    ],
+    tresc: [
+      "Bitcoin spadł w czwartek do 61 350 USD, poniżej celu 61 946,2, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Kryptowaluty tracą razem ze spółkami technologicznymi po wyprzedaży AI; na Gemini kurs spadał w nocy do 61 000 USD.",
+      "Wsparciem jest lipcowe minimum 61 250, oporami maksima z 20 i 19 listopada (62 562,2 i 64 023,7). Średnie z 20 i 50 sesji (71 159 i 77 684) są wysoko nad ceną (Coinbase)."
+    ],
+    tresc_en: [
+      "Bitcoin fell to $61,350 on Thursday, below the $61,946.2 target, so the previous bearish analysis was settled as a hit.",
+      "Crypto falls alongside tech stocks after the AI sell-off; on Gemini the price dropped to $61,000 overnight.",
+      "Support is July's low of $61,250; resistance is the 20 and 19 November highs ($62,562.2 and $64,023.7). The 20- and 50-session averages ($71,159 and $77,684) are well above the price (Coinbase)."
+    ],
+    zrodla: [
+      { nazwa: "Gemini: notowanie BTC/USD (20 lis 2026)", url: "https://www.gemini.com/prices/bitcoin" },
+      { nazwa: "Coinbase: świece dzienne BTC/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.coinbase.com/price/bitcoin" }
+    ]
+  },
+  {
     id: "2026-11-19-zloto", instrument: "xauusd", data: "2026-11-19", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Złoto na 14-miesięcznym dnie, celem 3 700", tytul_en: "Gold at a 14-month low, eyeing 3,700",
     lead: "Złoto spadło w środę o 3,2% do 3 723,71 USD (CNBC), a rano notowane jest około 3 735. Jastrzębi protokół Fed i dolar na 19-miesięcznym szczycie podtrzymują presję, więc bazą jest test 3 700.",
     lead_en: "Gold fell 3.2% on Wednesday to $3,723.71 (CNBC) and trades around $3,735 this morning. Hawkish Fed minutes and a dollar at a 19-month high keep up the pressure, so a test of $3,700 is the base case.",
     poziomy: { cena: 3734.91, opory: [3855.09, 3974.71], wsparcia: [3700] },
+    wynik: { status: "trafiona", data: "2026-11-19", komentarz: "19 lis złoto spadło do 3 621,27 USD, poniżej celu S1 3 700, bez zamknięcia powyżej R1 3 855,09. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 19 Nov gold fell to $3,621.27, below the S1 target of $3,700, with no close above R1 $3,855.09. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do około 3 700 USD, najniżej od września 2025 (Trading Economics).", tekst_en: "Base case: a drop to around $3,700, the lowest since September 2025 (Trading Economics)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 3 855,09 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do średniej z 20 sesji (3 974,71).", tekst_en: "A daily close above $3,855.09 (the 18 November high) invalidates the setup and opens the way to the 20-session average ($3,974.71)." }
@@ -57,6 +246,7 @@ window.ANALIZY = [
     lead: "Srebro straciło w środę 4,9% do 45,03 USD (CNBC), a rano odbija do około 45,39. Dopóki cena jest pod środowym maksimum 47,69, bazą jest powrót do środowego minimum 44,74.",
     lead_en: "Silver lost 4.9% on Wednesday to $45.03 (CNBC) and rebounds to around $45.39 this morning. While the price stays below Wednesday's high of $47.69, a return to Wednesday's low of $44.74 is the base case.",
     poziomy: { cena: 45.39, opory: [47.69, 48], wsparcia: [44.74] },
+    wynik: { status: "trafiona", data: "2026-11-19", komentarz: "19 lis srebro spadło do 42,695 USD, poniżej celu S1 44,74, bez zamknięcia powyżej R1 47,69. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 19 Nov silver fell to $42.695, below the S1 target of $44.74, with no close above R1 $47.69. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo powrót do 44,74 USD (minimum z 18 listopada).", tekst_en: "Base case: a return to $44.74 (the 18 November low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 47,69 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do 48 (maksimum z 17 listopada).", tekst_en: "A daily close above $47.69 (the 18 November high) invalidates the setup and opens the way to $48 (the 17 November high)." }
@@ -83,6 +273,7 @@ window.ANALIZY = [
     lead: "Funt spadł w środę do 1,3132, czyli do minimum z 14 października, a rano notowany jest około 1,3144. Rynek wciąż wycenia grudniową podwyżkę BoE, więc dopóki para jest nad 1,3132, bazą jest odbicie do 1,3227.",
     lead_en: "Sterling fell on Wednesday to 1.3132, matching the 14 October low, and trades around 1.3144 this morning. Markets still price a December BoE hike, so while the pair stays above 1.3132, a rebound to 1.3227 is the base case.",
     poziomy: { cena: 1.3144, opory: [1.3227, 1.3304], wsparcia: [1.3132] },
+    wynik: { status: "nietrafiona", data: "2026-11-19", komentarz: "19 lis GBP/USD zamknął dzień na 1,3086, poniżej S1 1,3132, zanim kurs dotknął celu R1 1,3227 (najwyżej 1,3174). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 19 Nov GBP/USD closed at 1.3086, below S1 1.3132, before reaching the R1 target of 1.3227 (high 1.3174). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo odbicie do 1,3227 (maksimum z 17 listopada), a wyżej do 1,3304 (maksimum z 12 listopada).", tekst_en: "Base case: a rebound to 1.3227 (the 17 November high), and higher to 1.3304 (the 12 November high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 1,3132 (minima z 14 października i 18 listopada) unieważnia scenariusz i oznacza nowe roczne minimum.", tekst_en: "A daily close below 1.3132 (the 14 October and 18 November lows) invalidates the setup and means a new one-year low." }
@@ -135,6 +326,7 @@ window.ANALIZY = [
     lead: "DAX stracił w środę 1,2% i zamknął się na 25 736,2 (CNBC), pod średnią z 20 sesji. Po jastrzębim protokole Fed i słabości SAP i banków bazą jest spadek do minimum z 6 listopada, 25 617,5.",
     lead_en: "The DAX lost 1.2% on Wednesday and closed at 25,736.2 (CNBC), below its 20-session average. After hawkish Fed minutes and weakness in SAP and banks, a drop to the 6 November low of 25,617.5 is the base case.",
     poziomy: { cena: 25820, opory: [26139.2, 26440.6], wsparcia: [25617.5, 25340.2] },
+    wynik: { status: "trafiona", data: "2026-11-19", komentarz: "19 lis DAX spadł do 25 463,8, poniżej celu S1 25 617,5, bez zamknięcia powyżej R1 26 139,2. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 19 Nov the DAX fell to 25,463.8, below the S1 target of 25,617.5, with no close above R1 26,139.2. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 25 617,5 (minimum z 6 listopada, blisko średniej z 50 sesji 25 625), a niżej do 25 340,2 (minimum z 27 października).", tekst_en: "Base case: a drop to 25,617.5 (the 6 November low, near the 50-session average of 25,625), and lower to 25,340.2 (the 27 October low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 26 139,2 (maksimum z 18 listopada) unieważnia scenariusz i otwiera drogę do 26 440,6 (maksimum z 17 listopada).", tekst_en: "A daily close above 26,139.2 (the 18 November high) invalidates the setup and opens the way to 26,440.6 (the 17 November high)." }
@@ -162,6 +354,7 @@ window.ANALIZY = [
     lead: "S&P 500 zamknął wtorek na 7 341 po czwartej spadkowej sesji, a po lepszych od oczekiwań wynikach Nvidii kontrakty rosną o około 0,7%. Dopóki indeks jest nad wtorkowym minimum 7 288, bazą jest odbicie do 7 502.",
     lead_en: "The S&P 500 closed Tuesday at 7,341 after a fourth losing session, and futures rise about 0.7% after Nvidia's better-than-expected results. While the index stays above Tuesday's low of 7,288, a rebound to 7,502 is the base case.",
     poziomy: { cena: 7340.53, opory: [7501.56, 7597.44], wsparcia: [7288.34, 7237.85] },
+    wynik: { status: "nietrafiona", data: "2026-11-19", komentarz: "19 lis S&P 500 zamknął dzień na 7 175,83, poniżej S1 7 288,34, zanim indeks dotknął celu R1 7 501,56 (najwyżej 7 415,64). Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 19 Nov the S&P 500 closed at 7,175.83, below S1 7,288.34, before reaching the R1 target of 7,501.56 (high 7,415.64). Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo odbicie do 7 501,56 (poziom 50% według FXEmpire), a wyżej do 7 597.", tekst_en: "Base case: a rebound to 7,501.56 (the 50% level according to FXEmpire), and higher to 7,597." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 7 288,34 (minimum z 17 listopada) unieważnia scenariusz i otwiera drogę do 7 237,85 (minimum z 9 czerwca).", tekst_en: "A daily close below 7,288.34 (the 17 November low) invalidates the setup and opens the way to 7,237.85 (the 9 June low)." }
@@ -190,6 +383,7 @@ window.ANALIZY = [
     lead: "Nasdaq 100 zamknął wtorek na 27 002, a po wynikach Nvidii kontrakty rosną o ponad 1%. Dopóki indeks jest nad wtorkowym minimum 26 581, bazą jest odbicie do poniedziałkowego maksimum przy 27 622.",
     lead_en: "The Nasdaq 100 closed Tuesday at 27,002, and futures rise more than 1% after Nvidia's results. While the index stays above Tuesday's low of 26,581, a rebound to Monday's high near 27,622 is the base case.",
     poziomy: { cena: 27001.8, opory: [27621.6, 28025.8], wsparcia: [26580.9] },
+    wynik: { status: "trafiona", data: "2026-11-19", komentarz: "19 lis Nasdaq 100 wzrósł na otwarciu do 27 749,3 i dotknął celu R1 27 621,6, zanim sesja zamknęła się na 26 517,1, poniżej S1 26 580,9. Cel padł w trakcie dnia, przed zamknięciem poniżej S1. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 19 Nov the Nasdaq 100 rose at the open to 27,749.3, touching the R1 target of 27,621.6, before the session closed at 26,517.1, below S1 26,580.9. The target was hit during the day, before the close below S1. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo odbicie do 27 621,6 (maksimum z 16 listopada), a wyżej do 28 025,8 (maksimum z 9 listopada).", tekst_en: "Base case: a rebound to 27,621.6 (the 16 November high), and higher to 28,025.8 (the 9 November high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 580,9 (minimum z 17 listopada) unieważnia scenariusz i oznacza nowe minimum od lipca.", tekst_en: "A daily close below 26,580.9 (the 17 November low) invalidates the setup and marks a new low since July." }
@@ -439,6 +633,7 @@ window.ANALIZY = [
     lead: "Bitcoin spadł w weekend do 61 946 USD i w poniedziałek rano jest przy 64 580. Dopóki cena jest pod sobotnim maksimum 68 380, bazą jest powrót do niedzielnego minimum przy 61 946.",
     lead_en: "Bitcoin fell to $61,946 over the weekend and is near $64,580 on Monday morning. While the price stays below Saturday's high of $68,380, a return to Sunday's low near $61,946 is the base case.",
     poziomy: { cena: 64580, opory: [68380, 71429.5], wsparcia: [61946.2, 61750.9] },
+    wynik: { status: "trafiona", data: "2026-11-19", komentarz: "19 lis bitcoin spadł do 61 350 USD, poniżej celu S1 61 946,2, bez zamknięcia powyżej R1 68 380. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 19 Nov bitcoin fell to $61,350, below the S1 target of $61,946.2, with no close above R1 $68,380. Price source: Coinbase daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 61 946 USD (minimum z 15 listopada), a niżej do 61 751 (minimum z 13 lipca).", tekst_en: "Base case: a drop to $61,946 (the 15 November low), and lower to $61,751 (the 13 July low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 68 380 USD (maksimum z 14 listopada) unieważnia scenariusz i otwiera drogę do 71 430 (maksimum z 13 listopada).", tekst_en: "A daily close above $68,380 (the 14 November high) invalidates the setup and opens the way to $71,430 (the 13 November high)." }
