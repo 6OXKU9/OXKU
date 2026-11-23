@@ -1,52 +1,51 @@
 // PRZEGLĄD RYNKU AI. Plik nadpisywany przez Claude przy każdej aktualizacji.
 // Każda liczba ma źródło. Gdy dana nie została potwierdzona w źródle, pole zostaje puste (null) i strona pokazuje „brak danych”.
 window.PRZEGLAD = {
-  aktualizacja: "2026-11-23T13:55:00+01:00",
-  stanNa_en: "Monday, 23 Nov 2026 (before the US session)",
-  stanNa: "poniedziałek, 23 lis 2026 (przed sesją w USA)",
-  naglowek_en: "Markets rebound after a week of selling: Nasdaq 100 futures rise about 3%, S&P 500 futures 2–2.5%. The DAX +0.8% near 25,000 after better-than-expected German PMIs. Gold $3,618 (+2.3%), WTI crude −1.4% to 82.2.",
-  naglowek: "Rynki odbijają po tygodniu wyprzedaży: kontrakty na Nasdaq 100 rosną o około 3%, na S&P 500 o 2–2,5%. DAX +0,8% przy 25 000 po lepszych od oczekiwań PMI z Niemiec. Złoto 3 618 USD (+2,3%), ropa WTI −1,4% do 82,2.",
+  aktualizacja: "2026-11-23T22:35:00+01:00",
+  stanNa_en: "Monday, 23 Nov 2026 (evening)",
+  stanNa: "poniedziałek, 23 lis 2026 (wieczór)",
+  naglowek_en: "A huge rebound after a week of selling: Nasdaq 100 +6.9%, S&P 500 +4.7%, Nvidia +31.5% after Jensen Huang was reinstated as CEO. The DAX closed 2.15% higher, gold +2.9%, WTI crude −3.8% to 80.2.",
+  naglowek: "Wielkie odbicie po tygodniu wyprzedaży: Nasdaq 100 +6,9%, S&P 500 +4,7%, Nvidia +31,5% po przywróceniu Jensena Huanga na stanowisko prezesa. DAX zamknął się 2,15% wyżej, złoto +2,9%, ropa WTI −3,8% do 80,2.",
   punkty: [
-    "W zeszłym tygodniu S&P 500 stracił 8,6%, Nasdaq Composite 10%. Przed otwarciem kontrakty odbijają: według Trading Economics Nasdaq 100 o 3–3,5%, S&P 500 o 1,9–2,5%, Dow o 1,3%. VIX spada do 31,5. O 15:45 wstępne PMI z USA.",
-    "Rynek wycenia około 93% szans na podwyżkę Fed o 25 pb w grudniu. Indeks dolara przy 103,9: EUR/USD 1,0959, GBP/USD 1,3096, USD/JPY 159,1.",
-    "DAX zyskuje około 0,8% do 24 990 i zbliża się do 25 000. Wstępne PMI z Niemiec okazały się lepsze od oczekiwań (Trading Economics nie podaje jeszcze liczb); Infineon +4,1%, Siemens Energy +3,8%. W Wielkiej Brytanii PMI przemysłu 52,7, usług 52,0 (oczekiwano 51,8).",
-    "Złoto 3 618 USD (+2,3%), srebro 42,30 (+2,7%). Ropa WTI traci 1,4% do 82,2 USD, Brent 91,1; MAE przewiduje nadwyżkę podaży około 2 mln baryłek dziennie. Bitcoin około 61 400 USD.",
-    "Żaden poziom nowych szkiców nie został jeszcze przebity. W środę PCE, PKB i wnioski o zasiłek (14:30), w czwartek Święto Dziękczynienia."
+    "Według Trading Economics S&P 500 zyskał około 4,7%, Nasdaq 100 6,9%, Dow 3,1%. Zarząd Nvidii przywrócił Jensena Huanga na stanowisko prezesa, a akcje spółki wzrosły o 31,5%. Micron +19%, Marvell +18,4%; CrowdStrike −8,9% po ogłoszeniu przejęcia Zscalera. VIX spadł do 26,6.",
+    "Wstępne PMI z USA słabsze: przemysł 54,5 (poprzednio 54,9), usługi 54,7 przy oczekiwanych 55,6. Rynek nadal wycenia ponad 90% szans na podwyżkę Fed o 25 pb w grudniu. Indeks dolara wzrósł o 0,5% do 104,3: EUR/USD 1,0903, GBP/USD 1,3034, USD/JPY 158,95.",
+    "DAX zamknął się na 25 337 (+2,15%). PMI z Niemiec mocno powyżej oczekiwań: przemysł 55,0, usługi 54,0, kompozytowy 55,0 (oczekiwano 53,3), najwyżej od marca 2022. Siemens Energy +7,3%, Infineon +6,8%.",
+    "Złoto 3 636 USD (+2,9%) odbiło od rocznych minimów, srebro 43,10 (+4,6%). Ropa WTI spadła o 3,8% do 80,2 USD, najniżej od trzech miesięcy, po wznowieniu pracy rurociągu Sharara w Libii; Brent 89,3. Bitcoin około 61 200 USD (w ciągu doby do 63 600).",
+    "Dzień przyniósł kilka przebić poziomów: S&P 500 i Nasdaq 100 osiągnęły cele szkiców wzrostowych, DAX zamknął się powyżej poziomu unieważnienia szkicu spadkowego, GBP/USD spadł poniżej poziomu unieważnienia, a WTI i EUR/USD dotarły do celów szkiców spadkowych. Rozliczenie jutro rano na podstawie świec dziennych."
   ],
   punkty_en: [
-    "Last week the S&P 500 lost 8.6% and the Nasdaq Composite 10%. Before the open futures rebound: according to Trading Economics the Nasdaq 100 by 3–3.5%, the S&P 500 by 1.9–2.5%, the Dow by 1.3%. The VIX falls to 31.5. US flash PMIs at 15:45.",
-    "Markets price about a 93% chance of a 25 bp Fed hike in December. The dollar index near 103.9: EUR/USD 1.0959, GBP/USD 1.3096, USD/JPY 159.1.",
-    "The DAX gains about 0.8% to 24,990 and nears 25,000. German flash PMIs beat expectations (Trading Economics gives no figures yet); Infineon +4.1%, Siemens Energy +3.8%. In the UK manufacturing PMI 52.7, services 52.0 (51.8 expected).",
-    "Gold $3,618 (+2.3%), silver 42.30 (+2.7%). WTI crude loses 1.4% to $82.2, Brent 91.1; the IEA expects a supply surplus of about 2 million barrels a day. Bitcoin around $61,400.",
-    "No level of the new drafts has been breached yet. On Wednesday PCE, GDP and jobless claims (14:30), on Thursday Thanksgiving."
+    "According to Trading Economics the S&P 500 gained about 4.7%, the Nasdaq 100 6.9% and the Dow 3.1%. Nvidia's board reinstated Jensen Huang as CEO and the shares rose 31.5%. Micron +19%, Marvell +18.4%; CrowdStrike −8.9% after announcing a deal for Zscaler. The VIX fell to 26.6.",
+    "US flash PMIs were softer: manufacturing 54.5 (previously 54.9), services 54.7 against 55.6 expected. Markets still price more than a 90% chance of a 25 bp Fed hike in December. The dollar index rose 0.5% to 104.3: EUR/USD 1.0903, GBP/USD 1.3034, USD/JPY 158.95.",
+    "The DAX closed at 25,337 (+2.15%). German PMIs beat expectations strongly: manufacturing 55.0, services 54.0, composite 55.0 (53.3 expected), the highest since March 2022. Siemens Energy +7.3%, Infineon +6.8%.",
+    "Gold $3,636 (+2.9%) rebounded from one-year lows, silver 43.10 (+4.6%). WTI crude fell 3.8% to $80.2, a three-month low, after Libya's Sharara pipeline restarted; Brent 89.3. Bitcoin around $61,200 (up to 63,600 within the day).",
+    "Several levels were breached today: the S&P 500 and Nasdaq 100 reached the targets of the bullish drafts, the DAX closed above the invalidation level of the bearish draft, GBP/USD fell below its invalidation level, and WTI and EUR/USD reached the targets of the bearish drafts. Settlement tomorrow morning from the daily candles."
   ],
   instrumenty: {
-    sp500: { kurs: 7077.04, zmiana: 2.41, tydzien: -4.58, notka: "CFD przed sesją (Trading Economics), kontrakty +1,9%. Nowy szkic wzrostowy: cel 7 238, unieważnienie 6 883.", notka_en: "Pre-market CFD (Trading Economics), futures +1.9%. New bullish draft: target 7,238, invalidation 6,883.", zrodlo: 1 },
-    nasdaq: { kurs: 25797.97, zmiana: 3.07, tydzien: -5.14, notka: "CFD przed sesją (Trading Economics), kontrakty blisko +3%. Nowy szkic wzrostowy: cel 26 140, unieważnienie 24 911.", notka_en: "Pre-market CFD (Trading Economics), futures almost +3%. New bullish draft: target 26,140, invalidation 24,911.", zrodlo: 1 },
-    xauusd: { kurs: 3617.84, zmiana: 2.42, tydzien: -6.16, notka: "Nowy szkic wzrostowy: cel 3 723, unieważnienie 3 500.", notka_en: "New bullish draft: target $3,723, invalidation $3,500.", zrodlo: 0 },
-    eurusd: { kurs: 1.0959, zmiana: -0.07, tydzien: -0.34, notka: "Szkic spadkowy: cel 1,0950, unieważnienie 1,1140.", notka_en: "Bearish draft: target 1.0950, invalidation 1.1140.", zrodlo: 2 },
-    gbpusd: { kurs: 1.3096, zmiana: 0.11, tydzien: -0.65, notka: "Nowy szkic wzrostowy: cel 1,3174, unieważnienie 1,3072.", notka_en: "New bullish draft: target 1.3174, invalidation 1.3072.", zrodlo: 4 },
-    usdjpy: { kurs: 159.1, zmiana: 0.36, tydzien: -0.19, notka: "Nowy szkic neutralny: zakres 157,21–160.", notka_en: "New neutral draft: range 157.21–160.", zrodlo: 2 },
-    xagusd: { kurs: 42.3, zmiana: 2.69, tydzien: -9.89, notka: "Nowy szkic wzrostowy: cel 45, unieważnienie 40,77.", notka_en: "New bullish draft: target $45, invalidation $40.77.", zrodlo: 0 },
+    sp500: { kurs: 7242.71, zmiana: 4.81, tydzien: -2.34, notka: "Trading Economics, koniec sesji. Cel szkicu wzrostowego 7 238 osiągnięty; rozliczenie jutro rano.", notka_en: "Trading Economics, end of session. The bullish draft's 7,238 target was reached; settlement tomorrow morning.", zrodlo: 1 },
+    nasdaq: { kurs: 26699.77, zmiana: 6.68, tydzien: -1.83, notka: "Trading Economics, koniec sesji. Cel szkicu wzrostowego 26 140 osiągnięty; rozliczenie jutro rano.", notka_en: "Trading Economics, end of session. The bullish draft's 26,140 target was reached; settlement tomorrow morning.", zrodlo: 1 },
+    xauusd: { kurs: 3635.81, zmiana: 2.93, tydzien: -5.69, notka: "Szkic wzrostowy: cel 3 723 jeszcze nieosiągnięty, unieważnienie 3 500.", notka_en: "Bullish draft: 3,723 target not yet reached, invalidation 3,500.", zrodlo: 0 },
+    eurusd: { kurs: 1.0903, zmiana: -0.58, tydzien: -0.85, notka: "Kurs poniżej celu 1,0950 szkicu spadkowego; rozliczenie jutro rano.", notka_en: "The rate is below the bearish draft's 1.0950 target; settlement tomorrow morning.", zrodlo: 2 },
+    gbpusd: { kurs: 1.3034, zmiana: -0.36, tydzien: -1.12, notka: "Kurs poniżej poziomu unieważnienia 1,3072; rozliczenie jutro rano po zamknięciu dnia.", notka_en: "The rate is below the 1.3072 invalidation level; settlement tomorrow morning after the daily close.", zrodlo: 2 },
+    usdjpy: { kurs: 158.95, zmiana: 0.26, tydzien: -0.29, notka: "Szkic neutralny: kurs w zakresie 157,21–160.", notka_en: "Neutral draft: the rate is within the 157.21–160 range.", zrodlo: 2 },
+    xagusd: { kurs: 43.1, zmiana: 4.63, tydzien: -8.18, notka: "Szkic wzrostowy: cel 45 jeszcze nieosiągnięty, unieważnienie 40,77.", notka_en: "Bullish draft: $45 target not yet reached, invalidation $40.77.", zrodlo: 0 },
     usdpln: { kurs: 4.0608, zmiana: 0.0, tydzien: 1.51, notka: "Zamknięcie z piątku (CNBC), brak świeższego notowania. Szkic wzrostowy: cel 4,08, unieważnienie 3,9775.", notka_en: "Friday close (CNBC), no fresher quote. Bullish draft: target 4.08, invalidation 3.9775.", zrodlo: 5 },
-    wti: { kurs: 82.22, zmiana: -2.1, tydzien: -4.08, notka: "Najbliższy kontrakt. Nowy szkic spadkowy: cel 81,55, unieważnienie 84,35.", notka_en: "Front-month contract. New bearish draft: target $81.55, invalidation $84.35.", zrodlo: 3 },
-    dax: { kurs: 24990.8, zmiana: 0.76, tydzien: -6.04, notka: "Trading Economics, przed otwarciem. Nowy szkic spadkowy: cel 24 500, unieważnienie 25 195.", notka_en: "Trading Economics, before the open. New bearish draft: target 24,500, invalidation 25,195.", zrodlo: 5 },
-    btcusd: { kurs: 61396.5, zmiana: 1.39, tydzien: -6.0, notka: "Gemini. Nowy szkic wzrostowy: cel 62 500, unieważnienie 58 636.", notka_en: "Gemini. New bullish draft: target $62,500, invalidation $58,636.", zrodlo: 6 }
+    wti: { kurs: 80.2, zmiana: -4.5, tydzien: -6.44, notka: "Najbliższy kontrakt. Cel szkicu spadkowego 81,55 osiągnięty; rozliczenie jutro rano.", notka_en: "Front-month contract. The bearish draft's $81.55 target was reached; settlement tomorrow morning.", zrodlo: 3 },
+    dax: { kurs: 25337, zmiana: 2.15, tydzien: -4.74, notka: "Zamknięcie 25 337 powyżej poziomu unieważnienia 25 195 szkicu spadkowego; rozliczenie jutro rano.", notka_en: "Close of 25,337 above the bearish draft's 25,195 invalidation level; settlement tomorrow morning.", zrodlo: 5 },
+    btcusd: { kurs: 61237.6, zmiana: 1.13, tydzien: -6.24, notka: "Gemini. W ciągu doby do 63 645, powyżej celu 62 500; rozliczenie jutro rano według świec Coinbase.", notka_en: "Gemini. Up to 63,645 within the day, above the 62,500 target; settlement tomorrow morning from Coinbase candles.", zrodlo: 6 }
   },
   kalendarz: [
-    { dzien: "Pon 23 lis", wydarzenia: ["USA: wstępne PMI (15:45)"] },
     { dzien: "Wt 24 lis", wydarzenia: ["Niemcy: Ifo (10:00)", "USA: zaufanie konsumentów (16:00)", "Dell: wyniki po sesji"] },
     { dzien: "Śr 25 lis", wydarzenia: ["USA: PCE, PKB, dobra trwałe, wnioski o zasiłek (14:30)", "Beżowa Księga Fed (20:00)"] },
     { dzien: "Czw 26 lis", wydarzenia: ["USA: Święto Dziękczynienia, giełdy zamknięte", "Protokół EBC (13:30)"] },
     { dzien: "Pt 27 lis", wydarzenia: ["Tokio: CPI (0:30)", "Francja: wstępny CPI (8:45)", "USA: krótsza sesja"] }
   ],
   zrodla: [
-    { nazwa: "Trading Economics: złoto odbija (23 lis 2026)", nazwa_en: "Trading Economics: gold rebounds (23 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
-    { nazwa: "Trading Economics: US Stocks Set to Rebound (23 lis 2026)", nazwa_en: "Trading Economics: US Stocks Set to Rebound (23 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
-    { nazwa: "Trading Economics: dolar cofa się z 19-miesięcznego szczytu (23 lis 2026)", nazwa_en: "Trading Economics: the dollar retreats from a 19-month high (23 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
-    { nazwa: "Trading Economics: ropa po trzech tygodniach spadków (22–23 lis 2026)", nazwa_en: "Trading Economics: crude after three weekly declines (22–23 Nov 2026)", url: "https://tradingeconomics.com/commodity/crude-oil" },
-    { nazwa: "Trading Economics: wstępne PMI Wielkiej Brytanii (23 lis 2026)", nazwa_en: "Trading Economics: UK flash PMIs (23 Nov 2026)", url: "https://tradingeconomics.com/united-kingdom/services-pmi" },
-    { nazwa: "Trading Economics: DAX Starts Week Higher (23 lis 2026); USD/PLN: zamknięcie CNBC", nazwa_en: "Trading Economics: DAX Starts Week Higher (23 Nov 2026); USD/PLN: CNBC close", url: "https://tradingeconomics.com/germany/stock-market" },
+    { nazwa: "Trading Economics: złoto odbija od rocznych minimów (23 lis 2026)", nazwa_en: "Trading Economics: gold rebounds from one-year lows (23 Nov 2026)", url: "https://tradingeconomics.com/commodity/gold" },
+    { nazwa: "Trading Economics: akcje w USA, Nvidia (23 lis 2026)", nazwa_en: "Trading Economics: US stocks, Nvidia (23 Nov 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+    { nazwa: "Trading Economics: dolar i PMI z USA (23 lis 2026)", nazwa_en: "Trading Economics: the dollar and US PMIs (23 Nov 2026)", url: "https://tradingeconomics.com/united-states/currency" },
+    { nazwa: "Trading Economics: ropa na trzymiesięcznym minimum (23 lis 2026)", nazwa_en: "Trading Economics: crude at a three-month low (23 Nov 2026)", url: "https://tradingeconomics.com/commodity/crude-oil" },
+    { nazwa: "Trading Economics: wstępne PMI USA (23 lis 2026)", nazwa_en: "Trading Economics: US flash PMIs (23 Nov 2026)", url: "https://tradingeconomics.com/united-states/services-pmi" },
+    { nazwa: "Trading Economics: DAX zamyka się 2,15% wyżej (23 lis 2026); USD/PLN: zamknięcie CNBC", nazwa_en: "Trading Economics: DAX closes 2.15% higher (23 Nov 2026); USD/PLN: CNBC close", url: "https://tradingeconomics.com/germany/stock-market" },
     { nazwa: "Gemini: notowanie BTC/USD (23 lis 2026)", nazwa_en: "Gemini: BTC/USD quote (23 Nov 2026)", url: "https://www.gemini.com/prices/bitcoin" },
     { nazwa: "FXEmpire: The Week Ahead: PCE in Focus After AI Sell-Off in Holiday-Shortened Week", nazwa_en: "FXEmpire: The Week Ahead: PCE in Focus After AI Sell-Off in Holiday-Shortened Week", url: "https://www.fxempire.com/forecasts/article/the-week-ahead-pce-in-focus-after-ai-sell-off-in-holiday-shortened-week-1646337" },
     { nazwa: "Newsquawk: Weekly Economic Calendar 23–27 lis 2026", nazwa_en: "Newsquawk: Weekly Economic Calendar 23–27 Nov 2026", url: "https://www.newsquawk.com/headlines/newsquawk-weekly-economic-calendar---23rd-27th-november-2026" }
