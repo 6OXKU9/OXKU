@@ -24,6 +24,32 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-25-nasdaq", instrument: "nasdaq", data: "2026-11-25", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Nasdaq 100 oddaje rajd Nvidii, celem 24 911", tytul_en: "Nasdaq 100 gives back the Nvidia rally, eyeing 24,911",
+    lead: "Nasdaq 100 stracił we wtorek około 2% i zamknął się na 26 214 (CNBC), oddając dużą część poniedziałkowego wzrostu o 6,9%. Dopóki indeks jest pod 27 019, bazą jest powrót do listopadowego minimum 24 911.",
+    lead_en: "The Nasdaq 100 lost about 2% on Tuesday and closed at 26,214 (CNBC), giving back much of Monday's 6.9% gain. While the index stays below 27,019, a return to the November low of 24,911 is the base case.",
+    poziomy: { cena: 26135, opory: [27018.9, 27749.3], wsparcia: [24910.5] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 24 910,50 (minimum z 20 listopada).", tekst_en: "Base case: a fall to 24,910.50 (the 20 November low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 27 018,90 (maksimum z 23 listopada) unieważnia scenariusz; dalej oporem jest 27 749,30.", tekst_en: "A daily close above 27,018.90 (the 23 November high) invalidates the setup; further resistance is 27,749.30." }
+    ],
+    tresc: [
+      "Nasdaq 100 zamknął się we wtorek na 26 214,20, poniżej poziomu unieważnienia 26 386,40, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona.",
+      "Nvidia spadła o około 6% na obawach o ład korporacyjny po przywróceniu Jensena Huanga, Micron o 11%, AMD o 8,9%. W nocy Nikkei stracił 2,8%, a Tajwan 4,8%; kontrakty na Nasdaq 100 tracą rano około 0,3%. O 14:30 dane o PCE i PKB, w czwartek giełdy w USA są zamknięte.",
+      "Cel 24 910,50 to minimum z 20 listopada, a opory 27 018,90 i 27 749,30 to maksima z 23 i 19 listopada (CNBC). Pomijamy bliższe wtorkowe minimum 25 935,50, bo leży zbyt blisko ceny. Cena to wtorkowe zamknięcie skorygowane o poranny ruch kontraktów."
+    ],
+    tresc_en: [
+      "The Nasdaq 100 closed Tuesday at 26,214.20, below the 26,386.40 invalidation level, so the previous bullish analysis was settled as a miss.",
+      "Nvidia fell about 6% on governance concerns after Jensen Huang's reinstatement, Micron 11% and AMD 8.9%. Overnight the Nikkei lost 2.8% and Taiwan 4.8%; Nasdaq 100 futures are down about 0.3% this morning. PCE and GDP data are due at 14:30, and US markets are closed on Thursday.",
+      "The 24,910.50 target is the 20 November low, and the 27,018.90 and 27,749.30 resistance levels are the 23 and 19 November highs (CNBC). We skip Tuesday's nearer low of 25,935.50 because it sits too close to the price. The price is Tuesday's close adjusted for the morning futures move."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: kontrakty w USA lekko w dół, Azja (25 lis 2026)", url: "https://tradingeconomics.com/united-states/stock-market" },
+      { nazwa: "CNBC: świece dzienne Nasdaq 100 (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.NDX" }
+    ]
+  },
+  {
     id: "2026-11-24-sp500", instrument: "sp500", data: "2026-11-24", interwal: "D1",
     kierunek: "wzrostowy", ai: true, szkic: true,
     tytul: "S&P 500 po skoku o 4,7% celuje w 7 416", tytul_en: "After a 4.7% jump the S&P 500 targets 7,416",
@@ -56,6 +82,7 @@ window.ANALIZY = [
     lead: "Nasdaq 100 zyskał w poniedziałek 6,9% i zamknął się na 26 746 (CNBC). Dopóki indeks jest nad poniedziałkowym minimum 26 386, bazą jest dalszy wzrost do 27 749.",
     lead_en: "The Nasdaq 100 gained 6.9% on Monday and closed at 26,746 (CNBC). While the index stays above Monday's low of 26,386, a further rise to 27,749 is the base case.",
     poziomy: { cena: 26787, opory: [27749.3, 28593.5], wsparcia: [26386.4, 24910.5] },
+    wynik: { status: "nietrafiona", data: "2026-11-25", komentarz: "24 lis Nasdaq 100 zamknął się na 26 214,20, poniżej poziomu unieważnienia S1 26 386,40; maksimum dnia 26 433,60 nie dotknęło celu R1 27 749,30. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 24 Nov the Nasdaq 100 closed at 26,214.20, below the S1 invalidation level of 26,386.40; the day's high of 26,433.60 did not touch the R1 target of 27,749.30. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 27 749,30 (maksimum z 19 listopada), a wyżej do 28 593,50 (maksimum z 11 listopada).", tekst_en: "Base case: a rise to 27,749.30 (the 19 November high), and higher to 28,593.50 (the 11 November high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 26 386,40 (minimum z 23 listopada) unieważnia scenariusz; dalej wsparciem jest 24 910,50.", tekst_en: "A daily close below 26,386.40 (the 23 November low) invalidates the setup; further support is 24,910.50." }
