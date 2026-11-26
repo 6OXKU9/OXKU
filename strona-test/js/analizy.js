@@ -24,6 +24,58 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-26-dax", instrument: "dax", data: "2026-11-26", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "DAX na pięciomiesięcznym minimum, celem 24 422", tytul_en: "DAX at a five-month low, eyeing 24,422",
+    lead: "DAX zamknął środę na 24 702 (−1,2%, CNBC), najniżej od lipca, po zapowiedzi nowych ceł USA na UE i wyprzedaży spółek AI. Dopóki indeks jest pod 25 151, bazą jest spadek do czerwcowego minimum 24 422.",
+    lead_en: "The DAX closed Wednesday at 24,702 (−1.2%, CNBC), the lowest since July, after the US announced new tariffs on the EU and AI stocks sold off. While the index stays below 25,151, a fall to the June low of 24,422 is the base case.",
+    poziomy: { cena: 24702, opory: [25151.4, 25330.3], wsparcia: [24421.8, 24043.5] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 24 421,80 (minimum z 12 czerwca), a niżej do 24 043,50 (minimum z 10 czerwca).", tekst_en: "Base case: a fall to 24,421.80 (the 12 June low), and lower to 24,043.50 (the 10 June low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 25 151,40 (maksimum z 25 listopada) unieważnia scenariusz; dalej oporem jest 25 330,30.", tekst_en: "A daily close above 25,151.40 (the 25 November high) invalidates the setup; further resistance is 25,330.30." }
+    ],
+    tresc: [
+      "DAX zamknął się w środę na 24 702,10, poniżej poziomu unieważnienia 24 873,30, więc poprzednia analiza wzrostowa została rozliczona jako nietrafiona.",
+      "USA zaproponowały cła na kilkunastu partnerów, w tym 15–20% na UE; Infineon stracił w środę 6,5%. Indeks jest wyraźnie pod 20- i 50-sesyjną średnią (25 940 i 25 585). W czwartek giełdy w USA są zamknięte, więc handel może być słabszy.",
+      "Cele 24 421,80 i 24 043,50 to czerwcowe minima (CNBC). Pomijamy bliższe minima z lipca i końca czerwca (24 651–24 548), bo leżą zbyt blisko ceny. Unieważnienie to środowe maksimum 25 151,40."
+    ],
+    tresc_en: [
+      "The DAX closed Wednesday at 24,702.10, below the 24,873.30 invalidation level, so the previous bullish analysis was settled as a miss.",
+      "The US proposed tariffs on more than a dozen partners, including 15–20% on the EU; Infineon lost 6.5% on Wednesday. The index sits well below its 20- and 50-day averages (25,940 and 25,585). US markets are closed on Thursday, so trading may be thinner.",
+      "The 24,421.80 and 24,043.50 targets are June lows (CNBC). We skip the nearer July and late-June lows (24,651–24,548) because they sit too close to the price. The invalidation is Wednesday's high of 25,151.40."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX zamyka się 1,2% niżej, cła USA (25 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
+    id: "2026-11-26-bitcoin", instrument: "btcusd", data: "2026-11-26", interwal: "D1",
+    kierunek: "spadkowy", ai: true, szkic: true,
+    tytul: "Bitcoin odbija od 57 200, ale trend pozostaje spadkowy", tytul_en: "Bitcoin bounces from 57,200, but the trend stays lower",
+    lead: "Bitcoin spadł w środę do 57 208 USD (Coinbase), a rano jest z powrotem przy 60 450 (Gemini), wciąż ponad 8% pod 20-dniową średnią 65 965. Dopóki kurs jest pod 62 562, bazą jest powrót do 57 208.",
+    lead_en: "Bitcoin fell to $57,208 on Wednesday (Coinbase) and is back near 60,450 this morning (Gemini), still more than 8% below its 20-day average of 65,965. While the price stays below 62,562, a return to 57,208 is the base case.",
+    poziomy: { cena: 60450, opory: [62562.2, 64534], wsparcia: [57208.2, 55106] },
+    scenariusze: [
+      { typ: "spadkowy", tekst: "Bazowo spadek do 57 208,20 (minimum z 25 listopada), a niżej do 55 106 (minimum z 21 listopada).", tekst_en: "Base case: a fall to 57,208.20 (the 25 November low), and lower to 55,106 (the 21 November low)." },
+      { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 62 562,20 (maksimum z 20 listopada) unieważnia scenariusz; dalej oporem jest 64 534.", tekst_en: "A daily close above 62,562.20 (the 20 November high) invalidates the setup; further resistance is 64,534." }
+    ],
+    tresc: [
+      "Bitcoin spadł w środę do 57 208,20 USD, poniżej celu 57 655,20, więc poprzednia analiza spadkowa została rozliczona jako trafiona.",
+      "Kryptowaluty podążają za spółkami AI: wyprzedaż technologii i obawy o grudniową podwyżkę Fed (inflacja bazowa PCE 3,3%) ciążą na ryzykownych aktywach. Kurs jest ponad 30% pod październikowym maksimum.",
+      "Cele 57 208,20 i 55 106 to minima z 25 i 21 listopada (Coinbase). Pomijamy bliższe minimum 58 636,20 z 22 listopada, bo leży blisko ceny. Unieważnienie to maksimum z 20 listopada 62 562,20."
+    ],
+    tresc_en: [
+      "Bitcoin fell to $57,208.20 on Wednesday, below the $57,655.20 target, so the previous bearish analysis was settled as a hit.",
+      "Crypto follows AI stocks: the tech sell-off and worries about a December Fed hike (core PCE 3.3%) weigh on risk assets. The price is more than 30% below October's high.",
+      "The 57,208.20 and 55,106 targets are the 25 and 21 November lows (Coinbase). We skip the nearer 58,636.20 low of 22 November because it sits close to the price. The invalidation is the 20 November high of 62,562.20."
+    ],
+    zrodla: [
+      { nazwa: "Gemini: notowanie BTC/USD (26 lis 2026)", url: "https://www.gemini.com/prices/bitcoin" },
+      { nazwa: "Coinbase: świece dzienne BTC/USD (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.coinbase.com/price/bitcoin" }
+    ]
+  },
+  {
     id: "2026-11-25-nasdaq", instrument: "nasdaq", data: "2026-11-25", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "Nasdaq 100 oddaje rajd Nvidii, celem 24 911", tytul_en: "Nasdaq 100 gives back the Nvidia rally, eyeing 24,911",
@@ -109,6 +161,7 @@ window.ANALIZY = [
     lead: "DAX zamknął poniedziałek na 25 337 (+2,15%) po najlepszych od marca 2022 PMI z Niemiec. Dopóki indeks jest nad poniedziałkowym minimum 24 873, bazą jest wzrost do 25 946.",
     lead_en: "The DAX closed Monday at 25,337 (+2.15%) after the strongest German PMIs since March 2022. While the index stays above Monday's low of 24,873, a rise to 25,946 is the base case.",
     poziomy: { cena: 25380, opory: [25945.5, 26139.2], wsparcia: [24873.3, 24792.8] },
+    wynik: { status: "nietrafiona", data: "2026-11-26", komentarz: "25 lis DAX zamknął się na 24 702,10, poniżej poziomu unieważnienia S1 24 873,30; maksimum z 24 lis 25 330,30 nie dotknęło celu R1 25 945,50. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 25 Nov the DAX closed at 24,702.10, below the S1 invalidation level of 24,873.30; the 24 Nov high of 25,330.30 did not touch the R1 target of 25,945.50. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "wzrostowy", tekst: "Bazowo wzrost do 25 945,50 (maksimum z 19 listopada), a wyżej do 26 139,20 (maksimum z 18 listopada).", tekst_en: "Base case: a rise to 25,945.50 (the 19 November high), and higher to 26,139.20 (the 18 November high)." },
       { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 24 873,30 (minimum z 23 listopada) unieważnia scenariusz; dalej wsparciem jest 24 792,80 (minimum z 8 października).", tekst_en: "A daily close below 24,873.30 (the 23 November low) invalidates the setup; further support is 24,792.80 (the 8 October low)." }
@@ -162,6 +215,7 @@ window.ANALIZY = [
     lead: "Bitcoin doszedł w poniedziałek do 64 534 USD, ale rano jest z powrotem przy 60 350 (Gemini), wciąż daleko pod 20-dniową średnią 67 515. Dopóki kurs jest pod 64 534, bazą jest spadek do 57 655.",
     lead_en: "Bitcoin reached $64,534 on Monday but is back near 60,350 this morning (Gemini), still well below the 20-day average of 67,515. While the price stays below 64,534, a fall to 57,655 is the base case.",
     poziomy: { cena: 60350, opory: [64534, 65627], wsparcia: [57655.2, 55106] },
+    wynik: { status: "trafiona", data: "2026-11-26", komentarz: "25 lis bitcoin spadł do 57 208,20 USD, poniżej celu S1 57 655,20, bez zamknięcia powyżej R1 64 534. Źródło ceny: świece dzienne Coinbase.", komentarz_en: "On 25 Nov bitcoin fell to $57,208.20, below the S1 target of $57,655.20, with no close above R1 $64,534. Price source: Coinbase daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 57 655,20 (minimum z 20 listopada), a niżej do 55 106 (minimum z 21 listopada).", tekst_en: "Base case: a fall to 57,655.20 (the 20 November low), and lower to 55,106 (the 21 November low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 64 534 (maksimum z 23 listopada) unieważnia scenariusz; dalej oporem jest 65 627.", tekst_en: "A daily close above 64,534 (the 23 November high) invalidates the setup; further resistance is 65,627." }
