@@ -24,12 +24,39 @@
 // wskazywanych przez analityków w źródłach podanych przy każdym wpisie.
 window.ANALIZY = [
   {
+    id: "2026-11-27-dax", instrument: "dax", data: "2026-11-27", interwal: "D1",
+    kierunek: "wzrostowy", ai: true, szkic: true,
+    tytul: "DAX odbija od minimum, celem 25 946", tytul_en: "DAX rebounds from its low, eyeing 25,946",
+    lead: "DAX zyskał w czwartek 2,1% i zamknął się na 25 216 (CNBC), a w piątek rano Azja mocno rośnie. Dopóki indeks jest nad środowym minimum 24 698, bazą jest powrót do 25 946.",
+    lead_en: "The DAX gained 2.1% on Thursday and closed at 25,216 (CNBC), and Asia rallies strongly on Friday morning. While the index stays above Wednesday's low of 24,698, a return to 25,946 is the base case.",
+    poziomy: { cena: 25216, opory: [25945.5, 26139.2], wsparcia: [24698.2, 24421.8] },
+    scenariusze: [
+      { typ: "wzrostowy", tekst: "Bazowo wzrost do 25 945,50 (maksimum z 19 listopada), a wyżej do 26 139,20 (maksimum z 18 listopada).", tekst_en: "Base case: a rise to 25,945.50 (the 19 November high), and higher to 26,139.20 (the 18 November high)." },
+      { typ: "spadkowy", tekst: "Zamknięcie dnia poniżej 24 698,20 (minimum z 25 listopada) unieważnia scenariusz; dalej wsparciem jest 24 421,80.", tekst_en: "A daily close below 24,698.20 (the 25 November low) invalidates the setup; further support is 24,421.80." }
+    ],
+    tresc: [
+      "DAX zamknął się w czwartek na 25 215,50, powyżej poziomu unieważnienia 25 151,40, więc poprzednia analiza spadkowa została rozliczona jako nietrafiona.",
+      "Odbicie prowadziły Volkswagen, Siemens Energy, Bayer i Infineon, a rynek liczy na ograniczenie ceł USA na UE do 15%. W piątek rano Nikkei zyskuje około 2%, Hang Seng 2%, a kontrakty na Nasdaq 100 2,4%.",
+      "Cele 25 945,50 i 26 139,20 to maksima z 19 i 18 listopada (CNBC). Pomijamy bliższe maksimum 25 330,30 z 24 listopada, bo leży zbyt blisko ceny. Unieważnienie to środowe minimum 24 698,20."
+    ],
+    tresc_en: [
+      "The DAX closed Thursday at 25,215.50, above the 25,151.40 invalidation level, so the previous bearish analysis was settled as a miss.",
+      "The rebound was led by Volkswagen, Siemens Energy, Bayer and Infineon, and markets hope US tariffs on the EU will be capped at 15%. On Friday morning the Nikkei gains about 2%, the Hang Seng 2% and Nasdaq 100 futures 2.4%.",
+      "The 25,945.50 and 26,139.20 targets are the 19 and 18 November highs (CNBC). We skip the nearer 25,330.30 high of 24 November because it sits too close to the price. The invalidation is Wednesday's low of 24,698.20."
+    ],
+    zrodla: [
+      { nazwa: "Trading Economics: DAX odbija, kontrakty i Azja (26–27 lis 2026)", url: "https://tradingeconomics.com/germany/stock-market" },
+      { nazwa: "CNBC: świece dzienne DAX (maksima, minima i średnie z danych wykresów na stronie)", url: "https://www.cnbc.com/quotes/.GDAXI" }
+    ]
+  },
+  {
     id: "2026-11-26-dax", instrument: "dax", data: "2026-11-26", interwal: "D1",
     kierunek: "spadkowy", ai: true, szkic: true,
     tytul: "DAX na pięciomiesięcznym minimum, celem 24 422", tytul_en: "DAX at a five-month low, eyeing 24,422",
     lead: "DAX zamknął środę na 24 702 (−1,2%, CNBC), najniżej od lipca, po zapowiedzi nowych ceł USA na UE i wyprzedaży spółek AI. Dopóki indeks jest pod 25 151, bazą jest spadek do czerwcowego minimum 24 422.",
     lead_en: "The DAX closed Wednesday at 24,702 (−1.2%, CNBC), the lowest since July, after the US announced new tariffs on the EU and AI stocks sold off. While the index stays below 25,151, a fall to the June low of 24,422 is the base case.",
     poziomy: { cena: 24702, opory: [25151.4, 25330.3], wsparcia: [24421.8, 24043.5] },
+    wynik: { status: "nietrafiona", data: "2026-11-27", komentarz: "26 lis DAX zamknął się na 25 215,50, powyżej poziomu unieważnienia R1 25 151,40; minimum dnia 25 114,20 nie dotknęło celu S1 24 421,80. Źródło ceny: świece dzienne CNBC.", komentarz_en: "On 26 Nov the DAX closed at 25,215.50, above the R1 invalidation level of 25,151.40; the day's low of 25,114.20 did not touch the S1 target of 24,421.80. Price source: CNBC daily candles." },
     scenariusze: [
       { typ: "spadkowy", tekst: "Bazowo spadek do 24 421,80 (minimum z 12 czerwca), a niżej do 24 043,50 (minimum z 10 czerwca).", tekst_en: "Base case: a fall to 24,421.80 (the 12 June low), and lower to 24,043.50 (the 10 June low)." },
       { typ: "wzrostowy", tekst: "Zamknięcie dnia powyżej 25 151,40 (maksimum z 25 listopada) unieważnia scenariusz; dalej oporem jest 25 330,30.", tekst_en: "A daily close above 25,151.40 (the 25 November high) invalidates the setup; further resistance is 25,330.30." }
